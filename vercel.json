@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 300
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/admin/sources/scan",
+      "schedule": "0 2 * * 0"
+    }
+  ],
+  "env": {
+    "POSTGRES_PRISMA_URL": "@postgres_prisma_url",
+    "POSTGRES_URL_NON_POOLING": "@postgres_url_non_pooling"
+  }
+}
