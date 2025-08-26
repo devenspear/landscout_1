@@ -1,18 +1,10 @@
 import { Navigation } from '@/components/layout/navigation'
-import { auth } from '@clerk/nextjs/server'
-import { redirect } from 'next/navigation'
 
-export default function DashboardLayout({
+export default function DemoLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const { userId } = auth()
-  
-  if (!userId) {
-    redirect('/sign-in')
-  }
-
   return (
     <div className="flex min-h-screen bg-gray-50">
       <Navigation />

@@ -1,18 +1,16 @@
 generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["postgresqlExtensions"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
-  provider   = "postgresql"
-  url        = env("DATABASE_URL")
-  extensions = [postgis]
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
 }
 
 model AdminConfig {
   id        String   @id @default(cuid())
   orgId     String   @unique @default("default")
-  config    Json     @db.JsonB
+  config    String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
@@ -29,7 +27,7 @@ model Source {
   crawlFrequency   String     @default("weekly")
   rateLimitPerMin  Int        @default(6)
   lastCrawledAt    DateTime?
-  metadata         Json?      @db.JsonB
+  metadata         String?
   createdAt        DateTime   @default(now())
   updatedAt        DateTime   @updatedAt
   
@@ -50,8 +48,8 @@ model ScanRun {
   updatedCount     Int             @default(0)
   duplicateCount   Int             @default(0)
   errorCount       Int             @default(0)
-  errors           Json?           @db.JsonB
-  metadata         Json?           @db.JsonB
+  errors           String?
+  metadata         String?
   createdAt        DateTime        @default(now())
   
   sources          ScanRunSource[]
@@ -65,7 +63,7 @@ model ScanRunSource {
   sourceId    String
   status      String   @default("pending")
   processed   Int      @default(0)
-  errors      Json?    @db.JsonB
+  errors      String?
   createdAt   DateTime @default(now())
   
   scanRun     ScanRun  @relation(fields: [scanRunId], references: [id])
@@ -79,7 +77,7 @@ model Parcel {
   id               String          @id @default(cuid())
   apn              String?
   acreage          Float
-  geometry         Json?           @db.JsonB // GeoJSON geometry
+  geometry         String?         // GeoJSON geometry as string
   centroidLat      Float?
   centroidLon      Float?
   county           String
@@ -91,7 +89,7 @@ model Parcel {
   taxValue         Float?
   taxYear          Int?
   landUseCode      String?
-  metadata         Json?           @db.JsonB
+  metadata         String?
   createdAt        DateTime        @default(now())
   updatedAt        DateTime        @updatedAt
   
@@ -102,8 +100,6 @@ model Parcel {
   deals            Deal[]
   
   @@unique([apn, county, state])
-  @@index([centroidLat, centroidLon])
-  @@index([county, state])
   @@map("parcels")
 }
 
@@ -118,12 +114,12 @@ model Listing {
   price            Float?
   pricePerAcre     Float?
   status           String          @default("listed") // listed, off-market, distressed, sold
-  photos           Json?           @db.JsonB // Array of photo URLs
-  sourceData       Json?           @db.JsonB // Raw data from source
+  photos           String?         // JSON array of photo URLs
+  sourceData       String?         // Raw data from source
   firstSeenAt      DateTime        @default(now())
   lastSeenAt       DateTime        @default(now())
   lastChangedAt    DateTime?
-  changeHistory    Json?           @db.JsonB
+  changeHistory    String?
   createdAt        DateTime        @default(now())
   updatedAt        DateTime        @updatedAt
   
@@ -131,8 +127,6 @@ model Listing {
   parcel           Parcel?         @relation(fields: [parcelId], references: [id])
   
   @@unique([sourceId, externalId])
-  @@index([parcelId])
-  @@index([status])
   @@map("listings")
 }
 
@@ -149,7 +143,7 @@ model Ownership {
   email            String?
   acquisitionDate  DateTime?
   acquisitionPrice Float?
-  metadata         Json?           @db.JsonB
+  metadata         String?
   createdAt        DateTime        @default(now())
   updatedAt        DateTime        @updatedAt
   
@@ -161,13 +155,13 @@ model Ownership {
 model Features {
   id                String          @id @default(cuid())
   parcelId          String          @unique
-  landCoverMix      Json?           @db.JsonB // {forest: %, pasture: %, crop: %, etc}
-  slopeStats        Json?           @db.JsonB // {min, max, mean, percentOver20, percentOver40}
-  elevationStats    Json?           @db.JsonB // {min, max, mean}
+  landCoverMix      String?         // JSON object {forest: %, pasture: %, crop: %, etc}
+  slopeStats        String?         // JSON object {min, max, mean, percentOver20, percentOver40}
+  elevationStats    String?         // JSON object {min, max, mean}
   soilsClass        String?
   soilsQuality      Int?            // 1-10 rating
   waterPresence     Boolean         @default(false)
-  waterFeatures     String[]        // creek, pond, lake, river, wetland
+  waterFeatures     String          @default("[]") // JSON array: creek, pond, lake, river, wetland
   floodZone         String?
   inFloodway        Boolean         @default(false)
   wetlandsPercent   Float?
@@ -178,14 +172,14 @@ model Features {
   waterDistance     Float?          // miles to municipal water
   sewerDistance     Float?          // miles to sewer
   gasDistance       Float?          // miles to natural gas
-  easements         String[]        // conservation, utility, access, etc
+  easements         String          @default("[]") // JSON array: conservation, utility, access, etc
   improvementsValue Float?
-  improvements      String[]        // house, barn, fence, etc
+  improvements      String          @default("[]") // JSON array: house, barn, fence, etc
   metroDistance     Float?          // miles to nearest metro
   nearestMetro      String?
   airportDistance   Float?          // miles
   nearestAirport    String?
-  metadata          Json?           @db.JsonB
+  metadata          String?
   createdAt         DateTime        @default(now())
   updatedAt         DateTime        @updatedAt
   
@@ -198,19 +192,18 @@ model FitScore {
   id                String          @id @default(cuid())
   parcelId          String          @unique
   overallScore      Int             // 0-100
-  scoreBreakdown    Json            @db.JsonB // {acreage: 20, landCover: 15, etc}
-  topReasons        String[]        // Top 5 contributing factors
+  scoreBreakdown    String          // JSON object {acreage: 20, landCover: 15, etc}
+  topReasons        String          @default("[]") // JSON array: Top 5 contributing factors
   autoFailed        Boolean         @default(false)
   autoFailReason    String?
   scoreVersion      String          @default("1.0")
   computedAt        DateTime        @default(now())
-  metadata          Json?           @db.JsonB
+  metadata          String?
   createdAt         DateTime        @default(now())
   updatedAt         DateTime        @updatedAt
   
   parcel            Parcel          @relation(fields: [parcelId], references: [id])
   
-  @@index([overallScore])
   @@map("fit_scores")
 }
 
@@ -220,21 +213,19 @@ model Deal {
   stage             String          @default("New") // New, Qualified, Triage, Pursuit, LOI, UC, Closed, Lost
   priority          String?         // P0, P1, P2, P3
   assignedTo        String?         // User ID from Clerk
-  ownerContact      Json?           @db.JsonB
+  ownerContact      String?         // JSON object
   lastContactDate   DateTime?
   nextActionDate    DateTime?
   nextAction        String?
   notes             String?
   internalNotes     String?
-  metadata          Json?           @db.JsonB
+  metadata          String?
   createdAt         DateTime        @default(now())
   updatedAt         DateTime        @updatedAt
   
   parcel            Parcel          @relation(fields: [parcelId], references: [id])
   activities        Activity[]
   
-  @@index([stage])
-  @@index([assignedTo])
   @@map("deals")
 }
 
@@ -244,7 +235,7 @@ model Activity {
   userId            String          // User ID from Clerk
   type              String          // note, email, call, meeting, status_change
   description       String
-  metadata          Json?           @db.JsonB
+  metadata          String?
   createdAt         DateTime        @default(now())
   
   deal              Deal            @relation(fields: [dealId], references: [id])
@@ -256,15 +247,14 @@ model SavedSearch {
   id                String          @id @default(cuid())
   userId            String          // User ID from Clerk
   name              String
-  criteria          Json            @db.JsonB
+  criteria          String          // JSON object
   schedule          String?         // weekly, daily, manual
   lastRunAt         DateTime?
   emailNotification Boolean         @default(false)
   active            Boolean         @default(true)
-  metadata          Json?           @db.JsonB
+  metadata          String?
   createdAt         DateTime        @default(now())
   updatedAt         DateTime        @updatedAt
   
-  @@index([userId])
   @@map("saved_searches")
 }

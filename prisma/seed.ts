@@ -10,11 +10,11 @@ async function main() {
   const adminConfig = await prisma.adminConfig.upsert({
     where: { orgId: 'default' },
     update: {
-      config: DEFAULT_ADMIN_CONFIG as any
+      config: JSON.stringify(DEFAULT_ADMIN_CONFIG)
     },
     create: {
       orgId: 'default',
-      config: DEFAULT_ADMIN_CONFIG as any
+      config: JSON.stringify(DEFAULT_ADMIN_CONFIG)
     }
   })
   console.log('Created/updated admin config:', adminConfig.id)
@@ -109,21 +109,21 @@ async function main() {
     await prisma.features.create({
       data: {
         parcelId: parcel.id,
-        landCoverMix: {
+        landCoverMix: JSON.stringify({
           forest: 40,
           pasture: 35,
           crop: 20,
           other: 5
-        },
-        slopeStats: {
+        }),
+        slopeStats: JSON.stringify({
           min: 0,
           max: 25,
           mean: 8,
           percentOver20: 15,
           percentOver40: 0
-        },
+        }),
         waterPresence: true,
-        waterFeatures: ['creek', 'pond'],
+        waterFeatures: JSON.stringify(['creek', 'pond']),
         inFloodway: false,
         wetlandsPercent: 5,
         roadAccess: 'paved',
@@ -138,7 +138,7 @@ async function main() {
       data: {
         parcelId: parcel.id,
         overallScore: score,
-        scoreBreakdown: {
+        scoreBreakdown: JSON.stringify({
           acreage: 18,
           landCoverMix: 16,
           waterPresence: 8,
@@ -148,14 +148,14 @@ async function main() {
           roadAccess: 9,
           easementPenalty: 4,
           utilities: 3
-        },
-        topReasons: [
+        }),
+        topReasons: JSON.stringify([
           'Excellent acreage in target range',
           'Good land cover mix',
           'Water features present',
           'Paved road access',
           'Reasonable metro proximity'
-        ],
+        ]),
         autoFailed: false
       }
     })
@@ -172,10 +172,10 @@ async function main() {
         price: Math.floor(parcel.acreage * (8000 + Math.random() * 4000)),
         pricePerAcre: 8000 + Math.random() * 4000,
         status: 'listed',
-        photos: [
+        photos: JSON.stringify([
           'https://example.com/photo1.jpg',
           'https://example.com/photo2.jpg'
-        ]
+        ])
       }
     })
 
