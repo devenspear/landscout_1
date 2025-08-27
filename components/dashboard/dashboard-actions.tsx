@@ -14,6 +14,19 @@ export function DashboardActions() {
     setScanResult(null)
     
     try {
+      // First, ensure admin config is initialized
+      const configResponse = await fetch('/api/admin/config/init', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      
+      if (!configResponse.ok) {
+        throw new Error('Failed to initialize admin config')
+      }
+      
+      // Now run the scan
       const response = await fetch('/api/admin/sources/scan', {
         method: 'POST',
         headers: {
@@ -28,7 +41,7 @@ export function DashboardActions() {
         // Optionally refresh the page after a delay to show updated stats
         setTimeout(() => {
           window.location.reload()
-        }, 2000)
+        }, 3000)
       } else {
         setScanResult({ success: false, error: result.error })
       }
