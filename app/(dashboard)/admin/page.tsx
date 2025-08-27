@@ -53,6 +53,39 @@ export default function AdminPage() {
   const [emailNotifications, setEmailNotifications] = React.useState(true)
   const [respectRobots, setRespectRobots] = React.useState(true)
   const [enableCaching, setEnableCaching] = React.useState(true)
+  const [testing, setTesting] = React.useState(false)
+  const [testResults, setTestResults] = React.useState<any>(null)
+
+  // Test sources function
+  const testAllSources = async () => {
+    setTesting(true)
+    setTestResults(null)
+    
+    try {
+      // Test LandWatch first
+      const response = await fetch('/api/admin/sources/test', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sourceId: 'landwatch',
+          testParams: {
+            states: Object.entries(states).filter(([_, enabled]) => enabled).map(([state]) => state),
+            minAcreage: acreageMin,
+            maxAcreage: acreageMax
+          }
+        })
+      })
+      
+      const result = await response.json()
+      setTestResults(result)
+      console.log('Test results:', result)
+    } catch (error) {
+      console.error('Test failed:', error)
+      setTestResults({ success: false, error: 'Test failed: ' + error })
+    } finally {
+      setTesting(false)
+    }
+  }
 
   // Mock data for demonstration
   const health = {
@@ -275,10 +308,38 @@ export default function AdminPage() {
               <Button 
                 variant="outline" 
                 className="w-full backdrop-blur-xl bg-white/50 dark:bg-gray-800/50 hover:scale-105 transition-transform duration-200"
+                onClick={testAllSources}
+                disabled={testing}
               >
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Test All Sources
+                <RefreshCw className={`w-4 h-4 mr-2 ${testing ? 'animate-spin' : ''}`} />
+                {testing ? 'Testing...' : 'Test All Sources'}
               </Button>
+              
+              {/* Test Results */}
+              {testResults && (
+                <div className="mt-4 p-3 rounded-xl bg-white/50 dark:bg-gray-900/50 border border-gray-200/50 dark:border-gray-700/50">
+                  {testResults.success ? (
+                    <div>
+                      <div className="text-sm font-medium text-green-600 dark:text-green-400 mb-2">
+                        ✅ {testResults.source}: Found {testResults.totalFound} listings
+                      </div>
+                      {testResults.sampleResults.length > 0 && (
+                        <div className="space-y-1">
+                          {testResults.sampleResults.map((result: any, i: number) => (
+                            <div key={i} className="text-xs text-gray-600 dark:text-gray-400">
+                              • {result.title} - {result.acreage} acres - {result.county}, {result.state}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="text-sm font-medium text-red-600 dark:text-red-400">
+                      ❌ Test failed: {testResults.error}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </CardContent>
         </Card>

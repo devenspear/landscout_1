@@ -11,9 +11,14 @@ export class LandWatchAdapter implements CrawlerAdapter {
     const listings: ListingCandidate[] = []
     
     try {
-      // Build search URL
-      const stateQuery = params.states.map(s => s.toLowerCase()).join(',')
-      const searchUrl = `${this.baseUrl}/${stateQuery}/land`
+      // Build search URL - try different URL patterns
+      const state = params.states[0]?.toLowerCase() || 'georgia'
+      const searchUrls = [
+        `${this.baseUrl}/${state}/land`,
+        `${this.baseUrl}/land/${state}`,
+        `${this.baseUrl}/search/land?state=${state}`,
+        `${this.baseUrl}/land`
+      ]
       
       // Add filters
       const urlParams = new URLSearchParams({
@@ -22,29 +27,61 @@ export class LandWatchAdapter implements CrawlerAdapter {
         page: (params.page || 1).toString()
       })
       
-      const response = await axios.get(`${searchUrl}?${urlParams}`, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        },
-        timeout: 30000
-      })
+      let response: any = null
+      let lastError: any = null
+      
+      // Try different URL patterns until one works
+      for (const searchUrl of searchUrls) {
+        try {
+          console.log(`Trying URL: ${searchUrl}?${urlParams}`)
+          response = await axios.get(`${searchUrl}?${urlParams}`, {
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+              'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+              'Accept-Language': 'en-US,en;q=0.5',
+              'Accept-Encoding': 'gzip, deflate',
+              'DNT': '1',
+              'Connection': 'keep-alive',
+              'Upgrade-Insecure-Requests': '1'
+            },
+            timeout: 15000
+          })
+          console.log(`Success with URL: ${searchUrl}, status: ${response.status}`)
+          break
+        } catch (error: any) {
+          console.log(`Failed URL: ${searchUrl}, error: ${error.response?.status || error.message}`)
+          lastError = error
+          continue
+        }
+      }
+      
+      if (!response) {
+        throw new Error(`All URLs failed. Last error: ${lastError?.response?.status || lastError?.message}`)
+      }
       
       const $ = cheerio.load(response.data)
       
-      // Parse listings from search results
-      $('.property-card').each((i, element) => {
+      // Parse listings from search results - try multiple selectors
+      let propertyElements = $('.property-card')
+      if (propertyElements.length === 0) {
+        propertyElements = $('.listing-card, .property-item, .listing-item, [data-listing-id], .search-result')
+      }
+      
+      console.log(`Found ${propertyElements.length} property elements`)
+      
+      propertyElements.each((i, element) => {
         const $el = $(element)
         
         const listing: ListingCandidate = {
           sourceId: this.sourceId,
-          externalId: $el.attr('data-property-id') || undefined,
-          url: this.baseUrl + $el.find('a.property-title').attr('href'),
-          title: $el.find('.property-title').text().trim(),
-          description: $el.find('.property-description').text().trim(),
-          acreage: this.parseAcreage($el.find('.property-acres').text()),
-          county: this.extractCounty($el.find('.property-location').text()),
-          state: this.extractState($el.find('.property-location').text()),
-          price: this.parsePrice($el.find('.property-price').text()),
+          externalId: $el.attr('data-property-id') || $el.attr('data-listing-id') || undefined,
+          url: this.baseUrl + ($el.find('a.property-title').attr('href') || $el.find('a').first().attr('href') || ''),
+          title: ($el.find('.property-title').text() || $el.find('h2, h3, .title').first().text()).trim(),
+          description: ($el.find('.property-description').text() || $el.find('.description').text()).trim(),
+          acreage: this.parseAcreage($el.find('.property-acres, .acres').text() || $el.text()),
+          county: this.extractCounty($el.find('.property-location, .location').text() || $el.text()),
+          state: this.extractState($el.find('.property-location, .location').text() || $el.text()),
+          price: this.parsePrice($el.find('.property-price, .price').text() || $el.text()),
           status: 'listed',
           photos: this.extractPhotos($el)
         }
@@ -62,7 +99,12 @@ export class LandWatchAdapter implements CrawlerAdapter {
           listing.lon = parseFloat(lon)
         }
         
-        listings.push(listing)
+        // Only add if we have minimum required data
+        if (listing.title && listing.acreage > 0 && listing.url) {
+          listings.push(listing)
+        } else {
+          console.log(`Skipping incomplete listing: ${listing.title || 'No title'}, ${listing.acreage} acres`)
+        }
       })
       
     } catch (error) {
