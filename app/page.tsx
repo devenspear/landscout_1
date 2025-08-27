@@ -1,13 +1,14 @@
 import { redirect } from 'next/navigation'
-import { auth } from '@clerk/nextjs/server'
+// import { auth } from '@clerk/nextjs/server'
 
 export default function HomePage() {
-  const { userId } = auth()
+  // Temporarily bypass authentication
+  // const { userId } = auth()
+  // 
+  // if (!userId) {
+  //   redirect('/sign-in')
+  // }
   
-  if (!userId) {
-    redirect('/sign-in')
-  }
-  
-  // Redirect authenticated users to dashboard
+  // Redirect to dashboard directly for development
   redirect('/dashboard')
 }

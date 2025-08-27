@@ -2,7 +2,8 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { UserButton } from '@clerk/nextjs'
+// import { UserButton } from '@clerk/nextjs'
+import { User } from 'lucide-react'
 import { 
   Home, 
   Search, 
@@ -68,13 +69,10 @@ export function Navigation() {
       <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <UserButton 
-              appearance={{
-                elements: {
-                  avatarBox: "w-8 h-8 rounded-full ring-2 ring-gray-200 dark:ring-gray-600 hover:ring-blue-500 transition-all duration-200"
-                }
-              }}
-            />
+            {/* Temporary user avatar placeholder */}
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center ring-2 ring-gray-200 dark:ring-gray-600 hover:ring-blue-500 transition-all duration-200 cursor-pointer">
+              <User className="w-4 h-4 text-white" />
+            </div>
           </div>
           <ThemeToggle />
         </div>
