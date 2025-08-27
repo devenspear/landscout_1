@@ -17,10 +17,7 @@ export default function DashboardLayout({
 
   return (
     <>
-      <div className="md:hidden">
-        {/* Mobile top bar */}
-        {/* Imported dynamically below */}
-      </div>
+      <MobileNavigation />
       <div className="flex min-h-screen-ios bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
         <Navigation />
         <main className="flex-1 overflow-hidden bg-gray-50 dark:bg-gray-900 transition-colors duration-200 pb-safe pt-16 md:pt-0">

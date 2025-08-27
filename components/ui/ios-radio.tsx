@@ -61,30 +61,33 @@ export function IOSRadioItem({ value, children, disabled = false }: IOSRadioItem
       )}>
         {children}
       </span>
-      <div className="ml-3 grid place-items-center">
+      <div className="ml-3 relative h-7 w-7 flex items-center justify-center">
+        {/* Soft background "pill" */}
         <div
           className={cn(
-            "w-7 h-7 rounded-full grid place-items-center transition-all duration-200",
+            "absolute inset-0 rounded-full transition-colors",
             isSelected
               ? "bg-blue-100 dark:bg-blue-900/30"
               : "bg-gray-100/80 dark:bg-gray-700/50"
           )}
+        />
+        {/* Stroke circle with inner dot */}
+        <div
+          className={cn(
+            "z-10 flex items-center justify-center rounded-full border-2 transition-colors",
+            isSelected
+              ? "border-blue-500 bg-blue-500"
+              : "border-gray-300 dark:border-gray-600 bg-transparent"
+          )}
+          style={{ width: 20, height: 20 }}
         >
           <div
             className={cn(
-              "rounded-full box-border grid place-items-center ring-2",
-              isSelected ? "bg-blue-500 ring-blue-500" : "bg-transparent ring-gray-300 dark:ring-gray-600"
+              "rounded-full transition-colors",
+              isSelected ? "bg-white" : "bg-transparent"
             )}
-            style={{ width: '18px', height: '18px' }}
-          >
-            <div
-              className={cn(
-                "rounded-full transition-transform duration-200",
-                isSelected ? "bg-white" : "bg-transparent"
-              )}
-              style={{ width: '8px', height: '8px' }}
-            />
-          </div>
+            style={{ width: 8, height: 8 }}
+          />
         </div>
       </div>
     </button>
