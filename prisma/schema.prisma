@@ -4,9 +4,8 @@ generator client {
 }
 
 datasource db {
-  provider   = "sqlite"
-  url        = env("DATABASE_URL")
-  // extensions = [postgis] // Not available in SQLite
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model AdminConfig {

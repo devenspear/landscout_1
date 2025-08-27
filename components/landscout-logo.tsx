@@ -26,28 +26,38 @@ export function LandScoutLogo({
       {/* Logo Icon */}
       <div className={`${sizeClasses[size]} relative`}>
         <svg
-          viewBox="0 0 100 100"
+          viewBox="0 0 100 60"
           className="h-full w-full"
           fill="none"
         >
-          {/* Sun/Moon background */}
-          <circle
-            cx="50"
-            cy="35"
-            r="25"
-            className="fill-amber-400 dark:fill-amber-300"
+          {/* Golden sun arc - matches the image */}
+          <path
+            d="M10 25 Q50 10 90 25 Q50 15 10 25 Z"
+            fill="#D4AF37"
+            className="opacity-90"
           />
           
-          {/* Rolling hills */}
+          {/* Back rolling hill - darker green */}
           <path
-            d="M10 60 C30 45, 40 55, 50 50 C60 45, 70 55, 90 45 L90 90 L10 90 Z"
-            className="fill-green-600 dark:fill-green-500"
+            d="M0 35 Q25 25 50 32 Q75 25 100 35 L100 60 L0 60 Z"
+            fill="#2F5233"
+            className="dark:fill-green-800"
           />
           
-          {/* Front hill */}
+          {/* Front rolling hill - brighter green */}
           <path
-            d="M15 70 C35 55, 45 65, 55 60 C65 55, 75 65, 85 60 L85 90 L15 90 Z"
-            className="fill-green-700 dark:fill-green-600"
+            d="M0 40 Q20 30 40 37 Q60 30 80 38 Q90 35 100 40 L100 60 L0 60 Z"
+            fill="#4A7C59"
+            className="dark:fill-green-600"
+          />
+          
+          {/* White/cream separator curve - matches the image */}
+          <path
+            d="M15 32 Q35 28 55 32 Q75 28 85 32"
+            stroke="#F5F5DC"
+            strokeWidth="1.5"
+            fill="none"
+            opacity="0.8"
           />
         </svg>
       </div>

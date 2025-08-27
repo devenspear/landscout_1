@@ -1,0 +1,16 @@
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Golden sun arc -->
+  <path d="M50 60 Q200 20 350 60 Q200 40 50 60 Z" fill="#D4AF37" opacity="0.9"/>
+  
+  <!-- Back rolling hill -->
+  <path d="M0 120 Q100 80 200 110 Q300 80 400 120 L400 200 L0 200 Z" fill="#2F5233" opacity="0.8"/>
+  
+  <!-- Front rolling hill -->
+  <path d="M0 140 Q80 100 160 130 Q240 100 320 135 Q360 125 400 140 L400 200 L0 200 Z" fill="#4A7C59"/>
+  
+  <!-- Separator curve -->
+  <path d="M100 125 Q140 115 180 125 Q200 120 220 125" stroke="#F5F5DC" stroke-width="3" fill="none" opacity="0.6"/>
+  
+  <!-- LandScout text -->
+  <text x="50" y="300" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#333">LandScout</text>
+</svg>
