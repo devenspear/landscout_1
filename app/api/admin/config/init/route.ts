@@ -31,6 +31,34 @@ export async function POST(req: NextRequest) {
       }
     })
     
+    // Also create the source records if they don't exist
+    try {
+      const existingSources = await prisma.source.count()
+      if (existingSources === 0) {
+        // Create source records from the config
+        const sources = DEFAULT_ADMIN_CONFIG.listingSources.map(source => ({
+          id: source.id,
+          name: source.name,
+          baseUrl: source.baseUrl,
+          type: source.type,
+          adapter: source.adapter,
+          enabled: source.enabled,
+          crawlFrequency: source.crawlFrequency,
+          rateLimitPerMin: source.rateLimitPerMin
+        }))
+        
+        await prisma.source.createMany({
+          data: sources,
+          skipDuplicates: true
+        })
+        
+        console.log(`Created ${sources.length} source records`)
+      }
+    } catch (sourceError) {
+      console.error('Failed to create sources:', sourceError)
+      // Continue anyway - the main config was created
+    }
+    
     return NextResponse.json({ 
       message: 'Admin config created successfully',
       config: JSON.parse(adminConfig.config)

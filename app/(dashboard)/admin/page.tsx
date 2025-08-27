@@ -96,7 +96,7 @@ export default function AdminPage() {
   }
 
   return (
-    <div className="p-6 max-w-7xl mx-auto">
+    <div className="p-6 max-w-7xl mx-auto min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <div className="mb-8">
         <div className="flex justify-between items-center">
           <div>

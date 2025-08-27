@@ -20,18 +20,33 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Admin config not found' }, { status: 404 })
     }
     
+    let parsedConfig
+    try {
+      parsedConfig = JSON.parse(adminConfig.config)
+    } catch (error) {
+      console.error('Failed to parse admin config:', error)
+      return NextResponse.json({ error: 'Invalid admin config format' }, { status: 500 })
+    }
+    
     // Start scan in background (non-blocking)
-    const scanner = new LandScanner(adminConfig.config as any)
-    
-    // Run scan asynchronously
-    scanner.runScan('on-demand').catch(error => {
-      console.error('Background scan failed:', error)
-    })
-    
-    return NextResponse.json({ 
-      message: 'Scan started successfully',
-      status: 'running'
-    })
+    try {
+      const scanner = new LandScanner(parsedConfig)
+      
+      // Run scan asynchronously
+      scanner.runScan('on-demand').catch(error => {
+        console.error('Background scan failed:', error)
+      })
+      
+      return NextResponse.json({ 
+        message: 'Scan started successfully',
+        status: 'running'
+      })
+    } catch (scannerError) {
+      console.error('Failed to create scanner or start scan:', scannerError)
+      return NextResponse.json({ 
+        error: 'Failed to initialize scanner: ' + (scannerError as Error).message 
+      }, { status: 500 })
+    }
     
   } catch (error) {
     console.error('Scan API error:', error)
