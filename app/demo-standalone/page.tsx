@@ -54,14 +54,14 @@ export default async function DemoStandalonePage() {
     <html lang="en">
       <head>
         <title>ThriveMore Land Intelligence - Demo</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <Script 
           src="https://cdn.tailwindcss.com" 
           strategy="beforeInteractive"
         />
       </head>
       <body className="bg-gray-50">
-        <div className="min-h-screen">
+        <div className="min-h-[100svh] pb-[env(safe-area-inset-bottom)]">
           {/* Navigation */}
           <nav className="bg-white border-b border-gray-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

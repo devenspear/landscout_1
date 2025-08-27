@@ -42,7 +42,7 @@ export default async function DashboardPage() {
   const stats = await getDashboardStats()
 
   return (
-    <div className="p-6 bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors duration-200">
+    <div className="p-6 bg-gray-50 dark:bg-gray-900 min-h-screen-ios pb-safe transition-colors duration-200">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Dashboard</h1>
         <p className="text-gray-600 dark:text-gray-400 mt-1">Overview of your AI-powered land discovery pipeline</p>

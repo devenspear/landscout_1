@@ -6,9 +6,9 @@ export default function DemoLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen-ios bg-gray-50">
       <Navigation />
-      <main className="flex-1 overflow-hidden">
+      <main className="flex-1 overflow-hidden pb-safe">
         {children}
       </main>
     </div>

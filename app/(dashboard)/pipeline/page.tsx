@@ -107,7 +107,7 @@ export default function PipelinePage() {
   }, {} as Record<string, typeof deals>)
 
   return (
-    <div className="p-6 bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors duration-200">
+    <div className="p-6 bg-gray-50 dark:bg-gray-900 min-h-screen-ios pb-safe transition-colors duration-200">
       <div className="mb-8">
         <div className="flex justify-between items-center">
           <div>
@@ -186,7 +186,7 @@ export default function PipelinePage() {
       </div>
 
       {/* Kanban Board */}
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto scroll-ios">
         <div className="flex gap-6 pb-4" style={{ minWidth: 'max-content' }}>
           {stages.map((stage) => {
             const stageDeals = dealsByStage[stage.id] || []

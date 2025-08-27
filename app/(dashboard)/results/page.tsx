@@ -89,7 +89,7 @@ export default function ResultsPage() {
   }
 
   return (
-    <div className="p-6 bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors duration-200">
+    <div className="p-6 bg-gray-50 dark:bg-gray-900 min-h-screen-ios pb-safe transition-colors duration-200">
       <div className="mb-8">
         <div className="flex justify-between items-center">
           <div>

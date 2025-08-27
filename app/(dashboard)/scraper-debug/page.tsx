@@ -103,7 +103,7 @@ export default function ScraperDebugPage() {
   }
   
   return (
-    <div className="p-6 max-w-7xl mx-auto min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="p-6 max-w-7xl mx-auto min-h-screen-ios pb-safe bg-gray-50 dark:bg-gray-900">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
           Scraper Debug Dashboard

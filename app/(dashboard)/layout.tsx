@@ -15,9 +15,9 @@ export default function DashboardLayout({
   // }
 
   return (
-    <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+    <div className="flex min-h-screen-ios bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <Navigation />
-      <main className="flex-1 overflow-hidden bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
+      <main className="flex-1 overflow-hidden bg-gray-50 dark:bg-gray-900 transition-colors duration-200 pb-safe">
         {children}
       </main>
     </div>

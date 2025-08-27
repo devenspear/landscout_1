@@ -31,7 +31,7 @@ export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 w-64 min-h-screen backdrop-blur-xl bg-white/90 dark:bg-gray-800/90 transition-all duration-200">
+    <nav className="bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 w-64 min-h-screen-ios pb-safe backdrop-blur-xl bg-white/90 dark:bg-gray-800/90 transition-all duration-200">
       {/* Header with Logo */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <LandScoutLogo size="md" showText={false} />
@@ -68,7 +68,7 @@ export function Navigation() {
       </div>
       
       {/* Bottom Section with User Controls */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
+      <div className="absolute bottom-safe left-0 right-0 p-4 border-t border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <UserButton 
