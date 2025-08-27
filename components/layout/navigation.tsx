@@ -13,6 +13,8 @@ import {
   Database
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { LandScoutLogo } from '@/components/landscout-logo'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: Home },
@@ -26,15 +28,15 @@ export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="bg-white border-r border-gray-200 w-64 min-h-screen">
-      <div className="p-4">
-        <h1 className="text-xl font-bold text-gray-900">
-          ThriveMore Land Intelligence
-        </h1>
+    <nav className="bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 w-64 min-h-screen backdrop-blur-xl bg-white/90 dark:bg-gray-800/90 transition-all duration-200">
+      {/* Header with Logo */}
+      <div className="p-6 border-b border-gray-200 dark:border-gray-700">
+        <LandScoutLogo size="md" />
       </div>
       
-      <div className="mt-8">
-        <ul className="space-y-2 px-4">
+      {/* Navigation Links */}
+      <div className="mt-6">
+        <ul className="space-y-1 px-3">
           {navigation.map((item) => {
             const Icon = item.icon
             const isActive = pathname === item.href
@@ -44,13 +46,16 @@ export function Navigation() {
                 <Link
                   href={item.href}
                   className={cn(
-                    'flex items-center px-3 py-2 text-sm font-medium rounded-md',
+                    'group flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ease-out',
                     isActive
-                      ? 'bg-blue-100 text-blue-900'
-                      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-50'
+                      ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25 scale-[1.02]'
+                      : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700/50 hover:scale-[1.01]'
                   )}
                 >
-                  <Icon className="mr-3 h-5 w-5" />
+                  <Icon className={cn(
+                    "mr-3 h-5 w-5 transition-transform duration-200",
+                    isActive ? "scale-110" : "group-hover:scale-105"
+                  )} />
                   {item.name}
                 </Link>
               </li>
@@ -59,9 +64,19 @@ export function Navigation() {
         </ul>
       </div>
       
-      <div className="absolute bottom-4 left-4 right-4">
+      {/* Bottom Section with User Controls */}
+      <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
         <div className="flex items-center justify-between">
-          <UserButton />
+          <div className="flex items-center space-x-3">
+            <UserButton 
+              appearance={{
+                elements: {
+                  avatarBox: "w-8 h-8 rounded-full ring-2 ring-gray-200 dark:ring-gray-600 hover:ring-blue-500 transition-all duration-200"
+                }
+              }}
+            />
+          </div>
+          <ThemeToggle />
         </div>
       </div>
     </nav>

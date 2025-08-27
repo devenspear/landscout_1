@@ -14,9 +14,9 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
       <Navigation />
-      <main className="flex-1 overflow-hidden">
+      <main className="flex-1 overflow-hidden bg-white dark:bg-gray-900">
         {children}
       </main>
     </div>

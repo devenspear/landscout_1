@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import Script from 'next/script'
 
 async function getDashboardStats() {
   try {
@@ -54,7 +55,10 @@ export default async function DemoStandalonePage() {
       <head>
         <title>ThriveMore Land Intelligence - Demo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://cdn.tailwindcss.com"></script>
+        <Script 
+          src="https://cdn.tailwindcss.com" 
+          strategy="beforeInteractive"
+        />
       </head>
       <body className="bg-gray-50">
         <div className="min-h-screen">
