@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import { Activity, MapPin, Star, TrendingUp, Play, Eye, Download, Search } from 'lucide-react'
+import { Activity, MapPin, Star, TrendingUp, Play, Search } from 'lucide-react'
+import { DashboardActions } from '@/components/dashboard/dashboard-actions'
 
 async function getDashboardStats() {
   const [
@@ -169,26 +169,7 @@ export default async function DashboardPage() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="space-y-4">
-              <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25 hover:scale-105 transition-all duration-200">
-                <Play className="w-4 h-4 mr-2" />
-                Run On-Demand Scan
-              </Button>
-              <Button 
-                variant="outline" 
-                className="w-full hover:scale-105 transition-all duration-200 backdrop-blur-sm bg-white/50 dark:bg-gray-800/50"
-              >
-                <Eye className="w-4 h-4 mr-2" />
-                View High Fit Properties
-              </Button>
-              <Button 
-                variant="outline" 
-                className="w-full hover:scale-105 transition-all duration-200 backdrop-blur-sm bg-white/50 dark:bg-gray-800/50"
-              >
-                <Download className="w-4 h-4 mr-2" />
-                Export Results
-              </Button>
-            </div>
+            <DashboardActions />
           </CardContent>
         </Card>
       </div>
