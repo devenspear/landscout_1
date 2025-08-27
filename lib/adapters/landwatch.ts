@@ -40,11 +40,11 @@ export class LandWatchAdapter implements CrawlerAdapter {
       
       // Try different URL patterns until one works
       for (const searchUrl of searchUrls) {
+        const fullUrl = `${searchUrl}?${urlParams}`
+        this.logger.info(`Attempting request to: ${fullUrl}`)
+        const requestTimer = this.logger.startTimer(`request-${searchUrls.indexOf(searchUrl)}`)
+        
         try {
-          const fullUrl = `${searchUrl}?${urlParams}`
-          this.logger.info(`Attempting request to: ${fullUrl}`)
-          const requestTimer = this.logger.startTimer(`request-${searchUrls.indexOf(searchUrl)}`)
-          
           response = await axios.get(fullUrl, {
             headers: {
               'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -122,19 +122,25 @@ export class LandWatchAdapter implements CrawlerAdapter {
         if (listing.title && listing.acreage > 0 && listing.url) {
           listings.push(listing)
         } else {
-          console.log(`Skipping incomplete listing: ${listing.title || 'No title'}, ${listing.acreage} acres`)
+          this.logger.debug(`Skipping incomplete listing: ${listing.title || 'No title'}, ${listing.acreage} acres`)
         }
       })
       
     } catch (error) {
-      console.error('LandWatch search error:', error)
+      searchTimer()
+      this.logger.error('LandWatch search error:', error)
       throw new Error(`Failed to search LandWatch: ${error}`)
     }
     
+    searchTimer()
+    this.logger.info(`Search completed successfully`, { count: listings.length })
     return listings
   }
   
   async getDetails(url: string): Promise<ListingCandidate> {
+    this.logger.info('Getting property details', { url })
+    const detailTimer = this.logger.startTimer('getDetails')
+    
     try {
       const response = await axios.get(url, {
         headers: {
@@ -178,10 +184,13 @@ export class LandWatchAdapter implements CrawlerAdapter {
         listing.pricePerAcre = listing.price / listing.acreage
       }
       
+      detailTimer()
+      this.logger.info('Property details retrieved successfully')
       return listing
       
     } catch (error) {
-      console.error('LandWatch details error:', error)
+      detailTimer()
+      this.logger.error('LandWatch details error:', error)
       throw new Error(`Failed to get LandWatch details: ${error}`)
     }
   }
