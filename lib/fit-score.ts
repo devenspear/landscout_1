@@ -67,10 +67,13 @@ export function calculateFitScore(
   if (features) {
     const waterScore = features.waterPresence ? 100 : 30
     scores.waterPresence = (waterScore * weights.waterPresence) / 100
-    if (features.waterPresence && features.waterFeatures.length > 0) {
+    if (features.waterPresence && features.waterFeatures && features.waterFeatures.length > 0) {
+      const waterFeaturesList = typeof features.waterFeatures === 'string' 
+        ? JSON.parse(features.waterFeatures) 
+        : features.waterFeatures
       reasons.push({ 
         score: scores.waterPresence, 
-        reason: `Water features: ${features.waterFeatures.join(', ')}` 
+        reason: `Water features: ${waterFeaturesList.join(', ')}` 
       })
     }
   } else {
@@ -127,12 +130,15 @@ export function calculateFitScore(
   
   // 8. Easement Penalty
   if (features?.easements && features.easements.length > 0) {
-    const easementScore = Math.max(0, 100 - (features.easements.length * 20))
+    const easementsList = typeof features.easements === 'string' 
+      ? JSON.parse(features.easements) 
+      : features.easements
+    const easementScore = Math.max(0, 100 - (easementsList.length * 20))
     scores.easementPenalty = (easementScore * weights.easementPenalty) / 100
     if (easementScore < 50) {
       reasons.push({ 
         score: -scores.easementPenalty, 
-        reason: `Easements: ${features.easements.join(', ')}` 
+        reason: `Easements: ${easementsList.join(', ')}` 
       })
     }
   } else {

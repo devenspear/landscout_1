@@ -93,7 +93,7 @@ export class LandScanner {
             where: { id: sourceRun.id },
             data: {
               status: 'failed',
-              errors: { message: String(error) }
+              errors: String(error)
             }
           })
         }
@@ -113,7 +113,7 @@ export class LandScanner {
           updatedCount: totalUpdated,
           duplicateCount: totalDuplicates,
           errorCount: totalErrors,
-          errors: errors.length > 0 ? errors : null
+          errors: errors.length > 0 ? JSON.stringify(errors) : null
         }
       })
       
@@ -127,7 +127,7 @@ export class LandScanner {
         data: {
           status: 'failed',
           completedAt: new Date(),
-          errors: { message: String(error) }
+          errors: String(error)
         }
       })
       
@@ -160,7 +160,7 @@ export class LandScanner {
             price: candidate.price,
             pricePerAcre: candidate.pricePerAcre,
             status: candidate.status,
-            photos: candidate.photos,
+            photos: candidate.photos ? JSON.stringify(candidate.photos) : null,
             lastSeenAt: new Date(),
             lastChangedAt: new Date()
           }
@@ -202,8 +202,8 @@ export class LandScanner {
         price: candidate.price,
         pricePerAcre: candidate.pricePerAcre,
         status: candidate.status,
-        photos: candidate.photos,
-        sourceData: candidate.metadata
+        photos: candidate.photos ? JSON.stringify(candidate.photos) : null,
+        sourceData: candidate.metadata ? JSON.stringify(candidate.metadata) : null
       }
     })
     
@@ -268,8 +268,8 @@ export class LandScanner {
       where: { parcelId },
       update: {
         overallScore: fitScore.overallScore,
-        scoreBreakdown: fitScore.scoreBreakdown,
-        topReasons: fitScore.topReasons,
+        scoreBreakdown: JSON.stringify(fitScore.scoreBreakdown),
+        topReasons: JSON.stringify(fitScore.topReasons),
         autoFailed: fitScore.autoFailed,
         autoFailReason: fitScore.autoFailReason,
         computedAt: new Date()
@@ -277,8 +277,8 @@ export class LandScanner {
       create: {
         parcelId,
         overallScore: fitScore.overallScore,
-        scoreBreakdown: fitScore.scoreBreakdown,
-        topReasons: fitScore.topReasons,
+        scoreBreakdown: JSON.stringify(fitScore.scoreBreakdown),
+        topReasons: JSON.stringify(fitScore.topReasons),
         autoFailed: fitScore.autoFailed,
         autoFailReason: fitScore.autoFailReason
       }

@@ -159,7 +159,7 @@ export class LandWatchAdapter implements CrawlerAdapter {
       })
     } else {
       // Search result card
-      const mainImg = $el.find('img.property-image').attr('src')
+      const mainImg = ($el as cheerio.Cheerio<any>).find('img.property-image').attr('src')
       if (mainImg) photos.push(mainImg)
     }
     
