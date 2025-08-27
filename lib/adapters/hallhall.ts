@@ -1,22 +1,52 @@
 import axios from 'axios'
 import * as cheerio from 'cheerio'
 import { CrawlerAdapter, ListingCandidate, SearchParams } from './types'
+import { DebugLogger } from '../debug-logger'
 
 export class HallAndHallAdapter implements CrawlerAdapter {
   name = 'Hall and Hall'
   sourceId = 'hallhall'
   private baseUrl = 'https://hallhall.com'
+  private logger: DebugLogger
+  
+  constructor() {
+    this.logger = new DebugLogger('HallHallAdapter')
+  }
   
   async search(params: SearchParams): Promise<ListingCandidate[]> {
     const listings: ListingCandidate[] = []
+    this.logger.info('Starting Hall & Hall search', params)
+    const searchTimer = this.logger.startTimer('search')
     
     try {
-      // Hall and Hall uses a different URL structure
+      // First test basic connectivity
+      this.logger.info('Testing basic connectivity to Hall & Hall')
+      const connectTimer = this.logger.startTimer('connectivity')
+      
+      const testResponse = await axios.get(this.baseUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        },
+        timeout: 10000
+      })
+      
+      connectTimer()
+      this.logger.info(`Connectivity test successful: ${testResponse.status}`, { 
+        contentLength: testResponse.data?.length,
+        title: testResponse.data?.match(/<title[^>]*>([^<]+)<\/title>/i)?.[1]
+      })
+      
+      // Now try the search
       const searchUrl = `${this.baseUrl}/ranches-for-sale`
+      this.logger.info(`Attempting search request to: ${searchUrl}`)
+      const requestTimer = this.logger.startTimer('search-request')
       
       const response = await axios.get(searchUrl, {
         headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+          'Accept-Language': 'en-US,en;q=0.5',
+          'Connection': 'keep-alive'
         },
         params: {
           'min_acres': params.minAcreage,
@@ -24,25 +54,56 @@ export class HallAndHallAdapter implements CrawlerAdapter {
           'states': params.states.join(','),
           'page': params.page || 1
         },
-        timeout: 30000
+        timeout: 15000
+      })
+      
+      requestTimer()
+      this.logger.info(`Search request successful: ${response.status}`, { 
+        contentLength: response.data?.length 
       })
       
       const $ = cheerio.load(response.data)
       
-      // Parse listings - Hall and Hall has a different structure
-      $('.ranch-listing, .property-item').each((i, element) => {
+      // Parse listings - try multiple selector patterns
+      let propertyElements = $('.ranch-listing, .property-item')
+      if (propertyElements.length === 0) {
+        propertyElements = $('.listing-card, .property-card, .ranch-card, [data-listing], .result')
+      }
+      if (propertyElements.length === 0) {
+        propertyElements = $('div[class*="listing"], div[class*="property"], div[class*="ranch"], article')
+      }
+      
+      this.logger.info(`Found ${propertyElements.length} property elements`)
+      
+      // Log page analysis if no elements found
+      if (propertyElements.length === 0) {
+        this.logger.warn('No property elements found. Page analysis:', {
+          title: $('title').text(),
+          bodyLength: $('body').text().length,
+          hasRanchText: $('body').text().toLowerCase().includes('ranch'),
+          hasAcresText: $('body').text().toLowerCase().includes('acres'),
+          commonElements: {
+            divs: $('div').length,
+            articles: $('article').length,
+            cards: $('.card').length,
+            listings: $('[class*="listing"]').length
+          }
+        })
+      }
+      
+      propertyElements.each((i, element) => {
         const $el = $(element)
         
         const listing: ListingCandidate = {
           sourceId: this.sourceId,
           externalId: $el.attr('data-listing-id') || undefined,
-          url: this.baseUrl + $el.find('a.listing-link').attr('href'),
-          title: $el.find('.listing-title, h2').text().trim(),
-          description: $el.find('.listing-description, .summary').text().trim(),
-          acreage: this.parseAcreage($el.find('.acres, .size').text()),
-          county: this.extractCounty($el.find('.location').text()),
-          state: this.extractState($el.find('.location').text()),
-          price: this.parsePrice($el.find('.price').text()),
+          url: this.baseUrl + ($el.find('a.listing-link').attr('href') || $el.find('a').first().attr('href') || ''),
+          title: ($el.find('.listing-title, h2, h3, .title').first().text() || $el.find('a').first().text()).trim(),
+          description: ($el.find('.listing-description, .summary, .description').first().text()).trim(),
+          acreage: this.parseAcreage($el.find('.acres, .size, .acreage').text() || $el.text()),
+          county: this.extractCounty($el.find('.location, .address').text() || $el.text()),
+          state: this.extractState($el.find('.location, .address').text() || $el.text()),
+          price: this.parsePrice($el.find('.price, .cost').text() || $el.text()),
           status: 'listed',
           photos: this.extractPhotos($el)
         }
@@ -52,15 +113,26 @@ export class HallAndHallAdapter implements CrawlerAdapter {
           listing.pricePerAcre = listing.price / listing.acreage
         }
         
-        listings.push(listing)
+        // Only add if we have minimum required data and meets acreage requirements
+        if (listing.title && listing.acreage > 0 && listing.url) {
+          if (listing.acreage >= params.minAcreage && listing.acreage <= params.maxAcreage) {
+            listings.push(listing)
+          } else {
+            this.logger.debug(`Skipping listing outside acreage range: ${listing.title}, ${listing.acreage} acres`)
+          }
+        } else {
+          this.logger.debug(`Skipping incomplete listing: ${listing.title || 'No title'}, ${listing.acreage} acres`)
+        }
       })
       
     } catch (error) {
-      console.error('Hall and Hall search error:', error)
-      // Return empty array instead of throwing - graceful degradation
-      return []
+      searchTimer()
+      this.logger.error('Hall & Hall search error:', error)
+      throw new Error(`Failed to search Hall & Hall: ${error}`)
     }
     
+    searchTimer()
+    this.logger.info(`Search completed successfully`, { count: listings.length })
     return listings
   }
   

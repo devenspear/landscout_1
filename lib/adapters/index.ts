@@ -1,6 +1,7 @@
 import { CrawlerAdapter } from './types'
 import { LandWatchAdapter } from './landwatch'
 import { HallAndHallAdapter } from './hallhall'
+import { HallAndHallPlaywrightAdapter } from './hallhall-playwright'
 
 // Stub adapters - to be implemented
 class StubAdapter implements CrawlerAdapter {
@@ -28,6 +29,7 @@ class StubAdapter implements CrawlerAdapter {
 export const adapters: Record<string, CrawlerAdapter> = {
   landwatch: new LandWatchAdapter(),
   hallhall: new HallAndHallAdapter(),
+  'hallhall-pw': new HallAndHallPlaywrightAdapter(),
   landandfarm: new StubAdapter('Land And Farm', 'landandfarm'),
   landsofamerica: new StubAdapter('Lands of America', 'landsofamerica'),
   whitetail: new StubAdapter('Whitetail Properties', 'whitetail'),

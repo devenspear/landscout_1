@@ -80,7 +80,9 @@ export async function POST(req: NextRequest) {
       searchError = {
         message: error.message,
         code: error.code,
-        response: error.response?.status
+        response: error.response?.status,
+        responseData: error.response?.data?.substring(0, 500), // First 500 chars of response
+        headers: error.response?.headers
       }
       logger.error('Search failed', searchError)
     }
@@ -178,6 +180,7 @@ export async function GET() {
   const adapters = [
     { id: 'landwatch', name: 'LandWatch', status: 'partial' },
     { id: 'hallhall', name: 'Hall and Hall', status: 'partial' },
+    { id: 'hallhall-pw', name: 'Hall and Hall (Playwright)', status: 'active' },
     { id: 'landandfarm', name: 'Land And Farm', status: 'stub' },
     { id: 'landsofamerica', name: 'Lands of America', status: 'stub' },
     { id: 'whitetail', name: 'Whitetail Properties', status: 'stub' },

@@ -19,28 +19,56 @@ export class LandWatchAdapter implements CrawlerAdapter {
     const searchTimer = this.logger.startTimer('search')
     
     try {
-      // Build search URL - try different URL patterns
-      const state = params.states[0]?.toLowerCase() || 'georgia'
-      const searchUrls = [
-        `${this.baseUrl}/${state}/land`,
-        `${this.baseUrl}/land/${state}`,
-        `${this.baseUrl}/search/land?state=${state}`,
-        `${this.baseUrl}/land`
-      ]
+      // First, visit homepage to establish session (avoid bot detection)
+      this.logger.info('Establishing session by visiting homepage first')
+      const sessionTimer = this.logger.startTimer('session-setup')
       
-      // Add filters
+      try {
+        await axios.get(this.baseUrl, {
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Accept-Encoding': 'gzip, deflate',
+            'DNT': '1',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1'
+          },
+          timeout: 10000
+        })
+        sessionTimer()
+        this.logger.info('Session established successfully')
+        
+        // Wait a bit to seem more human-like
+        await new Promise(resolve => setTimeout(resolve, 1000))
+        
+      } catch (sessionError) {
+        sessionTimer()
+        this.logger.warn('Session setup failed, proceeding anyway', sessionError)
+      }
+      
+      // Build search URL - use correct ASP.NET format
+      const state = params.states[0]?.toLowerCase() || 'ga'
+      
+      // LandWatch uses ASP.NET query parameters
+      // Start with simpler search to avoid anti-bot protection
       const urlParams = new URLSearchParams({
-        minacres: params.minAcreage.toString(),
-        maxacres: params.maxAcreage.toString(),
-        page: (params.page || 1).toString()
+        'ct': 'r',
+        'type': '13', // Start with basic land type
+        'state': state,
+        'pg': (params.page || 1).toString()
       })
+      
+      const searchUrls = [
+        `${this.baseUrl}/default.aspx?${urlParams}`
+      ]
       
       let response: any = null
       let lastError: any = null
       
       // Try different URL patterns until one works
       for (const searchUrl of searchUrls) {
-        const fullUrl = `${searchUrl}?${urlParams}`
+        const fullUrl = searchUrl // URL already includes params
         this.logger.info(`Attempting request to: ${fullUrl}`)
         
         // Add delay between requests to avoid rate limiting
@@ -61,7 +89,7 @@ export class LandWatchAdapter implements CrawlerAdapter {
               'Connection': 'keep-alive',
               'Upgrade-Insecure-Requests': '1'
             },
-            timeout: 30000
+            timeout: 15000
           })
           
           requestTimer()
@@ -146,9 +174,14 @@ export class LandWatchAdapter implements CrawlerAdapter {
           listing.lon = parseFloat(lon)
         }
         
-        // Only add if we have minimum required data
+        // Only add if we have minimum required data and meets acreage requirements
         if (listing.title && listing.acreage > 0 && listing.url) {
-          listings.push(listing)
+          // Apply client-side filtering for acreage since server-side filtering may trigger anti-bot
+          if (listing.acreage >= params.minAcreage && listing.acreage <= params.maxAcreage) {
+            listings.push(listing)
+          } else {
+            this.logger.debug(`Skipping listing outside acreage range: ${listing.title}, ${listing.acreage} acres`)
+          }
         } else {
           this.logger.debug(`Skipping incomplete listing: ${listing.title || 'No title'}, ${listing.acreage} acres`)
         }
