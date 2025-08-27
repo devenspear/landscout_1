@@ -34,7 +34,7 @@ export function Navigation() {
     <nav className="hidden md:block bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 md:w-64 min-h-screen-ios pb-safe backdrop-blur-xl bg-white/90 dark:bg-gray-800/90 transition-all duration-200">
       {/* Header with Logo */}
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-        <LandScoutLogo size="md" showText={false} />
+        <LandScoutLogo size="xl" showText={false} />
       </div>
       
       {/* Navigation Links */}

@@ -3,7 +3,7 @@ import Image from 'next/image'
 interface LandScoutLogoProps {
   className?: string
   showText?: boolean
-  size?: 'sm' | 'md' | 'lg'
+  size?: 'sm' | 'md' | 'lg' | 'xl'
 }
 
 export function LandScoutLogo({ 
@@ -14,7 +14,8 @@ export function LandScoutLogo({
   const sizeClasses = {
     sm: 'h-6',
     md: 'h-10', 
-    lg: 'h-16'
+    lg: 'h-16',
+    xl: 'h-20'
   }
 
   return (

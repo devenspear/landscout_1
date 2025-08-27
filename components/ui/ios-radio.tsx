@@ -61,19 +61,30 @@ export function IOSRadioItem({ value, children, disabled = false }: IOSRadioItem
       )}>
         {children}
       </span>
-      <div className="ml-3">
-        <div className={cn(
-          "w-5 h-5 rounded-full border-2 relative",
-          "transition-all duration-200",
-          isSelected 
-            ? "border-blue-500 bg-blue-500" 
-            : "border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800"
-        )}>
-          {isSelected && (
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-              <div className="w-2 h-2 rounded-full bg-white animate-scale-in" />
-            </div>
+      <div className="ml-3 grid place-items-center">
+        <div
+          className={cn(
+            "w-7 h-7 rounded-full grid place-items-center transition-all duration-200",
+            isSelected
+              ? "bg-blue-100 dark:bg-blue-900/30"
+              : "bg-gray-100/80 dark:bg-gray-700/50"
           )}
+        >
+          <div
+            className={cn(
+              "rounded-full box-border grid place-items-center ring-2",
+              isSelected ? "bg-blue-500 ring-blue-500" : "bg-transparent ring-gray-300 dark:ring-gray-600"
+            )}
+            style={{ width: '18px', height: '18px' }}
+          >
+            <div
+              className={cn(
+                "rounded-full transition-transform duration-200",
+                isSelected ? "bg-white" : "bg-transparent"
+              )}
+              style={{ width: '8px', height: '8px' }}
+            />
+          </div>
         </div>
       </div>
     </button>
