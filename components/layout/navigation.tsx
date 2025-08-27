@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-// import { UserButton } from '@clerk/nextjs'
+import { UserButton } from '@clerk/nextjs'
 import { User } from 'lucide-react'
 import { 
   Home, 
@@ -31,8 +31,8 @@ export function Navigation() {
   return (
     <nav className="bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 w-64 min-h-screen backdrop-blur-xl bg-white/90 dark:bg-gray-800/90 transition-all duration-200">
       {/* Header with Logo */}
-      <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-        <LandScoutLogo size="md" />
+      <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+        <LandScoutLogo size="md" showText={false} />
       </div>
       
       {/* Navigation Links */}
@@ -69,10 +69,13 @@ export function Navigation() {
       <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            {/* Temporary user avatar placeholder */}
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center ring-2 ring-gray-200 dark:ring-gray-600 hover:ring-blue-500 transition-all duration-200 cursor-pointer">
-              <User className="w-4 h-4 text-white" />
-            </div>
+            <UserButton 
+              appearance={{
+                elements: {
+                  avatarBox: "w-8 h-8"
+                }
+              }}
+            />
           </div>
           <ThemeToggle />
         </div>

@@ -13,38 +13,23 @@ export function LandScoutLogo({
 }: LandScoutLogoProps) {
   const sizeClasses = {
     sm: 'h-6',
-    md: 'h-8', 
-    lg: 'h-12'
-  }
-
-  const textSizeClasses = {
-    sm: 'text-lg',
-    md: 'text-xl',
-    lg: 'text-3xl'
+    md: 'h-10', 
+    lg: 'h-16'
   }
 
   return (
-    <div className={`flex items-center space-x-3 ${className}`}>
-      {/* Logo PNG */}
-      <div className={`${sizeClasses[size]} relative`}>
+    <div className={`flex items-center ${className}`}>
+      {/* Logo PNG - Full width of navigation */}
+      <div className="w-full flex justify-center">
         <Image
           src="/LandScout_logo2.png"
           alt="LandScout Logo"
           width={200}
           height={100}
-          className={`${sizeClasses[size]} w-auto object-contain`}
+          className={`${sizeClasses[size]} w-auto object-contain max-w-full`}
           priority
         />
       </div>
-
-      {/* Text - only show if showText is true and we want additional branding */}
-      {showText && size !== 'sm' && (
-        <div className="flex flex-col">
-          <span className="text-xs text-gray-500 dark:text-gray-400 -mt-1">
-            Land Intelligence
-          </span>
-        </div>
-      )}
     </div>
   )
 }

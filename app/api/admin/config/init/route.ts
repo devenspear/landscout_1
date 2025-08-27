@@ -5,10 +5,11 @@ import { DEFAULT_ADMIN_CONFIG } from '@/lib/admin-config-schema'
 
 export async function POST(req: NextRequest) {
   try {
-    const { userId } = auth()
-    if (!userId) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
+    // Temporarily bypass authentication for testing
+    // const { userId } = auth()
+    // if (!userId) {
+    //   return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    // }
     
     // Check if admin config exists
     const existingConfig = await prisma.adminConfig.findUnique({

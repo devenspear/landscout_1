@@ -1,11 +1,18 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 
-// Temporarily bypass Clerk authentication for development
-export function middleware(request: NextRequest) {
-  // Allow all requests to pass through
-  return NextResponse.next()
-}
+const isPublicRoute = createRouteMatcher([
+  '/',
+  '/demo(.*)',
+  '/sign-in(.*)',
+  '/sign-up(.*)',
+  '/api/health(.*)'
+])
+
+export default clerkMiddleware((auth, req) => {
+  // For now, allow all routes without authentication
+  // This can be modified later to protect specific routes
+  return
+})
 
 export const config = {
   matcher: [
