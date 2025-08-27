@@ -1,14 +1,22 @@
 import axios from 'axios'
 import * as cheerio from 'cheerio'
 import { CrawlerAdapter, ListingCandidate, SearchParams } from './types'
+import { DebugLogger } from '../debug-logger'
 
 export class LandWatchAdapter implements CrawlerAdapter {
   name = 'LandWatch'
   sourceId = 'landwatch'
   private baseUrl = 'https://www.landwatch.com'
+  private logger: DebugLogger
+  
+  constructor() {
+    this.logger = new DebugLogger('LandWatchAdapter')
+  }
   
   async search(params: SearchParams): Promise<ListingCandidate[]> {
     const listings: ListingCandidate[] = []
+    this.logger.info('Starting LandWatch search', params)
+    const searchTimer = this.logger.startTimer('search')
     
     try {
       // Build search URL - try different URL patterns
@@ -33,8 +41,11 @@ export class LandWatchAdapter implements CrawlerAdapter {
       // Try different URL patterns until one works
       for (const searchUrl of searchUrls) {
         try {
-          console.log(`Trying URL: ${searchUrl}?${urlParams}`)
-          response = await axios.get(`${searchUrl}?${urlParams}`, {
+          const fullUrl = `${searchUrl}?${urlParams}`
+          this.logger.info(`Attempting request to: ${fullUrl}`)
+          const requestTimer = this.logger.startTimer(`request-${searchUrls.indexOf(searchUrl)}`)
+          
+          response = await axios.get(fullUrl, {
             headers: {
               'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
               'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
@@ -46,10 +57,18 @@ export class LandWatchAdapter implements CrawlerAdapter {
             },
             timeout: 15000
           })
-          console.log(`Success with URL: ${searchUrl}, status: ${response.status}`)
+          
+          requestTimer()
+          this.logger.info(`Success! Status: ${response.status}, Size: ${response.data.length} bytes`)
           break
         } catch (error: any) {
-          console.log(`Failed URL: ${searchUrl}, error: ${error.response?.status || error.message}`)
+          requestTimer()
+          this.logger.warn(`Request failed`, {
+            url: searchUrl,
+            status: error.response?.status,
+            message: error.message,
+            code: error.code
+          })
           lastError = error
           continue
         }

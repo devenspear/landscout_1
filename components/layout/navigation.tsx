@@ -11,7 +11,8 @@ import {
   Kanban, 
   Settings, 
   Activity,
-  Database
+  Database,
+  Bug
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { LandScoutLogo } from '@/components/landscout-logo'
@@ -23,6 +24,7 @@ const navigation = [
   { name: 'Pipeline', href: '/pipeline', icon: Kanban },
   { name: 'Saved Searches', href: '/saved-searches', icon: MapPin },
   { name: 'Admin', href: '/admin', icon: Settings },
+  { name: 'Scraper Debug', href: '/scraper-debug', icon: Bug },
 ]
 
 export function Navigation() {
