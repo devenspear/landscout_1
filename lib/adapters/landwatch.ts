@@ -42,6 +42,12 @@ export class LandWatchAdapter implements CrawlerAdapter {
       for (const searchUrl of searchUrls) {
         const fullUrl = `${searchUrl}?${urlParams}`
         this.logger.info(`Attempting request to: ${fullUrl}`)
+        
+        // Add delay between requests to avoid rate limiting
+        if (searchUrls.indexOf(searchUrl) > 0) {
+          await new Promise(resolve => setTimeout(resolve, 2000))
+        }
+        
         const requestTimer = this.logger.startTimer(`request-${searchUrls.indexOf(searchUrl)}`)
         
         try {
@@ -55,7 +61,7 @@ export class LandWatchAdapter implements CrawlerAdapter {
               'Connection': 'keep-alive',
               'Upgrade-Insecure-Requests': '1'
             },
-            timeout: 15000
+            timeout: 30000
           })
           
           requestTimer()
@@ -85,8 +91,30 @@ export class LandWatchAdapter implements CrawlerAdapter {
       if (propertyElements.length === 0) {
         propertyElements = $('.listing-card, .property-item, .listing-item, [data-listing-id], .search-result')
       }
+      if (propertyElements.length === 0) {
+        propertyElements = $('.result-card, .land-listing, .property-row, .listing-row, [class*="property"], [class*="listing"]')
+      }
+      if (propertyElements.length === 0) {
+        propertyElements = $('div[id*="property"], div[id*="listing"], article, .card')
+      }
       
-      console.log(`Found ${propertyElements.length} property elements`)
+      this.logger.info(`Found ${propertyElements.length} property elements`)
+      
+      // Log page content for debugging if no elements found
+      if (propertyElements.length === 0) {
+        this.logger.warn('No property elements found. Page analysis:', {
+          title: $('title').text(),
+          bodyLength: $('body').text().length,
+          hasAcresText: $('body').text().toLowerCase().includes('acres'),
+          hasPropertyText: $('body').text().toLowerCase().includes('property'),
+          commonElements: {
+            divs: $('div').length,
+            articles: $('article').length,
+            cards: $('.card').length,
+            results: $('.result').length
+          }
+        })
+      }
       
       propertyElements.each((i, element) => {
         const $el = $(element)
