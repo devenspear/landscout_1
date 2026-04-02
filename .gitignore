@@ -41,5 +41,3 @@ next-env.d.ts
 prisma/*.db
 prisma/*.db-journal
 
-# lock files (pnpm local, npm for Vercel)
-pnpm-lock.yaml
