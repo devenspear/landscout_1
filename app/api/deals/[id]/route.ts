@@ -1,48 +1,35 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
 export async function PUT(
-  req: NextRequest,
-  { params }: { params: { id: string } }
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { userId } = auth()
-    if (!userId) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const { id } = await params
+    const body = await request.json()
+    const { stage, priority, notes, nextAction, nextDate } = body
+
+    const existing = await prisma.deal.findUnique({ where: { id } })
+    if (!existing) {
+      return NextResponse.json({ error: 'Deal not found' }, { status: 404 })
     }
-    
-    const body = await req.json()
-    const { stage, priority, notes, nextAction, nextActionDate } = body
-    
+
+    const data: Record<string, unknown> = {}
+    if (stage !== undefined) data.stage = stage
+    if (priority !== undefined) data.priority = priority
+    if (notes !== undefined) data.notes = notes
+    if (nextAction !== undefined) data.nextAction = nextAction
+    if (nextDate !== undefined) data.nextDate = nextDate ? new Date(nextDate) : null
+
     const deal = await prisma.deal.update({
-      where: { id: params.id },
-      data: {
-        stage,
-        priority,
-        notes,
-        nextAction,
-        nextActionDate: nextActionDate ? new Date(nextActionDate) : null,
-        updatedAt: new Date()
-      }
+      where: { id },
+      data,
     })
-    
-    // Log the stage change as an activity
-    if (stage) {
-      await prisma.activity.create({
-        data: {
-          dealId: params.id,
-          userId,
-          type: 'status_change',
-          description: `Stage changed to ${stage}`
-        }
-      })
-    }
-    
+
     return NextResponse.json(deal)
-    
   } catch (error) {
-    console.error('Deal update API error:', error)
+    console.error('Deal update error:', error)
     return NextResponse.json(
       { error: 'Failed to update deal' },
       { status: 500 }
@@ -51,33 +38,39 @@ export async function PUT(
 }
 
 export async function POST(
-  req: NextRequest,
-  { params }: { params: { id: string } }
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { userId } = auth()
-    if (!userId) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    const { id } = await params
+    const body = await request.json()
+    const { type, content } = body
+
+    if (!type || !content) {
+      return NextResponse.json(
+        { error: 'type and content are required' },
+        { status: 400 }
+      )
     }
-    
-    const body = await req.json()
-    const { type, description } = body
-    
+
+    const existing = await prisma.deal.findUnique({ where: { id } })
+    if (!existing) {
+      return NextResponse.json({ error: 'Deal not found' }, { status: 404 })
+    }
+
     const activity = await prisma.activity.create({
       data: {
-        dealId: params.id,
-        userId,
+        dealId: id,
         type,
-        description
-      }
+        content,
+      },
     })
-    
-    return NextResponse.json(activity)
-    
+
+    return NextResponse.json(activity, { status: 201 })
   } catch (error) {
-    console.error('Deal activity API error:', error)
+    console.error('Activity create error:', error)
     return NextResponse.json(
-      { error: 'Failed to add activity' },
+      { error: 'Failed to create activity' },
       { status: 500 }
     )
   }

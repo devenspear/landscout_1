@@ -1,266 +1,198 @@
 generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["postgresqlExtensions"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
-model AdminConfig {
-  id        String   @id @default(cuid())
-  orgId     String   @unique @default("default")
-  config    String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("admin_configs")
-}
-
-model Source {
-  id               String     @id @default(cuid())
-  name             String
-  baseUrl          String
-  type             String // portal, broker, county, enrichment
-  adapter          String
-  enabled          Boolean    @default(true)
-  crawlFrequency   String     @default("weekly")
-  rateLimitPerMin  Int        @default(6)
-  lastCrawledAt    DateTime?
-  metadata         String?
-  createdAt        DateTime   @default(now())
-  updatedAt        DateTime   @updatedAt
-  
-  listings         Listing[]
-  scanRuns         ScanRunSource[]
-
-  @@map("sources")
-}
-
-model ScanRun {
-  id               String          @id @default(cuid())
-  name             String?
-  runType          String          // weekly, on-demand
-  status           String          @default("pending") // pending, running, completed, failed
-  startedAt        DateTime        @default(now())
-  completedAt      DateTime?
-  processedCount   Int             @default(0)
-  newCount         Int             @default(0)
-  updatedCount     Int             @default(0)
-  duplicateCount   Int             @default(0)
-  errorCount       Int             @default(0)
-  resultCount      Int             @default(0)
-  errors           String?
-  config           String?         // JSON configuration for the search
-  metadata         String?
-  createdAt        DateTime        @default(now())
-  
-  sources          ScanRunSource[]
-  parcels          Parcel[]        @relation("ScanRunParcels")
-
-  @@map("scan_runs")
-}
-
-model ScanRunSource {
-  id          String   @id @default(cuid())
-  scanRunId   String
-  sourceId    String
-  status      String   @default("pending")
-  processed   Int      @default(0)
-  errors      String?
-  createdAt   DateTime @default(now())
-  
-  scanRun     ScanRun  @relation(fields: [scanRunId], references: [id])
-  source      Source   @relation(fields: [sourceId], references: [id])
-
-  @@unique([scanRunId, sourceId])
-  @@map("scan_run_sources")
-}
-
 model Parcel {
-  id               String          @id @default(cuid())
-  apn              String?
-  acreage          Float
-  geometry         String?         // GeoJSON geometry as string
-  centroidLat      Float?
-  centroidLon      Float?
-  county           String
-  countyFips       String?
-  state            String
-  address          String?
-  zoning           String?
-  zoningBucket     String?         // ag, timber, ruralRes, mixedUse, conservation
-  taxValue         Float?
-  taxYear          Int?
-  landUseCode      String?
-  metadata         String?
-  createdAt        DateTime        @default(now())
-  updatedAt        DateTime        @updatedAt
-  
-  listings         Listing[]
-  ownership        Ownership?
-  features         Features?
-  fitScore         FitScore?
-  deals            Deal[]
-  scanRuns         ScanRun[]       @relation("ScanRunParcels")
-  
+  id          String   @id @default(cuid())
+  apn         String?
+  address     String?
+  county      String
+  state       String
+  acreage     Float
+  lat         Float?
+  lon         Float?
+  zoning      String?
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  listings   Listing[]
+  features   Features?
+  fitScore   FitScore?
+  deal       Deal?
+  ownership  Ownership?
+
   @@unique([apn, county, state])
-  @@map("parcels")
+  @@index([state, county])
+  @@index([acreage])
 }
 
 model Listing {
-  id               String          @id @default(cuid())
-  sourceId         String
-  parcelId         String?
-  externalId       String?         // Source's listing ID
-  url              String
-  title            String
-  description      String?
-  price            Float?
-  pricePerAcre     Float?
-  status           String          @default("listed") // listed, off-market, distressed, sold
-  photos           String?         // JSON array of photo URLs
-  sourceData       String?         // Raw data from source
-  firstSeenAt      DateTime        @default(now())
-  lastSeenAt       DateTime        @default(now())
-  lastChangedAt    DateTime?
-  changeHistory    String?
-  createdAt        DateTime        @default(now())
-  updatedAt        DateTime        @updatedAt
-  
-  source           Source          @relation(fields: [sourceId], references: [id])
-  parcel           Parcel?         @relation(fields: [parcelId], references: [id])
-  
-  @@unique([sourceId, externalId])
-  @@map("listings")
-}
+  id           String   @id @default(cuid())
+  parcelId     String
+  sourceId     String
+  externalId   String?
+  url          String
+  title        String
+  price        Float?
+  pricePerAcre Float?
+  status       String   @default("listed")
+  photos       String?
+  metadata     String?
+  firstSeen    DateTime @default(now())
+  lastSeen     DateTime @default(now())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 
-model Ownership {
-  id               String          @id @default(cuid())
-  parcelId         String          @unique
-  ownerName        String?
-  ownerType        String?         // individual, LLC, corp, trust, government
-  mailingAddress   String?
-  mailingCity      String?
-  mailingState     String?
-  mailingZip       String?
-  phone            String?
-  email            String?
-  acquisitionDate  DateTime?
-  acquisitionPrice Float?
-  metadata         String?
-  createdAt        DateTime        @default(now())
-  updatedAt        DateTime        @updatedAt
-  
-  parcel           Parcel          @relation(fields: [parcelId], references: [id])
-  
-  @@map("ownerships")
+  parcel Parcel @relation(fields: [parcelId], references: [id], onDelete: Cascade)
+
+  @@unique([sourceId, externalId])
+  @@index([parcelId])
+  @@index([sourceId])
 }
 
 model Features {
-  id                String          @id @default(cuid())
-  parcelId          String          @unique
-  landCoverMix      String?         // JSON object {forest: %, pasture: %, crop: %, etc}
-  slopeStats        String?         // JSON object {min, max, mean, percentOver20, percentOver40}
-  elevationStats    String?         // JSON object {min, max, mean}
-  soilsClass        String?
-  soilsQuality      Int?            // 1-10 rating
-  waterPresence     Boolean         @default(false)
-  waterFeatures     String          @default("[]") // JSON array: creek, pond, lake, river, wetland
-  floodZone         String?
-  inFloodway        Boolean         @default(false)
-  wetlandsPercent   Float?
-  roadFrontage      Float?          // feet
-  roadAccess        String?         // paved, gravel, dirt, none
-  powerDistance     Float?          // miles
-  fiberDistance     Float?          // miles
-  waterDistance     Float?          // miles to municipal water
-  sewerDistance     Float?          // miles to sewer
-  gasDistance       Float?          // miles to natural gas
-  easements         String          @default("[]") // JSON array: conservation, utility, access, etc
-  improvementsValue Float?
-  improvements      String          @default("[]") // JSON array: house, barn, fence, etc
-  metroDistance     Float?          // miles to nearest metro
-  nearestMetro      String?
-  airportDistance   Float?          // miles
-  nearestAirport    String?
-  metadata          String?
-  createdAt         DateTime        @default(now())
-  updatedAt         DateTime        @updatedAt
-  
-  parcel            Parcel          @relation(fields: [parcelId], references: [id])
-  
-  @@map("features")
+  id             String  @id @default(cuid())
+  parcelId       String  @unique
+  landCoverMix   String?
+  waterPresence  Boolean @default(false)
+  waterFeatures  String?
+  metroDistance   Float?
+  nearestMetro   String?
+  slopeStats     String?
+  soilsQuality   Float?
+  roadAccess     String?
+  easements      String?
+  powerDistance   Float?
+  waterDistance   Float?
+  sewerDistance   Float?
+  fiberDistance   Float?
+  gasDistance     Float?
+  inFloodway     Boolean @default(false)
+  floodZone      String?
+  wetlandsPercent Float?
+  elevation      Float?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  parcel Parcel @relation(fields: [parcelId], references: [id], onDelete: Cascade)
 }
 
 model FitScore {
-  id                String          @id @default(cuid())
-  parcelId          String          @unique
-  overallScore      Int             // 0-100
-  scoreBreakdown    String          // JSON object {acreage: 20, landCover: 15, etc}
-  topReasons        String          @default("[]") // JSON array: Top 5 contributing factors
-  autoFailed        Boolean         @default(false)
-  autoFailReason    String?
-  scoreVersion      String          @default("1.0")
-  computedAt        DateTime        @default(now())
-  metadata          String?
-  createdAt         DateTime        @default(now())
-  updatedAt         DateTime        @updatedAt
-  
-  parcel            Parcel          @relation(fields: [parcelId], references: [id])
-  
-  @@map("fit_scores")
+  id             String   @id @default(cuid())
+  parcelId       String   @unique
+  overallScore   Int
+  scoreBreakdown String
+  topReasons     String
+  autoFailed     Boolean  @default(false)
+  autoFailReason String?
+  calculatedAt   DateTime @default(now())
+
+  parcel Parcel @relation(fields: [parcelId], references: [id], onDelete: Cascade)
 }
 
 model Deal {
-  id                String          @id @default(cuid())
-  parcelId          String
-  stage             String          @default("New") // New, Qualified, Triage, Pursuit, LOI, UC, Closed, Lost
-  priority          String?         // P0, P1, P2, P3
-  assignedTo        String?         // User ID from Clerk
-  ownerContact      String?         // JSON object
-  lastContactDate   DateTime?
-  nextActionDate    DateTime?
-  nextAction        String?
-  notes             String?
-  internalNotes     String?
-  metadata          String?
-  createdAt         DateTime        @default(now())
-  updatedAt         DateTime        @updatedAt
-  
-  parcel            Parcel          @relation(fields: [parcelId], references: [id])
-  activities        Activity[]
-  
-  @@map("deals")
+  id         String   @id @default(cuid())
+  parcelId   String   @unique
+  stage      String   @default("new")
+  priority   String   @default("medium")
+  notes      String?
+  nextAction String?
+  nextDate   DateTime?
+  assignee   String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  parcel     Parcel     @relation(fields: [parcelId], references: [id], onDelete: Cascade)
+  activities Activity[]
 }
 
 model Activity {
-  id                String          @id @default(cuid())
-  dealId            String
-  userId            String          // User ID from Clerk
-  type              String          // note, email, call, meeting, status_change
-  description       String
-  metadata          String?
-  createdAt         DateTime        @default(now())
-  
-  deal              Deal            @relation(fields: [dealId], references: [id])
-  
-  @@map("activities")
+  id        String   @id @default(cuid())
+  dealId    String
+  type      String
+  content   String
+  createdAt DateTime @default(now())
+
+  deal Deal @relation(fields: [dealId], references: [id], onDelete: Cascade)
+
+  @@index([dealId])
+}
+
+model Ownership {
+  id              String   @id @default(cuid())
+  parcelId        String   @unique
+  ownerName       String?
+  ownerType       String?
+  mailingAddress  String?
+  acquisitionDate DateTime?
+  acquisitionPrice Float?
+  taxAssessment   Float?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  parcel Parcel @relation(fields: [parcelId], references: [id], onDelete: Cascade)
+}
+
+model Source {
+  id             String   @id @default(cuid())
+  name           String
+  slug           String   @unique
+  baseUrl        String
+  type           String
+  enabled        Boolean  @default(true)
+  crawlFrequency String   @default("weekly")
+  rateLimitPerMin Int     @default(6)
+  lastCrawl      DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  scanSources ScanRunSource[]
+}
+
+model ScanRun {
+  id             String   @id @default(cuid())
+  status         String   @default("running")
+  totalListings  Int      @default(0)
+  newParcels     Int      @default(0)
+  updatedParcels Int      @default(0)
+  errors         Int      @default(0)
+  startedAt      DateTime @default(now())
+  completedAt    DateTime?
+
+  sources ScanRunSource[]
+}
+
+model ScanRunSource {
+  id        String   @id @default(cuid())
+  scanRunId String
+  sourceId  String
+  status    String   @default("pending")
+  listings  Int      @default(0)
+  errors    Int      @default(0)
+  errorLog  String?
+  startedAt DateTime?
+  completedAt DateTime?
+
+  scanRun ScanRun @relation(fields: [scanRunId], references: [id], onDelete: Cascade)
+  source  Source  @relation(fields: [sourceId], references: [id], onDelete: Cascade)
+
+  @@index([scanRunId])
+  @@index([sourceId])
 }
 
 model SavedSearch {
-  id                String          @id @default(cuid())
-  userId            String          // User ID from Clerk
-  name              String
-  criteria          String          // JSON object
-  schedule          String?         // weekly, daily, manual
-  lastRunAt         DateTime?
-  emailNotification Boolean         @default(false)
-  active            Boolean         @default(true)
-  metadata          String?
-  createdAt         DateTime        @default(now())
-  updatedAt         DateTime        @updatedAt
-  
-  @@map("saved_searches")
+  id        String   @id @default(cuid())
+  name      String
+  filters   String
+  schedule  String   @default("manual")
+  lastRun   DateTime?
+  resultCount Int    @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

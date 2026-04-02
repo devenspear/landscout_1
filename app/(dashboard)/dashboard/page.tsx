@@ -1,209 +1,400 @@
 import { prisma } from '@/lib/prisma'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Activity, MapPin, Star, TrendingUp, Play, Search } from 'lucide-react'
-import { DashboardActions } from '@/components/dashboard/dashboard-actions'
+import { formatCurrency, formatNumber, formatAcres, scoreBgColor } from '@/lib/utils'
+import { SOURCES } from '@/lib/types'
+import {
+  MapPin,
+  Target,
+  Handshake,
+  List,
+  Clock,
+  TrendingUp,
+  Globe,
+  Database,
+} from 'lucide-react'
 
-async function getDashboardStats() {
-  const [
-    totalParcels,
-    totalListings,
-    totalDeals,
-    highFitCount,
-    recentScans
-  ] = await Promise.all([
-    prisma.parcel.count(),
-    prisma.listing.count(),
-    prisma.deal.count(),
-    prisma.fitScore.count({ where: { overallScore: { gte: 80 } } }),
-    prisma.scanRun.findMany({
-      take: 5,
-      orderBy: { createdAt: 'desc' },
-      select: {
-        id: true,
-        runType: true,
-        status: true,
-        createdAt: true,
-        processedCount: true,
-        newCount: true
-      }
-    })
-  ])
+// ─── Data fetching ──────────────────────────────────────────────────
+
+async function getDashboardData() {
+  const [totalParcels, totalListings, totalDeals, scores, byState, bySrc, recentParcels, lastScan] =
+    await Promise.all([
+      prisma.parcel.count(),
+      prisma.listing.count(),
+      prisma.deal.count(),
+      prisma.fitScore.findMany({ select: { overallScore: true } }),
+      prisma.parcel.groupBy({ by: ['state'], _count: true, orderBy: { _count: { state: 'desc' } } }),
+      prisma.listing.groupBy({ by: ['sourceId'], _count: true, orderBy: { _count: { sourceId: 'desc' } } }),
+      prisma.parcel.findMany({
+        take: 5,
+        orderBy: { createdAt: 'desc' },
+        include: { fitScore: true, listings: { take: 1 } },
+      }),
+      prisma.scanRun.findFirst({ orderBy: { startedAt: 'desc' } }),
+    ])
+
+  const avgScore =
+    scores.length > 0
+      ? Math.round(scores.reduce((s, r) => s + r.overallScore, 0) / scores.length)
+      : 0
+  const highCount = scores.filter((s) => s.overallScore >= 80).length
+  const medCount = scores.filter((s) => s.overallScore >= 60 && s.overallScore < 80).length
+  const lowCount = scores.filter((s) => s.overallScore < 60).length
 
   return {
     totalParcels,
     totalListings,
     totalDeals,
-    highFitCount,
-    recentScans
+    avgScore,
+    highCount,
+    medCount,
+    lowCount,
+    byState,
+    bySrc,
+    recentParcels,
+    lastScan,
   }
 }
 
+// ─── Helpers ────────────────────────────────────────────────────────
+
+function sourceLabel(sourceId: string): string {
+  return SOURCES.find((s) => s.id === sourceId)?.name ?? sourceId
+}
+
+function scoreBadgeClasses(score: number): string {
+  if (score >= 80) return 'bg-emerald-900/40 text-emerald-400 ring-emerald-500/30'
+  if (score >= 60) return 'bg-amber-900/40 text-amber-400 ring-amber-500/30'
+  return 'bg-red-900/40 text-red-400 ring-red-500/30'
+}
+
+// ─── Page ───────────────────────────────────────────────────────────
+
 export default async function DashboardPage() {
-  const stats = await getDashboardStats()
+  const data = await getDashboardData()
+  const {
+    totalParcels,
+    totalListings,
+    totalDeals,
+    avgScore,
+    highCount,
+    medCount,
+    lowCount,
+    byState,
+    bySrc,
+    recentParcels,
+    lastScan,
+  } = data
+
+  const totalScored = highCount + medCount + lowCount
+  const highPct = totalScored > 0 ? (highCount / totalScored) * 100 : 0
+  const medPct = totalScored > 0 ? (medCount / totalScored) * 100 : 0
+  const lowPct = totalScored > 0 ? (lowCount / totalScored) * 100 : 0
+
+  const maxStateCount = byState.length > 0 ? Math.max(...byState.map((s) => s._count)) : 1
+  const maxSrcCount = bySrc.length > 0 ? Math.max(...bySrc.map((s) => s._count)) : 1
 
   return (
-    <div className="p-6 bg-gray-50 dark:bg-gray-900 min-h-screen-ios pb-safe transition-colors duration-200">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Dashboard</h1>
-        <p className="text-gray-600 dark:text-gray-400 mt-1">Overview of your AI-powered land discovery pipeline</p>
+    <div className="space-y-6">
+      {/* Header */}
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold tracking-tight text-gray-100">Dashboard</h1>
+          <p className="mt-1 text-sm text-gray-500">
+            Land intelligence overview
+          </p>
+        </div>
+        {lastScan && (
+          <div className="flex items-center gap-2 rounded-lg border border-gray-800 bg-gray-900 px-3 py-2 text-xs text-gray-400">
+            <Clock className="h-3.5 w-3.5" />
+            Last scan:{' '}
+            {lastScan.completedAt
+              ? new Date(lastScan.completedAt).toLocaleDateString('en-US', {
+                  month: 'short',
+                  day: 'numeric',
+                  hour: 'numeric',
+                  minute: '2-digit',
+                })
+              : 'Running...'}
+            <span
+              className={`ml-1 inline-block h-2 w-2 rounded-full ${
+                lastScan.status === 'completed'
+                  ? 'bg-emerald-500'
+                  : lastScan.status === 'running'
+                    ? 'animate-pulse bg-amber-500'
+                    : 'bg-red-500'
+              }`}
+            />
+          </div>
+        )}
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-                <MapPin className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalParcels}</div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Properties discovered
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
-                <Activity className="h-6 w-6 text-green-600 dark:text-green-400" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalListings}</div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Active listings
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center">
-                <TrendingUp className="h-6 w-6 text-purple-600 dark:text-purple-400" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalDeals}</div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Pipeline deals
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
-        <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/30 rounded-xl flex items-center justify-center">
-                <Star className="h-6 w-6 text-yellow-600 dark:text-yellow-400" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">{stats.highFitCount}</div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
-                  High fit (80+)
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+      {/* Stat Cards */}
+      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <StatCard
+          icon={MapPin}
+          label="Total Parcels"
+          value={formatNumber(totalParcels)}
+          subtitle={`${byState.length} states`}
+          color="blue"
+        />
+        <StatCard
+          icon={Target}
+          label="Avg Fit Score"
+          value={avgScore.toString()}
+          subtitle={`${totalScored} scored`}
+          color="emerald"
+        />
+        <StatCard
+          icon={Handshake}
+          label="Active Deals"
+          value={formatNumber(totalDeals)}
+          subtitle="in pipeline"
+          color="purple"
+        />
+        <StatCard
+          icon={List}
+          label="Listings Tracked"
+          value={formatNumber(totalListings)}
+          subtitle={`${bySrc.length} sources`}
+          color="amber"
+        />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-gray-900 dark:text-white flex items-center space-x-2">
-              <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              <span>Recent Scan Activity</span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              {stats.recentScans.map((scan) => (
-                <div key={scan.id} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700/50 rounded-xl">
-                  <div>
-                    <p className="font-medium capitalize text-gray-900 dark:text-white">{scan.runType} Scan</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      {new Date(scan.createdAt).toLocaleDateString()}
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <div className={`inline-flex px-3 py-1 text-xs font-medium rounded-full ${
-                      scan.status === 'completed' 
-                        ? 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400'
-                        : scan.status === 'running'
-                        ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400'
-                        : 'bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-400'
-                    }`}>
-                      {scan.status}
+      {/* Score Distribution */}
+      {totalScored > 0 && (
+        <div className="rounded-xl border border-gray-800 bg-gray-900 p-6">
+          <div className="mb-3 flex items-center justify-between">
+            <h2 className="text-sm font-semibold text-gray-300">Score Distribution</h2>
+            <div className="flex gap-4 text-xs text-gray-500">
+              <span className="flex items-center gap-1.5">
+                <span className="inline-block h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                High ({highCount})
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="inline-block h-2.5 w-2.5 rounded-full bg-amber-500" />
+                Medium ({medCount})
+              </span>
+              <span className="flex items-center gap-1.5">
+                <span className="inline-block h-2.5 w-2.5 rounded-full bg-red-500" />
+                Low ({lowCount})
+              </span>
+            </div>
+          </div>
+          <div className="flex h-4 overflow-hidden rounded-full bg-gray-800">
+            {highPct > 0 && (
+              <div
+                className="bg-emerald-500 transition-all"
+                style={{ width: `${highPct}%` }}
+              />
+            )}
+            {medPct > 0 && (
+              <div
+                className="bg-amber-500 transition-all"
+                style={{ width: `${medPct}%` }}
+              />
+            )}
+            {lowPct > 0 && (
+              <div
+                className="bg-red-500 transition-all"
+                style={{ width: `${lowPct}%` }}
+              />
+            )}
+          </div>
+          <div className="mt-2 flex text-xs text-gray-500">
+            {highPct > 0 && <span style={{ width: `${highPct}%` }}>{Math.round(highPct)}%</span>}
+            {medPct > 0 && <span style={{ width: `${medPct}%` }}>{Math.round(medPct)}%</span>}
+            {lowPct > 0 && <span style={{ width: `${lowPct}%` }}>{Math.round(lowPct)}%</span>}
+          </div>
+        </div>
+      )}
+
+      {/* Two-column: By State / Top Sources */}
+      <div className="grid gap-4 lg:grid-cols-2">
+        {/* By State */}
+        <div className="rounded-xl border border-gray-800 bg-gray-900 p-6">
+          <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-gray-300">
+            <Globe className="h-4 w-4 text-blue-400" />
+            By State
+          </div>
+          {byState.length === 0 ? (
+            <p className="text-sm text-gray-600">No parcels yet</p>
+          ) : (
+            <div className="space-y-3">
+              {byState.map((row) => (
+                <div key={row.state} className="flex items-center gap-3">
+                  <span className="w-8 text-right text-xs font-medium text-gray-400">
+                    {row.state}
+                  </span>
+                  <div className="relative flex-1">
+                    <div className="h-6 overflow-hidden rounded bg-gray-800">
+                      <div
+                        className="h-full rounded bg-blue-500/60 transition-all"
+                        style={{
+                          width: `${(row._count / maxStateCount) * 100}%`,
+                        }}
+                      />
                     </div>
-                    {scan.processedCount > 0 && (
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                        {scan.processedCount} processed, {scan.newCount} new
-                      </p>
-                    )}
                   </div>
+                  <span className="w-10 text-right text-xs tabular-nums text-gray-400">
+                    {row._count}
+                  </span>
                 </div>
               ))}
-              {stats.recentScans.length === 0 && (
-                <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-                  <Search className="w-8 h-8 mx-auto mb-3 opacity-50" />
-                  <p>No recent scan activity</p>
-                  <p className="text-sm">Run your first scan to discover properties</p>
-                </div>
-              )}
             </div>
-          </CardContent>
-        </Card>
+          )}
+        </div>
 
-        <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg">
-          <CardHeader>
-            <CardTitle className="text-gray-900 dark:text-white flex items-center space-x-2">
-              <Play className="w-5 h-5 text-green-600 dark:text-green-400" />
-              <span>Quick Actions</span>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <DashboardActions />
-          </CardContent>
-        </Card>
+        {/* Top Sources */}
+        <div className="rounded-xl border border-gray-800 bg-gray-900 p-6">
+          <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-gray-300">
+            <Database className="h-4 w-4 text-amber-400" />
+            Top Sources
+          </div>
+          {bySrc.length === 0 ? (
+            <p className="text-sm text-gray-600">No listings yet</p>
+          ) : (
+            <div className="space-y-3">
+              {bySrc.map((row) => (
+                <div key={row.sourceId} className="flex items-center gap-3">
+                  <span className="w-28 truncate text-right text-xs font-medium text-gray-400">
+                    {sourceLabel(row.sourceId)}
+                  </span>
+                  <div className="relative flex-1">
+                    <div className="h-6 overflow-hidden rounded bg-gray-800">
+                      <div
+                        className="h-full rounded bg-amber-500/60 transition-all"
+                        style={{
+                          width: `${(row._count / maxSrcCount) * 100}%`,
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <span className="w-10 text-right text-xs tabular-nums text-gray-400">
+                    {row._count}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
 
-      {/* Data Status Info */}
-      <div className="mt-8">
-        <Card className="backdrop-blur-sm bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 border-0 shadow-lg">
-          <CardContent className="p-6">
-            <div className="flex items-start space-x-4">
-              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center flex-shrink-0">
-                <Star className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Data Status</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  The Results and Pipeline pages currently display sample data for demonstration purposes. 
-                  The dashboard shows real database statistics from your connected PostgreSQL database.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <div className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-400 rounded-full text-sm font-medium">
-                    ✅ Real Database Connected
-                  </div>
-                  <div className="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-400 rounded-full text-sm font-medium">
-                    📊 Sample Results Data
-                  </div>
-                  <div className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-400 rounded-full text-sm font-medium">
-                    🔧 Admin Panel Functional
-                  </div>
-                </div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+      {/* Recent Discoveries */}
+      <div className="rounded-xl border border-gray-800 bg-gray-900 p-6">
+        <div className="mb-4 flex items-center gap-2 text-sm font-semibold text-gray-300">
+          <TrendingUp className="h-4 w-4 text-emerald-400" />
+          Recent Discoveries
+        </div>
+        {recentParcels.length === 0 ? (
+          <p className="text-sm text-gray-600">No parcels discovered yet</p>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-gray-800 text-left text-xs uppercase tracking-wider text-gray-500">
+                  <th className="pb-3 pr-4 font-medium">Score</th>
+                  <th className="pb-3 pr-4 font-medium">Location</th>
+                  <th className="pb-3 pr-4 font-medium">Acreage</th>
+                  <th className="pb-3 pr-4 font-medium">Price</th>
+                  <th className="pb-3 font-medium">Discovered</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-800/60">
+                {recentParcels.map((parcel) => {
+                  const score = parcel.fitScore?.overallScore ?? null
+                  const listing = parcel.listings[0] ?? null
+                  return (
+                    <tr
+                      key={parcel.id}
+                      className="text-gray-300 transition-colors hover:bg-gray-800/40"
+                    >
+                      <td className="py-3 pr-4">
+                        {score !== null ? (
+                          <span
+                            className={`inline-flex h-8 w-8 items-center justify-center rounded-md text-xs font-bold ring-1 ring-inset ${scoreBadgeClasses(score)}`}
+                          >
+                            {score}
+                          </span>
+                        ) : (
+                          <span className="text-xs text-gray-600">--</span>
+                        )}
+                      </td>
+                      <td className="py-3 pr-4">
+                        <div className="font-medium">{parcel.county}</div>
+                        <div className="text-xs text-gray-500">{parcel.state}</div>
+                      </td>
+                      <td className="py-3 pr-4 tabular-nums">
+                        {formatAcres(parcel.acreage)}
+                      </td>
+                      <td className="py-3 pr-4 tabular-nums">
+                        {listing?.price ? formatCurrency(listing.price) : '--'}
+                      </td>
+                      <td className="py-3 text-xs text-gray-500">
+                        {new Date(parcel.createdAt).toLocaleDateString('en-US', {
+                          month: 'short',
+                          day: 'numeric',
+                        })}
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
+    </div>
+  )
+}
+
+// ─── Stat Card ──────────────────────────────────────────────────────
+
+const colorMap = {
+  blue: {
+    iconBg: 'bg-blue-500/10',
+    iconText: 'text-blue-400',
+    ring: 'ring-blue-500/20',
+  },
+  emerald: {
+    iconBg: 'bg-emerald-500/10',
+    iconText: 'text-emerald-400',
+    ring: 'ring-emerald-500/20',
+  },
+  purple: {
+    iconBg: 'bg-purple-500/10',
+    iconText: 'text-purple-400',
+    ring: 'ring-purple-500/20',
+  },
+  amber: {
+    iconBg: 'bg-amber-500/10',
+    iconText: 'text-amber-400',
+    ring: 'ring-amber-500/20',
+  },
+} as const
+
+function StatCard({
+  icon: Icon,
+  label,
+  value,
+  subtitle,
+  color,
+}: {
+  icon: React.ComponentType<{ className?: string }>
+  label: string
+  value: string
+  subtitle: string
+  color: keyof typeof colorMap
+}) {
+  const c = colorMap[color]
+  return (
+    <div className="rounded-xl border border-gray-800 bg-gray-900 p-6 shadow-sm">
+      <div className="flex items-center justify-between">
+        <p className="text-xs font-medium uppercase tracking-wider text-gray-500">{label}</p>
+        <div className={`rounded-lg p-2 ${c.iconBg} ring-1 ring-inset ${c.ring}`}>
+          <Icon className={`h-4 w-4 ${c.iconText}`} />
+        </div>
+      </div>
+      <p className="mt-3 text-3xl font-bold tracking-tight text-gray-100">{value}</p>
+      <p className="mt-1 text-xs text-gray-500">{subtitle}</p>
     </div>
   )
 }

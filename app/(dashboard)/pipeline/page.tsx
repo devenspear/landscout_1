@@ -1,325 +1,370 @@
 'use client'
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Plus, MapPin, Star, DollarSign, Activity } from 'lucide-react'
+import { useEffect, useState, useCallback } from 'react'
+import { GripVertical, MapPin, DollarSign, Clock } from 'lucide-react'
+import { DEAL_STAGES } from '@/lib/types'
+import type { DealStage, Priority } from '@/lib/types'
+import { formatCurrency, formatAcres, cn } from '@/lib/utils'
 
-const stages = [
-  { id: 'New', name: 'New', color: 'bg-gray-50 dark:bg-gray-800', borderColor: 'border-t-gray-400', count: 0 },
-  { id: 'Qualified', name: 'Qualified', color: 'bg-blue-50 dark:bg-blue-900/20', borderColor: 'border-t-blue-400', count: 0 },
-  { id: 'Triage', name: 'Triage', color: 'bg-yellow-50 dark:bg-yellow-900/20', borderColor: 'border-t-yellow-400', count: 0 },
-  { id: 'Pursuit', name: 'Pursuit', color: 'bg-orange-50 dark:bg-orange-900/20', borderColor: 'border-t-orange-400', count: 0 },
-  { id: 'LOI', name: 'LOI', color: 'bg-purple-50 dark:bg-purple-900/20', borderColor: 'border-t-purple-400', count: 0 },
-  { id: 'UC', name: 'Under Contract', color: 'bg-green-50 dark:bg-green-900/20', borderColor: 'border-t-green-400', count: 0 },
-  { id: 'Closed', name: 'Closed', color: 'bg-emerald-50 dark:bg-emerald-900/20', borderColor: 'border-t-emerald-500', count: 0 },
-  { id: 'Lost', name: 'Lost', color: 'bg-red-50 dark:bg-red-900/20', borderColor: 'border-t-red-400', count: 0 }
-]
+// ─── Types ─────────────────────────────────────────────────────────
 
-// Sample deals for demo
-function getSampleDeals() {
-  return [
-    {
-      id: '1',
-      stage: 'New',
-      priority: 'P2',
-      notes: 'Initial contact attempt made',
-      updatedAt: new Date().toISOString(),
-      parcel: {
-        acreage: 25.5,
-        county: 'Riverside',
-        state: 'CA',
-        fitScore: { overallScore: 87 },
-        listings: [{ price: 425000 }]
-      },
-      activities: [{ type: 'Email sent', createdAt: new Date().toISOString() }]
-    },
-    {
-      id: '2',
-      stage: 'Qualified',
-      priority: 'P1',
-      notes: 'Owner expressed interest in selling',
-      updatedAt: new Date().toISOString(),
-      parcel: {
-        acreage: 12.3,
-        county: 'Austin',
-        state: 'TX',
-        fitScore: { overallScore: 73 },
-        listings: [{ price: 180000 }]
-      },
-      activities: [{ type: 'Phone call', createdAt: new Date().toISOString() }]
-    },
-    {
-      id: '3',
-      stage: 'Triage',
-      priority: 'P1',
-      notes: 'Due diligence in progress - environmental study ordered',
-      updatedAt: new Date().toISOString(),
-      parcel: {
-        acreage: 40.8,
-        county: 'Jefferson',
-        state: 'CO',
-        fitScore: { overallScore: 91 },
-        listings: [{ price: 850000 }]
-      },
-      activities: [{ type: 'Site visit', createdAt: new Date().toISOString() }]
-    },
-    {
-      id: '4',
-      stage: 'Pursuit',
-      priority: 'P0',
-      notes: 'Preparing offer - market analysis complete',
-      updatedAt: new Date().toISOString(),
-      parcel: {
-        acreage: 15.7,
-        county: 'Maricopa',
-        state: 'AZ',
-        fitScore: { overallScore: 82 },
-        listings: [{ price: 320000 }]
-      },
-      activities: [{ type: 'Market analysis', createdAt: new Date().toISOString() }]
-    },
-    {
-      id: '5',
-      stage: 'LOI',
-      priority: 'P0',
-      notes: 'LOI submitted - awaiting response from owner',
-      updatedAt: new Date().toISOString(),
-      parcel: {
-        acreage: 8.2,
-        county: 'Wake',
-        state: 'NC',
-        fitScore: { overallScore: 79 },
-        listings: [{ price: 245000 }]
-      },
-      activities: [{ type: 'LOI submitted', createdAt: new Date().toISOString() }]
-    }
-  ]
+interface DealParcel {
+  id: string
+  county: string
+  state: string
+  acreage: number
+  listings: { price: number | null }[]
+  fitScore: { overallScore: number } | null
 }
 
-export default function PipelinePage() {
-  const deals = getSampleDeals()
-  
-  // Group deals by stage
-  const dealsByStage = stages.reduce((acc, stage) => {
-    acc[stage.id] = deals.filter(deal => deal.stage === stage.id)
-    return acc
-  }, {} as Record<string, typeof deals>)
+interface DealActivity {
+  id: string
+  type: string
+  content: string
+  createdAt: string
+}
+
+interface Deal {
+  id: string
+  parcelId: string
+  stage: DealStage
+  priority: Priority
+  notes: string | null
+  nextAction: string | null
+  nextDate: string | null
+  createdAt: string
+  updatedAt: string
+  parcel: DealParcel
+  activities: DealActivity[]
+}
+
+// ─── Stage styling ─────────────────────────────────────────────────
+
+const STAGE_STYLES: Record<string, { border: string; header: string; bg: string }> = {
+  new: {
+    border: 'border-blue-500/30',
+    header: 'text-blue-400',
+    bg: 'bg-blue-500/10',
+  },
+  qualified: {
+    border: 'border-purple-500/30',
+    header: 'text-purple-400',
+    bg: 'bg-purple-500/10',
+  },
+  pursuit: {
+    border: 'border-amber-500/30',
+    header: 'text-amber-400',
+    bg: 'bg-amber-500/10',
+  },
+  'under-contract': {
+    border: 'border-emerald-500/30',
+    header: 'text-emerald-400',
+    bg: 'bg-emerald-500/10',
+  },
+  closed: {
+    border: 'border-green-500/30',
+    header: 'text-green-400',
+    bg: 'bg-green-500/10',
+  },
+  passed: {
+    border: 'border-gray-500/30',
+    header: 'text-gray-400',
+    bg: 'bg-gray-500/10',
+  },
+}
+
+const PRIORITY_DOT: Record<Priority, string> = {
+  high: 'bg-red-500',
+  medium: 'bg-amber-500',
+  low: 'bg-green-500',
+}
+
+function scoreColor(score: number): string {
+  if (score >= 80) return 'text-emerald-400 bg-emerald-500/15 border-emerald-500/30'
+  if (score >= 60) return 'text-amber-400 bg-amber-500/15 border-amber-500/30'
+  return 'text-red-400 bg-red-500/15 border-red-500/30'
+}
+
+function relativeDate(dateStr: string): string {
+  const date = new Date(dateStr)
+  const now = new Date()
+  const diffMs = now.getTime() - date.getTime()
+  const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24))
+  if (diffDays === 0) return 'Today'
+  if (diffDays === 1) return 'Yesterday'
+  if (diffDays < 7) return `${diffDays}d ago`
+  if (diffDays < 30) return `${Math.floor(diffDays / 7)}w ago`
+  return `${Math.floor(diffDays / 30)}mo ago`
+}
+
+// ─── Deal Card ─────────────────────────────────────────────────────
+
+function DealCard({
+  deal,
+  onDragStart,
+}: {
+  deal: Deal
+  onDragStart: (e: React.DragEvent, dealId: string) => void
+}) {
+  const score = deal.parcel.fitScore?.overallScore ?? 0
+  const price = deal.parcel.listings?.[0]?.price ?? null
+  const lastActivity = deal.activities?.[0]?.createdAt ?? deal.updatedAt
 
   return (
-    <div className="p-6 bg-gray-50 dark:bg-gray-900 min-h-screen-ios pb-safe transition-colors duration-200">
-      <div className="mb-8">
-        <div className="flex justify-between items-center">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Deal Pipeline</h1>
-            <p className="text-gray-600 dark:text-gray-400 mt-1">Kanban board for managing land acquisition deals</p>
+    <div
+      draggable
+      onDragStart={(e) => onDragStart(e, deal.id)}
+      className="group cursor-grab rounded-lg bg-gray-800 p-3.5 shadow-sm border border-gray-700/50 transition-all duration-150 hover:border-gray-600 hover:shadow-md hover:bg-gray-800/80 active:cursor-grabbing active:scale-[0.98]"
+    >
+      {/* Header row */}
+      <div className="flex items-start justify-between gap-2 mb-2.5">
+        <div className="flex items-center gap-2 min-w-0">
+          <GripVertical className="h-3.5 w-3.5 text-gray-600 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+          <div className="min-w-0">
+            <div className="flex items-center gap-1.5">
+              <MapPin className="h-3 w-3 text-gray-500 flex-shrink-0" />
+              <span className="text-sm font-medium text-gray-200 truncate">
+                {deal.parcel.county}, {deal.parcel.state}
+              </span>
+            </div>
           </div>
-          <Button className="hover:scale-105 transition-all duration-200 bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25">
-            <Plus className="w-4 h-4 mr-2" />
-            Add Deal
-          </Button>
         </div>
+        {/* Priority dot */}
+        <span
+          className={cn(
+            'h-2 w-2 rounded-full flex-shrink-0 mt-1.5',
+            PRIORITY_DOT[deal.priority]
+          )}
+          title={`${deal.priority} priority`}
+        />
       </div>
 
-      {/* Pipeline Stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-                <Activity className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">{deals.length}</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Total Deals</div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center">
-                <Star className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                  {dealsByStage.Qualified?.length || 0}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Qualified</div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-green-600 dark:text-green-400" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                  {dealsByStage.UC?.length || 0}
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Under Contract</div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <Card className="backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
-          <CardContent className="p-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center">
-                <DollarSign className="w-5 h-5 text-green-600 dark:text-green-400" />
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                  ${((dealsByStage.Closed?.reduce((sum, deal) => {
-                    return sum + (deal.parcel.listings[0]?.price || 0)
-                  }, 0) || 0) / 1000000).toFixed(1)}M
-                </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Closed Value</div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+      {/* Stats row */}
+      <div className="flex items-center gap-3 text-xs text-gray-400 mb-2.5">
+        <span>{formatAcres(deal.parcel.acreage)}</span>
+        {price && (
+          <span className="flex items-center gap-1">
+            <DollarSign className="h-3 w-3" />
+            {formatCurrency(price)}
+          </span>
+        )}
+      </div>
+
+      {/* Footer */}
+      <div className="flex items-center justify-between">
+        {/* Fit Score badge */}
+        <span
+          className={cn(
+            'inline-flex items-center rounded-md border px-2 py-0.5 text-xs font-semibold tabular-nums',
+            scoreColor(score)
+          )}
+        >
+          {score}
+        </span>
+        {/* Last activity */}
+        <span className="flex items-center gap-1 text-[11px] text-gray-500">
+          <Clock className="h-3 w-3" />
+          {relativeDate(lastActivity)}
+        </span>
+      </div>
+    </div>
+  )
+}
+
+// ─── Pipeline Page ─────────────────────────────────────────────────
+
+export default function PipelinePage() {
+  const [deals, setDeals] = useState<Deal[]>([])
+  const [loading, setLoading] = useState(true)
+  const [dragOverStage, setDragOverStage] = useState<string | null>(null)
+  const [dragDealId, setDragDealId] = useState<string | null>(null)
+
+  // Fetch deals
+  useEffect(() => {
+    async function fetchDeals() {
+      try {
+        const res = await fetch('/api/deals')
+        if (res.ok) {
+          const data = await res.json()
+          setDeals(data.deals ?? data ?? [])
+        }
+      } catch {
+        // API not available yet
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchDeals()
+  }, [])
+
+  // Group by stage
+  const dealsByStage: Record<string, Deal[]> = {}
+  for (const stage of DEAL_STAGES) {
+    dealsByStage[stage.value] = deals.filter((d) => d.stage === stage.value)
+  }
+
+  // Drag handlers
+  const handleDragStart = useCallback(
+    (e: React.DragEvent, dealId: string) => {
+      e.dataTransfer.effectAllowed = 'move'
+      e.dataTransfer.setData('text/plain', dealId)
+      setDragDealId(dealId)
+    },
+    []
+  )
+
+  const handleDragOver = useCallback(
+    (e: React.DragEvent, stage: string) => {
+      e.preventDefault()
+      e.dataTransfer.dropEffect = 'move'
+      setDragOverStage(stage)
+    },
+    []
+  )
+
+  const handleDragLeave = useCallback(() => {
+    setDragOverStage(null)
+  }, [])
+
+  const handleDrop = useCallback(
+    async (e: React.DragEvent, newStage: string) => {
+      e.preventDefault()
+      setDragOverStage(null)
+      setDragDealId(null)
+
+      const dealId = e.dataTransfer.getData('text/plain')
+      if (!dealId) return
+
+      const deal = deals.find((d) => d.id === dealId)
+      if (!deal || deal.stage === newStage) return
+
+      // Optimistic update
+      setDeals((prev) =>
+        prev.map((d) =>
+          d.id === dealId ? { ...d, stage: newStage as DealStage } : d
+        )
+      )
+
+      // Persist
+      try {
+        await fetch(`/api/deals/${dealId}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ stage: newStage }),
+        })
+      } catch {
+        // Revert on failure
+        setDeals((prev) =>
+          prev.map((d) =>
+            d.id === dealId ? { ...d, stage: deal.stage } : d
+          )
+        )
+      }
+    },
+    [deals]
+  )
+
+  return (
+    <div>
+      {/* Header */}
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold text-gray-100">Pipeline</h1>
+        <p className="mt-1 text-sm text-gray-400">
+          Manage deals across stages. Drag cards to update status.
+        </p>
       </div>
 
       {/* Kanban Board */}
-      <div className="overflow-x-auto scroll-ios">
-        <div className="flex gap-6 pb-4" style={{ minWidth: 'max-content' }}>
-          {stages.map((stage) => {
-            const stageDeals = dealsByStage[stage.id] || []
-            
-            return (
-              <div key={stage.id} className="flex-shrink-0 w-80 min-h-[600px]">
-                <Card className={`${stage.color} ${stage.borderColor} border-t-4 backdrop-blur-sm bg-white/50 dark:bg-gray-800/50 shadow-lg`}>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-base font-semibold flex justify-between items-center text-gray-900 dark:text-white">
-                      <span>{stage.name}</span>
-                      <Badge 
-                        variant="secondary" 
-                        className="text-xs bg-white/60 dark:bg-gray-700/60 backdrop-blur-sm"
-                      >
-                        {stageDeals.length}
-                      </Badge>
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4 px-4">
-                    {stageDeals.map((deal) => (
-                      <Card key={deal.id} className="bg-white dark:bg-gray-800 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer border-0 shadow-md">
-                        <CardContent className="p-5">
-                          {/* Priority Badge */}
-                          {deal.priority && (
-                            <div className="mb-3">
-                              <Badge 
-                                variant={deal.priority === 'P0' ? 'destructive' : 'secondary'}
-                                className="text-xs font-medium"
-                              >
-                                {deal.priority === 'P0' ? '🔥 Critical' : deal.priority === 'P1' ? '⚡ High' : '📋 Normal'}
-                              </Badge>
-                            </div>
-                          )}
+      <div className="flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+        {DEAL_STAGES.map((stage) => {
+          const stageDeals = dealsByStage[stage.value] || []
+          const style = STAGE_STYLES[stage.value] || STAGE_STYLES.new
+          const isOver = dragOverStage === stage.value
 
-                          {/* Property Info */}
-                          <div className="mb-4">
-                            <div className="flex items-center space-x-2 mb-2">
-                              <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
-                                <MapPin className="w-3 h-3 text-blue-600 dark:text-blue-400" />
-                              </div>
-                              <div className="text-base font-semibold text-gray-900 dark:text-white">
-                                {deal.parcel.acreage} acres
-                              </div>
-                            </div>
-                            <div className="text-sm text-gray-600 dark:text-gray-400 ml-8">
-                              {deal.parcel.county}, {deal.parcel.state}
-                            </div>
-                          </div>
-
-                          {/* Fit Score */}
-                          {deal.parcel.fitScore && (
-                            <div className="flex items-center space-x-2 mb-3">
-                              <div className="w-6 h-6 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg flex items-center justify-center">
-                                <Star className="w-3 h-3 text-yellow-600 dark:text-yellow-400" />
-                              </div>
-                              <div className={`text-sm font-medium ${
-                                deal.parcel.fitScore.overallScore >= 80 ? 'text-green-600 dark:text-green-400' : 
-                                deal.parcel.fitScore.overallScore >= 60 ? 'text-yellow-600 dark:text-yellow-400' : 'text-gray-600 dark:text-gray-400'
-                              }`}>
-                                {deal.parcel.fitScore.overallScore} fit score
-                              </div>
-                            </div>
-                          )}
-
-                          {/* Price */}
-                          {deal.parcel.listings[0]?.price && (
-                            <div className="flex items-center space-x-2 mb-3">
-                              <div className="w-6 h-6 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
-                                <DollarSign className="w-3 h-3 text-green-600 dark:text-green-400" />
-                              </div>
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">
-                                ${(deal.parcel.listings[0].price / 1000).toFixed(0)}k
-                              </div>
-                            </div>
-                          )}
-
-                          {/* Notes */}
-                          {deal.notes && (
-                            <div className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
-                              {deal.notes}
-                            </div>
-                          )}
-
-                          {/* Last Activity */}
-                          {deal.activities.length > 0 && (
-                            <div className="text-xs text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-600 pt-3 pb-1">
-                              <div className="flex items-center space-x-1">
-                                <Activity className="w-3 h-3" />
-                                <span>Last: {deal.activities[0].type}</span>
-                              </div>
-                            </div>
-                          )}
-
-                          {/* Updated Date */}
-                          <div className="text-xs text-gray-400 dark:text-gray-500">
-                            {new Date(deal.updatedAt).toLocaleDateString()}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    ))}
-
-                    {/* Add Deal Button */}
-                    <Button 
-                      variant="ghost" 
-                      className="w-full h-20 border-2 border-dashed border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 rounded-xl hover:scale-105 transition-all duration-200 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm"
-                    >
-                      <Plus className="w-4 h-4 mr-2" />
-                      Add Deal
-                    </Button>
-                  </CardContent>
-                </Card>
+          return (
+            <div
+              key={stage.value}
+              className={cn(
+                'flex-shrink-0 w-72 rounded-xl border bg-gray-900/50 transition-all duration-150',
+                style.border,
+                isOver && 'ring-2 ring-emerald-500/40 bg-gray-900/80'
+              )}
+              onDragOver={(e) => handleDragOver(e, stage.value)}
+              onDragLeave={handleDragLeave}
+              onDrop={(e) => handleDrop(e, stage.value)}
+            >
+              {/* Column Header */}
+              <div
+                className={cn(
+                  'flex items-center justify-between rounded-t-xl px-4 py-3',
+                  style.bg
+                )}
+              >
+                <h2 className={cn('text-sm font-semibold', style.header)}>
+                  {stage.label}
+                </h2>
+                <span
+                  className={cn(
+                    'inline-flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[11px] font-bold',
+                    style.bg,
+                    style.header
+                  )}
+                >
+                  {stageDeals.length}
+                </span>
               </div>
+
+              {/* Cards */}
+              <div className="space-y-2.5 p-3 min-h-[120px]">
+                {loading ? (
+                  <div className="space-y-2.5">
+                    {[1, 2].map((i) => (
+                      <div
+                        key={i}
+                        className="h-28 animate-pulse rounded-lg bg-gray-800/60"
+                      />
+                    ))}
+                  </div>
+                ) : stageDeals.length === 0 ? (
+                  <div className="flex items-center justify-center py-8">
+                    <p className="text-xs text-gray-600">No deals</p>
+                  </div>
+                ) : (
+                  stageDeals.map((deal) => (
+                    <DealCard
+                      key={deal.id}
+                      deal={deal}
+                      onDragStart={handleDragStart}
+                    />
+                  ))
+                )}
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      {/* Summary bar */}
+      {!loading && (
+        <div className="mt-6 flex flex-wrap items-center gap-4 rounded-xl bg-gray-900/50 border border-gray-800/60 px-5 py-3.5">
+          <span className="text-sm font-medium text-gray-300">
+            {deals.length} total deal{deals.length !== 1 ? 's' : ''}
+          </span>
+          <span className="h-4 w-px bg-gray-700" />
+          {DEAL_STAGES.filter((s) => s.value !== 'passed').map((stage) => {
+            const count = dealsByStage[stage.value]?.length ?? 0
+            if (count === 0) return null
+            const style = STAGE_STYLES[stage.value]
+            return (
+              <span
+                key={stage.value}
+                className={cn('text-xs font-medium', style?.header)}
+              >
+                {count} {stage.label}
+              </span>
             )
           })}
         </div>
-      </div>
-
-      {/* Empty State */}
-      {deals.length === 0 && (
-        <Card className="mt-8 backdrop-blur-sm bg-white/70 dark:bg-gray-800/70 border-0 shadow-lg">
-          <CardContent className="p-12 text-center">
-            <div className="text-gray-500 dark:text-gray-400">
-              <div className="w-20 h-20 bg-gray-100 dark:bg-gray-700 rounded-2xl mx-auto mb-6 flex items-center justify-center">
-                <Plus className="w-10 h-10" />
-              </div>
-              <h3 className="text-xl font-medium mb-3 text-gray-900 dark:text-white">No deals in pipeline</h3>
-              <p className="mb-6 max-w-md mx-auto">Start by adding high-fit properties from your results table.</p>
-              <Button className="hover:scale-105 transition-all duration-200 bg-blue-500 hover:bg-blue-600 text-white shadow-lg shadow-blue-500/25">
-                Add First Deal
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
       )}
     </div>
   )

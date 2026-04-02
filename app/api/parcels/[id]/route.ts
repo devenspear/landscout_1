@@ -1,50 +1,37 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
 export async function GET(
-  req: NextRequest,
-  { params }: { params: { id: string } }
+  request: Request,
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const { userId } = auth()
-    if (!userId) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-    
+    const { id } = await params
+
     const parcel = await prisma.parcel.findUnique({
-      where: { id: params.id },
+      where: { id },
       include: {
-        fitScore: true,
+        listings: true,
         features: true,
-        ownership: true,
-        listings: {
+        fitScore: true,
+        deal: {
           include: {
-            source: true
+            activities: { orderBy: { createdAt: 'desc' } },
           },
-          orderBy: { lastSeenAt: 'desc' }
         },
-        deals: {
-          include: {
-            activities: {
-              orderBy: { createdAt: 'desc' },
-              take: 10
-            }
-          }
-        }
-      }
+        ownership: true,
+      },
     })
-    
+
     if (!parcel) {
       return NextResponse.json({ error: 'Parcel not found' }, { status: 404 })
     }
-    
+
     return NextResponse.json(parcel)
-    
   } catch (error) {
-    console.error('Parcel API error:', error)
+    console.error('Parcel fetch error:', error)
     return NextResponse.json(
-      { error: 'Failed to get parcel' },
+      { error: 'Failed to fetch parcel' },
       { status: 500 }
     )
   }

@@ -1,66 +1,51 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { auth } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   try {
-    const { userId } = auth()
-    if (!userId) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-    }
-    
-    // Get latest scan run
-    const latestScan = await prisma.scanRun.findFirst({
-      orderBy: { createdAt: 'desc' },
-      include: {
-        sources: {
-          include: {
-            source: true
-          }
-        }
-      }
-    })
-    
-    // Get source statistics
-    const sources = await prisma.source.findMany({
-      select: {
-        id: true,
-        name: true,
-        enabled: true,
-        lastCrawledAt: true,
-        _count: {
+    const [lastScan, parcelsCount, listingsCount, dealsCount, sourcesCount, sources] =
+      await Promise.all([
+        prisma.scanRun.findFirst({
+          orderBy: { startedAt: 'desc' },
           select: {
-            listings: true
-          }
-        }
-      }
-    })
-    
-    // Get overall statistics
-    const stats = await prisma.$transaction([
-      prisma.parcel.count(),
-      prisma.listing.count(),
-      prisma.deal.count(),
-      prisma.fitScore.count({ where: { overallScore: { gte: 80 } } }),
-      prisma.fitScore.count({ where: { overallScore: { gte: 60, lt: 80 } } }),
-    ])
-    
+            id: true,
+            status: true,
+            startedAt: true,
+            totalListings: true,
+            newParcels: true,
+          },
+        }),
+        prisma.parcel.count(),
+        prisma.listing.count(),
+        prisma.deal.count(),
+        prisma.source.count(),
+        prisma.source.findMany({
+          select: {
+            id: true,
+            name: true,
+            slug: true,
+            type: true,
+            enabled: true,
+            lastCrawl: true,
+          },
+          orderBy: { name: 'asc' },
+        }),
+      ])
+
     return NextResponse.json({
-      latestScan,
+      lastScan,
+      counts: {
+        parcels: parcelsCount,
+        listings: listingsCount,
+        deals: dealsCount,
+        sources: sourcesCount,
+      },
       sources,
-      statistics: {
-        totalParcels: stats[0],
-        totalListings: stats[1],
-        totalDeals: stats[2],
-        highFitCount: stats[3],
-        mediumFitCount: stats[4]
-      }
     })
-    
   } catch (error) {
-    console.error('Health API error:', error)
+    console.error('Health check error:', error)
     return NextResponse.json(
-      { error: 'Failed to get health status' },
+      { error: 'Failed to fetch health data' },
       { status: 500 }
     )
   }
