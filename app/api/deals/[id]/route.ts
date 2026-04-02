@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import * as fs from 'fs'
+import * as path from 'path'
 
 export async function PUT(
   request: Request,
@@ -10,24 +11,36 @@ export async function PUT(
     const body = await request.json()
     const { stage, priority, notes, nextAction, nextDate } = body
 
-    const existing = await prisma.deal.findUnique({ where: { id } })
+    // Load deals to find existing deal
+    const filePath = path.join(process.cwd(), 'data', 'deals.json')
+    if (!fs.existsSync(filePath)) {
+      return NextResponse.json(
+        { error: 'deals.json not found. Data files may not have been generated during build.' },
+        { status: 500 }
+      )
+    }
+
+    const deals = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+    const existing = deals.find((d: { id: string }) => d.id === id)
+
     if (!existing) {
       return NextResponse.json({ error: 'Deal not found' }, { status: 404 })
     }
 
-    const data: Record<string, unknown> = {}
-    if (stage !== undefined) data.stage = stage
-    if (priority !== undefined) data.priority = priority
-    if (notes !== undefined) data.notes = notes
-    if (nextAction !== undefined) data.nextAction = nextAction
-    if (nextDate !== undefined) data.nextDate = nextDate ? new Date(nextDate) : null
+    // Return optimistic response with updated fields
+    // (We cannot write to files on Vercel serverless, so the client
+    // should handle this optimistically)
+    const updated = {
+      ...existing,
+      ...(stage !== undefined && { stage }),
+      ...(priority !== undefined && { priority }),
+      ...(notes !== undefined && { notes }),
+      ...(nextAction !== undefined && { nextAction }),
+      ...(nextDate !== undefined && { nextDate }),
+      updatedAt: new Date().toISOString(),
+    }
 
-    const deal = await prisma.deal.update({
-      where: { id },
-      data,
-    })
-
-    return NextResponse.json(deal)
+    return NextResponse.json(updated)
   } catch (error) {
     console.error('Deal update error:', error)
     return NextResponse.json(
@@ -53,18 +66,30 @@ export async function POST(
       )
     }
 
-    const existing = await prisma.deal.findUnique({ where: { id } })
+    // Verify deal exists
+    const filePath = path.join(process.cwd(), 'data', 'deals.json')
+    if (!fs.existsSync(filePath)) {
+      return NextResponse.json(
+        { error: 'deals.json not found. Data files may not have been generated during build.' },
+        { status: 500 }
+      )
+    }
+
+    const deals = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+    const existing = deals.find((d: { id: string }) => d.id === id)
+
     if (!existing) {
       return NextResponse.json({ error: 'Deal not found' }, { status: 404 })
     }
 
-    const activity = await prisma.activity.create({
-      data: {
-        dealId: id,
-        type,
-        content,
-      },
-    })
+    // Return optimistic response for the new activity
+    const activity = {
+      id: `activity_${Date.now()}`,
+      dealId: id,
+      type,
+      content,
+      createdAt: new Date().toISOString(),
+    }
 
     return NextResponse.json(activity, { status: 201 })
   } catch (error) {

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import * as fs from 'fs'
+import * as path from 'path'
 
 export async function GET(
   request: Request,
@@ -7,31 +8,18 @@ export async function GET(
 ) {
   try {
     const { id } = await params
+    const filePath = path.join(process.cwd(), 'data', 'parcels', `${id}.json`)
 
-    const parcel = await prisma.parcel.findUnique({
-      where: { id },
-      include: {
-        listings: true,
-        features: true,
-        fitScore: true,
-        deal: {
-          include: {
-            activities: { orderBy: { createdAt: 'desc' } },
-          },
-        },
-        ownership: true,
-      },
-    })
-
-    if (!parcel) {
+    if (!fs.existsSync(filePath)) {
       return NextResponse.json({ error: 'Parcel not found' }, { status: 404 })
     }
 
+    const parcel = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
     return NextResponse.json(parcel)
   } catch (error) {
     console.error('Parcel fetch error:', error)
     return NextResponse.json(
-      { error: 'Failed to fetch parcel' },
+      { error: 'Failed to fetch parcel. Data files may not have been generated during build.' },
       { status: 500 }
     )
   }

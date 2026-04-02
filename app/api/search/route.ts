@@ -1,6 +1,30 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
-import type { Prisma } from '@prisma/client'
+import * as fs from 'fs'
+import * as path from 'path'
+
+interface ParcelData {
+  id: string
+  apn: string | null
+  address: string | null
+  county: string
+  state: string
+  acreage: number
+  lat: number | null
+  lon: number | null
+  zoning: string | null
+  createdAt: string
+  fitScore: { overallScore: number; topReasons: string } | null
+  listings: { sourceId: string; price: number | null; pricePerAcre: number | null; status: string }[]
+  deal: { stage: string; priority: string } | null
+}
+
+function loadParcels(): ParcelData[] {
+  const filePath = path.join(process.cwd(), 'data', 'parcels.json')
+  if (!fs.existsSync(filePath)) {
+    throw new Error('parcels.json not found. Run the data export script during build.')
+  }
+  return JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+}
 
 export async function POST(request: Request) {
   try {
@@ -17,108 +41,64 @@ export async function POST(request: Request) {
       limit = 50,
     } = body
 
-    const where: Prisma.ParcelWhereInput = {}
+    let parcels = loadParcels()
 
+    // Apply filters
     if (state) {
-      where.state = state
+      parcels = parcels.filter((p) => p.state === state)
     }
 
-    if (minAcreage !== undefined || maxAcreage !== undefined) {
-      where.acreage = {}
-      if (minAcreage !== undefined) where.acreage.gte = minAcreage
-      if (maxAcreage !== undefined) where.acreage.lte = maxAcreage
+    if (minAcreage !== undefined) {
+      parcels = parcels.filter((p) => p.acreage >= minAcreage)
+    }
+    if (maxAcreage !== undefined) {
+      parcels = parcels.filter((p) => p.acreage <= maxAcreage)
     }
 
     if (sourceId) {
-      where.listings = { some: { sourceId } }
+      parcels = parcels.filter((p) => p.listings.some((l) => l.sourceId === sourceId))
     }
 
-    // For score filtering, we need to include fitScore and filter in JS
-    // since SQLite doesn't handle nested where clauses well
     if (minScore !== undefined) {
-      where.fitScore = { overallScore: { gte: minScore } }
+      parcels = parcels.filter((p) => p.fitScore && p.fitScore.overallScore >= minScore)
     }
 
-    // Build orderBy
-    let orderBy: Prisma.ParcelOrderByWithRelationInput = { createdAt: sortDir }
+    const total = parcels.length
 
-    switch (sortBy) {
-      case 'score':
-        orderBy = { fitScore: { overallScore: sortDir } }
-        break
-      case 'acreage':
-        orderBy = { acreage: sortDir }
-        break
-      case 'state':
-        orderBy = { state: sortDir }
-        break
-      case 'createdAt':
-        orderBy = { createdAt: sortDir }
-        break
-      // 'price' handled post-query since it's on a relation
-    }
+    // Apply sorting
+    parcels.sort((a, b) => {
+      const dir = sortDir === 'asc' ? 1 : -1
 
+      switch (sortBy) {
+        case 'score': {
+          const scoreA = a.fitScore?.overallScore ?? (sortDir === 'asc' ? Infinity : -Infinity)
+          const scoreB = b.fitScore?.overallScore ?? (sortDir === 'asc' ? Infinity : -Infinity)
+          return (scoreA - scoreB) * dir
+        }
+        case 'acreage':
+          return (a.acreage - b.acreage) * dir
+        case 'state':
+          return a.state.localeCompare(b.state) * dir
+        case 'price': {
+          const priceA = a.listings[0]?.price ?? (sortDir === 'asc' ? Infinity : -Infinity)
+          const priceB = b.listings[0]?.price ?? (sortDir === 'asc' ? Infinity : -Infinity)
+          return (priceA - priceB) * dir
+        }
+        case 'createdAt':
+        default:
+          return (new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()) * dir
+      }
+    })
+
+    // Apply pagination
     const skip = (page - 1) * limit
+    const results = parcels.slice(skip, skip + limit)
 
-    const [parcels, total] = await Promise.all([
-      prisma.parcel.findMany({
-        where,
-        include: {
-          fitScore: true,
-          listings: {
-            select: {
-              sourceId: true,
-              price: true,
-              pricePerAcre: true,
-              status: true,
-            },
-          },
-          deal: {
-            select: {
-              stage: true,
-              priority: true,
-            },
-          },
-        },
-        orderBy,
-        skip,
-        take: limit,
-      }),
-      prisma.parcel.count({ where }),
-    ])
-
-    // If sorting by price, sort in JS
-    let results = parcels
-    if (sortBy === 'price') {
-      results = [...parcels].sort((a, b) => {
-        const priceA = a.listings[0]?.price ?? (sortDir === 'asc' ? Infinity : -Infinity)
-        const priceB = b.listings[0]?.price ?? (sortDir === 'asc' ? Infinity : -Infinity)
-        return sortDir === 'asc' ? priceA - priceB : priceB - priceA
-      })
-    }
-
-    const mapped = results.map((p) => ({
-      id: p.id,
-      apn: p.apn,
-      address: p.address,
-      county: p.county,
-      state: p.state,
-      acreage: p.acreage,
-      lat: p.lat,
-      lon: p.lon,
-      zoning: p.zoning,
-      fitScore: p.fitScore
-        ? { overallScore: p.fitScore.overallScore, topReasons: p.fitScore.topReasons }
-        : null,
-      listings: p.listings,
-      deal: p.deal ? { stage: p.deal.stage, priority: p.deal.priority } : null,
-    }))
-
-    return NextResponse.json({ parcels: mapped, total, page, limit })
+    return NextResponse.json({ parcels: results, total, page, limit })
   } catch (error) {
     console.error('Search error:', error)
     return NextResponse.json(
-      { error: 'Failed to search parcels' },
+      { error: 'Failed to search parcels. Data files may not have been generated during build.' },
       { status: 500 }
     )
   }

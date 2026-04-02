@@ -1,0 +1,71 @@
+{
+  "totalParcels": 75,
+  "totalListings": 106,
+  "totalDeals": 25,
+  "avgFitScore": 62,
+  "highFitCount": 13,
+  "medFitCount": 44,
+  "lowFitCount": 18,
+  "byState": {
+    "NC": 14,
+    "GA": 13,
+    "VA": 13,
+    "AL": 12,
+    "SC": 12,
+    "FL": 11
+  },
+  "bySources": [
+    {
+      "sourceId": "cmnhysfm20000v125f1w5uqem",
+      "count": 14
+    },
+    {
+      "sourceId": "cmnhysfm20004v125c8o95h9x",
+      "count": 13
+    },
+    {
+      "sourceId": "cmnhysfm20001v125leznjd4i",
+      "count": 11
+    },
+    {
+      "sourceId": "cmnhysfm2000av125vhu7e1np",
+      "count": 10
+    },
+    {
+      "sourceId": "cmnhysfm2000bv1255sqtcyli",
+      "count": 9
+    },
+    {
+      "sourceId": "cmnhysfm3000cv125j15rjavo",
+      "count": 8
+    },
+    {
+      "sourceId": "cmnhysfm20003v125geev4wh0",
+      "count": 7
+    },
+    {
+      "sourceId": "cmnhysfm20008v125rpad17wr",
+      "count": 7
+    },
+    {
+      "sourceId": "cmnhysfm20009v125kw0a8tdt",
+      "count": 7
+    },
+    {
+      "sourceId": "cmnhysfm20007v125l560jgzu",
+      "count": 6
+    },
+    {
+      "sourceId": "cmnhysfm20002v125vrrt4ve2",
+      "count": 5
+    },
+    {
+      "sourceId": "cmnhysfm20005v125wdppyhxi",
+      "count": 5
+    },
+    {
+      "sourceId": "cmnhysfm20006v125tmqnfw4p",
+      "count": 4
+    }
+  ]
+}

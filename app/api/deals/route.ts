@@ -1,24 +1,19 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import * as fs from 'fs'
+import * as path from 'path'
 
 export async function GET() {
   try {
-    const deals = await prisma.deal.findMany({
-      include: {
-        parcel: {
-          include: {
-            fitScore: true,
-            listings: { take: 1 },
-          },
-        },
-        activities: {
-          orderBy: { createdAt: 'desc' },
-          take: 1,
-        },
-      },
-      orderBy: { updatedAt: 'desc' },
-    })
+    const filePath = path.join(process.cwd(), 'data', 'deals.json')
 
+    if (!fs.existsSync(filePath)) {
+      return NextResponse.json(
+        { error: 'deals.json not found. Data files may not have been generated during build.' },
+        { status: 500 }
+      )
+    }
+
+    const deals = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
     return NextResponse.json(deals)
   } catch (error) {
     console.error('Deals fetch error:', error)

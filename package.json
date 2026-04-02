@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npx prisma generate && npx prisma db push && npx tsx prisma/seed.ts && next build",
+    "build": "npx prisma generate && npx prisma db push && npx tsx prisma/seed.ts && npx tsx scripts/export-data.ts && next build",
     "start": "next start",
     "lint": "next lint",
     "postinstall": "npx prisma generate",

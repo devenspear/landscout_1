@@ -1,47 +1,20 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import * as fs from 'fs'
+import * as path from 'path'
 
 export async function GET() {
   try {
-    const [lastScan, parcelsCount, listingsCount, dealsCount, sourcesCount, sources] =
-      await Promise.all([
-        prisma.scanRun.findFirst({
-          orderBy: { startedAt: 'desc' },
-          select: {
-            id: true,
-            status: true,
-            startedAt: true,
-            totalListings: true,
-            newParcels: true,
-          },
-        }),
-        prisma.parcel.count(),
-        prisma.listing.count(),
-        prisma.deal.count(),
-        prisma.source.count(),
-        prisma.source.findMany({
-          select: {
-            id: true,
-            name: true,
-            slug: true,
-            type: true,
-            enabled: true,
-            lastCrawl: true,
-          },
-          orderBy: { name: 'asc' },
-        }),
-      ])
+    const filePath = path.join(process.cwd(), 'data', 'health.json')
 
-    return NextResponse.json({
-      lastScan,
-      counts: {
-        parcels: parcelsCount,
-        listings: listingsCount,
-        deals: dealsCount,
-        sources: sourcesCount,
-      },
-      sources,
-    })
+    if (!fs.existsSync(filePath)) {
+      return NextResponse.json(
+        { error: 'health.json not found. Data files may not have been generated during build.' },
+        { status: 500 }
+      )
+    }
+
+    const health = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+    return NextResponse.json(health)
   } catch (error) {
     console.error('Health check error:', error)
     return NextResponse.json(

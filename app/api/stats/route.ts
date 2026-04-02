@@ -1,67 +1,20 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+import * as fs from 'fs'
+import * as path from 'path'
 
 export async function GET() {
   try {
-    const [
-      totalParcels,
-      totalListings,
-      totalDeals,
-      fitScores,
-      parcelsWithState,
-      listingsBySrc,
-    ] = await Promise.all([
-      prisma.parcel.count(),
-      prisma.listing.count(),
-      prisma.deal.count(),
-      prisma.fitScore.findMany({
-        select: { overallScore: true },
-      }),
-      prisma.parcel.groupBy({
-        by: ['state'],
-        _count: { id: true },
-        orderBy: { _count: { id: 'desc' } },
-      }),
-      prisma.listing.groupBy({
-        by: ['sourceId'],
-        _count: { id: true },
-        orderBy: { _count: { id: 'desc' } },
-      }),
-    ])
+    const filePath = path.join(process.cwd(), 'data', 'stats.json')
 
-    // Calculate score stats from fetched fit scores
-    const scores = fitScores.map((f) => f.overallScore)
-    const avgFitScore =
-      scores.length > 0
-        ? Math.round(scores.reduce((sum, s) => sum + s, 0) / scores.length)
-        : 0
-    const highFitCount = scores.filter((s) => s >= 80).length
-    const medFitCount = scores.filter((s) => s >= 50 && s < 80).length
-    const lowFitCount = scores.filter((s) => s < 50).length
-
-    // Build byState as Record<string, number>
-    const byState: Record<string, number> = {}
-    for (const row of parcelsWithState) {
-      byState[row.state] = row._count.id
+    if (!fs.existsSync(filePath)) {
+      return NextResponse.json(
+        { error: 'stats.json not found. Data files may not have been generated during build.' },
+        { status: 500 }
+      )
     }
 
-    // Build bySources array
-    const bySources = listingsBySrc.map((row) => ({
-      sourceId: row.sourceId,
-      count: row._count.id,
-    }))
-
-    return NextResponse.json({
-      totalParcels,
-      totalListings,
-      totalDeals,
-      avgFitScore,
-      highFitCount,
-      medFitCount,
-      lowFitCount,
-      byState,
-      bySources,
-    })
+    const stats = JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+    return NextResponse.json(stats)
   } catch (error) {
     console.error('Stats error:', error)
     return NextResponse.json(
