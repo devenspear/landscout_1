@@ -1,0 +1,96 @@
+{
+  "id": "cmni3yh71004mv1tnm6xnvfho",
+  "apn": null,
+  "address": "5518 Turkey Creek Rd",
+  "county": "Telfair",
+  "state": "GA",
+  "acreage": 197,
+  "lat": 31.8744,
+  "lon": -82.7882,
+  "zoning": "timber",
+  "description": "197-acre timber tract in Telfair County, GA. 35% developed, 33% wetland, 25% pasture, 7% forest. Water features include creek, spring. 67 miles from Macon. Gravel road access. Elevation 544 ft.",
+  "createdAt": "2026-04-02T23:30:42.445Z",
+  "updatedAt": "2026-04-02T23:30:42.445Z",
+  "listings": [
+    {
+      "id": "cmni3yh8h00avv1tnzm9m84qa",
+      "parcelId": "cmni3yh71004mv1tnm6xnvfho",
+      "sourceId": "cmni3yh3z0009v1tni34ogcbs",
+      "externalId": "nai-land-484599",
+      "url": "https://www.nailand.com/listing/nai-land-484599",
+      "title": "Private 197-Acre Timber Tract in Telfair County",
+      "price": 1304928,
+      "pricePerAcre": 6624,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/nai-land-484599/aerial-1.jpg\",\"https://images.landscout.dev/nai-land-484599/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-03-13\",\"daysOnMarket\":224,\"broker\":\"NAI Land\"}",
+      "firstSeen": "2026-04-02T23:30:42.498Z",
+      "lastSeen": "2026-04-02T23:30:42.498Z",
+      "createdAt": "2026-04-02T23:30:42.498Z",
+      "updatedAt": "2026-04-02T23:30:42.498Z"
+    }
+  ],
+  "features": {
+    "id": "cmni3yh71004nv1tnd8qc9bhe",
+    "parcelId": "cmni3yh71004mv1tnm6xnvfho",
+    "landCoverMix": "{\"developed\":35,\"wetland\":33,\"pasture\":25,\"forest\":7}",
+    "waterPresence": true,
+    "waterFeatures": "[\"creek\",\"spring\"]",
+    "metroDistance": 67,
+    "nearestMetro": "Macon",
+    "slopeStats": "{\"mean\":7.1,\"percentOver20\":2.9,\"percentOver40\":3.1}",
+    "soilsQuality": 8.7,
+    "roadAccess": "gravel",
+    "easements": null,
+    "powerDistance": 7.9,
+    "waterDistance": 5.6,
+    "sewerDistance": 18.5,
+    "fiberDistance": 3.8,
+    "gasDistance": 23.3,
+    "inFloodway": false,
+    "floodZone": "A",
+    "wetlandsPercent": 22.3,
+    "elevation": 544,
+    "createdAt": "2026-04-02T23:30:42.445Z",
+    "updatedAt": "2026-04-02T23:30:42.445Z"
+  },
+  "fitScore": {
+    "id": "cmni3yh71004ov1tnohwmy7tw",
+    "parcelId": "cmni3yh71004mv1tnm6xnvfho",
+    "overallScore": 94,
+    "scoreBreakdown": "{\"acreage\":14,\"soils\":13,\"location\":9,\"access\":8,\"water\":8,\"terrain\":9,\"utilities\":4,\"risk\":8,\"elevation\":2}",
+    "topReasons": "[\"Ideal acreage (197 ac) in target range\",\"Strong soils quality (8.7/10)\",\"Water features present on property\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-02T23:30:42.445Z"
+  },
+  "deal": {
+    "id": "cmni3yh8x00d5v1tne51gqb0q",
+    "parcelId": "cmni3yh71004mv1tnm6xnvfho",
+    "stage": "new",
+    "priority": "high",
+    "notes": "197-acre timber property in Telfair County, GA. Score: 94/100.",
+    "nextAction": "Contact listing agent",
+    "nextDate": "2026-04-18T23:30:42.513Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-02T23:30:42.514Z",
+    "updatedAt": "2026-04-02T23:30:42.514Z",
+    "activities": [
+      {
+        "id": "cmni3yh8y00d7v1tnl2jzfa08",
+        "dealId": "cmni3yh8x00d5v1tne51gqb0q",
+        "type": "visit",
+        "content": "Walked the property — excellent road frontage, creek runs year-round.",
+        "createdAt": "2026-04-01T23:30:42.514Z"
+      },
+      {
+        "id": "cmni3yh8y00d9v1tn7g0lo1qv",
+        "dealId": "cmni3yh8x00d5v1tne51gqb0q",
+        "type": "offer",
+        "content": "Final offer accepted at $4,000/acre — moving to contract phase.",
+        "createdAt": "2026-02-06T23:30:42.514Z"
+      }
+    ]
+  },
+  "ownership": null
+}

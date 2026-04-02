@@ -1,0 +1,103 @@
+{
+  "id": "cmni3ytqj0057v119i1j8tbi8",
+  "apn": "87-6-232-78",
+  "address": "8179 Bear Hollow Rd",
+  "county": "Jackson",
+  "state": "FL",
+  "acreage": 564,
+  "lat": 30.8437,
+  "lon": -85.2337,
+  "zoning": "conservation",
+  "description": "564-acre conservation tract in Jackson County, FL. 10% wetland, 90% cropland. Water features include creek. 21 miles from Marianna. Dirt road access. Elevation 251 ft.",
+  "createdAt": "2026-04-02T23:30:58.699Z",
+  "updatedAt": "2026-04-02T23:30:58.699Z",
+  "listings": [
+    {
+      "id": "cmni3ytrm00bbv119l27kbgbm",
+      "parcelId": "cmni3ytqj0057v119i1j8tbi8",
+      "sourceId": "cmni3ytoe0001v119n6x5u41m",
+      "externalId": "land-and-farm-832201",
+      "url": "https://www.landandfarm.com/listing/land-and-farm-832201",
+      "title": "Unrestricted 564-Acre Wilderness Tract in Jackson County",
+      "price": 4607316,
+      "pricePerAcre": 8169,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/land-and-farm-832201/aerial-1.jpg\",\"https://images.landscout.dev/land-and-farm-832201/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-11-21\",\"daysOnMarket\":322,\"broker\":null}",
+      "firstSeen": "2026-04-02T23:30:58.739Z",
+      "lastSeen": "2026-04-02T23:30:58.739Z",
+      "createdAt": "2026-04-02T23:30:58.739Z",
+      "updatedAt": "2026-04-02T23:30:58.739Z"
+    }
+  ],
+  "features": {
+    "id": "cmni3ytqj0058v119bieli5b1",
+    "parcelId": "cmni3ytqj0057v119i1j8tbi8",
+    "landCoverMix": "{\"wetland\":10,\"cropland\":90}",
+    "waterPresence": true,
+    "waterFeatures": "[\"creek\"]",
+    "metroDistance": 21,
+    "nearestMetro": "Marianna",
+    "slopeStats": "{\"mean\":20.1,\"percentOver20\":34.8,\"percentOver40\":8.1}",
+    "soilsQuality": 5.5,
+    "roadAccess": "dirt",
+    "easements": null,
+    "powerDistance": 3.4,
+    "waterDistance": 2.3,
+    "sewerDistance": 8.5,
+    "fiberDistance": 23.9,
+    "gasDistance": 11.6,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 4.7,
+    "elevation": 251,
+    "createdAt": "2026-04-02T23:30:58.699Z",
+    "updatedAt": "2026-04-02T23:30:58.699Z"
+  },
+  "fitScore": {
+    "id": "cmni3ytqj0059v119umtzpc4j",
+    "parcelId": "cmni3ytqj0057v119i1j8tbi8",
+    "overallScore": 80,
+    "scoreBreakdown": "{\"acreage\":15,\"soils\":8,\"location\":12,\"access\":4,\"water\":7,\"terrain\":2,\"utilities\":3,\"risk\":11,\"elevation\":1}",
+    "topReasons": "[\"Ideal acreage (564 ac) in target range\",\"Good metro proximity (21 mi)\",\"Water features present on property\",\"Low flood/wetlands risk\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-02T23:30:58.699Z"
+  },
+  "deal": {
+    "id": "cmni3yts900evv1190wz17u78",
+    "parcelId": "cmni3ytqj0057v119i1j8tbi8",
+    "stage": "qualified",
+    "priority": "medium",
+    "notes": null,
+    "nextAction": "Conduct environmental review",
+    "nextDate": "2026-05-02T23:30:58.761Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-02T23:30:58.762Z",
+    "updatedAt": "2026-04-02T23:30:58.762Z",
+    "activities": [
+      {
+        "id": "cmni3ytsa00exv11971e3magq",
+        "dealId": "cmni3yts900evv1190wz17u78",
+        "type": "document",
+        "content": "Uploaded survey plat to deal folder.",
+        "createdAt": "2026-03-19T23:30:58.762Z"
+      },
+      {
+        "id": "cmni3ytsb00f1v119vera8k63",
+        "dealId": "cmni3yts900evv1190wz17u78",
+        "type": "email",
+        "content": "Requested updated plat from county GIS office.",
+        "createdAt": "2026-03-01T23:30:58.763Z"
+      },
+      {
+        "id": "cmni3ytsa00ezv119xy1ogtq4",
+        "dealId": "cmni3yts900evv1190wz17u78",
+        "type": "call",
+        "content": "Broker confirmed no other active offers at this time.",
+        "createdAt": "2026-02-07T23:30:58.762Z"
+      }
+    ]
+  },
+  "ownership": null
+}

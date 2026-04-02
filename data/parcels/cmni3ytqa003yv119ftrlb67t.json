@@ -1,0 +1,96 @@
+{
+  "id": "cmni3ytqa003yv119ftrlb67t",
+  "apn": null,
+  "address": "9924 Timber Ridge Ln",
+  "county": "Morgan",
+  "state": "GA",
+  "acreage": 285,
+  "lat": 33.71510000000001,
+  "lon": -83.46329999999999,
+  "zoning": "agricultural",
+  "description": "285-acre agricultural tract in Morgan County, GA. 52% forest, 43% pasture, 5% developed. 58 miles from Atlanta. Paved road access. Elevation 762 ft.",
+  "createdAt": "2026-04-02T23:30:58.691Z",
+  "updatedAt": "2026-04-02T23:30:58.691Z",
+  "listings": [
+    {
+      "id": "cmni3ytrg00a9v119i44bz8aj",
+      "parcelId": "cmni3ytqa003yv119ftrlb67t",
+      "sourceId": "cmni3ytof0004v119b1ngv1y5",
+      "externalId": "crexi-504323",
+      "url": "https://www.crexi.com/listing/crexi-504323",
+      "title": "Expansive 285-Acre Agricultural Tract in Morgan County",
+      "price": 2473515,
+      "pricePerAcre": 8679,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/crexi-504323/aerial-1.jpg\",\"https://images.landscout.dev/crexi-504323/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-08-07\",\"daysOnMarket\":218,\"broker\":null}",
+      "firstSeen": "2026-04-02T23:30:58.732Z",
+      "lastSeen": "2026-04-02T23:30:58.732Z",
+      "createdAt": "2026-04-02T23:30:58.732Z",
+      "updatedAt": "2026-04-02T23:30:58.732Z"
+    }
+  ],
+  "features": {
+    "id": "cmni3ytqa003zv1199zev6hqx",
+    "parcelId": "cmni3ytqa003yv119ftrlb67t",
+    "landCoverMix": "{\"forest\":52,\"pasture\":43,\"developed\":5}",
+    "waterPresence": false,
+    "waterFeatures": null,
+    "metroDistance": 58,
+    "nearestMetro": "Atlanta",
+    "slopeStats": "{\"mean\":4.8,\"percentOver20\":10.4,\"percentOver40\":2.8}",
+    "soilsQuality": 8.4,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 0.9,
+    "waterDistance": 5.4,
+    "sewerDistance": 18.6,
+    "fiberDistance": 13.4,
+    "gasDistance": 7.3,
+    "inFloodway": false,
+    "floodZone": "AE",
+    "wetlandsPercent": 1.3,
+    "elevation": 762,
+    "createdAt": "2026-04-02T23:30:58.691Z",
+    "updatedAt": "2026-04-02T23:30:58.691Z"
+  },
+  "fitScore": {
+    "id": "cmni3ytqa0040v119z38gyqn3",
+    "parcelId": "cmni3ytqa003yv119ftrlb67t",
+    "overallScore": 91,
+    "scoreBreakdown": "{\"acreage\":20,\"soils\":13,\"location\":10,\"access\":13,\"water\":5,\"terrain\":10,\"utilities\":9,\"risk\":12,\"elevation\":1}",
+    "topReasons": "[\"Ideal acreage (285 ac) in target range\",\"Strong soils quality (8.4/10)\",\"Paved road access\",\"Utilities readily available\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-02T23:30:58.691Z"
+  },
+  "deal": {
+    "id": "cmni3yts000djv119abh9pjn9",
+    "parcelId": "cmni3ytqa003yv119ftrlb67t",
+    "stage": "new",
+    "priority": "high",
+    "notes": "285-acre agricultural property in Morgan County, GA. Score: 91/100.",
+    "nextAction": "Schedule site visit",
+    "nextDate": "2026-04-08T23:30:58.752Z",
+    "assignee": "Analyst",
+    "createdAt": "2026-04-02T23:30:58.752Z",
+    "updatedAt": "2026-04-02T23:30:58.752Z",
+    "activities": [
+      {
+        "id": "cmni3yts100dnv11981hpnyt7",
+        "dealId": "cmni3yts000djv119abh9pjn9",
+        "type": "email",
+        "content": "Sent LOI to listing broker for client review.",
+        "createdAt": "2026-03-05T23:30:58.753Z"
+      },
+      {
+        "id": "cmni3yts000dlv119ixqg8080",
+        "dealId": "cmni3yts000djv119abh9pjn9",
+        "type": "note",
+        "content": "County records show no liens or encumbrances. Title appears clean.",
+        "createdAt": "2026-02-12T23:30:58.752Z"
+      }
+    ]
+  },
+  "ownership": null
+}
