@@ -9,7 +9,9 @@ import {
   Map,
   Kanban,
   Settings,
+  LogOut,
 } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 const navItems = [
   { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
@@ -25,6 +27,13 @@ export default function DashboardLayout({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
+  const router = useRouter()
+
+  async function handleLogout() {
+    await fetch('/api/auth/logout', { method: 'POST' })
+    router.push('/login')
+    router.refresh()
+  }
 
   return (
     <div className="flex min-h-screen">
@@ -68,9 +77,16 @@ export default function DashboardLayout({
           })}
         </nav>
 
-        {/* Version */}
-        <div className="border-t border-gray-800/60 px-5 py-4">
-          <p className="text-xs text-gray-600">v2.0.0</p>
+        {/* Footer */}
+        <div className="border-t border-gray-800/60 px-3 py-4">
+          <button
+            onClick={handleLogout}
+            className="group flex w-full items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-400 transition-colors hover:bg-gray-800/60 hover:text-gray-200"
+          >
+            <LogOut className="h-[18px] w-[18px] text-gray-500 group-hover:text-gray-300" />
+            Sign Out
+          </button>
+          <p className="mt-2 px-3 text-xs text-gray-600">v2.0.0</p>
         </div>
       </aside>
 
