@@ -1,0 +1,104 @@
+{
+  "id": "cmnj13sqj001vv17ebitf7v4s",
+  "apn": "84-4-986-54",
+  "address": "3470 Hollow Creek Rd",
+  "county": "Alamance",
+  "state": "NC",
+  "acreage": 271,
+  "lat": 36.0454,
+  "lon": -79.44420000000001,
+  "zoning": "agricultural",
+  "description": "271-acre agricultural tract in Alamance County, NC. 16% forest, 84% pasture. Water features include lake frontage. 9 miles from Burlington. Paved road access. Elevation 1505 ft.",
+  "createdAt": "2026-04-03T14:58:38.012Z",
+  "updatedAt": "2026-04-03T14:58:38.012Z",
+  "listings": [
+    {
+      "id": "cmnj13srq007zv17ekp9xoj91",
+      "parcelId": "cmnj13sqj001vv17ebitf7v4s",
+      "sourceId": "cmnj13spi000cv17eqvfg8sxl",
+      "externalId": "whitetail-properties-930592",
+      "url": "https://www.whitetailproperties.com/listing/whitetail-properties-930592",
+      "title": "Rolling 271-Acre Agricultural Tract in Alamance County",
+      "price": 920045,
+      "pricePerAcre": 3395,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/whitetail-properties-930592/aerial-1.jpg\",\"https://images.landscout.dev/whitetail-properties-930592/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-01-22\",\"daysOnMarket\":10,\"broker\":\"Whitetail Properties\"}",
+      "firstSeen": "2026-04-03T14:58:38.055Z",
+      "lastSeen": "2026-04-03T14:58:38.055Z",
+      "createdAt": "2026-04-03T14:58:38.055Z",
+      "updatedAt": "2026-04-03T14:58:38.055Z",
+      "sourceName": "Whitetail Properties"
+    }
+  ],
+  "features": {
+    "id": "cmnj13sqj001wv17el26r1yp4",
+    "parcelId": "cmnj13sqj001vv17ebitf7v4s",
+    "landCoverMix": "{\"forest\":16,\"pasture\":84}",
+    "waterPresence": true,
+    "waterFeatures": "[\"lake frontage\"]",
+    "metroDistance": 9,
+    "nearestMetro": "Burlington",
+    "slopeStats": "{\"mean\":17.9,\"percentOver20\":16.8,\"percentOver40\":1.5}",
+    "soilsQuality": 6.8,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 1.2,
+    "waterDistance": 5,
+    "sewerDistance": 9.4,
+    "fiberDistance": 24.5,
+    "gasDistance": 15.3,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 13.6,
+    "elevation": 1505,
+    "createdAt": "2026-04-03T14:58:38.012Z",
+    "updatedAt": "2026-04-03T14:58:38.012Z"
+  },
+  "fitScore": {
+    "id": "cmnj13sqj001xv17ebc4hatzb",
+    "parcelId": "cmnj13sqj001vv17ebitf7v4s",
+    "overallScore": 97,
+    "scoreBreakdown": "{\"acreage\":20,\"soils\":10,\"location\":12,\"access\":12,\"water\":7,\"terrain\":3,\"utilities\":5,\"risk\":9,\"elevation\":5}",
+    "topReasons": "[\"Ideal acreage (271 ac) in target range\",\"Paved road access\",\"Water features present on property\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T14:58:38.012Z"
+  },
+  "deal": {
+    "id": "cmnj13sso00cxv17evxm7qfs2",
+    "parcelId": "cmnj13sqj001vv17ebitf7v4s",
+    "stage": "new",
+    "priority": "high",
+    "notes": "271-acre agricultural property in Alamance County, NC. Score: 97/100.",
+    "nextAction": "Request timber appraisal",
+    "nextDate": "2026-04-25T14:58:38.088Z",
+    "assignee": "Analyst",
+    "createdAt": "2026-04-03T14:58:38.088Z",
+    "updatedAt": "2026-04-03T14:58:38.088Z",
+    "activities": [
+      {
+        "id": "cmnj13ssp00d3v17eqlicmj20",
+        "dealId": "cmnj13sso00cxv17evxm7qfs2",
+        "type": "visit",
+        "content": "Visited during rain — drainage patterns look healthy, no standing water issues.",
+        "createdAt": "2026-03-26T14:58:38.089Z"
+      },
+      {
+        "id": "cmnj13sso00czv17et2mfymjw",
+        "dealId": "cmnj13sso00cxv17evxm7qfs2",
+        "type": "call",
+        "content": "Called county planning office — zoning change is feasible with site plan.",
+        "createdAt": "2026-02-23T14:58:38.088Z"
+      },
+      {
+        "id": "cmnj13ssp00d1v17e4dyzu509",
+        "dealId": "cmnj13sso00cxv17evxm7qfs2",
+        "type": "offer",
+        "content": "Submitted initial offer at $3,800/acre, 30-day due diligence.",
+        "createdAt": "2026-02-10T14:58:38.089Z"
+      }
+    ]
+  },
+  "ownership": null
+}

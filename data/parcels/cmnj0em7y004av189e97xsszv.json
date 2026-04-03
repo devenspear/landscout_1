@@ -1,0 +1,97 @@
+{
+  "id": "cmnj0em7y004av189e97xsszv",
+  "apn": null,
+  "address": "4464 Hollow Creek Rd",
+  "county": "Meriwether",
+  "state": "GA",
+  "acreage": 904,
+  "lat": 32.9341,
+  "lon": -84.6089,
+  "zoning": "mixed-use",
+  "description": "904-acre mixed-use tract in Meriwether County, GA. 22% cropland, 13% forest, 12% wetland, 53% developed. Water features include creek, pond. 72 miles from Atlanta. Gravel road access. Elevation 1376 ft.",
+  "createdAt": "2026-04-03T14:39:03.166Z",
+  "updatedAt": "2026-04-03T14:39:03.166Z",
+  "listings": [
+    {
+      "id": "cmnj0em9300alv189ix40w5j7",
+      "parcelId": "cmnj0em7y004av189e97xsszv",
+      "sourceId": "cmnj0em4d0007v189srl4wonk",
+      "externalId": "united-country-726699",
+      "url": "https://www.unitedcountry.com/listing/united-country-726699",
+      "title": "Prime 904-Acre Development Opportunity in Meriwether County",
+      "price": 4173768,
+      "pricePerAcre": 4617,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/united-country-726699/aerial-1.jpg\",\"https://images.landscout.dev/united-country-726699/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-11-23\",\"daysOnMarket\":278,\"broker\":\"United Country\"}",
+      "firstSeen": "2026-04-03T14:39:03.208Z",
+      "lastSeen": "2026-04-03T14:39:03.208Z",
+      "createdAt": "2026-04-03T14:39:03.208Z",
+      "updatedAt": "2026-04-03T14:39:03.208Z",
+      "sourceName": "United Country"
+    }
+  ],
+  "features": {
+    "id": "cmnj0em7y004bv1891fvr2stz",
+    "parcelId": "cmnj0em7y004av189e97xsszv",
+    "landCoverMix": "{\"cropland\":22,\"forest\":13,\"wetland\":12,\"developed\":53}",
+    "waterPresence": true,
+    "waterFeatures": "[\"creek\",\"pond\"]",
+    "metroDistance": 72,
+    "nearestMetro": "Atlanta",
+    "slopeStats": "{\"mean\":3.9,\"percentOver20\":10.1,\"percentOver40\":2.9}",
+    "soilsQuality": 8.6,
+    "roadAccess": "gravel",
+    "easements": null,
+    "powerDistance": 7.1,
+    "waterDistance": 4.3,
+    "sewerDistance": 10.9,
+    "fiberDistance": 7.3,
+    "gasDistance": 5.7,
+    "inFloodway": false,
+    "floodZone": "A",
+    "wetlandsPercent": 13.5,
+    "elevation": 1376,
+    "createdAt": "2026-04-03T14:39:03.166Z",
+    "updatedAt": "2026-04-03T14:39:03.166Z"
+  },
+  "fitScore": {
+    "id": "cmnj0em7y004cv189xpluhqww",
+    "parcelId": "cmnj0em7y004av189e97xsszv",
+    "overallScore": 75,
+    "scoreBreakdown": "{\"acreage\":16,\"soils\":13,\"location\":9,\"access\":9,\"water\":10,\"terrain\":8,\"utilities\":1,\"risk\":9,\"elevation\":1}",
+    "topReasons": "[\"Ideal acreage (904 ac) in target range\",\"Strong soils quality (8.6/10)\",\"Water features present on property\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T14:39:03.166Z"
+  },
+  "deal": {
+    "id": "cmnj0ema700gpv189cp7cald9",
+    "parcelId": "cmnj0em7y004av189e97xsszv",
+    "stage": "under-contract",
+    "priority": "low",
+    "notes": "904-acre mixed-use property in Meriwether County, GA. Score: 75/100.",
+    "nextAction": "Finalize financing",
+    "nextDate": "2026-04-12T14:39:03.247Z",
+    "assignee": "Analyst",
+    "createdAt": "2026-04-03T14:39:03.248Z",
+    "updatedAt": "2026-04-03T14:39:03.248Z",
+    "activities": [
+      {
+        "id": "cmnj0ema800gtv189t55s3snn",
+        "dealId": "cmnj0ema700gpv189cp7cald9",
+        "type": "call",
+        "content": "Spoke with listing agent — seller is motivated, recently inherited the property.",
+        "createdAt": "2026-03-05T14:39:03.248Z"
+      },
+      {
+        "id": "cmnj0ema800grv189vn3ghk31",
+        "dealId": "cmnj0ema700gpv189cp7cald9",
+        "type": "call",
+        "content": "Spoke with listing agent — seller is motivated, recently inherited the property.",
+        "createdAt": "2026-02-27T14:39:03.248Z"
+      }
+    ]
+  },
+  "ownership": null
+}

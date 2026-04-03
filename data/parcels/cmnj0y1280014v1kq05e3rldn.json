@@ -1,0 +1,104 @@
+{
+  "id": "cmnj0y1280014v1kq05e3rldn",
+  "apn": "11-7-156-82",
+  "address": "9075 Cedar Creek Rd",
+  "county": "Fluvanna",
+  "state": "VA",
+  "acreage": 1307,
+  "lat": 37.9842,
+  "lon": -78.2593,
+  "zoning": "timber",
+  "description": "1307-acre timber tract in Fluvanna County, VA. 49% forest, 29% pasture, 14% developed, 8% wetland. Water features include creek. 63 miles from Richmond. Gravel road access. Elevation 2774 ft.",
+  "createdAt": "2026-04-03T14:54:08.865Z",
+  "updatedAt": "2026-04-03T14:54:08.865Z",
+  "listings": [
+    {
+      "id": "cmnj0y13r007dv1kqg2hiv3oa",
+      "parcelId": "cmnj0y1280014v1kq05e3rldn",
+      "sourceId": "cmnj0y101000av1kqxst5rpez",
+      "externalId": "landleader-640208",
+      "url": "https://www.landleader.com/listing/landleader-640208",
+      "title": "Breathtaking 1307-Acre Managed Timber in Fluvanna County",
+      "price": 10948739,
+      "pricePerAcre": 8377,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/landleader-640208/aerial-1.jpg\",\"https://images.landscout.dev/landleader-640208/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-02-28\",\"daysOnMarket\":282,\"broker\":null}",
+      "firstSeen": "2026-04-03T14:54:08.919Z",
+      "lastSeen": "2026-04-03T14:54:08.919Z",
+      "createdAt": "2026-04-03T14:54:08.919Z",
+      "updatedAt": "2026-04-03T14:54:08.919Z",
+      "sourceName": "LandLeader"
+    }
+  ],
+  "features": {
+    "id": "cmnj0y1280015v1kqs60nrok2",
+    "parcelId": "cmnj0y1280014v1kq05e3rldn",
+    "landCoverMix": "{\"forest\":49,\"pasture\":29,\"developed\":14,\"wetland\":8}",
+    "waterPresence": true,
+    "waterFeatures": "[\"creek\"]",
+    "metroDistance": 63,
+    "nearestMetro": "Richmond",
+    "slopeStats": "{\"mean\":13.5,\"percentOver20\":7.5,\"percentOver40\":2.9}",
+    "soilsQuality": 8.4,
+    "roadAccess": "gravel",
+    "easements": null,
+    "powerDistance": 1.8,
+    "waterDistance": 0.2,
+    "sewerDistance": 5.4,
+    "fiberDistance": 2,
+    "gasDistance": 15.4,
+    "inFloodway": false,
+    "floodZone": "AE",
+    "wetlandsPercent": 29.4,
+    "elevation": 2774,
+    "createdAt": "2026-04-03T14:54:08.865Z",
+    "updatedAt": "2026-04-03T14:54:08.865Z"
+  },
+  "fitScore": {
+    "id": "cmnj0y1280016v1kqea58syn3",
+    "parcelId": "cmnj0y1280014v1kq05e3rldn",
+    "overallScore": 72,
+    "scoreBreakdown": "{\"acreage\":11,\"soils\":13,\"location\":10,\"access\":6,\"water\":8,\"terrain\":4,\"utilities\":6,\"risk\":6,\"elevation\":3}",
+    "topReasons": "[\"Strong soils quality (8.4/10)\",\"Water features present on property\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T14:54:08.865Z"
+  },
+  "deal": {
+    "id": "cmnj0y15s00hbv1kqnvrdj8d3",
+    "parcelId": "cmnj0y1280014v1kq05e3rldn",
+    "stage": "passed",
+    "priority": "low",
+    "notes": "1307-acre timber property in Fluvanna County, VA. Score: 72/100.",
+    "nextAction": null,
+    "nextDate": null,
+    "assignee": null,
+    "createdAt": "2026-04-03T14:54:08.992Z",
+    "updatedAt": "2026-04-03T14:54:08.992Z",
+    "activities": [
+      {
+        "id": "cmnj0y15s00hdv1kqrmkkbwwj",
+        "dealId": "cmnj0y15s00hbv1kqnvrdj8d3",
+        "type": "visit",
+        "content": "Inspected existing barn structure — needs roof repair but solid foundation.",
+        "createdAt": "2026-02-27T14:54:08.992Z"
+      },
+      {
+        "id": "cmnj0y15t00hfv1kqg15th0k0",
+        "dealId": "cmnj0y15s00hbv1kqnvrdj8d3",
+        "type": "email",
+        "content": "Forwarded wetlands delineation report to attorney for review.",
+        "createdAt": "2026-02-16T14:54:08.993Z"
+      },
+      {
+        "id": "cmnj0y15t00hhv1kqdmzrwzpa",
+        "dealId": "cmnj0y15s00hbv1kqnvrdj8d3",
+        "type": "offer",
+        "content": "Final offer accepted at $4,000/acre — moving to contract phase.",
+        "createdAt": "2026-02-14T14:54:08.993Z"
+      }
+    ]
+  },
+  "ownership": null
+}

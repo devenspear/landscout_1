@@ -51,8 +51,8 @@ export default function LoginPage() {
             <Compass className="h-6 w-6 text-emerald-500" />
           </div>
           <div className="text-center">
-            <h1 className="text-lg font-semibold text-gray-100">LandScout</h1>
-            <p className="mt-1 text-sm text-gray-500">
+            <h1 className="text-xl font-bold text-white">LandScout</h1>
+            <p className="mt-1 text-sm text-gray-300">
               Sign in to continue
             </p>
           </div>
@@ -69,7 +69,7 @@ export default function LoginPage() {
           <div className="space-y-1.5">
             <label
               htmlFor="username"
-              className="block text-sm font-medium text-gray-400"
+              className="block text-sm font-semibold text-gray-200"
             >
               Username
             </label>
@@ -81,7 +81,7 @@ export default function LoginPage() {
               required
               autoFocus
               autoComplete="username"
-              className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-3 py-2.5 text-sm text-gray-100 placeholder-gray-600 transition-colors focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500/50"
+              className="w-full rounded-lg border border-gray-600 bg-gray-800/50 px-3 py-2.5 text-base text-white placeholder-gray-500 transition-colors focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500/50"
               placeholder="Enter username"
             />
           </div>
@@ -89,7 +89,7 @@ export default function LoginPage() {
           <div className="space-y-1.5">
             <label
               htmlFor="password"
-              className="block text-sm font-medium text-gray-400"
+              className="block text-sm font-semibold text-gray-200"
             >
               Password
             </label>
@@ -100,7 +100,7 @@ export default function LoginPage() {
               onChange={(e) => setPassword(e.target.value)}
               required
               autoComplete="current-password"
-              className="w-full rounded-lg border border-gray-700 bg-gray-800/50 px-3 py-2.5 text-sm text-gray-100 placeholder-gray-600 transition-colors focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500/50"
+              className="w-full rounded-lg border border-gray-600 bg-gray-800/50 px-3 py-2.5 text-base text-white placeholder-gray-500 transition-colors focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500/50"
               placeholder="Enter password"
             />
           </div>

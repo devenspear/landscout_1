@@ -1,0 +1,104 @@
+{
+  "id": "cmnj0exmp003jv1g2vdrvf8ao",
+  "apn": "57-6-876-15",
+  "address": "8384 White Oak Rd",
+  "county": "Williamsburg",
+  "state": "SC",
+  "acreage": 390,
+  "lat": 33.6871,
+  "lon": -79.7295,
+  "zoning": "rural-residential",
+  "description": "390-acre rural-residential tract in Williamsburg County, SC. 50% cropland, 50% forest. 43 miles from Florence. Gravel road access. Elevation 931 ft.",
+  "createdAt": "2026-04-03T14:39:17.953Z",
+  "updatedAt": "2026-04-03T14:39:17.953Z",
+  "listings": [
+    {
+      "id": "cmnj0exnu009rv1g270rm4xvc",
+      "parcelId": "cmnj0exmp003jv1g2vdrvf8ao",
+      "sourceId": "cmnj0exku0002v1g21wb48887",
+      "externalId": "whitetail-properties-852816",
+      "url": "https://www.whitetailproperties.com/listing/whitetail-properties-852816",
+      "title": "Scenic 390-Acre Country Estate in Williamsburg County",
+      "price": 3397290,
+      "pricePerAcre": 8711,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/whitetail-properties-852816/aerial-1.jpg\",\"https://images.landscout.dev/whitetail-properties-852816/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-03-25\",\"daysOnMarket\":251,\"broker\":\"Whitetail Properties\"}",
+      "firstSeen": "2026-04-03T14:39:17.994Z",
+      "lastSeen": "2026-04-03T14:39:17.994Z",
+      "createdAt": "2026-04-03T14:39:17.994Z",
+      "updatedAt": "2026-04-03T14:39:17.994Z",
+      "sourceName": "Whitetail Properties"
+    }
+  ],
+  "features": {
+    "id": "cmnj0exmp003kv1g2huc8s32u",
+    "parcelId": "cmnj0exmp003jv1g2vdrvf8ao",
+    "landCoverMix": "{\"cropland\":50,\"forest\":50}",
+    "waterPresence": false,
+    "waterFeatures": null,
+    "metroDistance": 43,
+    "nearestMetro": "Florence",
+    "slopeStats": "{\"mean\":15.5,\"percentOver20\":18.9,\"percentOver40\":1.5}",
+    "soilsQuality": 6.9,
+    "roadAccess": "gravel",
+    "easements": null,
+    "powerDistance": 3.4,
+    "waterDistance": 4.9,
+    "sewerDistance": 8.1,
+    "fiberDistance": 18.5,
+    "gasDistance": 23.3,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 12.7,
+    "elevation": 931,
+    "createdAt": "2026-04-03T14:39:17.953Z",
+    "updatedAt": "2026-04-03T14:39:17.953Z"
+  },
+  "fitScore": {
+    "id": "cmnj0exmp003lv1g2onfy1fhp",
+    "parcelId": "cmnj0exmp003jv1g2vdrvf8ao",
+    "overallScore": 73,
+    "scoreBreakdown": "{\"acreage\":19,\"soils\":10,\"location\":13,\"access\":8,\"water\":4,\"terrain\":5,\"utilities\":3,\"risk\":9,\"elevation\":2}",
+    "topReasons": "[\"Ideal acreage (390 ac) in target range\",\"Good metro proximity (43 mi)\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T14:39:17.953Z"
+  },
+  "deal": {
+    "id": "cmnj0exp400h3v1g2nfijralh",
+    "parcelId": "cmnj0exmp003jv1g2vdrvf8ao",
+    "stage": "closed",
+    "priority": "low",
+    "notes": null,
+    "nextAction": null,
+    "nextDate": null,
+    "assignee": null,
+    "createdAt": "2026-04-03T14:39:18.041Z",
+    "updatedAt": "2026-04-03T14:39:18.041Z",
+    "activities": [
+      {
+        "id": "cmnj0exp500h9v1g2if92vqzk",
+        "dealId": "cmnj0exp400h3v1g2nfijralh",
+        "type": "offer",
+        "content": "Final offer accepted at $4,000/acre — moving to contract phase.",
+        "createdAt": "2026-03-20T14:39:18.041Z"
+      },
+      {
+        "id": "cmnj0exp500h7v1g2eobe4mvd",
+        "dealId": "cmnj0exp400h3v1g2nfijralh",
+        "type": "note",
+        "content": "Soils report shows prime farmland classification on 60% of the tract.",
+        "createdAt": "2026-03-06T14:39:18.041Z"
+      },
+      {
+        "id": "cmnj0exp500h5v1g28v0qfw27",
+        "dealId": "cmnj0exp400h3v1g2nfijralh",
+        "type": "offer",
+        "content": "Submitted initial offer at $3,800/acre, 30-day due diligence.",
+        "createdAt": "2026-02-13T14:39:18.041Z"
+      }
+    ]
+  },
+  "ownership": null
+}

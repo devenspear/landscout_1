@@ -1,0 +1,97 @@
+{
+  "id": "cmnj0exms0041v1g2mm9p68sy",
+  "apn": "69-9-952-24",
+  "address": "3279 Hollow Creek Rd",
+  "county": "Putnam",
+  "state": "GA",
+  "acreage": 165,
+  "lat": 33.3861,
+  "lon": -83.25670000000001,
+  "zoning": "rural-residential",
+  "description": "165-acre rural-residential tract in Putnam County, GA. 29% pasture, 48% wetland, 18% forest, 5% developed. 34 miles from Milledgeville. Gravel road access. Elevation 1730 ft.",
+  "createdAt": "2026-04-03T14:39:17.956Z",
+  "updatedAt": "2026-04-03T14:39:17.956Z",
+  "listings": [
+    {
+      "id": "cmnj0exnx00abv1g2h9c16o5x",
+      "parcelId": "cmnj0exms0041v1g2mm9p68sy",
+      "sourceId": "cmnj0exku0009v1g2p7rshiv6",
+      "externalId": "united-country-169673",
+      "url": "https://www.unitedcountry.com/listing/united-country-169673",
+      "title": "Breathtaking 165-Acre Mountain Retreat in Putnam County",
+      "price": 715935,
+      "pricePerAcre": 4339,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/united-country-169673/aerial-1.jpg\",\"https://images.landscout.dev/united-country-169673/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-04-07\",\"daysOnMarket\":31,\"broker\":\"United Country\"}",
+      "firstSeen": "2026-04-03T14:39:17.997Z",
+      "lastSeen": "2026-04-03T14:39:17.997Z",
+      "createdAt": "2026-04-03T14:39:17.997Z",
+      "updatedAt": "2026-04-03T14:39:17.997Z",
+      "sourceName": "United Country"
+    }
+  ],
+  "features": {
+    "id": "cmnj0exms0042v1g26z3gakg2",
+    "parcelId": "cmnj0exms0041v1g2mm9p68sy",
+    "landCoverMix": "{\"pasture\":29,\"wetland\":48,\"forest\":18,\"developed\":5}",
+    "waterPresence": false,
+    "waterFeatures": null,
+    "metroDistance": 34,
+    "nearestMetro": "Milledgeville",
+    "slopeStats": "{\"mean\":5,\"percentOver20\":0.6,\"percentOver40\":0.5}",
+    "soilsQuality": 8.1,
+    "roadAccess": "gravel",
+    "easements": null,
+    "powerDistance": 6.5,
+    "waterDistance": 1.8,
+    "sewerDistance": 13.6,
+    "fiberDistance": 12.9,
+    "gasDistance": 10.1,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 32.5,
+    "elevation": 1730,
+    "createdAt": "2026-04-03T14:39:17.956Z",
+    "updatedAt": "2026-04-03T14:39:17.956Z"
+  },
+  "fitScore": {
+    "id": "cmnj0exms0043v1g2el3ahy3u",
+    "parcelId": "cmnj0exms0041v1g2mm9p68sy",
+    "overallScore": 90,
+    "scoreBreakdown": "{\"acreage\":19,\"soils\":12,\"location\":13,\"access\":9,\"water\":4,\"terrain\":10,\"utilities\":4,\"risk\":5,\"elevation\":3}",
+    "topReasons": "[\"Ideal acreage (165 ac) in target range\",\"Strong soils quality (8.1/10)\",\"Good metro proximity (34 mi)\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T14:39:17.956Z"
+  },
+  "deal": {
+    "id": "cmnj0exoj00dpv1g2bo6w1l8a",
+    "parcelId": "cmnj0exms0041v1g2mm9p68sy",
+    "stage": "new",
+    "priority": "high",
+    "notes": "165-acre rural-residential property in Putnam County, GA. Score: 90/100.",
+    "nextAction": "Pull county tax records",
+    "nextDate": "2026-04-27T14:39:18.019Z",
+    "assignee": "Analyst",
+    "createdAt": "2026-04-03T14:39:18.019Z",
+    "updatedAt": "2026-04-03T14:39:18.019Z",
+    "activities": [
+      {
+        "id": "cmnj0exoj00dtv1g2hpohazae",
+        "dealId": "cmnj0exoj00dpv1g2bo6w1l8a",
+        "type": "call",
+        "content": "Spoke with listing agent — seller is motivated, recently inherited the property.",
+        "createdAt": "2026-03-21T14:39:18.019Z"
+      },
+      {
+        "id": "cmnj0exoj00drv1g29bzufym6",
+        "dealId": "cmnj0exoj00dpv1g2bo6w1l8a",
+        "type": "note",
+        "content": "Soils report shows prime farmland classification on 60% of the tract.",
+        "createdAt": "2026-03-10T14:39:18.019Z"
+      }
+    ]
+  },
+  "ownership": null
+}

@@ -1,0 +1,97 @@
+{
+  "id": "cmnj13sr1004dv17e41mf1iq8",
+  "apn": "30-2-569-20",
+  "address": "665 Meadow Creek Rd",
+  "county": "Burke",
+  "state": "GA",
+  "acreage": 856,
+  "lat": 32.9248,
+  "lon": -81.8984,
+  "zoning": "conservation",
+  "description": "856-acre conservation tract in Burke County, GA. 36% pasture, 27% wetland, 11% forest, 26% cropland. Water features include river frontage. 46 miles from Augusta. Dirt road access. Elevation 1399 ft.",
+  "createdAt": "2026-04-03T14:58:38.029Z",
+  "updatedAt": "2026-04-03T14:58:38.029Z",
+  "listings": [
+    {
+      "id": "cmnj13ss700anv17evwsy328l",
+      "parcelId": "cmnj13sr1004dv17e41mf1iq8",
+      "sourceId": "cmnj13spi0000v17es1fv8lr8",
+      "externalId": "landwatch-521650",
+      "url": "https://www.landwatch.com/listing/landwatch-521650",
+      "title": "Prime 856-Acre Wilderness Tract in Burke County",
+      "price": 10959368,
+      "pricePerAcre": 12803,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/landwatch-521650/aerial-1.jpg\",\"https://images.landscout.dev/landwatch-521650/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-06-26\",\"daysOnMarket\":129,\"broker\":null}",
+      "firstSeen": "2026-04-03T14:58:38.072Z",
+      "lastSeen": "2026-04-03T14:58:38.072Z",
+      "createdAt": "2026-04-03T14:58:38.072Z",
+      "updatedAt": "2026-04-03T14:58:38.072Z",
+      "sourceName": "LandWatch"
+    }
+  ],
+  "features": {
+    "id": "cmnj13sr1004ev17e55z8i2nf",
+    "parcelId": "cmnj13sr1004dv17e41mf1iq8",
+    "landCoverMix": "{\"pasture\":36,\"wetland\":27,\"forest\":11,\"cropland\":26}",
+    "waterPresence": true,
+    "waterFeatures": "[\"river frontage\"]",
+    "metroDistance": 46,
+    "nearestMetro": "Augusta",
+    "slopeStats": "{\"mean\":18.2,\"percentOver20\":24.7,\"percentOver40\":11.3}",
+    "soilsQuality": 6,
+    "roadAccess": "dirt",
+    "easements": null,
+    "powerDistance": 1.8,
+    "waterDistance": 5.2,
+    "sewerDistance": 19.4,
+    "fiberDistance": 29.5,
+    "gasDistance": 6.7,
+    "inFloodway": false,
+    "floodZone": null,
+    "wetlandsPercent": 9.3,
+    "elevation": 1399,
+    "createdAt": "2026-04-03T14:58:38.029Z",
+    "updatedAt": "2026-04-03T14:58:38.029Z"
+  },
+  "fitScore": {
+    "id": "cmnj13sr1004fv17efju0t9rs",
+    "parcelId": "cmnj13sr1004dv17e41mf1iq8",
+    "overallScore": 81,
+    "scoreBreakdown": "{\"acreage\":15,\"soils\":9,\"location\":9,\"access\":3,\"water\":8,\"terrain\":4,\"utilities\":4,\"risk\":10,\"elevation\":2}",
+    "topReasons": "[\"Ideal acreage (856 ac) in target range\",\"Water features present on property\",\"Low flood/wetlands risk\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T14:58:38.029Z"
+  },
+  "deal": {
+    "id": "cmnj13ssz00epv17eabnhj10o",
+    "parcelId": "cmnj13sr1004dv17e41mf1iq8",
+    "stage": "qualified",
+    "priority": "medium",
+    "notes": "856-acre conservation property in Burke County, GA. Score: 81/100.",
+    "nextAction": "Request survey",
+    "nextDate": "2026-04-26T14:58:38.099Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-03T14:58:38.100Z",
+    "updatedAt": "2026-04-03T14:58:38.100Z",
+    "activities": [
+      {
+        "id": "cmnj13st000erv17ehody94gg",
+        "dealId": "cmnj13ssz00epv17eabnhj10o",
+        "type": "document",
+        "content": "Uploaded survey plat to deal folder.",
+        "createdAt": "2026-03-02T14:58:38.100Z"
+      },
+      {
+        "id": "cmnj13st000etv17e4q6n1dr2",
+        "dealId": "cmnj13ssz00epv17eabnhj10o",
+        "type": "note",
+        "content": "Soils report shows prime farmland classification on 60% of the tract.",
+        "createdAt": "2026-02-27T14:58:38.100Z"
+      }
+    ]
+  },
+  "ownership": null
+}

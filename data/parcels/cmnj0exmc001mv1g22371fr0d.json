@@ -1,0 +1,104 @@
+{
+  "id": "cmnj0exmc001mv1g22371fr0d",
+  "apn": "99-8-804-53",
+  "address": "4784 Church Hill Rd",
+  "county": "Ashe",
+  "state": "NC",
+  "acreage": 557,
+  "lat": 36.5007,
+  "lon": -81.6486,
+  "zoning": "mixed-use",
+  "description": "557-acre mixed-use tract in Ashe County, NC. 16% forest, 84% pasture. Water features include spring. 36 miles from Boone. Gravel road access. Elevation 2289 ft.",
+  "createdAt": "2026-04-03T14:39:17.940Z",
+  "updatedAt": "2026-04-03T14:39:17.940Z",
+  "listings": [
+    {
+      "id": "cmnj0exnh007tv1g2wy1hfls7",
+      "parcelId": "cmnj0exmc001mv1g22371fr0d",
+      "sourceId": "cmnj0exku0003v1g2cqaopcb9",
+      "externalId": "lands-of-america-936705",
+      "url": "https://www.landsofamerica.com/listing/lands-of-america-936705",
+      "title": "Pristine 557-Acre Development Opportunity in Ashe County",
+      "price": 1696622,
+      "pricePerAcre": 3046,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/lands-of-america-936705/aerial-1.jpg\",\"https://images.landscout.dev/lands-of-america-936705/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-11-19\",\"daysOnMarket\":74,\"broker\":null}",
+      "firstSeen": "2026-04-03T14:39:17.981Z",
+      "lastSeen": "2026-04-03T14:39:17.981Z",
+      "createdAt": "2026-04-03T14:39:17.981Z",
+      "updatedAt": "2026-04-03T14:39:17.981Z",
+      "sourceName": "Lands of America"
+    }
+  ],
+  "features": {
+    "id": "cmnj0exmc001nv1g26aq19hr4",
+    "parcelId": "cmnj0exmc001mv1g22371fr0d",
+    "landCoverMix": "{\"forest\":16,\"pasture\":84}",
+    "waterPresence": true,
+    "waterFeatures": "[\"spring\"]",
+    "metroDistance": 36,
+    "nearestMetro": "Boone",
+    "slopeStats": "{\"mean\":4.3,\"percentOver20\":11.3,\"percentOver40\":1.4}",
+    "soilsQuality": 8.8,
+    "roadAccess": "gravel",
+    "easements": "[\"utility easement\",\"road easement\"]",
+    "powerDistance": 5.5,
+    "waterDistance": 3.4,
+    "sewerDistance": 14,
+    "fiberDistance": 11.4,
+    "gasDistance": 16.8,
+    "inFloodway": false,
+    "floodZone": null,
+    "wetlandsPercent": 2.8,
+    "elevation": 2289,
+    "createdAt": "2026-04-03T14:39:17.940Z",
+    "updatedAt": "2026-04-03T14:39:17.940Z"
+  },
+  "fitScore": {
+    "id": "cmnj0exmc001ov1g2zitpnmpt",
+    "parcelId": "cmnj0exmc001mv1g22371fr0d",
+    "overallScore": 77,
+    "scoreBreakdown": "{\"acreage\":19,\"soils\":13,\"location\":15,\"access\":9,\"water\":8,\"terrain\":7,\"utilities\":1,\"risk\":11,\"elevation\":4}",
+    "topReasons": "[\"Ideal acreage (557 ac) in target range\",\"Strong soils quality (8.8/10)\",\"Good metro proximity (36 mi)\",\"Water features present on property\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T14:39:17.940Z"
+  },
+  "deal": {
+    "id": "cmnj0exox00fxv1g2kmka55ea",
+    "parcelId": "cmnj0exmc001mv1g22371fr0d",
+    "stage": "pursuit",
+    "priority": "medium",
+    "notes": "557-acre mixed-use property in Ashe County, NC. Score: 77/100.",
+    "nextAction": "Finalize offer terms",
+    "nextDate": "2026-04-09T14:39:18.033Z",
+    "assignee": null,
+    "createdAt": "2026-04-03T14:39:18.034Z",
+    "updatedAt": "2026-04-03T14:39:18.034Z",
+    "activities": [
+      {
+        "id": "cmnj0exoy00g1v1g2d19u3nzi",
+        "dealId": "cmnj0exox00fxv1g2kmka55ea",
+        "type": "email",
+        "content": "Received Phase I environmental report — no issues identified.",
+        "createdAt": "2026-03-27T14:39:18.034Z"
+      },
+      {
+        "id": "cmnj0exoy00g3v1g2apiii11z",
+        "dealId": "cmnj0exox00fxv1g2kmka55ea",
+        "type": "email",
+        "content": "Forwarded wetlands delineation report to attorney for review.",
+        "createdAt": "2026-03-15T14:39:18.034Z"
+      },
+      {
+        "id": "cmnj0exoy00fzv1g2gmfo6ccx",
+        "dealId": "cmnj0exox00fxv1g2kmka55ea",
+        "type": "email",
+        "content": "Sent request for timber appraisal to Anderson Forestry Consultants.",
+        "createdAt": "2026-03-05T14:39:18.034Z"
+      }
+    ]
+  },
+  "ownership": null
+}

@@ -1,0 +1,104 @@
+{
+  "id": "cmnj0cmm0003mv1s3xmhp0icc",
+  "apn": "83-3-871-64",
+  "address": "1179 Long Branch Rd",
+  "county": "Lumpkin",
+  "state": "GA",
+  "acreage": 533,
+  "lat": 34.5429,
+  "lon": -84.0212,
+  "zoning": "agricultural",
+  "description": "533-acre agricultural tract in Lumpkin County, GA. 33% wetland, 67% forest. Water features include pond. 11 miles from Dahlonega. Paved road access. Elevation 838 ft.",
+  "createdAt": "2026-04-03T14:37:30.361Z",
+  "updatedAt": "2026-04-03T14:37:30.361Z",
+  "listings": [
+    {
+      "id": "cmnj0cmn9009tv1s31t173gsd",
+      "parcelId": "cmnj0cmm0003mv1s3xmhp0icc",
+      "sourceId": "cmnj0cmjb0005v1s327khnz9k",
+      "externalId": "united-country-278603",
+      "url": "https://www.unitedcountry.com/listing/united-country-278603",
+      "title": "Prime 533-Acre Farm in Lumpkin County",
+      "price": 2025400,
+      "pricePerAcre": 3800,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/united-country-278603/aerial-1.jpg\",\"https://images.landscout.dev/united-country-278603/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-02-07\",\"daysOnMarket\":20,\"broker\":\"United Country\"}",
+      "firstSeen": "2026-04-03T14:37:30.405Z",
+      "lastSeen": "2026-04-03T14:37:30.405Z",
+      "createdAt": "2026-04-03T14:37:30.405Z",
+      "updatedAt": "2026-04-03T14:37:30.405Z",
+      "sourceName": "United Country"
+    }
+  ],
+  "features": {
+    "id": "cmnj0cmm0003nv1s3wsvlds4c",
+    "parcelId": "cmnj0cmm0003mv1s3xmhp0icc",
+    "landCoverMix": "{\"wetland\":33,\"forest\":67}",
+    "waterPresence": true,
+    "waterFeatures": "[\"pond\"]",
+    "metroDistance": 11,
+    "nearestMetro": "Dahlonega",
+    "slopeStats": "{\"mean\":21.2,\"percentOver20\":20.5,\"percentOver40\":11.3}",
+    "soilsQuality": 5.5,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 5.9,
+    "waterDistance": 0.3,
+    "sewerDistance": 3,
+    "fiberDistance": 22.9,
+    "gasDistance": 15.1,
+    "inFloodway": false,
+    "floodZone": "AE",
+    "wetlandsPercent": 35.8,
+    "elevation": 838,
+    "createdAt": "2026-04-03T14:37:30.361Z",
+    "updatedAt": "2026-04-03T14:37:30.361Z"
+  },
+  "fitScore": {
+    "id": "cmnj0cmm0003ov1s3ktbhro03",
+    "parcelId": "cmnj0cmm0003mv1s3xmhp0icc",
+    "overallScore": 78,
+    "scoreBreakdown": "{\"acreage\":19,\"soils\":8,\"location\":12,\"access\":11,\"water\":9,\"terrain\":0,\"utilities\":0,\"risk\":5,\"elevation\":2}",
+    "topReasons": "[\"Ideal acreage (533 ac) in target range\",\"Paved road access\",\"Water features present on property\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T14:37:30.361Z"
+  },
+  "deal": {
+    "id": "cmnj0cmod00fpv1s3m4rntnvc",
+    "parcelId": "cmnj0cmm0003mv1s3xmhp0icc",
+    "stage": "pursuit",
+    "priority": "medium",
+    "notes": "533-acre agricultural property in Lumpkin County, GA. Score: 78/100.",
+    "nextAction": "Order Phase I ESA",
+    "nextDate": "2026-04-25T14:37:30.445Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-03T14:37:30.445Z",
+    "updatedAt": "2026-04-03T14:37:30.445Z",
+    "activities": [
+      {
+        "id": "cmnj0cmod00frv1s3fkd68kbw",
+        "dealId": "cmnj0cmod00fpv1s3m4rntnvc",
+        "type": "note",
+        "content": "County records show no liens or encumbrances. Title appears clean.",
+        "createdAt": "2026-03-24T14:37:30.445Z"
+      },
+      {
+        "id": "cmnj0cmod00ftv1s3ev06xmov",
+        "dealId": "cmnj0cmod00fpv1s3m4rntnvc",
+        "type": "document",
+        "content": "Received and reviewed title commitment — Schedule B items are standard.",
+        "createdAt": "2026-03-24T14:37:30.445Z"
+      },
+      {
+        "id": "cmnj0cmoe00fvv1s3yo8qi4ax",
+        "dealId": "cmnj0cmod00fpv1s3m4rntnvc",
+        "type": "document",
+        "content": "Received and reviewed title commitment — Schedule B items are standard.",
+        "createdAt": "2026-03-01T14:37:30.446Z"
+      }
+    ]
+  },
+  "ownership": null
+}
