@@ -1,8 +1,8 @@
 {
   "lastScan": {
-    "id": "cmni9yoeq00hiv1na7ik92qud",
+    "id": "cmnj03i0q00hiv1xh83odz7nr",
     "status": "completed",
-    "startedAt": "2026-04-02T23:18:49.490Z",
+    "startedAt": "2026-04-03T11:30:24.506Z",
     "totalListings": 106,
     "newParcels": 75
   },
@@ -14,7 +14,7 @@
   },
   "sources": [
     {
-      "id": "cmni9yo80000cv1nayrllpv8f",
+      "id": "cmnj03huz0004v1xhy0uskm5l",
       "name": "AFM Real Estate",
       "slug": "afm-real-estate",
       "type": "broker",
@@ -22,7 +22,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo80000bv1naszntu3mn",
+      "id": "cmnj03huz0009v1xhn5rskogf",
       "name": "Crexi",
       "slug": "crexi",
       "type": "portal",
@@ -30,7 +30,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo7z0001v1nae2xati4n",
+      "id": "cmnj03huy0000v1xh077u9qwu",
       "name": "Hall & Hall",
       "slug": "hall-and-hall",
       "type": "broker",
@@ -38,7 +38,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo7z0004v1nazi1mupk9",
+      "id": "cmnj03huz0001v1xhdd5zqnul",
       "name": "Land And Farm",
       "slug": "land-and-farm",
       "type": "portal",
@@ -46,7 +46,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo7z0005v1na97s98i4z",
+      "id": "cmnj03huz000cv1xhthsz4912",
       "name": "LandLeader",
       "slug": "landleader",
       "type": "portal",
@@ -54,7 +54,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo7z0000v1naemtfmt98",
+      "id": "cmnj03huz0002v1xht0ioztoy",
       "name": "LandWatch",
       "slug": "landwatch",
       "type": "portal",
@@ -62,7 +62,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo800008v1nahb879x8v",
+      "id": "cmnj03huz000av1xhamc1vjtl",
       "name": "Lands of America",
       "slug": "lands-of-america",
       "type": "portal",
@@ -70,7 +70,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo800009v1nawzhqe8n6",
+      "id": "cmnj03huz0008v1xh11f6oswd",
       "name": "LoopNet",
       "slug": "loopnet",
       "type": "portal",
@@ -78,7 +78,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo7z0002v1navxxxz99g",
+      "id": "cmnj03huz0007v1xh5avd5vw3",
       "name": "Mason & Morse Ranch",
       "slug": "mason-morse-ranch",
       "type": "broker",
@@ -86,7 +86,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo7z0006v1navrhuf640",
+      "id": "cmnj03huz0005v1xhzmaydw8k",
       "name": "NAI Land",
       "slug": "nai-land",
       "type": "broker",
@@ -94,7 +94,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo80000av1nam2zbxwiy",
+      "id": "cmnj03huz000bv1xhzglfcfpf",
       "name": "Peoples Company",
       "slug": "peoples-company",
       "type": "broker",
@@ -102,7 +102,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo7z0003v1nauvn1oqm6",
+      "id": "cmnj03huz0006v1xh63a9t5bi",
       "name": "United Country",
       "slug": "united-country",
       "type": "broker",
@@ -110,7 +110,7 @@
       "lastCrawl": null
     },
     {
-      "id": "cmni9yo800007v1nacuc2ef46",
+      "id": "cmnj03huz0003v1xhf1k1wlu7",
       "name": "Whitetail Properties",
       "slug": "whitetail-properties",
       "type": "broker",

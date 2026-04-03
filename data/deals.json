@@ -1,17 +1,17 @@
 [
   {
-    "id": "cmni9yoep00hbv1nauak660jb",
-    "parcelId": "cmni9yobp0014v1nagzzd4pr0",
+    "id": "cmnj03i0n00hbv1xhtgnh2arn",
+    "parcelId": "cmnj03hx10014v1xha9vpp91o",
     "stage": "passed",
     "priority": "low",
     "notes": "1307-acre timber property in Fluvanna County, VA. Score: 72/100.",
     "nextAction": null,
     "nextDate": null,
     "assignee": null,
-    "createdAt": "2026-04-03T02:18:49.490Z",
-    "updatedAt": "2026-04-03T02:18:49.490Z",
+    "createdAt": "2026-04-03T14:30:24.503Z",
+    "updatedAt": "2026-04-03T14:30:24.503Z",
     "parcel": {
-      "id": "cmni9yobp0014v1nagzzd4pr0",
+      "id": "cmnj03hx10014v1xha9vpp91o",
       "apn": "11-7-156-82",
       "address": "9075 Cedar Creek Rd",
       "county": "Fluvanna",
@@ -21,23 +21,23 @@
       "lon": -78.2593,
       "zoning": "timber",
       "description": "1307-acre timber tract in Fluvanna County, VA. 49% forest, 29% pasture, 14% developed, 8% wetland. Water features include creek. 63 miles from Richmond. Gravel road access. Elevation 2774 ft.",
-      "createdAt": "2026-04-03T02:18:49.381Z",
-      "updatedAt": "2026-04-03T02:18:49.381Z",
+      "createdAt": "2026-04-03T14:30:24.374Z",
+      "updatedAt": "2026-04-03T14:30:24.374Z",
       "fitScore": {
-        "id": "cmni9yobp0016v1na6ccxddaf",
-        "parcelId": "cmni9yobp0014v1nagzzd4pr0",
+        "id": "cmnj03hx10016v1xhw023tet7",
+        "parcelId": "cmnj03hx10014v1xha9vpp91o",
         "overallScore": 72,
         "scoreBreakdown": "{\"acreage\":11,\"soils\":13,\"location\":10,\"access\":6,\"water\":8,\"terrain\":4,\"utilities\":6,\"risk\":6,\"elevation\":3}",
         "topReasons": "[\"Strong soils quality (8.4/10)\",\"Water features present on property\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.381Z"
+        "calculatedAt": "2026-04-03T14:30:24.374Z"
       },
       "listings": [
         {
-          "id": "cmni9yocz007dv1nagmkiam1j",
-          "parcelId": "cmni9yobp0014v1nagzzd4pr0",
-          "sourceId": "cmni9yo7z0005v1na97s98i4z",
+          "id": "cmnj03hyi007dv1xhrgrr6q1r",
+          "parcelId": "cmnj03hx10014v1xha9vpp91o",
+          "sourceId": "cmnj03huz000cv1xhthsz4912",
           "externalId": "landleader-640208",
           "url": "https://www.landleader.com/listing/landleader-640208",
           "title": "Breathtaking 1307-Acre Managed Timber in Fluvanna County",
@@ -46,36 +46,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/landleader-640208/aerial-1.jpg\",\"https://images.landscout.dev/landleader-640208/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-02-28\",\"daysOnMarket\":282,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.428Z",
-          "lastSeen": "2026-04-03T02:18:49.428Z",
-          "createdAt": "2026-04-03T02:18:49.428Z",
-          "updatedAt": "2026-04-03T02:18:49.428Z"
+          "firstSeen": "2026-04-03T14:30:24.426Z",
+          "lastSeen": "2026-04-03T14:30:24.426Z",
+          "createdAt": "2026-04-03T14:30:24.426Z",
+          "updatedAt": "2026-04-03T14:30:24.426Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoep00hdv1naibiq6p86",
-        "dealId": "cmni9yoep00hbv1nauak660jb",
+        "id": "cmnj03i0n00hdv1xhkzu3t1zz",
+        "dealId": "cmnj03i0n00hbv1xhtgnh2arn",
         "type": "visit",
         "content": "Inspected existing barn structure — needs roof repair but solid foundation.",
-        "createdAt": "2026-02-27T02:18:49.489Z"
+        "createdAt": "2026-02-27T14:30:24.503Z"
       }
     ]
   },
   {
-    "id": "cmni9yoeo00h3v1nan1gxrqcy",
-    "parcelId": "cmni9yoc9003jv1namouzu057",
+    "id": "cmnj03i0l00h3v1xheydh5kuz",
+    "parcelId": "cmnj03hxo003jv1xh8qfw7dj4",
     "stage": "closed",
     "priority": "low",
     "notes": null,
     "nextAction": null,
     "nextDate": null,
     "assignee": null,
-    "createdAt": "2026-04-03T02:18:49.488Z",
-    "updatedAt": "2026-04-03T02:18:49.488Z",
+    "createdAt": "2026-04-03T14:30:24.502Z",
+    "updatedAt": "2026-04-03T14:30:24.502Z",
     "parcel": {
-      "id": "cmni9yoc9003jv1namouzu057",
+      "id": "cmnj03hxo003jv1xh8qfw7dj4",
       "apn": "57-6-876-15",
       "address": "8384 White Oak Rd",
       "county": "Williamsburg",
@@ -85,23 +85,23 @@
       "lon": -79.7295,
       "zoning": "rural-residential",
       "description": "390-acre rural-residential tract in Williamsburg County, SC. 50% cropland, 50% forest. 43 miles from Florence. Gravel road access. Elevation 931 ft.",
-      "createdAt": "2026-04-03T02:18:49.402Z",
-      "updatedAt": "2026-04-03T02:18:49.402Z",
+      "createdAt": "2026-04-03T14:30:24.396Z",
+      "updatedAt": "2026-04-03T14:30:24.396Z",
       "fitScore": {
-        "id": "cmni9yoc9003lv1na6ano4u5v",
-        "parcelId": "cmni9yoc9003jv1namouzu057",
+        "id": "cmnj03hxo003lv1xh4lwxzvez",
+        "parcelId": "cmnj03hxo003jv1xh8qfw7dj4",
         "overallScore": 73,
         "scoreBreakdown": "{\"acreage\":19,\"soils\":10,\"location\":13,\"access\":8,\"water\":4,\"terrain\":5,\"utilities\":3,\"risk\":9,\"elevation\":2}",
         "topReasons": "[\"Ideal acreage (390 ac) in target range\",\"Good metro proximity (43 mi)\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.402Z"
+        "calculatedAt": "2026-04-03T14:30:24.396Z"
       },
       "listings": [
         {
-          "id": "cmni9yode009rv1na0sxviya4",
-          "parcelId": "cmni9yoc9003jv1namouzu057",
-          "sourceId": "cmni9yo800007v1nacuc2ef46",
+          "id": "cmnj03hz0009rv1xhp9obwi02",
+          "parcelId": "cmnj03hxo003jv1xh8qfw7dj4",
+          "sourceId": "cmnj03huz0003v1xhf1k1wlu7",
           "externalId": "whitetail-properties-852816",
           "url": "https://www.whitetailproperties.com/listing/whitetail-properties-852816",
           "title": "Scenic 390-Acre Country Estate in Williamsburg County",
@@ -110,36 +110,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/whitetail-properties-852816/aerial-1.jpg\",\"https://images.landscout.dev/whitetail-properties-852816/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-03-25\",\"daysOnMarket\":251,\"broker\":\"Whitetail Properties\"}",
-          "firstSeen": "2026-04-03T02:18:49.442Z",
-          "lastSeen": "2026-04-03T02:18:49.442Z",
-          "createdAt": "2026-04-03T02:18:49.442Z",
-          "updatedAt": "2026-04-03T02:18:49.442Z"
+          "firstSeen": "2026-04-03T14:30:24.445Z",
+          "lastSeen": "2026-04-03T14:30:24.445Z",
+          "createdAt": "2026-04-03T14:30:24.445Z",
+          "updatedAt": "2026-04-03T14:30:24.445Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoep00h9v1na6xcl0wux",
-        "dealId": "cmni9yoeo00h3v1nan1gxrqcy",
+        "id": "cmnj03i0m00h9v1xhjig3m45l",
+        "dealId": "cmnj03i0l00h3v1xheydh5kuz",
         "type": "offer",
         "content": "Final offer accepted at $4,000/acre — moving to contract phase.",
-        "createdAt": "2026-03-20T02:18:49.489Z"
+        "createdAt": "2026-03-20T14:30:24.502Z"
       }
     ]
   },
   {
-    "id": "cmni9yoen00gvv1natjl8b3gx",
-    "parcelId": "cmni9yocc003vv1na6vmm4dwj",
+    "id": "cmnj03i0k00gvv1xh54j9fxdq",
+    "parcelId": "cmnj03hxq003vv1xhepdgvw4x",
     "stage": "closed",
     "priority": "low",
     "notes": null,
     "nextAction": null,
     "nextDate": null,
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.487Z",
-    "updatedAt": "2026-04-03T02:18:49.487Z",
+    "createdAt": "2026-04-03T14:30:24.500Z",
+    "updatedAt": "2026-04-03T14:30:24.500Z",
     "parcel": {
-      "id": "cmni9yocc003vv1na6vmm4dwj",
+      "id": "cmnj03hxq003vv1xhepdgvw4x",
       "apn": "63-1-685-35",
       "address": "601 Mountain View Dr",
       "county": "Greene",
@@ -149,23 +149,23 @@
       "lon": -83.1566,
       "zoning": "agricultural",
       "description": "360-acre agricultural tract in Greene County, GA. 54% forest, 46% wetland. 35 miles from Athens. Gravel road access. Elevation 1427 ft.",
-      "createdAt": "2026-04-03T02:18:49.404Z",
-      "updatedAt": "2026-04-03T02:18:49.404Z",
+      "createdAt": "2026-04-03T14:30:24.399Z",
+      "updatedAt": "2026-04-03T14:30:24.399Z",
       "fitScore": {
-        "id": "cmni9yocc003xv1nawcr6e9cw",
-        "parcelId": "cmni9yocc003vv1na6vmm4dwj",
+        "id": "cmnj03hxq003xv1xhew7nr2no",
+        "parcelId": "cmnj03hxq003vv1xhepdgvw4x",
         "overallScore": 74,
         "scoreBreakdown": "{\"acreage\":18,\"soils\":9,\"location\":15,\"access\":9,\"water\":5,\"terrain\":0,\"utilities\":0,\"risk\":11,\"elevation\":3}",
         "topReasons": "[\"Ideal acreage (360 ac) in target range\",\"Good metro proximity (35 mi)\",\"Low flood/wetlands risk\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.404Z"
+        "calculatedAt": "2026-04-03T14:30:24.399Z"
       },
       "listings": [
         {
-          "id": "cmni9yodg00a3v1na077myacl",
-          "parcelId": "cmni9yocc003vv1na6vmm4dwj",
-          "sourceId": "cmni9yo800008v1nahb879x8v",
+          "id": "cmnj03hz300a3v1xhmn3getiy",
+          "parcelId": "cmnj03hxq003vv1xhepdgvw4x",
+          "sourceId": "cmnj03huz000av1xhamc1vjtl",
           "externalId": "lands-of-america-796030",
           "url": "https://www.landsofamerica.com/listing/lands-of-america-796030",
           "title": "Pristine 360-Acre Farmland in Greene County",
@@ -174,36 +174,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/lands-of-america-796030/aerial-1.jpg\",\"https://images.landscout.dev/lands-of-america-796030/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-09-19\",\"daysOnMarket\":86,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.445Z",
-          "lastSeen": "2026-04-03T02:18:49.445Z",
-          "createdAt": "2026-04-03T02:18:49.445Z",
-          "updatedAt": "2026-04-03T02:18:49.445Z"
+          "firstSeen": "2026-04-03T14:30:24.447Z",
+          "lastSeen": "2026-04-03T14:30:24.447Z",
+          "createdAt": "2026-04-03T14:30:24.447Z",
+          "updatedAt": "2026-04-03T14:30:24.447Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoen00gxv1na0ou9tyec",
-        "dealId": "cmni9yoen00gvv1natjl8b3gx",
+        "id": "cmnj03i0k00gxv1xhvwzxti1l",
+        "dealId": "cmnj03i0k00gvv1xh54j9fxdq",
         "type": "offer",
         "content": "Submitted initial offer at $3,800/acre, 30-day due diligence.",
-        "createdAt": "2026-04-01T02:18:49.487Z"
+        "createdAt": "2026-04-01T14:30:24.500Z"
       }
     ]
   },
   {
-    "id": "cmni9yoem00gpv1naesc1tzvn",
-    "parcelId": "cmni9yocf004av1na7neo8axi",
+    "id": "cmnj03i0i00gpv1xha2c792a6",
+    "parcelId": "cmnj03hxu004av1xhfzix1yz8",
     "stage": "under-contract",
     "priority": "low",
     "notes": "904-acre mixed-use property in Meriwether County, GA. Score: 75/100.",
     "nextAction": "Finalize financing",
-    "nextDate": "2026-04-12T02:18:49.486Z",
+    "nextDate": "2026-04-12T14:30:24.498Z",
     "assignee": "Analyst",
-    "createdAt": "2026-04-03T02:18:49.486Z",
-    "updatedAt": "2026-04-03T02:18:49.486Z",
+    "createdAt": "2026-04-03T14:30:24.499Z",
+    "updatedAt": "2026-04-03T14:30:24.499Z",
     "parcel": {
-      "id": "cmni9yocf004av1na7neo8axi",
+      "id": "cmnj03hxu004av1xhfzix1yz8",
       "apn": null,
       "address": "4464 Hollow Creek Rd",
       "county": "Meriwether",
@@ -213,23 +213,23 @@
       "lon": -84.6089,
       "zoning": "mixed-use",
       "description": "904-acre mixed-use tract in Meriwether County, GA. 22% cropland, 13% forest, 12% wetland, 53% developed. Water features include creek, pond. 72 miles from Atlanta. Gravel road access. Elevation 1376 ft.",
-      "createdAt": "2026-04-03T02:18:49.407Z",
-      "updatedAt": "2026-04-03T02:18:49.407Z",
+      "createdAt": "2026-04-03T14:30:24.402Z",
+      "updatedAt": "2026-04-03T14:30:24.402Z",
       "fitScore": {
-        "id": "cmni9yocf004cv1naa213sdoe",
-        "parcelId": "cmni9yocf004av1na7neo8axi",
+        "id": "cmnj03hxu004cv1xhp6gsrwo4",
+        "parcelId": "cmnj03hxu004av1xhfzix1yz8",
         "overallScore": 75,
         "scoreBreakdown": "{\"acreage\":16,\"soils\":13,\"location\":9,\"access\":9,\"water\":10,\"terrain\":8,\"utilities\":1,\"risk\":9,\"elevation\":1}",
         "topReasons": "[\"Ideal acreage (904 ac) in target range\",\"Strong soils quality (8.6/10)\",\"Water features present on property\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.407Z"
+        "calculatedAt": "2026-04-03T14:30:24.402Z"
       },
       "listings": [
         {
-          "id": "cmni9yodk00alv1nak12ngtl9",
-          "parcelId": "cmni9yocf004av1na7neo8axi",
-          "sourceId": "cmni9yo7z0003v1nauvn1oqm6",
+          "id": "cmnj03hz700alv1xh22k1u09a",
+          "parcelId": "cmnj03hxu004av1xhfzix1yz8",
+          "sourceId": "cmnj03huz0006v1xh63a9t5bi",
           "externalId": "united-country-726699",
           "url": "https://www.unitedcountry.com/listing/united-country-726699",
           "title": "Prime 904-Acre Development Opportunity in Meriwether County",
@@ -238,36 +238,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/united-country-726699/aerial-1.jpg\",\"https://images.landscout.dev/united-country-726699/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-11-23\",\"daysOnMarket\":278,\"broker\":\"United Country\"}",
-          "firstSeen": "2026-04-03T02:18:49.448Z",
-          "lastSeen": "2026-04-03T02:18:49.448Z",
-          "createdAt": "2026-04-03T02:18:49.448Z",
-          "updatedAt": "2026-04-03T02:18:49.448Z"
+          "firstSeen": "2026-04-03T14:30:24.452Z",
+          "lastSeen": "2026-04-03T14:30:24.452Z",
+          "createdAt": "2026-04-03T14:30:24.452Z",
+          "updatedAt": "2026-04-03T14:30:24.452Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoem00gtv1na140s4zma",
-        "dealId": "cmni9yoem00gpv1naesc1tzvn",
+        "id": "cmnj03i0j00gtv1xh24bscshd",
+        "dealId": "cmnj03i0i00gpv1xha2c792a6",
         "type": "call",
         "content": "Spoke with listing agent — seller is motivated, recently inherited the property.",
-        "createdAt": "2026-03-05T02:18:49.486Z"
+        "createdAt": "2026-03-05T14:30:24.499Z"
       }
     ]
   },
   {
-    "id": "cmni9yoel00ghv1naueunau29",
-    "parcelId": "cmni9yobi000gv1navcd4owrf",
+    "id": "cmnj03i0h00ghv1xhc6j0c8t6",
+    "parcelId": "cmnj03hwu000gv1xh8apvysgi",
     "stage": "under-contract",
     "priority": "low",
     "notes": "79-acre mixed-use property in Rockbridge County, VA. Score: 75/100.",
     "nextAction": "Order title insurance",
-    "nextDate": "2026-05-03T02:18:49.485Z",
+    "nextDate": "2026-05-03T14:30:24.497Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.485Z",
-    "updatedAt": "2026-04-03T02:18:49.485Z",
+    "createdAt": "2026-04-03T14:30:24.498Z",
+    "updatedAt": "2026-04-03T14:30:24.498Z",
     "parcel": {
-      "id": "cmni9yobi000gv1navcd4owrf",
+      "id": "cmnj03hwu000gv1xh8apvysgi",
       "apn": "80-6-636-10",
       "address": "5237 State Rd 68",
       "county": "Rockbridge",
@@ -277,23 +277,23 @@
       "lon": -79.3236,
       "zoning": "mixed-use",
       "description": "79-acre mixed-use tract in Rockbridge County, VA. 10% developed, 15% cropland, 75% forest. 35 miles from Lexington. Paved road access. Elevation 3107 ft.",
-      "createdAt": "2026-04-03T02:18:49.374Z",
-      "updatedAt": "2026-04-03T02:18:49.374Z",
+      "createdAt": "2026-04-03T14:30:24.366Z",
+      "updatedAt": "2026-04-03T14:30:24.366Z",
       "fitScore": {
-        "id": "cmni9yobi000iv1na72x7aykk",
-        "parcelId": "cmni9yobi000gv1navcd4owrf",
+        "id": "cmnj03hwu000iv1xhc5ls49j6",
+        "parcelId": "cmnj03hwu000gv1xh8apvysgi",
         "overallScore": 75,
         "scoreBreakdown": "{\"acreage\":6,\"soils\":10,\"location\":14,\"access\":11,\"water\":2,\"terrain\":7,\"utilities\":2,\"risk\":7,\"elevation\":3}",
         "topReasons": "[\"Good metro proximity (35 mi)\",\"Paved road access\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.374Z"
+        "calculatedAt": "2026-04-03T14:30:24.366Z"
       },
       "listings": [
         {
-          "id": "cmni9yocv006pv1nalrg4tjzp",
-          "parcelId": "cmni9yobi000gv1navcd4owrf",
-          "sourceId": "cmni9yo7z0005v1na97s98i4z",
+          "id": "cmnj03hyd006pv1xhwvzl7r01",
+          "parcelId": "cmnj03hwu000gv1xh8apvysgi",
+          "sourceId": "cmnj03huz000cv1xhthsz4912",
           "externalId": "landleader-240452",
           "url": "https://www.landleader.com/listing/landleader-240452",
           "title": "Trophy 79-Acre Versatile Tract in Rockbridge County",
@@ -302,36 +302,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/landleader-240452/aerial-1.jpg\",\"https://images.landscout.dev/landleader-240452/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-03-21\",\"daysOnMarket\":361,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.423Z",
-          "lastSeen": "2026-04-03T02:18:49.423Z",
-          "createdAt": "2026-04-03T02:18:49.423Z",
-          "updatedAt": "2026-04-03T02:18:49.423Z"
+          "firstSeen": "2026-04-03T14:30:24.422Z",
+          "lastSeen": "2026-04-03T14:30:24.422Z",
+          "createdAt": "2026-04-03T14:30:24.422Z",
+          "updatedAt": "2026-04-03T14:30:24.422Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoem00gnv1na8ybj5a0f",
-        "dealId": "cmni9yoel00ghv1naueunau29",
+        "id": "cmnj03i0i00gnv1xhovkdefd7",
+        "dealId": "cmnj03i0h00ghv1xhc6j0c8t6",
         "type": "email",
         "content": "Requested updated plat from county GIS office.",
-        "createdAt": "2026-03-26T02:18:49.486Z"
+        "createdAt": "2026-03-26T14:30:24.498Z"
       }
     ]
   },
   {
-    "id": "cmni9yoek00gbv1nadicp2b5h",
-    "parcelId": "cmni9yocn005jv1nan9gjt98j",
+    "id": "cmnj03i0g00gbv1xhybx0juri",
+    "parcelId": "cmnj03hy3005jv1xh50z8gr5w",
     "stage": "under-contract",
     "priority": "low",
     "notes": "404-acre timber property in Polk County, FL. Score: 76/100.",
     "nextAction": "Finalize financing",
-    "nextDate": "2026-04-29T02:18:49.484Z",
+    "nextDate": "2026-04-29T14:30:24.496Z",
     "assignee": "Analyst",
-    "createdAt": "2026-04-03T02:18:49.484Z",
-    "updatedAt": "2026-04-03T02:18:49.484Z",
+    "createdAt": "2026-04-03T14:30:24.497Z",
+    "updatedAt": "2026-04-03T14:30:24.497Z",
     "parcel": {
-      "id": "cmni9yocn005jv1nan9gjt98j",
+      "id": "cmnj03hy3005jv1xh50z8gr5w",
       "apn": "63-5-182-36",
       "address": "4536 Fox Run Rd",
       "county": "Polk",
@@ -341,23 +341,23 @@
       "lon": -81.7737,
       "zoning": "timber",
       "description": "404-acre timber tract in Polk County, FL. 19% pasture, 49% forest, 25% wetland, 7% developed. Water features include creek, spring. 29 miles from Lakeland. Paved road access. Elevation 49 ft.",
-      "createdAt": "2026-04-03T02:18:49.415Z",
-      "updatedAt": "2026-04-03T02:18:49.415Z",
+      "createdAt": "2026-04-03T14:30:24.412Z",
+      "updatedAt": "2026-04-03T14:30:24.412Z",
       "fitScore": {
-        "id": "cmni9yocn005lv1naecyf4p3f",
-        "parcelId": "cmni9yocn005jv1nan9gjt98j",
+        "id": "cmnj03hy3005lv1xh64koro5i",
+        "parcelId": "cmnj03hy3005jv1xh50z8gr5w",
         "overallScore": 76,
         "scoreBreakdown": "{\"acreage\":19,\"soils\":9,\"location\":12,\"access\":11,\"water\":9,\"terrain\":3,\"utilities\":7,\"risk\":4,\"elevation\":2}",
         "topReasons": "[\"Ideal acreage (404 ac) in target range\",\"Good metro proximity (29 mi)\",\"Paved road access\",\"Water features present on property\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.415Z"
+        "calculatedAt": "2026-04-03T14:30:24.412Z"
       },
       "listings": [
         {
-          "id": "cmni9yodr00blv1nacynrqpyy",
-          "parcelId": "cmni9yocn005jv1nan9gjt98j",
-          "sourceId": "cmni9yo800007v1nacuc2ef46",
+          "id": "cmnj03hzh00blv1xh0nii01t5",
+          "parcelId": "cmnj03hy3005jv1xh50z8gr5w",
+          "sourceId": "cmnj03huz0003v1xhf1k1wlu7",
           "externalId": "whitetail-properties-305442",
           "url": "https://www.whitetailproperties.com/listing/whitetail-properties-305442",
           "title": "Breathtaking 404-Acre Hardwood Tract in Polk County",
@@ -366,36 +366,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/whitetail-properties-305442/aerial-1.jpg\",\"https://images.landscout.dev/whitetail-properties-305442/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-10-07\",\"daysOnMarket\":193,\"broker\":\"Whitetail Properties\"}",
-          "firstSeen": "2026-04-03T02:18:49.455Z",
-          "lastSeen": "2026-04-03T02:18:49.455Z",
-          "createdAt": "2026-04-03T02:18:49.455Z",
-          "updatedAt": "2026-04-03T02:18:49.455Z"
+          "firstSeen": "2026-04-03T14:30:24.461Z",
+          "lastSeen": "2026-04-03T14:30:24.461Z",
+          "createdAt": "2026-04-03T14:30:24.461Z",
+          "updatedAt": "2026-04-03T14:30:24.461Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoek00gfv1nawdfqwuzq",
-        "dealId": "cmni9yoek00gbv1nadicp2b5h",
+        "id": "cmnj03i0h00gfv1xhg0720lyc",
+        "dealId": "cmnj03i0g00gbv1xhybx0juri",
         "type": "visit",
         "content": "Visited during rain — drainage patterns look healthy, no standing water issues.",
-        "createdAt": "2026-02-15T02:18:49.484Z"
+        "createdAt": "2026-02-15T14:30:24.497Z"
       }
     ]
   },
   {
-    "id": "cmni9yoej00g5v1nac6r7at35",
-    "parcelId": "cmni9yoc2002jv1nauj3wjgl3",
+    "id": "cmnj03i0f00g5v1xhp1mna0zj",
+    "parcelId": "cmnj03hxf002jv1xh7g3dgaic",
     "stage": "pursuit",
     "priority": "low",
     "notes": "275-acre conservation property in Columbus County, NC. Score: 77/100.",
     "nextAction": "Schedule closing",
-    "nextDate": "2026-04-26T02:18:49.483Z",
+    "nextDate": "2026-04-26T14:30:24.495Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.483Z",
-    "updatedAt": "2026-04-03T02:18:49.483Z",
+    "createdAt": "2026-04-03T14:30:24.495Z",
+    "updatedAt": "2026-04-03T14:30:24.495Z",
     "parcel": {
-      "id": "cmni9yoc2002jv1nauj3wjgl3",
+      "id": "cmnj03hxf002jv1xh7g3dgaic",
       "apn": "41-4-816-11",
       "address": "8146 Fox Run Rd",
       "county": "Columbus",
@@ -405,23 +405,23 @@
       "lon": -78.6068,
       "zoning": "conservation",
       "description": "275-acre conservation tract in Columbus County, NC. 13% wetland, 18% forest, 69% pasture. Water features include pond. 55 miles from Wilmington. Paved road access. Elevation 3059 ft.",
-      "createdAt": "2026-04-03T02:18:49.394Z",
-      "updatedAt": "2026-04-03T02:18:49.394Z",
+      "createdAt": "2026-04-03T14:30:24.388Z",
+      "updatedAt": "2026-04-03T14:30:24.388Z",
       "fitScore": {
-        "id": "cmni9yoc2002lv1na3xybtnfj",
-        "parcelId": "cmni9yoc2002jv1nauj3wjgl3",
+        "id": "cmnj03hxf002lv1xhexn1ds28",
+        "parcelId": "cmnj03hxf002jv1xh7g3dgaic",
         "overallScore": 77,
         "scoreBreakdown": "{\"acreage\":20,\"soils\":9,\"location\":9,\"access\":14,\"water\":10,\"terrain\":10,\"utilities\":3,\"risk\":9,\"elevation\":3}",
         "topReasons": "[\"Ideal acreage (275 ac) in target range\",\"Paved road access\",\"Water features present on property\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.394Z"
+        "calculatedAt": "2026-04-03T14:30:24.388Z"
       },
       "listings": [
         {
-          "id": "cmni9yod8008tv1naof2kq0vs",
-          "parcelId": "cmni9yoc2002jv1nauj3wjgl3",
-          "sourceId": "cmni9yo7z0000v1naemtfmt98",
+          "id": "cmnj03hyt008tv1xhq9lpe4qf",
+          "parcelId": "cmnj03hxf002jv1xh7g3dgaic",
+          "sourceId": "cmnj03huz0002v1xht0ioztoy",
           "externalId": "landwatch-379504",
           "url": "https://www.landwatch.com/listing/landwatch-379504",
           "title": "Unrestricted 275-Acre Nature Preserve in Columbus County",
@@ -430,36 +430,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/landwatch-379504/aerial-1.jpg\",\"https://images.landscout.dev/landwatch-379504/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-03-06\",\"daysOnMarket\":174,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.437Z",
-          "lastSeen": "2026-04-03T02:18:49.437Z",
-          "createdAt": "2026-04-03T02:18:49.437Z",
-          "updatedAt": "2026-04-03T02:18:49.437Z"
+          "firstSeen": "2026-04-03T14:30:24.438Z",
+          "lastSeen": "2026-04-03T14:30:24.438Z",
+          "createdAt": "2026-04-03T14:30:24.438Z",
+          "updatedAt": "2026-04-03T14:30:24.438Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoej00g9v1nadft4pmjq",
-        "dealId": "cmni9yoej00g5v1nac6r7at35",
+        "id": "cmnj03i0g00g9v1xh9mmrlchj",
+        "dealId": "cmnj03i0f00g5v1xhp1mna0zj",
         "type": "offer",
         "content": "Counter-offer received at $4,200/acre — recommending acceptance.",
-        "createdAt": "2026-03-15T02:18:49.483Z"
+        "createdAt": "2026-03-15T14:30:24.496Z"
       }
     ]
   },
   {
-    "id": "cmni9yoei00fxv1na2c8owns0",
-    "parcelId": "cmni9yobu001mv1naqjnnvqw0",
+    "id": "cmnj03i0d00fxv1xhhvijqa4b",
+    "parcelId": "cmnj03hx7001mv1xhe5onsklf",
     "stage": "pursuit",
     "priority": "medium",
     "notes": "557-acre mixed-use property in Ashe County, NC. Score: 77/100.",
     "nextAction": "Finalize offer terms",
-    "nextDate": "2026-04-09T02:18:49.482Z",
+    "nextDate": "2026-04-09T14:30:24.493Z",
     "assignee": null,
-    "createdAt": "2026-04-03T02:18:49.482Z",
-    "updatedAt": "2026-04-03T02:18:49.482Z",
+    "createdAt": "2026-04-03T14:30:24.494Z",
+    "updatedAt": "2026-04-03T14:30:24.494Z",
     "parcel": {
-      "id": "cmni9yobu001mv1naqjnnvqw0",
+      "id": "cmnj03hx7001mv1xhe5onsklf",
       "apn": "99-8-804-53",
       "address": "4784 Church Hill Rd",
       "county": "Ashe",
@@ -469,23 +469,23 @@
       "lon": -81.6486,
       "zoning": "mixed-use",
       "description": "557-acre mixed-use tract in Ashe County, NC. 16% forest, 84% pasture. Water features include spring. 36 miles from Boone. Gravel road access. Elevation 2289 ft.",
-      "createdAt": "2026-04-03T02:18:49.386Z",
-      "updatedAt": "2026-04-03T02:18:49.386Z",
+      "createdAt": "2026-04-03T14:30:24.379Z",
+      "updatedAt": "2026-04-03T14:30:24.379Z",
       "fitScore": {
-        "id": "cmni9yobu001ov1na66d92kvs",
-        "parcelId": "cmni9yobu001mv1naqjnnvqw0",
+        "id": "cmnj03hx7001ov1xhq11y2hrm",
+        "parcelId": "cmnj03hx7001mv1xhe5onsklf",
         "overallScore": 77,
         "scoreBreakdown": "{\"acreage\":19,\"soils\":13,\"location\":15,\"access\":9,\"water\":8,\"terrain\":7,\"utilities\":1,\"risk\":11,\"elevation\":4}",
         "topReasons": "[\"Ideal acreage (557 ac) in target range\",\"Strong soils quality (8.8/10)\",\"Good metro proximity (36 mi)\",\"Water features present on property\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.386Z"
+        "calculatedAt": "2026-04-03T14:30:24.379Z"
       },
       "listings": [
         {
-          "id": "cmni9yod2007tv1nayy45wyn6",
-          "parcelId": "cmni9yobu001mv1naqjnnvqw0",
-          "sourceId": "cmni9yo800008v1nahb879x8v",
+          "id": "cmnj03hyl007tv1xhror63a2v",
+          "parcelId": "cmnj03hx7001mv1xhe5onsklf",
+          "sourceId": "cmnj03huz000av1xhamc1vjtl",
           "externalId": "lands-of-america-936705",
           "url": "https://www.landsofamerica.com/listing/lands-of-america-936705",
           "title": "Pristine 557-Acre Development Opportunity in Ashe County",
@@ -494,36 +494,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/lands-of-america-936705/aerial-1.jpg\",\"https://images.landscout.dev/lands-of-america-936705/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-11-19\",\"daysOnMarket\":74,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.431Z",
-          "lastSeen": "2026-04-03T02:18:49.431Z",
-          "createdAt": "2026-04-03T02:18:49.431Z",
-          "updatedAt": "2026-04-03T02:18:49.431Z"
+          "firstSeen": "2026-04-03T14:30:24.429Z",
+          "lastSeen": "2026-04-03T14:30:24.429Z",
+          "createdAt": "2026-04-03T14:30:24.429Z",
+          "updatedAt": "2026-04-03T14:30:24.429Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoei00g1v1na9qv25olp",
-        "dealId": "cmni9yoei00fxv1na2c8owns0",
+        "id": "cmnj03i0e00g1v1xhha2llvtq",
+        "dealId": "cmnj03i0d00fxv1xhhvijqa4b",
         "type": "email",
         "content": "Received Phase I environmental report — no issues identified.",
-        "createdAt": "2026-03-27T02:18:49.482Z"
+        "createdAt": "2026-03-27T14:30:24.494Z"
       }
     ]
   },
   {
-    "id": "cmni9yoeg00fpv1na9xne872t",
-    "parcelId": "cmni9yoca003mv1namvlqa8ts",
+    "id": "cmnj03i0c00fpv1xhgavtl0q4",
+    "parcelId": "cmnj03hxo003mv1xhuimvhp4i",
     "stage": "pursuit",
     "priority": "medium",
     "notes": "533-acre agricultural property in Lumpkin County, GA. Score: 78/100.",
     "nextAction": "Order Phase I ESA",
-    "nextDate": "2026-04-25T02:18:49.480Z",
+    "nextDate": "2026-04-25T14:30:24.492Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.481Z",
-    "updatedAt": "2026-04-03T02:18:49.481Z",
+    "createdAt": "2026-04-03T14:30:24.492Z",
+    "updatedAt": "2026-04-03T14:30:24.492Z",
     "parcel": {
-      "id": "cmni9yoca003mv1namvlqa8ts",
+      "id": "cmnj03hxo003mv1xhuimvhp4i",
       "apn": "83-3-871-64",
       "address": "1179 Long Branch Rd",
       "county": "Lumpkin",
@@ -533,23 +533,23 @@
       "lon": -84.0212,
       "zoning": "agricultural",
       "description": "533-acre agricultural tract in Lumpkin County, GA. 33% wetland, 67% forest. Water features include pond. 11 miles from Dahlonega. Paved road access. Elevation 838 ft.",
-      "createdAt": "2026-04-03T02:18:49.402Z",
-      "updatedAt": "2026-04-03T02:18:49.402Z",
+      "createdAt": "2026-04-03T14:30:24.397Z",
+      "updatedAt": "2026-04-03T14:30:24.397Z",
       "fitScore": {
-        "id": "cmni9yoca003ov1naj0uzs076",
-        "parcelId": "cmni9yoca003mv1namvlqa8ts",
+        "id": "cmnj03hxo003ov1xh5nt7klnt",
+        "parcelId": "cmnj03hxo003mv1xhuimvhp4i",
         "overallScore": 78,
         "scoreBreakdown": "{\"acreage\":19,\"soils\":8,\"location\":12,\"access\":11,\"water\":9,\"terrain\":0,\"utilities\":0,\"risk\":5,\"elevation\":2}",
         "topReasons": "[\"Ideal acreage (533 ac) in target range\",\"Paved road access\",\"Water features present on property\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.402Z"
+        "calculatedAt": "2026-04-03T14:30:24.397Z"
       },
       "listings": [
         {
-          "id": "cmni9yode009tv1nafju1ryi5",
-          "parcelId": "cmni9yoca003mv1namvlqa8ts",
-          "sourceId": "cmni9yo7z0003v1nauvn1oqm6",
+          "id": "cmnj03hz0009tv1xhno6elsep",
+          "parcelId": "cmnj03hxo003mv1xhuimvhp4i",
+          "sourceId": "cmnj03huz0006v1xh63a9t5bi",
           "externalId": "united-country-278603",
           "url": "https://www.unitedcountry.com/listing/united-country-278603",
           "title": "Prime 533-Acre Farm in Lumpkin County",
@@ -558,36 +558,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/united-country-278603/aerial-1.jpg\",\"https://images.landscout.dev/united-country-278603/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-02-07\",\"daysOnMarket\":20,\"broker\":\"United Country\"}",
-          "firstSeen": "2026-04-03T02:18:49.443Z",
-          "lastSeen": "2026-04-03T02:18:49.443Z",
-          "createdAt": "2026-04-03T02:18:49.443Z",
-          "updatedAt": "2026-04-03T02:18:49.443Z"
+          "firstSeen": "2026-04-03T14:30:24.445Z",
+          "lastSeen": "2026-04-03T14:30:24.445Z",
+          "createdAt": "2026-04-03T14:30:24.445Z",
+          "updatedAt": "2026-04-03T14:30:24.445Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoeh00frv1nagdvly78a",
-        "dealId": "cmni9yoeg00fpv1na9xne872t",
-        "type": "note",
-        "content": "County records show no liens or encumbrances. Title appears clean.",
-        "createdAt": "2026-03-24T02:18:49.481Z"
+        "id": "cmnj03i0d00ftv1xhnkppwtzc",
+        "dealId": "cmnj03i0c00fpv1xhgavtl0q4",
+        "type": "document",
+        "content": "Received and reviewed title commitment — Schedule B items are standard.",
+        "createdAt": "2026-03-24T14:30:24.493Z"
       }
     ]
   },
   {
-    "id": "cmni9yoef00fjv1nap39bje8f",
-    "parcelId": "cmni9yoc2002mv1nabfhoqg79",
+    "id": "cmnj03i0a00fjv1xhmxc600aj",
+    "parcelId": "cmnj03hxg002mv1xhhf0rufvf",
     "stage": "pursuit",
     "priority": "medium",
     "notes": "195-acre conservation property in Greenville County, SC. Score: 78/100.",
     "nextAction": "Submit LOI",
-    "nextDate": "2026-04-18T02:18:49.479Z",
+    "nextDate": "2026-04-18T14:30:24.490Z",
     "assignee": "Analyst",
-    "createdAt": "2026-04-03T02:18:49.480Z",
-    "updatedAt": "2026-04-03T02:18:49.480Z",
+    "createdAt": "2026-04-03T14:30:24.491Z",
+    "updatedAt": "2026-04-03T14:30:24.491Z",
     "parcel": {
-      "id": "cmni9yoc2002mv1nabfhoqg79",
+      "id": "cmnj03hxg002mv1xhhf0rufvf",
       "apn": "12-1-411-85",
       "address": "147 Old Mill Rd",
       "county": "Greenville",
@@ -597,23 +597,23 @@
       "lon": -82.3587,
       "zoning": "conservation",
       "description": "195-acre conservation tract in Greenville County, SC. 38% pasture, 20% cropland, 42% wetland. 34 miles from Greenville. Paved road access. Elevation 344 ft.",
-      "createdAt": "2026-04-03T02:18:49.395Z",
-      "updatedAt": "2026-04-03T02:18:49.395Z",
+      "createdAt": "2026-04-03T14:30:24.388Z",
+      "updatedAt": "2026-04-03T14:30:24.388Z",
       "fitScore": {
-        "id": "cmni9yoc2002ov1nad1y7ftuo",
-        "parcelId": "cmni9yoc2002mv1nabfhoqg79",
+        "id": "cmnj03hxg002ov1xhrs6378nj",
+        "parcelId": "cmnj03hxg002mv1xhhf0rufvf",
         "overallScore": 78,
         "scoreBreakdown": "{\"acreage\":14,\"soils\":6,\"location\":15,\"access\":14,\"water\":2,\"terrain\":6,\"utilities\":7,\"risk\":12,\"elevation\":1}",
         "topReasons": "[\"Ideal acreage (195 ac) in target range\",\"Good metro proximity (34 mi)\",\"Paved road access\",\"Low flood/wetlands risk\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.395Z"
+        "calculatedAt": "2026-04-03T14:30:24.388Z"
       },
       "listings": [
         {
-          "id": "cmni9yod9008vv1na51esesd3",
-          "parcelId": "cmni9yoc2002mv1nabfhoqg79",
-          "sourceId": "cmni9yo7z0001v1nae2xati4n",
+          "id": "cmnj03hyu008vv1xhwoj7pepc",
+          "parcelId": "cmnj03hxg002mv1xhhf0rufvf",
+          "sourceId": "cmnj03huy0000v1xh077u9qwu",
           "externalId": "hall-and-hall-428920",
           "url": "https://www.hallhall.com/listing/hall-and-hall-428920",
           "title": "Rolling 195-Acre Conservation Tract in Greenville County",
@@ -622,36 +622,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/hall-and-hall-428920/aerial-1.jpg\",\"https://images.landscout.dev/hall-and-hall-428920/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-07-13\",\"daysOnMarket\":142,\"broker\":\"Hall & Hall\"}",
-          "firstSeen": "2026-04-03T02:18:49.437Z",
-          "lastSeen": "2026-04-03T02:18:49.437Z",
-          "createdAt": "2026-04-03T02:18:49.437Z",
-          "updatedAt": "2026-04-03T02:18:49.437Z"
+          "firstSeen": "2026-04-03T14:30:24.438Z",
+          "lastSeen": "2026-04-03T14:30:24.438Z",
+          "createdAt": "2026-04-03T14:30:24.438Z",
+          "updatedAt": "2026-04-03T14:30:24.438Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoeg00fnv1namzamn591",
-        "dealId": "cmni9yoef00fjv1nap39bje8f",
+        "id": "cmnj03i0b00fnv1xh3pwqhxyd",
+        "dealId": "cmnj03i0a00fjv1xhmxc600aj",
         "type": "visit",
         "content": "Site visit confirmed mountain views to the west, gentle rolling terrain.",
-        "createdAt": "2026-03-04T02:18:49.480Z"
+        "createdAt": "2026-03-04T14:30:24.491Z"
       }
     ]
   },
   {
-    "id": "cmni9yoee00fbv1na375zlddz",
-    "parcelId": "cmni9yoct006gv1naqswgq9f7",
+    "id": "cmnj03i0900fbv1xhes4kmp6g",
+    "parcelId": "cmnj03hyb006gv1xhc6nvkqqc",
     "stage": "pursuit",
     "priority": "medium",
     "notes": null,
     "nextAction": "Submit LOI",
-    "nextDate": "2026-05-01T02:18:49.478Z",
+    "nextDate": "2026-05-01T14:30:24.488Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.479Z",
-    "updatedAt": "2026-04-03T02:18:49.479Z",
+    "createdAt": "2026-04-03T14:30:24.489Z",
+    "updatedAt": "2026-04-03T14:30:24.489Z",
     "parcel": {
-      "id": "cmni9yoct006gv1naqswgq9f7",
+      "id": "cmnj03hyb006gv1xhc6nvkqqc",
       "apn": "54-9-944-40",
       "address": "1342 Bear Hollow Rd",
       "county": "Marengo",
@@ -661,23 +661,23 @@
       "lon": -87.6324,
       "zoning": "conservation",
       "description": "377-acre conservation tract in Marengo County, AL. 60% cropland, 40% wetland. Water features include creek, pond. 52 miles from Tuscaloosa. Paved road access. Elevation 1344 ft.",
-      "createdAt": "2026-04-03T02:18:49.421Z",
-      "updatedAt": "2026-04-03T02:18:49.421Z",
+      "createdAt": "2026-04-03T14:30:24.419Z",
+      "updatedAt": "2026-04-03T14:30:24.419Z",
       "fitScore": {
-        "id": "cmni9yoct006iv1nay5k58hiv",
-        "parcelId": "cmni9yoct006gv1naqswgq9f7",
+        "id": "cmnj03hyb006iv1xhkid4wwxy",
+        "parcelId": "cmnj03hyb006gv1xhc6nvkqqc",
         "overallScore": 79,
         "scoreBreakdown": "{\"acreage\":20,\"soils\":7,\"location\":7,\"access\":12,\"water\":10,\"terrain\":2,\"utilities\":1,\"risk\":12,\"elevation\":3}",
         "topReasons": "[\"Ideal acreage (377 ac) in target range\",\"Paved road access\",\"Water features present on property\",\"Low flood/wetlands risk\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.421Z"
+        "calculatedAt": "2026-04-03T14:30:24.419Z"
       },
       "listings": [
         {
-          "id": "cmni9yodx00cfv1naahfq4rdp",
-          "parcelId": "cmni9yoct006gv1naqswgq9f7",
-          "sourceId": "cmni9yo7z0005v1na97s98i4z",
+          "id": "cmnj03hzn00cfv1xhp730bbh3",
+          "parcelId": "cmnj03hyb006gv1xhc6nvkqqc",
+          "sourceId": "cmnj03huz000cv1xhthsz4912",
           "externalId": "landleader-549607",
           "url": "https://www.landleader.com/listing/landleader-549607",
           "title": "Trophy 377-Acre Wilderness Tract in Marengo County",
@@ -686,36 +686,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/landleader-549607/aerial-1.jpg\",\"https://images.landscout.dev/landleader-549607/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-01-01\",\"daysOnMarket\":339,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.461Z",
-          "lastSeen": "2026-04-03T02:18:49.461Z",
-          "createdAt": "2026-04-03T02:18:49.461Z",
-          "updatedAt": "2026-04-03T02:18:49.461Z"
+          "firstSeen": "2026-04-03T14:30:24.468Z",
+          "lastSeen": "2026-04-03T14:30:24.468Z",
+          "createdAt": "2026-04-03T14:30:24.468Z",
+          "updatedAt": "2026-04-03T14:30:24.468Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoef00fdv1najebw0cny",
-        "dealId": "cmni9yoee00fbv1na375zlddz",
+        "id": "cmnj03i0900fdv1xhotdt9sis",
+        "dealId": "cmnj03i0900fbv1xhes4kmp6g",
         "type": "call",
         "content": "Called county planning office — zoning change is feasible with site plan.",
-        "createdAt": "2026-03-16T02:18:49.479Z"
+        "createdAt": "2026-03-16T14:30:24.489Z"
       }
     ]
   },
   {
-    "id": "cmni9yoed00f3v1nae1r3qoh3",
-    "parcelId": "cmni9yoce0047v1nahzi6lhwi",
+    "id": "cmnj03i0700f3v1xh3urlxax7",
+    "parcelId": "cmnj03hxt0047v1xh65scv7av",
     "stage": "qualified",
     "priority": "medium",
     "notes": "536-acre agricultural property in Talbot County, GA. Score: 79/100.",
     "nextAction": "Order soil survey",
-    "nextDate": "2026-04-09T02:18:49.477Z",
+    "nextDate": "2026-04-09T14:30:24.487Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.477Z",
-    "updatedAt": "2026-04-03T02:18:49.477Z",
+    "createdAt": "2026-04-03T14:30:24.487Z",
+    "updatedAt": "2026-04-03T14:30:24.487Z",
     "parcel": {
-      "id": "cmni9yoce0047v1nahzi6lhwi",
+      "id": "cmnj03hxt0047v1xh65scv7av",
       "apn": "29-5-770-41",
       "address": "4768 Blue Ridge Pkwy",
       "county": "Talbot",
@@ -725,23 +725,23 @@
       "lon": -84.4387,
       "zoning": "agricultural",
       "description": "536-acre agricultural tract in Talbot County, GA. 51% forest, 49% wetland. 30 miles from Columbus. Dirt road access. Elevation 1642 ft.",
-      "createdAt": "2026-04-03T02:18:49.406Z",
-      "updatedAt": "2026-04-03T02:18:49.406Z",
+      "createdAt": "2026-04-03T14:30:24.402Z",
+      "updatedAt": "2026-04-03T14:30:24.402Z",
       "fitScore": {
-        "id": "cmni9yoce0049v1naen1t5b8u",
-        "parcelId": "cmni9yoce0047v1nahzi6lhwi",
+        "id": "cmnj03hxt0049v1xh9z0uk8vu",
+        "parcelId": "cmnj03hxt0047v1xh65scv7av",
         "overallScore": 79,
         "scoreBreakdown": "{\"acreage\":14,\"soils\":9,\"location\":14,\"access\":1,\"water\":3,\"terrain\":3,\"utilities\":4,\"risk\":11,\"elevation\":5}",
         "topReasons": "[\"Ideal acreage (536 ac) in target range\",\"Good metro proximity (30 mi)\",\"Low flood/wetlands risk\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.406Z"
+        "calculatedAt": "2026-04-03T14:30:24.402Z"
       },
       "listings": [
         {
-          "id": "cmni9yodi00afv1na0yq9n39t",
-          "parcelId": "cmni9yoce0047v1nahzi6lhwi",
-          "sourceId": "cmni9yo7z0001v1nae2xati4n",
+          "id": "cmnj03hz600afv1xhoz71ang4",
+          "parcelId": "cmnj03hxt0047v1xh65scv7av",
+          "sourceId": "cmnj03huy0000v1xh077u9qwu",
           "externalId": "hall-and-hall-714619",
           "url": "https://www.hallhall.com/listing/hall-and-hall-714619",
           "title": "Pristine 536-Acre Ag Tract in Talbot County",
@@ -750,36 +750,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/hall-and-hall-714619/aerial-1.jpg\",\"https://images.landscout.dev/hall-and-hall-714619/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-12-09\",\"daysOnMarket\":250,\"broker\":\"Hall & Hall\"}",
-          "firstSeen": "2026-04-03T02:18:49.447Z",
-          "lastSeen": "2026-04-03T02:18:49.447Z",
-          "createdAt": "2026-04-03T02:18:49.447Z",
-          "updatedAt": "2026-04-03T02:18:49.447Z"
+          "firstSeen": "2026-04-03T14:30:24.450Z",
+          "lastSeen": "2026-04-03T14:30:24.450Z",
+          "createdAt": "2026-04-03T14:30:24.450Z",
+          "updatedAt": "2026-04-03T14:30:24.450Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoee00f9v1na11rok1f4",
-        "dealId": "cmni9yoed00f3v1nae1r3qoh3",
+        "id": "cmnj03i0800f9v1xh1diplggt",
+        "dealId": "cmnj03i0700f3v1xh3urlxax7",
         "type": "call",
         "content": "Spoke with listing agent — seller is motivated, recently inherited the property.",
-        "createdAt": "2026-03-27T02:18:49.478Z"
+        "createdAt": "2026-03-27T14:30:24.488Z"
       }
     ]
   },
   {
-    "id": "cmni9yoec00evv1na0gc0ybyq",
-    "parcelId": "cmni9yocl0057v1nap533k7ce",
+    "id": "cmnj03i0500evv1xhoyddn20v",
+    "parcelId": "cmnj03hy10057v1xhsdsbtw2x",
     "stage": "qualified",
     "priority": "medium",
     "notes": null,
     "nextAction": "Conduct environmental review",
-    "nextDate": "2026-05-03T02:18:49.476Z",
+    "nextDate": "2026-05-03T14:30:24.485Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.476Z",
-    "updatedAt": "2026-04-03T02:18:49.476Z",
+    "createdAt": "2026-04-03T14:30:24.486Z",
+    "updatedAt": "2026-04-03T14:30:24.486Z",
     "parcel": {
-      "id": "cmni9yocl0057v1nap533k7ce",
+      "id": "cmnj03hy10057v1xhsdsbtw2x",
       "apn": "87-6-232-78",
       "address": "8179 Bear Hollow Rd",
       "county": "Jackson",
@@ -789,23 +789,23 @@
       "lon": -85.2337,
       "zoning": "conservation",
       "description": "564-acre conservation tract in Jackson County, FL. 10% wetland, 90% cropland. Water features include creek. 21 miles from Marianna. Dirt road access. Elevation 251 ft.",
-      "createdAt": "2026-04-03T02:18:49.413Z",
-      "updatedAt": "2026-04-03T02:18:49.413Z",
+      "createdAt": "2026-04-03T14:30:24.409Z",
+      "updatedAt": "2026-04-03T14:30:24.409Z",
       "fitScore": {
-        "id": "cmni9yocl0059v1na2tlneg9w",
-        "parcelId": "cmni9yocl0057v1nap533k7ce",
+        "id": "cmnj03hy10059v1xhogsqa812",
+        "parcelId": "cmnj03hy10057v1xhsdsbtw2x",
         "overallScore": 80,
         "scoreBreakdown": "{\"acreage\":15,\"soils\":8,\"location\":12,\"access\":4,\"water\":7,\"terrain\":2,\"utilities\":3,\"risk\":11,\"elevation\":1}",
         "topReasons": "[\"Ideal acreage (564 ac) in target range\",\"Good metro proximity (21 mi)\",\"Water features present on property\",\"Low flood/wetlands risk\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.413Z"
+        "calculatedAt": "2026-04-03T14:30:24.409Z"
       },
       "listings": [
         {
-          "id": "cmni9yodp00bbv1nap3hsh3hu",
-          "parcelId": "cmni9yocl0057v1nap533k7ce",
-          "sourceId": "cmni9yo7z0004v1nazi1mupk9",
+          "id": "cmnj03hzf00bbv1xhkxhxxm0v",
+          "parcelId": "cmnj03hy10057v1xhsdsbtw2x",
+          "sourceId": "cmnj03huz0001v1xhdd5zqnul",
           "externalId": "land-and-farm-832201",
           "url": "https://www.landandfarm.com/listing/land-and-farm-832201",
           "title": "Unrestricted 564-Acre Wilderness Tract in Jackson County",
@@ -814,36 +814,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/land-and-farm-832201/aerial-1.jpg\",\"https://images.landscout.dev/land-and-farm-832201/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-11-21\",\"daysOnMarket\":322,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.453Z",
-          "lastSeen": "2026-04-03T02:18:49.453Z",
-          "createdAt": "2026-04-03T02:18:49.453Z",
-          "updatedAt": "2026-04-03T02:18:49.453Z"
+          "firstSeen": "2026-04-03T14:30:24.459Z",
+          "lastSeen": "2026-04-03T14:30:24.459Z",
+          "createdAt": "2026-04-03T14:30:24.459Z",
+          "updatedAt": "2026-04-03T14:30:24.459Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoec00exv1naj41oyb4z",
-        "dealId": "cmni9yoec00evv1na0gc0ybyq",
+        "id": "cmnj03i0600exv1xhou7qq33w",
+        "dealId": "cmnj03i0500evv1xhoyddn20v",
         "type": "document",
         "content": "Uploaded survey plat to deal folder.",
-        "createdAt": "2026-03-20T02:18:49.476Z"
+        "createdAt": "2026-03-20T14:30:24.486Z"
       }
     ]
   },
   {
-    "id": "cmni9yoeb00epv1najqnpmm6k",
-    "parcelId": "cmni9yocf004dv1na08ztc888",
+    "id": "cmnj03i0400epv1xhgic3g3yl",
+    "parcelId": "cmnj03hxu004dv1xhswwb5pm2",
     "stage": "qualified",
     "priority": "medium",
     "notes": "856-acre conservation property in Burke County, GA. Score: 81/100.",
     "nextAction": "Request survey",
-    "nextDate": "2026-04-26T02:18:49.474Z",
+    "nextDate": "2026-04-26T14:30:24.484Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.475Z",
-    "updatedAt": "2026-04-03T02:18:49.475Z",
+    "createdAt": "2026-04-03T14:30:24.485Z",
+    "updatedAt": "2026-04-03T14:30:24.485Z",
     "parcel": {
-      "id": "cmni9yocf004dv1na08ztc888",
+      "id": "cmnj03hxu004dv1xhswwb5pm2",
       "apn": "30-2-569-20",
       "address": "665 Meadow Creek Rd",
       "county": "Burke",
@@ -853,23 +853,23 @@
       "lon": -81.8984,
       "zoning": "conservation",
       "description": "856-acre conservation tract in Burke County, GA. 36% pasture, 27% wetland, 11% forest, 26% cropland. Water features include river frontage. 46 miles from Augusta. Dirt road access. Elevation 1399 ft.",
-      "createdAt": "2026-04-03T02:18:49.408Z",
-      "updatedAt": "2026-04-03T02:18:49.408Z",
+      "createdAt": "2026-04-03T14:30:24.403Z",
+      "updatedAt": "2026-04-03T14:30:24.403Z",
       "fitScore": {
-        "id": "cmni9yocf004fv1na1ct19whc",
-        "parcelId": "cmni9yocf004dv1na08ztc888",
+        "id": "cmnj03hxv004fv1xhnsd92uu0",
+        "parcelId": "cmnj03hxu004dv1xhswwb5pm2",
         "overallScore": 81,
         "scoreBreakdown": "{\"acreage\":15,\"soils\":9,\"location\":9,\"access\":3,\"water\":8,\"terrain\":4,\"utilities\":4,\"risk\":10,\"elevation\":2}",
         "topReasons": "[\"Ideal acreage (856 ac) in target range\",\"Water features present on property\",\"Low flood/wetlands risk\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.408Z"
+        "calculatedAt": "2026-04-03T14:30:24.403Z"
       },
       "listings": [
         {
-          "id": "cmni9yodk00anv1nal5y1d7ns",
-          "parcelId": "cmni9yocf004dv1na08ztc888",
-          "sourceId": "cmni9yo7z0000v1naemtfmt98",
+          "id": "cmnj03hz800anv1xhmcwa9t5t",
+          "parcelId": "cmnj03hxu004dv1xhswwb5pm2",
+          "sourceId": "cmnj03huz0002v1xht0ioztoy",
           "externalId": "landwatch-521650",
           "url": "https://www.landwatch.com/listing/landwatch-521650",
           "title": "Prime 856-Acre Wilderness Tract in Burke County",
@@ -878,36 +878,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/landwatch-521650/aerial-1.jpg\",\"https://images.landscout.dev/landwatch-521650/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-06-26\",\"daysOnMarket\":129,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.449Z",
-          "lastSeen": "2026-04-03T02:18:49.449Z",
-          "createdAt": "2026-04-03T02:18:49.449Z",
-          "updatedAt": "2026-04-03T02:18:49.449Z"
+          "firstSeen": "2026-04-03T14:30:24.452Z",
+          "lastSeen": "2026-04-03T14:30:24.452Z",
+          "createdAt": "2026-04-03T14:30:24.452Z",
+          "updatedAt": "2026-04-03T14:30:24.452Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoeb00erv1na0xt56buj",
-        "dealId": "cmni9yoeb00epv1najqnpmm6k",
+        "id": "cmnj03i0500erv1xhblo41mhq",
+        "dealId": "cmnj03i0400epv1xhgic3g3yl",
         "type": "document",
         "content": "Uploaded survey plat to deal folder.",
-        "createdAt": "2026-03-02T02:18:49.475Z"
+        "createdAt": "2026-03-02T14:30:24.485Z"
       }
     ]
   },
   {
-    "id": "cmni9yoe900ehv1naid4xzmuj",
-    "parcelId": "cmni9yoby0024v1nayoke9kgp",
+    "id": "cmnj03i0300ehv1xhuookey2r",
+    "parcelId": "cmnj03hxb0024v1xh0ky20azc",
     "stage": "qualified",
     "priority": "medium",
     "notes": "513-acre agricultural property in Surry County, NC. Score: 82/100.",
     "nextAction": "Order soil survey",
-    "nextDate": "2026-04-19T02:18:49.473Z",
+    "nextDate": "2026-04-19T14:30:24.483Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.474Z",
-    "updatedAt": "2026-04-03T02:18:49.474Z",
+    "createdAt": "2026-04-03T14:30:24.483Z",
+    "updatedAt": "2026-04-03T14:30:24.483Z",
     "parcel": {
-      "id": "cmni9yoby0024v1nayoke9kgp",
+      "id": "cmnj03hxb0024v1xh0ky20azc",
       "apn": null,
       "address": "477 Old Mill Rd",
       "county": "Surry",
@@ -917,23 +917,23 @@
       "lon": -80.61680000000001,
       "zoning": "agricultural",
       "description": "513-acre agricultural tract in Surry County, NC. 42% developed, 58% wetland. Water features include pond, wetland area. 41 miles from Winston-Salem. Dirt road access. Elevation 866 ft.",
-      "createdAt": "2026-04-03T02:18:49.391Z",
-      "updatedAt": "2026-04-03T02:18:49.391Z",
+      "createdAt": "2026-04-03T14:30:24.384Z",
+      "updatedAt": "2026-04-03T14:30:24.384Z",
       "fitScore": {
-        "id": "cmni9yoby0026v1nam3no3aey",
-        "parcelId": "cmni9yoby0024v1nayoke9kgp",
+        "id": "cmnj03hxb0026v1xh5wxm8quj",
+        "parcelId": "cmnj03hxb0024v1xh0ky20azc",
         "overallScore": 82,
         "scoreBreakdown": "{\"acreage\":15,\"soils\":12,\"location\":14,\"access\":4,\"water\":7,\"terrain\":7,\"utilities\":1,\"risk\":4,\"elevation\":1}",
         "topReasons": "[\"Ideal acreage (513 ac) in target range\",\"Strong soils quality (7.8/10)\",\"Good metro proximity (41 mi)\",\"Water features present on property\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.391Z"
+        "calculatedAt": "2026-04-03T14:30:24.384Z"
       },
       "listings": [
         {
-          "id": "cmni9yod5008bv1na3jfyt88n",
-          "parcelId": "cmni9yoby0024v1nayoke9kgp",
-          "sourceId": "cmni9yo80000bv1naszntu3mn",
+          "id": "cmnj03hyp008bv1xh65k9odij",
+          "parcelId": "cmnj03hxb0024v1xh0ky20azc",
+          "sourceId": "cmnj03huz0009v1xhn5rskogf",
           "externalId": "crexi-465289",
           "url": "https://www.crexi.com/listing/crexi-465289",
           "title": "Trophy 513-Acre Agricultural Tract in Surry County",
@@ -942,36 +942,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/crexi-465289/aerial-1.jpg\",\"https://images.landscout.dev/crexi-465289/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-03-14\",\"daysOnMarket\":218,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.434Z",
-          "lastSeen": "2026-04-03T02:18:49.434Z",
-          "createdAt": "2026-04-03T02:18:49.434Z",
-          "updatedAt": "2026-04-03T02:18:49.434Z"
+          "firstSeen": "2026-04-03T14:30:24.434Z",
+          "lastSeen": "2026-04-03T14:30:24.434Z",
+          "createdAt": "2026-04-03T14:30:24.434Z",
+          "updatedAt": "2026-04-03T14:30:24.434Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoe900ejv1najzcxuv7t",
-        "dealId": "cmni9yoe900ehv1naid4xzmuj",
+        "id": "cmnj03i0300ejv1xhok3lsshq",
+        "dealId": "cmnj03i0300ehv1xhuookey2r",
         "type": "offer",
         "content": "Counter-offer received at $4,200/acre — recommending acceptance.",
-        "createdAt": "2026-03-17T02:18:49.473Z"
+        "createdAt": "2026-03-17T14:30:24.483Z"
       }
     ]
   },
   {
-    "id": "cmni9yoe800e9v1nadxrmj3fz",
-    "parcelId": "cmni9yobr001av1nanhuqroko",
+    "id": "cmnj03i0100e9v1xhu7e4fxts",
+    "parcelId": "cmnj03hx3001av1xhxa2v6m73",
     "stage": "qualified",
     "priority": "medium",
     "notes": "158-acre timber property in Patrick County, VA. Score: 82/100.",
     "nextAction": "Order soil survey",
-    "nextDate": "2026-04-07T02:18:49.472Z",
+    "nextDate": "2026-04-07T14:30:24.481Z",
     "assignee": "Analyst",
-    "createdAt": "2026-04-03T02:18:49.472Z",
-    "updatedAt": "2026-04-03T02:18:49.472Z",
+    "createdAt": "2026-04-03T14:30:24.481Z",
+    "updatedAt": "2026-04-03T14:30:24.481Z",
     "parcel": {
-      "id": "cmni9yobr001av1nanhuqroko",
+      "id": "cmnj03hx3001av1xhxa2v6m73",
       "apn": null,
       "address": "6664 Hollow Creek Rd",
       "county": "Patrick",
@@ -981,23 +981,23 @@
       "lon": -80.427,
       "zoning": "timber",
       "description": "158-acre timber tract in Patrick County, VA. 52% pasture, 48% forest. 59 miles from Roanoke. Paved road access. Elevation 3060 ft.",
-      "createdAt": "2026-04-03T02:18:49.383Z",
-      "updatedAt": "2026-04-03T02:18:49.383Z",
+      "createdAt": "2026-04-03T14:30:24.375Z",
+      "updatedAt": "2026-04-03T14:30:24.375Z",
       "fitScore": {
-        "id": "cmni9yobr001cv1na0682dulz",
-        "parcelId": "cmni9yobr001av1nanhuqroko",
+        "id": "cmnj03hx3001cv1xhrmy4golo",
+        "parcelId": "cmnj03hx3001av1xhxa2v6m73",
         "overallScore": 82,
         "scoreBreakdown": "{\"acreage\":19,\"soils\":5,\"location\":8,\"access\":14,\"water\":4,\"terrain\":3,\"utilities\":6,\"risk\":7,\"elevation\":4}",
         "topReasons": "[\"Ideal acreage (158 ac) in target range\",\"Paved road access\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.383Z"
+        "calculatedAt": "2026-04-03T14:30:24.375Z"
       },
       "listings": [
         {
-          "id": "cmni9yod0007hv1naoo2lqmv5",
-          "parcelId": "cmni9yobr001av1nanhuqroko",
-          "sourceId": "cmni9yo800009v1nawzhqe8n6",
+          "id": "cmnj03hyj007hv1xh8ds9tvbj",
+          "parcelId": "cmnj03hx3001av1xhxa2v6m73",
+          "sourceId": "cmnj03huz0008v1xh11f6oswd",
           "externalId": "loopnet-455617",
           "url": "https://www.loopnet.com/listing/loopnet-455617",
           "title": "Prime 158-Acre Timber Tract in Patrick County",
@@ -1006,36 +1006,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/loopnet-455617/aerial-1.jpg\",\"https://images.landscout.dev/loopnet-455617/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-01-05\",\"daysOnMarket\":339,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.429Z",
-          "lastSeen": "2026-04-03T02:18:49.429Z",
-          "createdAt": "2026-04-03T02:18:49.429Z",
-          "updatedAt": "2026-04-03T02:18:49.429Z"
+          "firstSeen": "2026-04-03T14:30:24.427Z",
+          "lastSeen": "2026-04-03T14:30:24.427Z",
+          "createdAt": "2026-04-03T14:30:24.427Z",
+          "updatedAt": "2026-04-03T14:30:24.427Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoe900efv1nahjictirz",
-        "dealId": "cmni9yoe800e9v1nadxrmj3fz",
+        "id": "cmnj03i0200efv1xh00ai3xe5",
+        "dealId": "cmnj03i0100e9v1xhu7e4fxts",
         "type": "offer",
         "content": "Counter-offer received at $4,200/acre — recommending acceptance.",
-        "createdAt": "2026-02-27T02:18:49.473Z"
+        "createdAt": "2026-02-27T14:30:24.482Z"
       }
     ]
   },
   {
-    "id": "cmni9yoe600e1v1nact3raqy5",
-    "parcelId": "cmni9yobq0017v1nacgg6cqig",
+    "id": "cmnj03hzz00e1v1xhwvl3j1tv",
+    "parcelId": "cmnj03hx20017v1xh4xhijzkt",
     "stage": "qualified",
     "priority": "medium",
     "notes": null,
     "nextAction": "Conduct environmental review",
-    "nextDate": "2026-04-16T02:18:49.470Z",
+    "nextDate": "2026-04-16T14:30:24.479Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.471Z",
-    "updatedAt": "2026-04-03T02:18:49.471Z",
+    "createdAt": "2026-04-03T14:30:24.480Z",
+    "updatedAt": "2026-04-03T14:30:24.480Z",
     "parcel": {
-      "id": "cmni9yobq0017v1nacgg6cqig",
+      "id": "cmnj03hx20017v1xh4xhijzkt",
       "apn": null,
       "address": "2995 Sandy Bottom Rd",
       "county": "Buckingham",
@@ -1045,23 +1045,23 @@
       "lon": -78.4159,
       "zoning": "agricultural",
       "description": "274-acre agricultural tract in Buckingham County, VA. 52% forest, 48% pasture. 35 miles from Lynchburg. Paved road access. Elevation 1494 ft.",
-      "createdAt": "2026-04-03T02:18:49.382Z",
-      "updatedAt": "2026-04-03T02:18:49.382Z",
+      "createdAt": "2026-04-03T14:30:24.374Z",
+      "updatedAt": "2026-04-03T14:30:24.374Z",
       "fitScore": {
-        "id": "cmni9yobq0019v1namfpwyuvh",
-        "parcelId": "cmni9yobq0017v1nacgg6cqig",
+        "id": "cmnj03hx20019v1xh5lxb9tyh",
+        "parcelId": "cmnj03hx20017v1xh4xhijzkt",
         "overallScore": 85,
         "scoreBreakdown": "{\"acreage\":19,\"soils\":12,\"location\":15,\"access\":10,\"water\":5,\"terrain\":3,\"utilities\":4,\"risk\":5,\"elevation\":1}",
         "topReasons": "[\"Ideal acreage (274 ac) in target range\",\"Strong soils quality (8/10)\",\"Good metro proximity (35 mi)\",\"Paved road access\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.382Z"
+        "calculatedAt": "2026-04-03T14:30:24.374Z"
       },
       "listings": [
         {
-          "id": "cmni9yod0007fv1na5o45vgld",
-          "parcelId": "cmni9yobq0017v1nacgg6cqig",
-          "sourceId": "cmni9yo7z0001v1nae2xati4n",
+          "id": "cmnj03hyi007fv1xhz3y5inwr",
+          "parcelId": "cmnj03hx20017v1xh4xhijzkt",
+          "sourceId": "cmnj03huy0000v1xh077u9qwu",
           "externalId": "hall-and-hall-909593",
           "url": "https://www.hallhall.com/listing/hall-and-hall-909593",
           "title": "Secluded 274-Acre Agricultural Tract in Buckingham County",
@@ -1070,36 +1070,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/hall-and-hall-909593/aerial-1.jpg\",\"https://images.landscout.dev/hall-and-hall-909593/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-03-02\",\"daysOnMarket\":198,\"broker\":\"Hall & Hall\"}",
-          "firstSeen": "2026-04-03T02:18:49.428Z",
-          "lastSeen": "2026-04-03T02:18:49.428Z",
-          "createdAt": "2026-04-03T02:18:49.428Z",
-          "updatedAt": "2026-04-03T02:18:49.428Z"
+          "firstSeen": "2026-04-03T14:30:24.427Z",
+          "lastSeen": "2026-04-03T14:30:24.427Z",
+          "createdAt": "2026-04-03T14:30:24.427Z",
+          "updatedAt": "2026-04-03T14:30:24.427Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoe700e7v1namo2zts14",
-        "dealId": "cmni9yoe600e1v1nact3raqy5",
+        "id": "cmnj03i0000e7v1xha0jpfjmu",
+        "dealId": "cmnj03hzz00e1v1xhwvl3j1tv",
         "type": "call",
         "content": "Discussed with surveyor — boundary survey would take 2-3 weeks.",
-        "createdAt": "2026-03-22T02:18:49.471Z"
+        "createdAt": "2026-03-22T14:30:24.480Z"
       }
     ]
   },
   {
-    "id": "cmni9yoe500dvv1nah6nj6z4o",
-    "parcelId": "cmni9yobn000yv1naves27mkr",
+    "id": "cmnj03hzy00dvv1xhxlxns08f",
+    "parcelId": "cmnj03hx0000yv1xhh6nvdd3b",
     "stage": "new",
     "priority": "high",
     "notes": "1062-acre mixed-use property in Madison County, VA. Score: 87/100.",
     "nextAction": "Contact listing agent",
-    "nextDate": "2026-04-21T02:18:49.469Z",
+    "nextDate": "2026-04-21T14:30:24.478Z",
     "assignee": "Analyst",
-    "createdAt": "2026-04-03T02:18:49.470Z",
-    "updatedAt": "2026-04-03T02:18:49.470Z",
+    "createdAt": "2026-04-03T14:30:24.478Z",
+    "updatedAt": "2026-04-03T14:30:24.478Z",
     "parcel": {
-      "id": "cmni9yobn000yv1naves27mkr",
+      "id": "cmnj03hx0000yv1xhh6nvdd3b",
       "apn": "83-3-790-78",
       "address": "2223 Hickory Flat Rd",
       "county": "Madison",
@@ -1109,23 +1109,23 @@
       "lon": -78.18820000000001,
       "zoning": "mixed-use",
       "description": "1062-acre mixed-use tract in Madison County, VA. 39% wetland, 61% pasture. Water features include creek, pond. 33 miles from Charlottesville. Paved road access. Elevation 1338 ft.",
-      "createdAt": "2026-04-03T02:18:49.380Z",
-      "updatedAt": "2026-04-03T02:18:49.380Z",
+      "createdAt": "2026-04-03T14:30:24.372Z",
+      "updatedAt": "2026-04-03T14:30:24.372Z",
       "fitScore": {
-        "id": "cmni9yobn0010v1napldpp9yr",
-        "parcelId": "cmni9yobn000yv1naves27mkr",
+        "id": "cmnj03hx00010v1xhzhanhqma",
+        "parcelId": "cmnj03hx0000yv1xhh6nvdd3b",
         "overallScore": 87,
         "scoreBreakdown": "{\"acreage\":9,\"soils\":13,\"location\":13,\"access\":14,\"water\":7,\"terrain\":3,\"utilities\":9,\"risk\":4,\"elevation\":3}",
         "topReasons": "[\"Strong soils quality (8.7/10)\",\"Good metro proximity (33 mi)\",\"Paved road access\",\"Water features present on property\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.380Z"
+        "calculatedAt": "2026-04-03T14:30:24.372Z"
       },
       "listings": [
         {
-          "id": "cmni9yocz0079v1nawwh4oopd",
-          "parcelId": "cmni9yobn000yv1naves27mkr",
-          "sourceId": "cmni9yo800008v1nahb879x8v",
+          "id": "cmnj03hyh0079v1xhhihfnjcu",
+          "parcelId": "cmnj03hx0000yv1xhh6nvdd3b",
+          "sourceId": "cmnj03huz000av1xhamc1vjtl",
           "externalId": "lands-of-america-293210",
           "url": "https://www.landsofamerica.com/listing/lands-of-america-293210",
           "title": "Magnificent 1062-Acre Development Opportunity in Madison County",
@@ -1134,36 +1134,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/lands-of-america-293210/aerial-1.jpg\",\"https://images.landscout.dev/lands-of-america-293210/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-03-18\",\"daysOnMarket\":129,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.427Z",
-          "lastSeen": "2026-04-03T02:18:49.427Z",
-          "createdAt": "2026-04-03T02:18:49.427Z",
-          "updatedAt": "2026-04-03T02:18:49.427Z"
+          "firstSeen": "2026-04-03T14:30:24.426Z",
+          "lastSeen": "2026-04-03T14:30:24.426Z",
+          "createdAt": "2026-04-03T14:30:24.426Z",
+          "updatedAt": "2026-04-03T14:30:24.426Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoe600dxv1na4ma7agzz",
-        "dealId": "cmni9yoe500dvv1nah6nj6z4o",
+        "id": "cmnj03hzy00dxv1xhwpazmbwl",
+        "dealId": "cmnj03hzy00dvv1xhxlxns08f",
         "type": "offer",
         "content": "Submitted initial offer at $3,800/acre, 30-day due diligence.",
-        "createdAt": "2026-03-02T02:18:49.470Z"
+        "createdAt": "2026-03-02T14:30:24.478Z"
       }
     ]
   },
   {
-    "id": "cmni9yoe400dpv1naenj8ekss",
-    "parcelId": "cmni9yocd0041v1nanj9bhw49",
+    "id": "cmnj03hzx00dpv1xhc4qi4a01",
+    "parcelId": "cmnj03hxs0041v1xhvbso4vpm",
     "stage": "new",
     "priority": "high",
     "notes": "165-acre rural-residential property in Putnam County, GA. Score: 90/100.",
     "nextAction": "Pull county tax records",
-    "nextDate": "2026-04-27T02:18:49.468Z",
+    "nextDate": "2026-04-27T14:30:24.477Z",
     "assignee": "Analyst",
-    "createdAt": "2026-04-03T02:18:49.469Z",
-    "updatedAt": "2026-04-03T02:18:49.469Z",
+    "createdAt": "2026-04-03T14:30:24.477Z",
+    "updatedAt": "2026-04-03T14:30:24.477Z",
     "parcel": {
-      "id": "cmni9yocd0041v1nanj9bhw49",
+      "id": "cmnj03hxs0041v1xhvbso4vpm",
       "apn": "69-9-952-24",
       "address": "3279 Hollow Creek Rd",
       "county": "Putnam",
@@ -1173,23 +1173,23 @@
       "lon": -83.25670000000001,
       "zoning": "rural-residential",
       "description": "165-acre rural-residential tract in Putnam County, GA. 29% pasture, 48% wetland, 18% forest, 5% developed. 34 miles from Milledgeville. Gravel road access. Elevation 1730 ft.",
-      "createdAt": "2026-04-03T02:18:49.405Z",
-      "updatedAt": "2026-04-03T02:18:49.405Z",
+      "createdAt": "2026-04-03T14:30:24.400Z",
+      "updatedAt": "2026-04-03T14:30:24.400Z",
       "fitScore": {
-        "id": "cmni9yocd0043v1nawunekg90",
-        "parcelId": "cmni9yocd0041v1nanj9bhw49",
+        "id": "cmnj03hxs0043v1xh6r18ay1k",
+        "parcelId": "cmnj03hxs0041v1xhvbso4vpm",
         "overallScore": 90,
         "scoreBreakdown": "{\"acreage\":19,\"soils\":12,\"location\":13,\"access\":9,\"water\":4,\"terrain\":10,\"utilities\":4,\"risk\":5,\"elevation\":3}",
         "topReasons": "[\"Ideal acreage (165 ac) in target range\",\"Strong soils quality (8.1/10)\",\"Good metro proximity (34 mi)\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.405Z"
+        "calculatedAt": "2026-04-03T14:30:24.400Z"
       },
       "listings": [
         {
-          "id": "cmni9yodi00abv1na24jvdv23",
-          "parcelId": "cmni9yocd0041v1nanj9bhw49",
-          "sourceId": "cmni9yo7z0003v1nauvn1oqm6",
+          "id": "cmnj03hz500abv1xhhwwksuw3",
+          "parcelId": "cmnj03hxs0041v1xhvbso4vpm",
+          "sourceId": "cmnj03huz0006v1xh63a9t5bi",
           "externalId": "united-country-169673",
           "url": "https://www.unitedcountry.com/listing/united-country-169673",
           "title": "Breathtaking 165-Acre Mountain Retreat in Putnam County",
@@ -1198,36 +1198,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/united-country-169673/aerial-1.jpg\",\"https://images.landscout.dev/united-country-169673/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-04-07\",\"daysOnMarket\":31,\"broker\":\"United Country\"}",
-          "firstSeen": "2026-04-03T02:18:49.446Z",
-          "lastSeen": "2026-04-03T02:18:49.446Z",
-          "createdAt": "2026-04-03T02:18:49.446Z",
-          "updatedAt": "2026-04-03T02:18:49.446Z"
+          "firstSeen": "2026-04-03T14:30:24.449Z",
+          "lastSeen": "2026-04-03T14:30:24.449Z",
+          "createdAt": "2026-04-03T14:30:24.449Z",
+          "updatedAt": "2026-04-03T14:30:24.449Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoe500dtv1nam8mhvmq9",
-        "dealId": "cmni9yoe400dpv1naenj8ekss",
+        "id": "cmnj03hzy00dtv1xhwwdiwyq8",
+        "dealId": "cmnj03hzx00dpv1xhc4qi4a01",
         "type": "call",
         "content": "Spoke with listing agent — seller is motivated, recently inherited the property.",
-        "createdAt": "2026-03-21T02:18:49.469Z"
+        "createdAt": "2026-03-21T14:30:24.478Z"
       }
     ]
   },
   {
-    "id": "cmni9yoe300djv1naeulp3ylw",
-    "parcelId": "cmni9yocc003yv1nanxc8vfeq",
+    "id": "cmnj03hzw00djv1xhwx1u6zhw",
+    "parcelId": "cmnj03hxr003yv1xhk13kc8tb",
     "stage": "new",
     "priority": "high",
     "notes": "285-acre agricultural property in Morgan County, GA. Score: 91/100.",
     "nextAction": "Schedule site visit",
-    "nextDate": "2026-04-09T02:18:49.467Z",
+    "nextDate": "2026-04-09T14:30:24.476Z",
     "assignee": "Analyst",
-    "createdAt": "2026-04-03T02:18:49.468Z",
-    "updatedAt": "2026-04-03T02:18:49.468Z",
+    "createdAt": "2026-04-03T14:30:24.476Z",
+    "updatedAt": "2026-04-03T14:30:24.476Z",
     "parcel": {
-      "id": "cmni9yocc003yv1nanxc8vfeq",
+      "id": "cmnj03hxr003yv1xhk13kc8tb",
       "apn": null,
       "address": "9924 Timber Ridge Ln",
       "county": "Morgan",
@@ -1237,23 +1237,23 @@
       "lon": -83.46329999999999,
       "zoning": "agricultural",
       "description": "285-acre agricultural tract in Morgan County, GA. 52% forest, 43% pasture, 5% developed. 58 miles from Atlanta. Paved road access. Elevation 762 ft.",
-      "createdAt": "2026-04-03T02:18:49.405Z",
-      "updatedAt": "2026-04-03T02:18:49.405Z",
+      "createdAt": "2026-04-03T14:30:24.400Z",
+      "updatedAt": "2026-04-03T14:30:24.400Z",
       "fitScore": {
-        "id": "cmni9yocc0040v1nart75wb5b",
-        "parcelId": "cmni9yocc003yv1nanxc8vfeq",
+        "id": "cmnj03hxr0040v1xhyv9fuj3g",
+        "parcelId": "cmnj03hxr003yv1xhk13kc8tb",
         "overallScore": 91,
         "scoreBreakdown": "{\"acreage\":20,\"soils\":13,\"location\":10,\"access\":13,\"water\":5,\"terrain\":10,\"utilities\":9,\"risk\":12,\"elevation\":1}",
         "topReasons": "[\"Ideal acreage (285 ac) in target range\",\"Strong soils quality (8.4/10)\",\"Paved road access\",\"Utilities readily available\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.405Z"
+        "calculatedAt": "2026-04-03T14:30:24.400Z"
       },
       "listings": [
         {
-          "id": "cmni9yodh00a9v1na228as3by",
-          "parcelId": "cmni9yocc003yv1nanxc8vfeq",
-          "sourceId": "cmni9yo80000bv1naszntu3mn",
+          "id": "cmnj03hz400a9v1xhdexsgwky",
+          "parcelId": "cmnj03hxr003yv1xhk13kc8tb",
+          "sourceId": "cmnj03huz0009v1xhn5rskogf",
           "externalId": "crexi-504323",
           "url": "https://www.crexi.com/listing/crexi-504323",
           "title": "Expansive 285-Acre Agricultural Tract in Morgan County",
@@ -1262,36 +1262,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/crexi-504323/aerial-1.jpg\",\"https://images.landscout.dev/crexi-504323/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-08-07\",\"daysOnMarket\":218,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.446Z",
-          "lastSeen": "2026-04-03T02:18:49.446Z",
-          "createdAt": "2026-04-03T02:18:49.446Z",
-          "updatedAt": "2026-04-03T02:18:49.446Z"
+          "firstSeen": "2026-04-03T14:30:24.449Z",
+          "lastSeen": "2026-04-03T14:30:24.449Z",
+          "createdAt": "2026-04-03T14:30:24.449Z",
+          "updatedAt": "2026-04-03T14:30:24.449Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoe400dnv1natairmhpn",
-        "dealId": "cmni9yoe300djv1naeulp3ylw",
+        "id": "cmnj03hzx00dnv1xhyirfk85j",
+        "dealId": "cmnj03hzw00djv1xhwx1u6zhw",
         "type": "email",
         "content": "Sent LOI to listing broker for client review.",
-        "createdAt": "2026-03-06T02:18:49.468Z"
+        "createdAt": "2026-03-06T14:30:24.476Z"
       }
     ]
   },
   {
-    "id": "cmni9yoe200dbv1naug2en4xo",
-    "parcelId": "cmni9yobs001gv1naoyyuw996",
+    "id": "cmnj03hzu00dbv1xhthy06mgv",
+    "parcelId": "cmnj03hx4001gv1xh29azmtbr",
     "stage": "new",
     "priority": "high",
     "notes": "450-acre conservation property in Buncombe County, NC. Score: 91/100.",
     "nextAction": "Contact listing agent",
-    "nextDate": "2026-04-27T02:18:49.466Z",
+    "nextDate": "2026-04-27T14:30:24.474Z",
     "assignee": null,
-    "createdAt": "2026-04-03T02:18:49.467Z",
-    "updatedAt": "2026-04-03T02:18:49.467Z",
+    "createdAt": "2026-04-03T14:30:24.475Z",
+    "updatedAt": "2026-04-03T14:30:24.475Z",
     "parcel": {
-      "id": "cmni9yobs001gv1naoyyuw996",
+      "id": "cmnj03hx4001gv1xh29azmtbr",
       "apn": "86-1-601-37",
       "address": "4949 Sandy Bottom Rd",
       "county": "Buncombe",
@@ -1301,23 +1301,23 @@
       "lon": -82.4132,
       "zoning": "conservation",
       "description": "450-acre conservation tract in Buncombe County, NC. 26% developed, 74% cropland. 24 miles from Asheville. Paved road access. Elevation 1011 ft.",
-      "createdAt": "2026-04-03T02:18:49.385Z",
-      "updatedAt": "2026-04-03T02:18:49.385Z",
+      "createdAt": "2026-04-03T14:30:24.377Z",
+      "updatedAt": "2026-04-03T14:30:24.377Z",
       "fitScore": {
-        "id": "cmni9yobs001iv1nafwdtdpvm",
-        "parcelId": "cmni9yobs001gv1naoyyuw996",
+        "id": "cmnj03hx4001iv1xhey69tysw",
+        "parcelId": "cmnj03hx4001gv1xh29azmtbr",
         "overallScore": 91,
         "scoreBreakdown": "{\"acreage\":19,\"soils\":6,\"location\":13,\"access\":11,\"water\":4,\"terrain\":7,\"utilities\":0,\"risk\":10,\"elevation\":3}",
         "topReasons": "[\"Ideal acreage (450 ac) in target range\",\"Good metro proximity (24 mi)\",\"Paved road access\",\"Low flood/wetlands risk\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.385Z"
+        "calculatedAt": "2026-04-03T14:30:24.377Z"
       },
       "listings": [
         {
-          "id": "cmni9yod1007lv1nap6v3gsb8",
-          "parcelId": "cmni9yobs001gv1naoyyuw996",
-          "sourceId": "cmni9yo7z0000v1naemtfmt98",
+          "id": "cmnj03hyj007lv1xh6xqyfprg",
+          "parcelId": "cmnj03hx4001gv1xh29azmtbr",
+          "sourceId": "cmnj03huz0002v1xht0ioztoy",
           "externalId": "landwatch-915833",
           "url": "https://www.landwatch.com/listing/landwatch-915833",
           "title": "Unrestricted 450-Acre Conservation Tract in Buncombe County",
@@ -1326,36 +1326,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/landwatch-915833/aerial-1.jpg\",\"https://images.landscout.dev/landwatch-915833/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-05-02\",\"daysOnMarket\":92,\"broker\":null}",
-          "firstSeen": "2026-04-03T02:18:49.429Z",
-          "lastSeen": "2026-04-03T02:18:49.429Z",
-          "createdAt": "2026-04-03T02:18:49.429Z",
-          "updatedAt": "2026-04-03T02:18:49.429Z"
+          "firstSeen": "2026-04-03T14:30:24.428Z",
+          "lastSeen": "2026-04-03T14:30:24.428Z",
+          "createdAt": "2026-04-03T14:30:24.428Z",
+          "updatedAt": "2026-04-03T14:30:24.428Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoe300dhv1nasowt1m1b",
-        "dealId": "cmni9yoe200dbv1naug2en4xo",
+        "id": "cmnj03hzv00dhv1xhno8tdmdy",
+        "dealId": "cmnj03hzu00dbv1xhthy06mgv",
         "type": "visit",
         "content": "Walked the property — excellent road frontage, creek runs year-round.",
-        "createdAt": "2026-02-26T02:18:49.467Z"
+        "createdAt": "2026-02-26T14:30:24.475Z"
       }
     ]
   },
   {
-    "id": "cmni9yoe100d5v1nang2zl49k",
-    "parcelId": "cmni9yoch004mv1nata0vlk6i",
+    "id": "cmnj03hzt00d5v1xh1n4g0pto",
+    "parcelId": "cmnj03hxw004mv1xhpmvuh3qu",
     "stage": "new",
     "priority": "high",
     "notes": "197-acre timber property in Telfair County, GA. Score: 94/100.",
     "nextAction": "Contact listing agent",
-    "nextDate": "2026-04-19T02:18:49.465Z",
+    "nextDate": "2026-04-19T14:30:24.473Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.466Z",
-    "updatedAt": "2026-04-03T02:18:49.466Z",
+    "createdAt": "2026-04-03T14:30:24.473Z",
+    "updatedAt": "2026-04-03T14:30:24.473Z",
     "parcel": {
-      "id": "cmni9yoch004mv1nata0vlk6i",
+      "id": "cmnj03hxw004mv1xhpmvuh3qu",
       "apn": null,
       "address": "5518 Turkey Creek Rd",
       "county": "Telfair",
@@ -1365,23 +1365,23 @@
       "lon": -82.7882,
       "zoning": "timber",
       "description": "197-acre timber tract in Telfair County, GA. 35% developed, 33% wetland, 25% pasture, 7% forest. Water features include creek, spring. 67 miles from Macon. Gravel road access. Elevation 544 ft.",
-      "createdAt": "2026-04-03T02:18:49.409Z",
-      "updatedAt": "2026-04-03T02:18:49.409Z",
+      "createdAt": "2026-04-03T14:30:24.405Z",
+      "updatedAt": "2026-04-03T14:30:24.405Z",
       "fitScore": {
-        "id": "cmni9yoch004ov1nan3n6twz0",
-        "parcelId": "cmni9yoch004mv1nata0vlk6i",
+        "id": "cmnj03hxw004ov1xh29b3stsy",
+        "parcelId": "cmnj03hxw004mv1xhpmvuh3qu",
         "overallScore": 94,
         "scoreBreakdown": "{\"acreage\":14,\"soils\":13,\"location\":9,\"access\":8,\"water\":8,\"terrain\":9,\"utilities\":4,\"risk\":8,\"elevation\":2}",
         "topReasons": "[\"Ideal acreage (197 ac) in target range\",\"Strong soils quality (8.7/10)\",\"Water features present on property\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.409Z"
+        "calculatedAt": "2026-04-03T14:30:24.405Z"
       },
       "listings": [
         {
-          "id": "cmni9yodm00avv1na037wxd24",
-          "parcelId": "cmni9yoch004mv1nata0vlk6i",
-          "sourceId": "cmni9yo7z0006v1navrhuf640",
+          "id": "cmnj03hza00avv1xhkhk0mp5o",
+          "parcelId": "cmnj03hxw004mv1xhpmvuh3qu",
+          "sourceId": "cmnj03huz0005v1xhzmaydw8k",
           "externalId": "nai-land-484599",
           "url": "https://www.nailand.com/listing/nai-land-484599",
           "title": "Private 197-Acre Timber Tract in Telfair County",
@@ -1390,36 +1390,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/nai-land-484599/aerial-1.jpg\",\"https://images.landscout.dev/nai-land-484599/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-03-13\",\"daysOnMarket\":224,\"broker\":\"NAI Land\"}",
-          "firstSeen": "2026-04-03T02:18:49.450Z",
-          "lastSeen": "2026-04-03T02:18:49.450Z",
-          "createdAt": "2026-04-03T02:18:49.450Z",
-          "updatedAt": "2026-04-03T02:18:49.450Z"
+          "firstSeen": "2026-04-03T14:30:24.455Z",
+          "lastSeen": "2026-04-03T14:30:24.455Z",
+          "createdAt": "2026-04-03T14:30:24.455Z",
+          "updatedAt": "2026-04-03T14:30:24.455Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoe200d7v1narrjepwyg",
-        "dealId": "cmni9yoe100d5v1nang2zl49k",
+        "id": "cmnj03hzt00d7v1xhmtmx8gwe",
+        "dealId": "cmnj03hzt00d5v1xh1n4g0pto",
         "type": "visit",
         "content": "Walked the property — excellent road frontage, creek runs year-round.",
-        "createdAt": "2026-04-02T02:18:49.466Z"
+        "createdAt": "2026-04-02T14:30:24.473Z"
       }
     ]
   },
   {
-    "id": "cmni9yoe000cxv1naiebexo7i",
-    "parcelId": "cmni9yobw001vv1nanfqzy05y",
+    "id": "cmnj03hzs00cxv1xhoetn4weo",
+    "parcelId": "cmnj03hx9001vv1xhk4qi7v0z",
     "stage": "new",
     "priority": "high",
     "notes": "271-acre agricultural property in Alamance County, NC. Score: 97/100.",
     "nextAction": "Request timber appraisal",
-    "nextDate": "2026-04-25T02:18:49.464Z",
+    "nextDate": "2026-04-25T14:30:24.472Z",
     "assignee": "Analyst",
-    "createdAt": "2026-04-03T02:18:49.464Z",
-    "updatedAt": "2026-04-03T02:18:49.464Z",
+    "createdAt": "2026-04-03T14:30:24.472Z",
+    "updatedAt": "2026-04-03T14:30:24.472Z",
     "parcel": {
-      "id": "cmni9yobw001vv1nanfqzy05y",
+      "id": "cmnj03hx9001vv1xhk4qi7v0z",
       "apn": "84-4-986-54",
       "address": "3470 Hollow Creek Rd",
       "county": "Alamance",
@@ -1429,23 +1429,23 @@
       "lon": -79.44420000000001,
       "zoning": "agricultural",
       "description": "271-acre agricultural tract in Alamance County, NC. 16% forest, 84% pasture. Water features include lake frontage. 9 miles from Burlington. Paved road access. Elevation 1505 ft.",
-      "createdAt": "2026-04-03T02:18:49.388Z",
-      "updatedAt": "2026-04-03T02:18:49.388Z",
+      "createdAt": "2026-04-03T14:30:24.381Z",
+      "updatedAt": "2026-04-03T14:30:24.381Z",
       "fitScore": {
-        "id": "cmni9yobw001xv1naa9rcwx1l",
-        "parcelId": "cmni9yobw001vv1nanfqzy05y",
+        "id": "cmnj03hx9001xv1xhwa81h4c6",
+        "parcelId": "cmnj03hx9001vv1xhk4qi7v0z",
         "overallScore": 97,
         "scoreBreakdown": "{\"acreage\":20,\"soils\":10,\"location\":12,\"access\":12,\"water\":7,\"terrain\":3,\"utilities\":5,\"risk\":9,\"elevation\":5}",
         "topReasons": "[\"Ideal acreage (271 ac) in target range\",\"Paved road access\",\"Water features present on property\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.388Z"
+        "calculatedAt": "2026-04-03T14:30:24.381Z"
       },
       "listings": [
         {
-          "id": "cmni9yod3007zv1na9racxue4",
-          "parcelId": "cmni9yobw001vv1nanfqzy05y",
-          "sourceId": "cmni9yo800007v1nacuc2ef46",
+          "id": "cmnj03hyn007zv1xhym1e23j1",
+          "parcelId": "cmnj03hx9001vv1xhk4qi7v0z",
+          "sourceId": "cmnj03huz0003v1xhf1k1wlu7",
           "externalId": "whitetail-properties-930592",
           "url": "https://www.whitetailproperties.com/listing/whitetail-properties-930592",
           "title": "Rolling 271-Acre Agricultural Tract in Alamance County",
@@ -1454,36 +1454,36 @@
           "status": "listed",
           "photos": "[\"https://images.landscout.dev/whitetail-properties-930592/aerial-1.jpg\",\"https://images.landscout.dev/whitetail-properties-930592/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-01-22\",\"daysOnMarket\":10,\"broker\":\"Whitetail Properties\"}",
-          "firstSeen": "2026-04-03T02:18:49.432Z",
-          "lastSeen": "2026-04-03T02:18:49.432Z",
-          "createdAt": "2026-04-03T02:18:49.432Z",
-          "updatedAt": "2026-04-03T02:18:49.432Z"
+          "firstSeen": "2026-04-03T14:30:24.432Z",
+          "lastSeen": "2026-04-03T14:30:24.432Z",
+          "createdAt": "2026-04-03T14:30:24.432Z",
+          "updatedAt": "2026-04-03T14:30:24.432Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yoe100d3v1namc2e2zdj",
-        "dealId": "cmni9yoe000cxv1naiebexo7i",
+        "id": "cmnj03hzt00d3v1xhvclli6em",
+        "dealId": "cmnj03hzs00cxv1xhoetn4weo",
         "type": "visit",
         "content": "Visited during rain — drainage patterns look healthy, no standing water issues.",
-        "createdAt": "2026-03-26T02:18:49.465Z"
+        "createdAt": "2026-03-26T14:30:24.473Z"
       }
     ]
   },
   {
-    "id": "cmni9yodz00crv1nal600zuhf",
-    "parcelId": "cmni9yobx001yv1natructyp2",
+    "id": "cmnj03hzr00crv1xhsdbb3pnv",
+    "parcelId": "cmnj03hxa001yv1xhfsj4k1tn",
     "stage": "new",
     "priority": "high",
     "notes": "172-acre rural-residential property in Rowan County, NC. Score: 99/100.",
     "nextAction": "Request timber appraisal",
-    "nextDate": "2026-05-01T02:18:49.463Z",
+    "nextDate": "2026-05-01T14:30:24.470Z",
     "assignee": "Deven",
-    "createdAt": "2026-04-03T02:18:49.463Z",
-    "updatedAt": "2026-04-03T02:18:49.463Z",
+    "createdAt": "2026-04-03T14:30:24.471Z",
+    "updatedAt": "2026-04-03T14:30:24.471Z",
     "parcel": {
-      "id": "cmni9yobx001yv1natructyp2",
+      "id": "cmnj03hxa001yv1xhfsj4k1tn",
       "apn": "28-2-565-98",
       "address": "499 Long Branch Rd",
       "county": "Rowan",
@@ -1493,23 +1493,23 @@
       "lon": -80.58999999999999,
       "zoning": "rural-residential",
       "description": "172-acre rural-residential tract in Rowan County, NC. 27% pasture, 38% developed, 11% forest, 24% cropland. Water features include lake frontage. 43 miles from Charlotte. Paved road access. Elevation 1705 ft.",
-      "createdAt": "2026-04-03T02:18:49.389Z",
-      "updatedAt": "2026-04-03T02:18:49.389Z",
+      "createdAt": "2026-04-03T14:30:24.382Z",
+      "updatedAt": "2026-04-03T14:30:24.382Z",
       "fitScore": {
-        "id": "cmni9yobx0020v1na7rfg2ynm",
-        "parcelId": "cmni9yobx001yv1natructyp2",
+        "id": "cmnj03hxa0020v1xhsz3h299w",
+        "parcelId": "cmnj03hxa001yv1xhfsj4k1tn",
         "overallScore": 99,
         "scoreBreakdown": "{\"acreage\":14,\"soils\":11,\"location\":15,\"access\":13,\"water\":7,\"terrain\":10,\"utilities\":4,\"risk\":8,\"elevation\":3}",
         "topReasons": "[\"Ideal acreage (172 ac) in target range\",\"Strong soils quality (7/10)\",\"Good metro proximity (43 mi)\",\"Paved road access\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.389Z"
+        "calculatedAt": "2026-04-03T14:30:24.382Z"
       },
       "listings": [
         {
-          "id": "cmni9yod30081v1naao5zt8d3",
-          "parcelId": "cmni9yobx001yv1natructyp2",
-          "sourceId": "cmni9yo7z0002v1navxxxz99g",
+          "id": "cmnj03hyn0081v1xhej42zgsf",
+          "parcelId": "cmnj03hxa001yv1xhfsj4k1tn",
+          "sourceId": "cmnj03huz0007v1xh5avd5vw3",
           "externalId": "mason-morse-ranch-286271",
           "url": "https://www.ranchland.com/listing/mason-morse-ranch-286271",
           "title": "Pristine 172-Acre Estate Tract in Rowan County",
@@ -1518,36 +1518,36 @@
           "status": "off-market",
           "photos": "[\"https://images.landscout.dev/mason-morse-ranch-286271/aerial-1.jpg\",\"https://images.landscout.dev/mason-morse-ranch-286271/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-07-26\",\"daysOnMarket\":359,\"broker\":\"Mason & Morse Ranch\"}",
-          "firstSeen": "2026-04-03T02:18:49.432Z",
-          "lastSeen": "2026-04-03T02:18:49.432Z",
-          "createdAt": "2026-04-03T02:18:49.432Z",
-          "updatedAt": "2026-04-03T02:18:49.432Z"
+          "firstSeen": "2026-04-03T14:30:24.432Z",
+          "lastSeen": "2026-04-03T14:30:24.432Z",
+          "createdAt": "2026-04-03T14:30:24.432Z",
+          "updatedAt": "2026-04-03T14:30:24.432Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yodz00ctv1na6bj6goc4",
-        "dealId": "cmni9yodz00crv1nal600zuhf",
+        "id": "cmnj03hzr00ctv1xhu77r166m",
+        "dealId": "cmnj03hzr00crv1xhsdbb3pnv",
         "type": "document",
         "content": "Received and reviewed title commitment — Schedule B items are standard.",
-        "createdAt": "2026-03-25T02:18:49.463Z"
+        "createdAt": "2026-03-25T14:30:24.471Z"
       }
     ]
   },
   {
-    "id": "cmni9yody00cjv1na2u8kposl",
-    "parcelId": "cmni9yoc60031v1na6sag6ztm",
+    "id": "cmnj03hzp00cjv1xhqfiz4uym",
+    "parcelId": "cmnj03hxk0031v1xhrthh0aet",
     "stage": "new",
     "priority": "high",
     "notes": null,
     "nextAction": "Pull county tax records",
-    "nextDate": "2026-04-17T02:18:49.461Z",
+    "nextDate": "2026-04-17T14:30:24.468Z",
     "assignee": "Analyst",
-    "createdAt": "2026-04-03T02:18:49.462Z",
-    "updatedAt": "2026-04-03T02:18:49.462Z",
+    "createdAt": "2026-04-03T14:30:24.469Z",
+    "updatedAt": "2026-04-03T14:30:24.469Z",
     "parcel": {
-      "id": "cmni9yoc60031v1na6sag6ztm",
+      "id": "cmnj03hxk0031v1xhrthh0aet",
       "apn": "57-7-637-60",
       "address": "309 Bear Hollow Rd",
       "county": "Laurens",
@@ -1557,23 +1557,23 @@
       "lon": -81.9846,
       "zoning": "timber",
       "description": "211-acre timber tract in Laurens County, SC. 45% wetland, 24% forest, 20% pasture, 11% cropland. 38 miles from Greenville. Paved road access. Elevation 533 ft.",
-      "createdAt": "2026-04-03T02:18:49.398Z",
-      "updatedAt": "2026-04-03T02:18:49.398Z",
+      "createdAt": "2026-04-03T14:30:24.392Z",
+      "updatedAt": "2026-04-03T14:30:24.392Z",
       "fitScore": {
-        "id": "cmni9yoc60033v1na6ppizlwg",
-        "parcelId": "cmni9yoc60031v1na6sag6ztm",
+        "id": "cmnj03hxk0033v1xh4j6pb4w9",
+        "parcelId": "cmnj03hxk0031v1xhrthh0aet",
         "overallScore": 100,
         "scoreBreakdown": "{\"acreage\":19,\"soils\":13,\"location\":14,\"access\":12,\"water\":3,\"terrain\":8,\"utilities\":9,\"risk\":10,\"elevation\":0}",
         "topReasons": "[\"Ideal acreage (211 ac) in target range\",\"Strong soils quality (8.9/10)\",\"Good metro proximity (38 mi)\",\"Paved road access\"]",
         "autoFailed": false,
         "autoFailReason": null,
-        "calculatedAt": "2026-04-03T02:18:49.398Z"
+        "calculatedAt": "2026-04-03T14:30:24.392Z"
       },
       "listings": [
         {
-          "id": "cmni9yodb009bv1na96u83rml",
-          "parcelId": "cmni9yoc60031v1na6sag6ztm",
-          "sourceId": "cmni9yo7z0002v1navxxxz99g",
+          "id": "cmnj03hyx009bv1xh1aa530h6",
+          "parcelId": "cmnj03hxk0031v1xhrthh0aet",
+          "sourceId": "cmnj03huz0007v1xh5avd5vw3",
           "externalId": "mason-morse-ranch-571229",
           "url": "https://www.ranchland.com/listing/mason-morse-ranch-571229",
           "title": "Rolling 211-Acre Timberland in Laurens County",
@@ -1582,20 +1582,20 @@
           "status": "off-market",
           "photos": "[\"https://images.landscout.dev/mason-morse-ranch-571229/aerial-1.jpg\",\"https://images.landscout.dev/mason-morse-ranch-571229/ground-1.jpg\"]",
           "metadata": "{\"originalListDate\":\"2025-09-08\",\"daysOnMarket\":55,\"broker\":\"Mason & Morse Ranch\"}",
-          "firstSeen": "2026-04-03T02:18:49.440Z",
-          "lastSeen": "2026-04-03T02:18:49.440Z",
-          "createdAt": "2026-04-03T02:18:49.440Z",
-          "updatedAt": "2026-04-03T02:18:49.440Z"
+          "firstSeen": "2026-04-03T14:30:24.441Z",
+          "lastSeen": "2026-04-03T14:30:24.441Z",
+          "createdAt": "2026-04-03T14:30:24.441Z",
+          "updatedAt": "2026-04-03T14:30:24.441Z"
         }
       ]
     },
     "activities": [
       {
-        "id": "cmni9yody00clv1nas0lmploa",
-        "dealId": "cmni9yody00cjv1na2u8kposl",
+        "id": "cmnj03hzp00clv1xhiouuk89a",
+        "dealId": "cmnj03hzp00cjv1xhqfiz4uym",
         "type": "offer",
         "content": "Final offer accepted at $4,000/acre — moving to contract phase.",
-        "createdAt": "2026-03-16T02:18:49.462Z"
+        "createdAt": "2026-03-16T14:30:24.469Z"
       }
     ]
   }
