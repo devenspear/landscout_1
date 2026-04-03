@@ -1,0 +1,97 @@
+{
+  "id": "cmni9ndj9000yv1d3byhe71kc",
+  "apn": "83-3-790-78",
+  "address": "2223 Hickory Flat Rd",
+  "county": "Madison",
+  "state": "VA",
+  "acreage": 1062,
+  "lat": 38.2876,
+  "lon": -78.18820000000001,
+  "zoning": "mixed-use",
+  "description": "1062-acre mixed-use tract in Madison County, VA. 39% wetland, 61% pasture. Water features include creek, pond. 33 miles from Charlottesville. Paved road access. Elevation 1338 ft.",
+  "createdAt": "2026-04-03T02:10:02.182Z",
+  "updatedAt": "2026-04-03T02:10:02.182Z",
+  "listings": [
+    {
+      "id": "cmni9ndkh0079v1d31p7wz7zk",
+      "parcelId": "cmni9ndj9000yv1d3byhe71kc",
+      "sourceId": "cmni9ndh80004v1d3gjbgyzv4",
+      "externalId": "lands-of-america-293210",
+      "url": "https://www.landsofamerica.com/listing/lands-of-america-293210",
+      "title": "Magnificent 1062-Acre Development Opportunity in Madison County",
+      "price": 4653684,
+      "pricePerAcre": 4382,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/lands-of-america-293210/aerial-1.jpg\",\"https://images.landscout.dev/lands-of-america-293210/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-03-18\",\"daysOnMarket\":129,\"broker\":null}",
+      "firstSeen": "2026-04-03T02:10:02.226Z",
+      "lastSeen": "2026-04-03T02:10:02.226Z",
+      "createdAt": "2026-04-03T02:10:02.226Z",
+      "updatedAt": "2026-04-03T02:10:02.226Z",
+      "sourceName": "Lands of America"
+    }
+  ],
+  "features": {
+    "id": "cmni9ndj9000zv1d3sdvshork",
+    "parcelId": "cmni9ndj9000yv1d3byhe71kc",
+    "landCoverMix": "{\"wetland\":39,\"pasture\":61}",
+    "waterPresence": true,
+    "waterFeatures": "[\"creek\",\"pond\"]",
+    "metroDistance": 33,
+    "nearestMetro": "Charlottesville",
+    "slopeStats": "{\"mean\":12.9,\"percentOver20\":3.4,\"percentOver40\":1.5}",
+    "soilsQuality": 8.7,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 0.4,
+    "waterDistance": 1,
+    "sewerDistance": 10,
+    "fiberDistance": 21,
+    "gasDistance": 16.7,
+    "inFloodway": false,
+    "floodZone": null,
+    "wetlandsPercent": 42.1,
+    "elevation": 1338,
+    "createdAt": "2026-04-03T02:10:02.182Z",
+    "updatedAt": "2026-04-03T02:10:02.182Z"
+  },
+  "fitScore": {
+    "id": "cmni9ndj90010v1d3hr2q5jff",
+    "parcelId": "cmni9ndj9000yv1d3byhe71kc",
+    "overallScore": 87,
+    "scoreBreakdown": "{\"acreage\":9,\"soils\":13,\"location\":13,\"access\":14,\"water\":7,\"terrain\":3,\"utilities\":9,\"risk\":4,\"elevation\":3}",
+    "topReasons": "[\"Strong soils quality (8.7/10)\",\"Good metro proximity (33 mi)\",\"Paved road access\",\"Water features present on property\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:10:02.182Z"
+  },
+  "deal": {
+    "id": "cmni9ndlo00dvv1d3sza49na0",
+    "parcelId": "cmni9ndj9000yv1d3byhe71kc",
+    "stage": "new",
+    "priority": "high",
+    "notes": "1062-acre mixed-use property in Madison County, VA. Score: 87/100.",
+    "nextAction": "Contact listing agent",
+    "nextDate": "2026-04-21T02:10:02.268Z",
+    "assignee": "Analyst",
+    "createdAt": "2026-04-03T02:10:02.269Z",
+    "updatedAt": "2026-04-03T02:10:02.269Z",
+    "activities": [
+      {
+        "id": "cmni9ndlp00dxv1d3gfk6aj2f",
+        "dealId": "cmni9ndlo00dvv1d3sza49na0",
+        "type": "offer",
+        "content": "Submitted initial offer at $3,800/acre, 30-day due diligence.",
+        "createdAt": "2026-03-02T02:10:02.269Z"
+      },
+      {
+        "id": "cmni9ndlp00dzv1d34wo9a8lc",
+        "dealId": "cmni9ndlo00dvv1d3sza49na0",
+        "type": "visit",
+        "content": "Site visit confirmed mountain views to the west, gentle rolling terrain.",
+        "createdAt": "2026-02-14T02:10:02.269Z"
+      }
+    ]
+  },
+  "ownership": null
+}

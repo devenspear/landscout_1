@@ -15,7 +15,7 @@ import {
 // ─── Data fetching ──────────────────────────────────────────────────
 
 async function getDashboardData() {
-  const [totalParcels, totalListings, totalDeals, scores, byState, bySrc, recentParcels, lastScan] =
+  const [totalParcels, totalListings, totalDeals, scores, byState, bySrc, recentParcels, lastScan, allSources] =
     await Promise.all([
       prisma.parcel.count(),
       prisma.listing.count(),
@@ -29,7 +29,11 @@ async function getDashboardData() {
         include: { fitScore: true, listings: { take: 1 } },
       }),
       prisma.scanRun.findFirst({ orderBy: { startedAt: 'desc' } }),
+      prisma.source.findMany({ select: { id: true, name: true } }),
     ])
+
+  // Build source name lookup (CUID -> human-readable name)
+  const sourceNameMap = Object.fromEntries(allSources.map((s) => [s.id, s.name]))
 
   const avgScore =
     scores.length > 0
@@ -51,13 +55,14 @@ async function getDashboardData() {
     bySrc,
     recentParcels,
     lastScan,
+    sourceNameMap,
   }
 }
 
 // ─── Helpers ────────────────────────────────────────────────────────
 
-function sourceLabel(sourceId: string): string {
-  return SOURCES.find((s) => s.id === sourceId)?.name ?? sourceId
+function sourceLabel(sourceId: string, nameMap: Record<string, string>): string {
+  return nameMap[sourceId] ?? SOURCES.find((s) => s.id === sourceId)?.name ?? sourceId
 }
 
 function scoreBadgeClasses(score: number): string {
@@ -82,6 +87,7 @@ export default async function DashboardPage() {
     bySrc,
     recentParcels,
     lastScan,
+    sourceNameMap,
   } = data
 
   const totalScored = highCount + medCount + lowCount
@@ -256,7 +262,7 @@ export default async function DashboardPage() {
               {bySrc.map((row) => (
                 <div key={row.sourceId} className="flex items-center gap-3">
                   <span className="w-28 truncate text-right text-xs font-medium text-gray-400">
-                    {sourceLabel(row.sourceId)}
+                    {sourceLabel(row.sourceId, sourceNameMap)}
                   </span>
                   <div className="relative flex-1">
                     <div className="h-6 overflow-hidden rounded bg-gray-800">

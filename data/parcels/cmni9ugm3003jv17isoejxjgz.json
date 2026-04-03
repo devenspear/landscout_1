@@ -1,0 +1,104 @@
+{
+  "id": "cmni9ugm3003jv17isoejxjgz",
+  "apn": "57-6-876-15",
+  "address": "8384 White Oak Rd",
+  "county": "Williamsburg",
+  "state": "SC",
+  "acreage": 390,
+  "lat": 33.6871,
+  "lon": -79.7295,
+  "zoning": "rural-residential",
+  "description": "390-acre rural-residential tract in Williamsburg County, SC. 50% cropland, 50% forest. 43 miles from Florence. Gravel road access. Elevation 931 ft.",
+  "createdAt": "2026-04-03T02:15:32.764Z",
+  "updatedAt": "2026-04-03T02:15:32.764Z",
+  "listings": [
+    {
+      "id": "cmni9ugna009rv17invgcqiub",
+      "parcelId": "cmni9ugm3003jv17isoejxjgz",
+      "sourceId": "cmni9ugjf0007v17i96ic2q8t",
+      "externalId": "whitetail-properties-852816",
+      "url": "https://www.whitetailproperties.com/listing/whitetail-properties-852816",
+      "title": "Scenic 390-Acre Country Estate in Williamsburg County",
+      "price": 3397290,
+      "pricePerAcre": 8711,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/whitetail-properties-852816/aerial-1.jpg\",\"https://images.landscout.dev/whitetail-properties-852816/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-03-25\",\"daysOnMarket\":251,\"broker\":\"Whitetail Properties\"}",
+      "firstSeen": "2026-04-03T02:15:32.807Z",
+      "lastSeen": "2026-04-03T02:15:32.807Z",
+      "createdAt": "2026-04-03T02:15:32.807Z",
+      "updatedAt": "2026-04-03T02:15:32.807Z",
+      "sourceName": "Whitetail Properties"
+    }
+  ],
+  "features": {
+    "id": "cmni9ugm3003kv17i3vhqu4c6",
+    "parcelId": "cmni9ugm3003jv17isoejxjgz",
+    "landCoverMix": "{\"cropland\":100}",
+    "waterPresence": true,
+    "waterFeatures": "[\"water feature\"]",
+    "metroDistance": 64,
+    "nearestMetro": "Charleston, SC",
+    "slopeStats": "{\"avgSlope\":0.1,\"maxSlope\":null,\"pctOver15\":0}",
+    "soilsQuality": 7,
+    "roadAccess": "gravel",
+    "easements": null,
+    "powerDistance": 3.4,
+    "waterDistance": 0.06,
+    "sewerDistance": 8.1,
+    "fiberDistance": 18.5,
+    "gasDistance": 23.3,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 12.7,
+    "elevation": 70,
+    "createdAt": "2026-04-03T02:15:32.764Z",
+    "updatedAt": "2026-04-03T02:17:14.629Z"
+  },
+  "fitScore": {
+    "id": "cmni9ugm3003lv17is1e05pj3",
+    "parcelId": "cmni9ugm3003jv17isoejxjgz",
+    "overallScore": 66,
+    "scoreBreakdown": "{\"acreage\":100,\"landCoverMix\":20,\"waterPresence\":100,\"metroProximity\":11,\"slope\":100,\"soils\":70,\"roadAccess\":75,\"easementPenalty\":100,\"utilities\":25}",
+    "topReasons": "[\"+ Ideal acreage for target range (100)\",\"+ Water features present (100)\",\"+ Favorable terrain (100)\",\"- Utilities distant or unavailable (25)\",\"- Far from metro areas (11)\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:17:14.632Z"
+  },
+  "deal": {
+    "id": "cmni9ugoq00h3v17i7po45bdb",
+    "parcelId": "cmni9ugm3003jv17isoejxjgz",
+    "stage": "closed",
+    "priority": "low",
+    "notes": null,
+    "nextAction": null,
+    "nextDate": null,
+    "assignee": null,
+    "createdAt": "2026-04-03T02:15:32.858Z",
+    "updatedAt": "2026-04-03T02:15:32.858Z",
+    "activities": [
+      {
+        "id": "cmni9ugor00h9v17in3mh2ixf",
+        "dealId": "cmni9ugoq00h3v17i7po45bdb",
+        "type": "offer",
+        "content": "Final offer accepted at $4,000/acre — moving to contract phase.",
+        "createdAt": "2026-03-20T02:15:32.859Z"
+      },
+      {
+        "id": "cmni9ugor00h7v17i6lyxk736",
+        "dealId": "cmni9ugoq00h3v17i7po45bdb",
+        "type": "note",
+        "content": "Soils report shows prime farmland classification on 60% of the tract.",
+        "createdAt": "2026-03-06T02:15:32.859Z"
+      },
+      {
+        "id": "cmni9ugoq00h5v17insgy8tsw",
+        "dealId": "cmni9ugoq00h3v17i7po45bdb",
+        "type": "offer",
+        "content": "Submitted initial offer at $3,800/acre, 30-day due diligence.",
+        "createdAt": "2026-02-13T02:15:32.858Z"
+      }
+    ]
+  },
+  "ownership": null
+}

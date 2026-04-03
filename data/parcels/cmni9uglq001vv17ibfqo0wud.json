@@ -1,0 +1,104 @@
+{
+  "id": "cmni9uglq001vv17ibfqo0wud",
+  "apn": "84-4-986-54",
+  "address": "3470 Hollow Creek Rd",
+  "county": "Alamance",
+  "state": "NC",
+  "acreage": 271,
+  "lat": 36.0454,
+  "lon": -79.44420000000001,
+  "zoning": "agricultural",
+  "description": "271-acre agricultural tract in Alamance County, NC. 16% forest, 84% pasture. Water features include lake frontage. 9 miles from Burlington. Paved road access. Elevation 1505 ft.",
+  "createdAt": "2026-04-03T02:15:32.751Z",
+  "updatedAt": "2026-04-03T02:15:32.751Z",
+  "listings": [
+    {
+      "id": "cmni9ugmy007zv17iwsnrl8b2",
+      "parcelId": "cmni9uglq001vv17ibfqo0wud",
+      "sourceId": "cmni9ugjf0007v17i96ic2q8t",
+      "externalId": "whitetail-properties-930592",
+      "url": "https://www.whitetailproperties.com/listing/whitetail-properties-930592",
+      "title": "Rolling 271-Acre Agricultural Tract in Alamance County",
+      "price": 920045,
+      "pricePerAcre": 3395,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/whitetail-properties-930592/aerial-1.jpg\",\"https://images.landscout.dev/whitetail-properties-930592/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-01-22\",\"daysOnMarket\":10,\"broker\":\"Whitetail Properties\"}",
+      "firstSeen": "2026-04-03T02:15:32.795Z",
+      "lastSeen": "2026-04-03T02:15:32.795Z",
+      "createdAt": "2026-04-03T02:15:32.795Z",
+      "updatedAt": "2026-04-03T02:15:32.795Z",
+      "sourceName": "Whitetail Properties"
+    }
+  ],
+  "features": {
+    "id": "cmni9uglq001wv17ia3rpolsk",
+    "parcelId": "cmni9uglq001vv17ibfqo0wud",
+    "landCoverMix": "{\"developed\":100}",
+    "waterPresence": false,
+    "waterFeatures": "[]",
+    "metroDistance": 48.7,
+    "nearestMetro": "Raleigh, NC",
+    "slopeStats": "{\"avgSlope\":2.8,\"maxSlope\":null,\"pctOver15\":0}",
+    "soilsQuality": 9,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 1.2,
+    "waterDistance": null,
+    "sewerDistance": 9.4,
+    "fiberDistance": 24.5,
+    "gasDistance": 15.3,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 13.6,
+    "elevation": 610,
+    "createdAt": "2026-04-03T02:15:32.751Z",
+    "updatedAt": "2026-04-03T02:16:31.562Z"
+  },
+  "fitScore": {
+    "id": "cmni9uglq001xv17i49voeuo0",
+    "parcelId": "cmni9uglq001vv17ibfqo0wud",
+    "overallScore": 65,
+    "scoreBreakdown": "{\"acreage\":100,\"landCoverMix\":20,\"waterPresence\":30,\"metroProximity\":24,\"slope\":100,\"soils\":90,\"roadAccess\":100,\"easementPenalty\":100,\"utilities\":22}",
+    "topReasons": "[\"+ Ideal acreage for target range (100)\",\"+ Favorable terrain (100)\",\"+ Strong road access (100)\",\"- Far from metro areas (24)\",\"- Utilities distant or unavailable (22)\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:16:31.565Z"
+  },
+  "deal": {
+    "id": "cmni9ugnx00cxv17i2ib1ibw1",
+    "parcelId": "cmni9uglq001vv17ibfqo0wud",
+    "stage": "new",
+    "priority": "high",
+    "notes": "271-acre agricultural property in Alamance County, NC. Score: 97/100.",
+    "nextAction": "Request timber appraisal",
+    "nextDate": "2026-04-25T02:15:32.829Z",
+    "assignee": "Analyst",
+    "createdAt": "2026-04-03T02:15:32.830Z",
+    "updatedAt": "2026-04-03T02:15:32.830Z",
+    "activities": [
+      {
+        "id": "cmni9ugny00d3v17i9ujaxp4p",
+        "dealId": "cmni9ugnx00cxv17i2ib1ibw1",
+        "type": "visit",
+        "content": "Visited during rain — drainage patterns look healthy, no standing water issues.",
+        "createdAt": "2026-03-26T02:15:32.830Z"
+      },
+      {
+        "id": "cmni9ugny00czv17ioq6bwk12",
+        "dealId": "cmni9ugnx00cxv17i2ib1ibw1",
+        "type": "call",
+        "content": "Called county planning office — zoning change is feasible with site plan.",
+        "createdAt": "2026-02-23T02:15:32.830Z"
+      },
+      {
+        "id": "cmni9ugny00d1v17iovsa190a",
+        "dealId": "cmni9ugnx00cxv17i2ib1ibw1",
+        "type": "offer",
+        "content": "Submitted initial offer at $3,800/acre, 30-day due diligence.",
+        "createdAt": "2026-02-10T02:15:32.830Z"
+      }
+    ]
+  },
+  "ownership": null
+}

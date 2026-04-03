@@ -1,0 +1,104 @@
+{
+  "id": "cmni9uglf000gv17i94ut7yr9",
+  "apn": "80-6-636-10",
+  "address": "5237 State Rd 68",
+  "county": "Rockbridge",
+  "state": "VA",
+  "acreage": 79,
+  "lat": 37.8413,
+  "lon": -79.3236,
+  "zoning": "mixed-use",
+  "description": "79-acre mixed-use tract in Rockbridge County, VA. 10% developed, 15% cropland, 75% forest. 35 miles from Lexington. Paved road access. Elevation 3107 ft.",
+  "createdAt": "2026-04-03T02:15:32.739Z",
+  "updatedAt": "2026-04-03T02:15:32.739Z",
+  "listings": [
+    {
+      "id": "cmni9ugmp006pv17ik56apll1",
+      "parcelId": "cmni9uglf000gv17i94ut7yr9",
+      "sourceId": "cmni9ugjf0008v17imoszkol1",
+      "externalId": "landleader-240452",
+      "url": "https://www.landleader.com/listing/landleader-240452",
+      "title": "Trophy 79-Acre Versatile Tract in Rockbridge County",
+      "price": 229732,
+      "pricePerAcre": 2908,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/landleader-240452/aerial-1.jpg\",\"https://images.landscout.dev/landleader-240452/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-03-21\",\"daysOnMarket\":361,\"broker\":null}",
+      "firstSeen": "2026-04-03T02:15:32.786Z",
+      "lastSeen": "2026-04-03T02:15:32.786Z",
+      "createdAt": "2026-04-03T02:15:32.786Z",
+      "updatedAt": "2026-04-03T02:15:32.786Z",
+      "sourceName": "LandLeader"
+    }
+  ],
+  "features": {
+    "id": "cmni9uglf000hv17ic18rjn48",
+    "parcelId": "cmni9uglf000gv17i94ut7yr9",
+    "landCoverMix": "{\"cropland\":100}",
+    "waterPresence": false,
+    "waterFeatures": "[]",
+    "metroDistance": 105.3,
+    "nearestMetro": "Richmond, VA",
+    "slopeStats": "{\"avgSlope\":4.6,\"maxSlope\":null,\"pctOver15\":0}",
+    "soilsQuality": 9,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 4.9,
+    "waterDistance": null,
+    "sewerDistance": 13.4,
+    "fiberDistance": 28.8,
+    "gasDistance": 12.2,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 26.2,
+    "elevation": 1534,
+    "createdAt": "2026-04-03T02:15:32.739Z",
+    "updatedAt": "2026-04-03T02:15:51.732Z"
+  },
+  "fitScore": {
+    "id": "cmni9uglf000iv17i7mo6kia2",
+    "parcelId": "cmni9uglf000gv17i94ut7yr9",
+    "overallScore": 54,
+    "scoreBreakdown": "{\"acreage\":62.2,\"landCoverMix\":20,\"waterPresence\":30,\"metroProximity\":1,\"slope\":100,\"soils\":90,\"roadAccess\":100,\"easementPenalty\":100,\"utilities\":13}",
+    "topReasons": "[\"+ Favorable terrain (100)\",\"+ Strong road access (100)\",\"- Utilities distant or unavailable (13)\",\"- Far from metro areas (1)\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:15:51.736Z"
+  },
+  "deal": {
+    "id": "cmni9ugol00ghv17ixbg8a90o",
+    "parcelId": "cmni9uglf000gv17i94ut7yr9",
+    "stage": "under-contract",
+    "priority": "low",
+    "notes": "79-acre mixed-use property in Rockbridge County, VA. Score: 75/100.",
+    "nextAction": "Order title insurance",
+    "nextDate": "2026-05-03T02:15:32.853Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-03T02:15:32.854Z",
+    "updatedAt": "2026-04-03T02:15:32.854Z",
+    "activities": [
+      {
+        "id": "cmni9ugon00gnv17iq6o7xnvg",
+        "dealId": "cmni9ugol00ghv17ixbg8a90o",
+        "type": "email",
+        "content": "Requested updated plat from county GIS office.",
+        "createdAt": "2026-03-26T02:15:32.855Z"
+      },
+      {
+        "id": "cmni9ugom00glv17ie38irue1",
+        "dealId": "cmni9ugol00ghv17ixbg8a90o",
+        "type": "email",
+        "content": "Forwarded wetlands delineation report to attorney for review.",
+        "createdAt": "2026-02-21T02:15:32.854Z"
+      },
+      {
+        "id": "cmni9ugom00gjv17ikycs433r",
+        "dealId": "cmni9ugol00ghv17ixbg8a90o",
+        "type": "visit",
+        "content": "Walked the property — excellent road frontage, creek runs year-round.",
+        "createdAt": "2026-02-19T02:15:32.854Z"
+      }
+    ]
+  },
+  "ownership": null
+}

@@ -1,0 +1,104 @@
+{
+  "id": "cmni9yoby0024v1nayoke9kgp",
+  "apn": null,
+  "address": "477 Old Mill Rd",
+  "county": "Surry",
+  "state": "NC",
+  "acreage": 513,
+  "lat": 36.388,
+  "lon": -80.61680000000001,
+  "zoning": "agricultural",
+  "description": "513-acre agricultural tract in Surry County, NC. 42% developed, 58% wetland. Water features include pond, wetland area. 41 miles from Winston-Salem. Dirt road access. Elevation 866 ft.",
+  "createdAt": "2026-04-03T02:18:49.391Z",
+  "updatedAt": "2026-04-03T02:18:49.391Z",
+  "listings": [
+    {
+      "id": "cmni9yod5008bv1na3jfyt88n",
+      "parcelId": "cmni9yoby0024v1nayoke9kgp",
+      "sourceId": "cmni9yo80000bv1naszntu3mn",
+      "externalId": "crexi-465289",
+      "url": "https://www.crexi.com/listing/crexi-465289",
+      "title": "Trophy 513-Acre Agricultural Tract in Surry County",
+      "price": 910062,
+      "pricePerAcre": 1774,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/crexi-465289/aerial-1.jpg\",\"https://images.landscout.dev/crexi-465289/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-03-14\",\"daysOnMarket\":218,\"broker\":null}",
+      "firstSeen": "2026-04-03T02:18:49.434Z",
+      "lastSeen": "2026-04-03T02:18:49.434Z",
+      "createdAt": "2026-04-03T02:18:49.434Z",
+      "updatedAt": "2026-04-03T02:18:49.434Z",
+      "sourceName": "Crexi"
+    }
+  ],
+  "features": {
+    "id": "cmni9yoby0025v1na2osqgkh6",
+    "parcelId": "cmni9yoby0024v1nayoke9kgp",
+    "landCoverMix": "{\"developed\":42,\"wetland\":58}",
+    "waterPresence": true,
+    "waterFeatures": "[\"pond\",\"wetland area\"]",
+    "metroDistance": 41,
+    "nearestMetro": "Winston-Salem",
+    "slopeStats": "{\"mean\":9.8,\"percentOver20\":7.8,\"percentOver40\":2.8}",
+    "soilsQuality": 7.8,
+    "roadAccess": "dirt",
+    "easements": null,
+    "powerDistance": 5.4,
+    "waterDistance": 2.6,
+    "sewerDistance": 12.2,
+    "fiberDistance": 20.3,
+    "gasDistance": 21.9,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 40.7,
+    "elevation": 866,
+    "createdAt": "2026-04-03T02:18:49.391Z",
+    "updatedAt": "2026-04-03T02:18:49.391Z"
+  },
+  "fitScore": {
+    "id": "cmni9yoby0026v1nam3no3aey",
+    "parcelId": "cmni9yoby0024v1nayoke9kgp",
+    "overallScore": 82,
+    "scoreBreakdown": "{\"acreage\":15,\"soils\":12,\"location\":14,\"access\":4,\"water\":7,\"terrain\":7,\"utilities\":1,\"risk\":4,\"elevation\":1}",
+    "topReasons": "[\"Ideal acreage (513 ac) in target range\",\"Strong soils quality (7.8/10)\",\"Good metro proximity (41 mi)\",\"Water features present on property\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:18:49.391Z"
+  },
+  "deal": {
+    "id": "cmni9yoe900ehv1naid4xzmuj",
+    "parcelId": "cmni9yoby0024v1nayoke9kgp",
+    "stage": "qualified",
+    "priority": "medium",
+    "notes": "513-acre agricultural property in Surry County, NC. Score: 82/100.",
+    "nextAction": "Order soil survey",
+    "nextDate": "2026-04-19T02:18:49.473Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-03T02:18:49.474Z",
+    "updatedAt": "2026-04-03T02:18:49.474Z",
+    "activities": [
+      {
+        "id": "cmni9yoe900ejv1najzcxuv7t",
+        "dealId": "cmni9yoe900ehv1naid4xzmuj",
+        "type": "offer",
+        "content": "Counter-offer received at $4,200/acre — recommending acceptance.",
+        "createdAt": "2026-03-17T02:18:49.473Z"
+      },
+      {
+        "id": "cmni9yoea00elv1nav432ww1n",
+        "dealId": "cmni9yoe900ehv1naid4xzmuj",
+        "type": "document",
+        "content": "Filed purchase and sale agreement with title company.",
+        "createdAt": "2026-03-09T02:18:49.474Z"
+      },
+      {
+        "id": "cmni9yoea00env1napuvkdnmt",
+        "dealId": "cmni9yoe900ehv1naid4xzmuj",
+        "type": "document",
+        "content": "Filed purchase and sale agreement with title company.",
+        "createdAt": "2026-02-13T02:18:49.474Z"
+      }
+    ]
+  },
+  "ownership": null
+}

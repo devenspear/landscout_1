@@ -1,0 +1,104 @@
+{
+  "id": "cmni9yobr001av1nanhuqroko",
+  "apn": null,
+  "address": "6664 Hollow Creek Rd",
+  "county": "Patrick",
+  "state": "VA",
+  "acreage": 158,
+  "lat": 36.7859,
+  "lon": -80.427,
+  "zoning": "timber",
+  "description": "158-acre timber tract in Patrick County, VA. 52% pasture, 48% forest. 59 miles from Roanoke. Paved road access. Elevation 3060 ft.",
+  "createdAt": "2026-04-03T02:18:49.383Z",
+  "updatedAt": "2026-04-03T02:18:49.383Z",
+  "listings": [
+    {
+      "id": "cmni9yod0007hv1naoo2lqmv5",
+      "parcelId": "cmni9yobr001av1nanhuqroko",
+      "sourceId": "cmni9yo800009v1nawzhqe8n6",
+      "externalId": "loopnet-455617",
+      "url": "https://www.loopnet.com/listing/loopnet-455617",
+      "title": "Prime 158-Acre Timber Tract in Patrick County",
+      "price": 260226,
+      "pricePerAcre": 1647,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/loopnet-455617/aerial-1.jpg\",\"https://images.landscout.dev/loopnet-455617/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-01-05\",\"daysOnMarket\":339,\"broker\":null}",
+      "firstSeen": "2026-04-03T02:18:49.429Z",
+      "lastSeen": "2026-04-03T02:18:49.429Z",
+      "createdAt": "2026-04-03T02:18:49.429Z",
+      "updatedAt": "2026-04-03T02:18:49.429Z",
+      "sourceName": "LoopNet"
+    }
+  ],
+  "features": {
+    "id": "cmni9yobr001bv1na3fsysbsf",
+    "parcelId": "cmni9yobr001av1nanhuqroko",
+    "landCoverMix": "{\"pasture\":52,\"forest\":48}",
+    "waterPresence": false,
+    "waterFeatures": null,
+    "metroDistance": 59,
+    "nearestMetro": "Roanoke",
+    "slopeStats": "{\"mean\":12,\"percentOver20\":11.1,\"percentOver40\":3.7}",
+    "soilsQuality": 3.3,
+    "roadAccess": "paved",
+    "easements": "[\"utility easement\",\"road easement\"]",
+    "powerDistance": 2,
+    "waterDistance": 1.1,
+    "sewerDistance": 7.1,
+    "fiberDistance": 1.1,
+    "gasDistance": 9.1,
+    "inFloodway": false,
+    "floodZone": "AE",
+    "wetlandsPercent": 22.9,
+    "elevation": 3060,
+    "createdAt": "2026-04-03T02:18:49.383Z",
+    "updatedAt": "2026-04-03T02:18:49.383Z"
+  },
+  "fitScore": {
+    "id": "cmni9yobr001cv1na0682dulz",
+    "parcelId": "cmni9yobr001av1nanhuqroko",
+    "overallScore": 82,
+    "scoreBreakdown": "{\"acreage\":19,\"soils\":5,\"location\":8,\"access\":14,\"water\":4,\"terrain\":3,\"utilities\":6,\"risk\":7,\"elevation\":4}",
+    "topReasons": "[\"Ideal acreage (158 ac) in target range\",\"Paved road access\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:18:49.383Z"
+  },
+  "deal": {
+    "id": "cmni9yoe800e9v1nadxrmj3fz",
+    "parcelId": "cmni9yobr001av1nanhuqroko",
+    "stage": "qualified",
+    "priority": "medium",
+    "notes": "158-acre timber property in Patrick County, VA. Score: 82/100.",
+    "nextAction": "Order soil survey",
+    "nextDate": "2026-04-07T02:18:49.472Z",
+    "assignee": "Analyst",
+    "createdAt": "2026-04-03T02:18:49.472Z",
+    "updatedAt": "2026-04-03T02:18:49.472Z",
+    "activities": [
+      {
+        "id": "cmni9yoe900efv1nahjictirz",
+        "dealId": "cmni9yoe800e9v1nadxrmj3fz",
+        "type": "offer",
+        "content": "Counter-offer received at $4,200/acre — recommending acceptance.",
+        "createdAt": "2026-02-27T02:18:49.473Z"
+      },
+      {
+        "id": "cmni9yoe800edv1namedngd8h",
+        "dealId": "cmni9yoe800e9v1nadxrmj3fz",
+        "type": "visit",
+        "content": "Visited during rain — drainage patterns look healthy, no standing water issues.",
+        "createdAt": "2026-02-19T02:18:49.472Z"
+      },
+      {
+        "id": "cmni9yoe800ebv1nalb25qfrh",
+        "dealId": "cmni9yoe800e9v1nadxrmj3fz",
+        "type": "offer",
+        "content": "Submitted initial offer at $3,800/acre, 30-day due diligence.",
+        "createdAt": "2026-02-10T02:18:49.472Z"
+      }
+    ]
+  },
+  "ownership": null
+}

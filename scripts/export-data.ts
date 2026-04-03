@@ -77,6 +77,10 @@ async function exportParcels() {
 async function exportParcelDetails() {
   console.log('Exporting individual parcel details...')
 
+  // Build source name lookup so listings include human-readable names
+  const allSources = await prisma.source.findMany({ select: { id: true, name: true } })
+  const sourceMap = Object.fromEntries(allSources.map((s) => [s.id, s.name]))
+
   const parcels = await prisma.parcel.findMany({
     include: {
       listings: true,
@@ -92,7 +96,14 @@ async function exportParcelDetails() {
   })
 
   for (const parcel of parcels) {
-    writeJson(path.join(PARCELS_DIR, `${parcel.id}.json`), parcel)
+    // Enrich listings with sourceName for display
+    // Use JSON round-trip to get plain objects (Prisma models may have non-enumerable properties)
+    const plain = JSON.parse(JSON.stringify(parcel))
+    plain.listings = plain.listings.map((l: Record<string, unknown>) => ({
+      ...l,
+      sourceName: sourceMap[l.sourceId as string] ?? l.sourceId,
+    }))
+    writeJson(path.join(PARCELS_DIR, `${plain.id}.json`), plain)
   }
 
   console.log(`  Wrote ${parcels.length} individual parcel files`)

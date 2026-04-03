@@ -22,6 +22,7 @@ export type ActivityType =
 export interface ParcelListing {
   id: string;
   sourceId: string;
+  sourceName?: string;
   url: string;
   title: string;
   price: number | null;

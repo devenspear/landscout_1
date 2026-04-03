@@ -1,0 +1,104 @@
+{
+  "id": "cmni9ugmn006gv17ilss9wpm8",
+  "apn": "54-9-944-40",
+  "address": "1342 Bear Hollow Rd",
+  "county": "Marengo",
+  "state": "AL",
+  "acreage": 377,
+  "lat": 32.09520000000001,
+  "lon": -87.6324,
+  "zoning": "conservation",
+  "description": "377-acre conservation tract in Marengo County, AL. 60% cropland, 40% wetland. Water features include creek, pond. 52 miles from Tuscaloosa. Paved road access. Elevation 1344 ft.",
+  "createdAt": "2026-04-03T02:15:32.784Z",
+  "updatedAt": "2026-04-03T02:15:32.784Z",
+  "listings": [
+    {
+      "id": "cmni9ugnt00cfv17iddl32euz",
+      "parcelId": "cmni9ugmn006gv17ilss9wpm8",
+      "sourceId": "cmni9ugjf0008v17imoszkol1",
+      "externalId": "landleader-549607",
+      "url": "https://www.landleader.com/listing/landleader-549607",
+      "title": "Trophy 377-Acre Wilderness Tract in Marengo County",
+      "price": 3765476,
+      "pricePerAcre": 9988,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/landleader-549607/aerial-1.jpg\",\"https://images.landscout.dev/landleader-549607/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-01-01\",\"daysOnMarket\":339,\"broker\":null}",
+      "firstSeen": "2026-04-03T02:15:32.826Z",
+      "lastSeen": "2026-04-03T02:15:32.826Z",
+      "createdAt": "2026-04-03T02:15:32.826Z",
+      "updatedAt": "2026-04-03T02:15:32.826Z",
+      "sourceName": "LandLeader"
+    }
+  ],
+  "features": {
+    "id": "cmni9ugmn006hv17ia30mf0dg",
+    "parcelId": "cmni9ugmn006gv17ilss9wpm8",
+    "landCoverMix": "{\"forest\":100}",
+    "waterPresence": false,
+    "waterFeatures": "[]",
+    "metroDistance": 109.7,
+    "nearestMetro": "Birmingham, AL",
+    "slopeStats": "{\"avgSlope\":2.8,\"maxSlope\":null,\"pctOver15\":0}",
+    "soilsQuality": 3,
+    "roadAccess": "paved",
+    "easements": "[\"utility easement\",\"road easement\"]",
+    "powerDistance": 7.7,
+    "waterDistance": null,
+    "sewerDistance": 17.7,
+    "fiberDistance": 10.7,
+    "gasDistance": 9.7,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 2.2,
+    "elevation": 250,
+    "createdAt": "2026-04-03T02:15:32.784Z",
+    "updatedAt": "2026-04-03T02:18:34.137Z"
+  },
+  "fitScore": {
+    "id": "cmni9ugmn006iv17i70eo3gtt",
+    "parcelId": "cmni9ugmn006gv17ilss9wpm8",
+    "overallScore": 54,
+    "scoreBreakdown": "{\"acreage\":100,\"landCoverMix\":20,\"waterPresence\":30,\"metroProximity\":1,\"slope\":100,\"soils\":30,\"roadAccess\":100,\"easementPenalty\":70,\"utilities\":17}",
+    "topReasons": "[\"+ Ideal acreage for target range (100)\",\"+ Favorable terrain (100)\",\"+ Strong road access (100)\",\"- Utilities distant or unavailable (17)\",\"- Far from metro areas (1)\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:18:34.141Z"
+  },
+  "deal": {
+    "id": "cmni9ugoe00fbv17iikps7mvr",
+    "parcelId": "cmni9ugmn006gv17ilss9wpm8",
+    "stage": "pursuit",
+    "priority": "medium",
+    "notes": null,
+    "nextAction": "Submit LOI",
+    "nextDate": "2026-05-01T02:15:32.846Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-03T02:15:32.846Z",
+    "updatedAt": "2026-04-03T02:15:32.846Z",
+    "activities": [
+      {
+        "id": "cmni9ugoe00fdv17ike3agnpc",
+        "dealId": "cmni9ugoe00fbv17iikps7mvr",
+        "type": "call",
+        "content": "Called county planning office — zoning change is feasible with site plan.",
+        "createdAt": "2026-03-16T02:15:32.846Z"
+      },
+      {
+        "id": "cmni9ugof00ffv17i58umemmu",
+        "dealId": "cmni9ugoe00fbv17iikps7mvr",
+        "type": "offer",
+        "content": "Counter-offer received at $4,200/acre — recommending acceptance.",
+        "createdAt": "2026-02-25T02:15:32.846Z"
+      },
+      {
+        "id": "cmni9ugof00fhv17iyi8cijod",
+        "dealId": "cmni9ugoe00fbv17iikps7mvr",
+        "type": "email",
+        "content": "Sent request for timber appraisal to Anderson Forestry Consultants.",
+        "createdAt": "2026-02-06T02:15:32.847Z"
+      }
+    ]
+  },
+  "ownership": null
+}

@@ -1,0 +1,97 @@
+{
+  "id": "cmni9uglv002jv17i3d807zee",
+  "apn": "41-4-816-11",
+  "address": "8146 Fox Run Rd",
+  "county": "Columbus",
+  "state": "NC",
+  "acreage": 275,
+  "lat": 34.1971,
+  "lon": -78.6068,
+  "zoning": "conservation",
+  "description": "275-acre conservation tract in Columbus County, NC. 13% wetland, 18% forest, 69% pasture. Water features include pond. 55 miles from Wilmington. Paved road access. Elevation 3059 ft.",
+  "createdAt": "2026-04-03T02:15:32.756Z",
+  "updatedAt": "2026-04-03T02:15:32.756Z",
+  "listings": [
+    {
+      "id": "cmni9ugn4008tv17is48ieshz",
+      "parcelId": "cmni9uglv002jv17i3d807zee",
+      "sourceId": "cmni9ugjf0006v17ijqnwe4qb",
+      "externalId": "landwatch-379504",
+      "url": "https://www.landwatch.com/listing/landwatch-379504",
+      "title": "Unrestricted 275-Acre Nature Preserve in Columbus County",
+      "price": 954250,
+      "pricePerAcre": 3470,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/landwatch-379504/aerial-1.jpg\",\"https://images.landscout.dev/landwatch-379504/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-03-06\",\"daysOnMarket\":174,\"broker\":null}",
+      "firstSeen": "2026-04-03T02:15:32.800Z",
+      "lastSeen": "2026-04-03T02:15:32.800Z",
+      "createdAt": "2026-04-03T02:15:32.800Z",
+      "updatedAt": "2026-04-03T02:15:32.800Z",
+      "sourceName": "LandWatch"
+    }
+  ],
+  "features": {
+    "id": "cmni9uglv002kv17i02c86z2s",
+    "parcelId": "cmni9uglv002jv17i3d807zee",
+    "landCoverMix": "{\"shrub\":100}",
+    "waterPresence": true,
+    "waterFeatures": "[\"water feature\"]",
+    "metroDistance": 109.4,
+    "nearestMetro": "Raleigh, NC",
+    "slopeStats": "{\"avgSlope\":0.1,\"maxSlope\":null,\"pctOver15\":0}",
+    "soilsQuality": 1,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 4.2,
+    "waterDistance": 0.14,
+    "sewerDistance": 12.7,
+    "fiberDistance": 3.7,
+    "gasDistance": 20.1,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 12.9,
+    "elevation": 44,
+    "createdAt": "2026-04-03T02:15:32.756Z",
+    "updatedAt": "2026-04-03T02:16:47.047Z"
+  },
+  "fitScore": {
+    "id": "cmni9uglv002lv17i2urup7zu",
+    "parcelId": "cmni9uglv002jv17i3d807zee",
+    "overallScore": 62,
+    "scoreBreakdown": "{\"acreage\":100,\"landCoverMix\":20,\"waterPresence\":100,\"metroProximity\":1,\"slope\":100,\"soils\":10,\"roadAccess\":100,\"easementPenalty\":100,\"utilities\":36}",
+    "topReasons": "[\"+ Ideal acreage for target range (100)\",\"+ Water features present (100)\",\"+ Favorable terrain (100)\",\"- Poor soil quality (10)\",\"- Far from metro areas (1)\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:16:47.049Z"
+  },
+  "deal": {
+    "id": "cmni9ugoj00g5v17ix7a1zaec",
+    "parcelId": "cmni9uglv002jv17i3d807zee",
+    "stage": "pursuit",
+    "priority": "low",
+    "notes": "275-acre conservation property in Columbus County, NC. Score: 77/100.",
+    "nextAction": "Schedule closing",
+    "nextDate": "2026-04-26T02:15:32.851Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-03T02:15:32.852Z",
+    "updatedAt": "2026-04-03T02:15:32.852Z",
+    "activities": [
+      {
+        "id": "cmni9ugok00g9v17ihf2pp6sp",
+        "dealId": "cmni9ugoj00g5v17ix7a1zaec",
+        "type": "offer",
+        "content": "Counter-offer received at $4,200/acre — recommending acceptance.",
+        "createdAt": "2026-03-15T02:15:32.852Z"
+      },
+      {
+        "id": "cmni9ugok00g7v17i1j0w0bvb",
+        "dealId": "cmni9ugoj00g5v17ix7a1zaec",
+        "type": "call",
+        "content": "Discussed with surveyor — boundary survey would take 2-3 weeks.",
+        "createdAt": "2026-03-07T02:15:32.852Z"
+      }
+    ]
+  },
+  "ownership": null
+}

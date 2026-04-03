@@ -1,0 +1,104 @@
+{
+  "id": "cmni9ugls0024v17iehxf9h6y",
+  "apn": null,
+  "address": "477 Old Mill Rd",
+  "county": "Surry",
+  "state": "NC",
+  "acreage": 513,
+  "lat": 36.388,
+  "lon": -80.61680000000001,
+  "zoning": "agricultural",
+  "description": "513-acre agricultural tract in Surry County, NC. 42% developed, 58% wetland. Water features include pond, wetland area. 41 miles from Winston-Salem. Dirt road access. Elevation 866 ft.",
+  "createdAt": "2026-04-03T02:15:32.753Z",
+  "updatedAt": "2026-04-03T02:15:32.753Z",
+  "listings": [
+    {
+      "id": "cmni9ugn1008bv17id1ib192u",
+      "parcelId": "cmni9ugls0024v17iehxf9h6y",
+      "sourceId": "cmni9ugjf0001v17icm8p7j95",
+      "externalId": "crexi-465289",
+      "url": "https://www.crexi.com/listing/crexi-465289",
+      "title": "Trophy 513-Acre Agricultural Tract in Surry County",
+      "price": 910062,
+      "pricePerAcre": 1774,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/crexi-465289/aerial-1.jpg\",\"https://images.landscout.dev/crexi-465289/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-03-14\",\"daysOnMarket\":218,\"broker\":null}",
+      "firstSeen": "2026-04-03T02:15:32.797Z",
+      "lastSeen": "2026-04-03T02:15:32.797Z",
+      "createdAt": "2026-04-03T02:15:32.797Z",
+      "updatedAt": "2026-04-03T02:15:32.797Z",
+      "sourceName": "Crexi"
+    }
+  ],
+  "features": {
+    "id": "cmni9ugls0025v17i45r46t1u",
+    "parcelId": "cmni9ugls0024v17iehxf9h6y",
+    "landCoverMix": "{\"shrub\":100}",
+    "waterPresence": true,
+    "waterFeatures": "[\"water feature\"]",
+    "metroDistance": 81.2,
+    "nearestMetro": "Charlotte, NC",
+    "slopeStats": "{\"avgSlope\":2.6,\"maxSlope\":null,\"pctOver15\":0}",
+    "soilsQuality": 9,
+    "roadAccess": "dirt",
+    "easements": null,
+    "powerDistance": 5.4,
+    "waterDistance": 0.34,
+    "sewerDistance": 12.2,
+    "fiberDistance": 20.3,
+    "gasDistance": 21.9,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 40.7,
+    "elevation": 1153,
+    "createdAt": "2026-04-03T02:15:32.753Z",
+    "updatedAt": "2026-04-03T02:16:37.359Z"
+  },
+  "fitScore": {
+    "id": "cmni9ugls0026v17i2xutln2m",
+    "parcelId": "cmni9ugls0024v17iehxf9h6y",
+    "overallScore": 64,
+    "scoreBreakdown": "{\"acreage\":100,\"landCoverMix\":20,\"waterPresence\":100,\"metroProximity\":5,\"slope\":100,\"soils\":90,\"roadAccess\":45,\"easementPenalty\":100,\"utilities\":20}",
+    "topReasons": "[\"+ Ideal acreage for target range (100)\",\"+ Water features present (100)\",\"+ Favorable terrain (100)\",\"- Utilities distant or unavailable (20)\",\"- Far from metro areas (5)\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:16:37.361Z"
+  },
+  "deal": {
+    "id": "cmni9ugo800ehv17iuvqpskak",
+    "parcelId": "cmni9ugls0024v17iehxf9h6y",
+    "stage": "qualified",
+    "priority": "medium",
+    "notes": "513-acre agricultural property in Surry County, NC. Score: 82/100.",
+    "nextAction": "Order soil survey",
+    "nextDate": "2026-04-19T02:15:32.840Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-03T02:15:32.840Z",
+    "updatedAt": "2026-04-03T02:15:32.840Z",
+    "activities": [
+      {
+        "id": "cmni9ugo800ejv17ioaqbmkkm",
+        "dealId": "cmni9ugo800ehv17iuvqpskak",
+        "type": "offer",
+        "content": "Counter-offer received at $4,200/acre — recommending acceptance.",
+        "createdAt": "2026-03-17T02:15:32.840Z"
+      },
+      {
+        "id": "cmni9ugo900elv17isencr4hc",
+        "dealId": "cmni9ugo800ehv17iuvqpskak",
+        "type": "document",
+        "content": "Filed purchase and sale agreement with title company.",
+        "createdAt": "2026-03-09T02:15:32.841Z"
+      },
+      {
+        "id": "cmni9ugo900env17i2lpy343l",
+        "dealId": "cmni9ugo800ehv17iuvqpskak",
+        "type": "document",
+        "content": "Filed purchase and sale agreement with title company.",
+        "createdAt": "2026-02-13T02:15:32.841Z"
+      }
+    ]
+  },
+  "ownership": null
+}

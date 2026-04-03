@@ -1,0 +1,122 @@
+{
+  "id": "cmni9mhzn0031v15puf0gisdu",
+  "apn": "57-7-637-60",
+  "address": "309 Bear Hollow Rd",
+  "county": "Laurens",
+  "state": "SC",
+  "acreage": 211,
+  "lat": 34.3578,
+  "lon": -81.9846,
+  "zoning": "timber",
+  "description": "211-acre timber tract in Laurens County, SC. 45% wetland, 24% forest, 20% pasture, 11% cropland. 38 miles from Greenville. Paved road access. Elevation 533 ft.",
+  "createdAt": "2026-04-03T02:09:21.299Z",
+  "updatedAt": "2026-04-03T02:09:21.299Z",
+  "listings": [
+    {
+      "id": "cmni9mi0s009bv15paob2rlao",
+      "parcelId": "cmni9mhzn0031v15puf0gisdu",
+      "sourceId": "cmni9mhxn0004v15p4vs5kmn2",
+      "externalId": "mason-morse-ranch-571229",
+      "url": "https://www.ranchland.com/listing/mason-morse-ranch-571229",
+      "title": "Rolling 211-Acre Timberland in Laurens County",
+      "price": 882402,
+      "pricePerAcre": 4182,
+      "status": "off-market",
+      "photos": "[\"https://images.landscout.dev/mason-morse-ranch-571229/aerial-1.jpg\",\"https://images.landscout.dev/mason-morse-ranch-571229/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-09-08\",\"daysOnMarket\":55,\"broker\":\"Mason & Morse Ranch\"}",
+      "firstSeen": "2026-04-03T02:09:21.340Z",
+      "lastSeen": "2026-04-03T02:09:21.340Z",
+      "createdAt": "2026-04-03T02:09:21.340Z",
+      "updatedAt": "2026-04-03T02:09:21.340Z",
+      "sourceName": "Mason & Morse Ranch"
+    },
+    {
+      "id": "cmni9mi0s009dv15pkoud6h47",
+      "parcelId": "cmni9mhzn0031v15puf0gisdu",
+      "sourceId": "cmni9mhxn0004v15p4vs5kmn2",
+      "externalId": "mason-morse-ranch-804356",
+      "url": "https://www.ranchland.com/listing/mason-morse-ranch-804356",
+      "title": "Prime 211-Acre Timber Tract in Laurens County",
+      "price": 855930,
+      "pricePerAcre": 4057,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/mason-morse-ranch-804356/aerial-1.jpg\",\"https://images.landscout.dev/mason-morse-ranch-804356/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-06-13\",\"daysOnMarket\":206,\"broker\":\"Mason & Morse Ranch\"}",
+      "firstSeen": "2026-04-03T02:09:21.341Z",
+      "lastSeen": "2026-04-03T02:09:21.341Z",
+      "createdAt": "2026-04-03T02:09:21.341Z",
+      "updatedAt": "2026-04-03T02:09:21.341Z",
+      "sourceName": "Mason & Morse Ranch"
+    }
+  ],
+  "features": {
+    "id": "cmni9mhzn0032v15pdc82r62c",
+    "parcelId": "cmni9mhzn0031v15puf0gisdu",
+    "landCoverMix": "{\"wetland\":45,\"forest\":24,\"pasture\":20,\"cropland\":11}",
+    "waterPresence": false,
+    "waterFeatures": null,
+    "metroDistance": 38,
+    "nearestMetro": "Greenville",
+    "slopeStats": "{\"mean\":9.3,\"percentOver20\":3.4,\"percentOver40\":2.4}",
+    "soilsQuality": 8.9,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 0.3,
+    "waterDistance": 4.1,
+    "sewerDistance": 17.8,
+    "fiberDistance": 19,
+    "gasDistance": 17.5,
+    "inFloodway": false,
+    "floodZone": "A",
+    "wetlandsPercent": 9.4,
+    "elevation": 533,
+    "createdAt": "2026-04-03T02:09:21.299Z",
+    "updatedAt": "2026-04-03T02:09:21.299Z"
+  },
+  "fitScore": {
+    "id": "cmni9mhzn0033v15p559ayfno",
+    "parcelId": "cmni9mhzn0031v15puf0gisdu",
+    "overallScore": 100,
+    "scoreBreakdown": "{\"acreage\":19,\"soils\":13,\"location\":14,\"access\":12,\"water\":3,\"terrain\":8,\"utilities\":9,\"risk\":10,\"elevation\":0}",
+    "topReasons": "[\"Ideal acreage (211 ac) in target range\",\"Strong soils quality (8.9/10)\",\"Good metro proximity (38 mi)\",\"Paved road access\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:09:21.299Z"
+  },
+  "deal": {
+    "id": "cmni9mi1d00cjv15pqrzd13kl",
+    "parcelId": "cmni9mhzn0031v15puf0gisdu",
+    "stage": "new",
+    "priority": "high",
+    "notes": null,
+    "nextAction": "Pull county tax records",
+    "nextDate": "2026-04-17T02:09:21.361Z",
+    "assignee": "Analyst",
+    "createdAt": "2026-04-03T02:09:21.362Z",
+    "updatedAt": "2026-04-03T02:09:21.362Z",
+    "activities": [
+      {
+        "id": "cmni9mi1e00clv15pcujw6wei",
+        "dealId": "cmni9mi1d00cjv15pqrzd13kl",
+        "type": "offer",
+        "content": "Final offer accepted at $4,000/acre — moving to contract phase.",
+        "createdAt": "2026-03-16T02:09:21.362Z"
+      },
+      {
+        "id": "cmni9mi1e00cnv15pswr1cqtv",
+        "dealId": "cmni9mi1d00cjv15pqrzd13kl",
+        "type": "call",
+        "content": "Called county planning office — zoning change is feasible with site plan.",
+        "createdAt": "2026-03-02T02:09:21.362Z"
+      },
+      {
+        "id": "cmni9mi1f00cpv15p3f3f5ftv",
+        "dealId": "cmni9mi1d00cjv15pqrzd13kl",
+        "type": "visit",
+        "content": "Drove all property boundaries — access from both north and south sides.",
+        "createdAt": "2026-03-01T02:09:21.362Z"
+      }
+    ]
+  },
+  "ownership": null
+}

@@ -1,6 +1,56 @@
 [
   {
-    "id": "cmni3ytqr006gv1196dqepzhi",
+    "id": "cmni9yocu006jv1nau5kq2h0r",
+    "apn": "89-5-303-28",
+    "address": "8667 Hwy 29",
+    "county": "Tuscaloosa",
+    "state": "AL",
+    "acreage": 510,
+    "lat": 33.3473,
+    "lon": -87.6243,
+    "zoning": "mixed-use",
+    "createdAt": "2026-04-03T02:18:49.422Z",
+    "fitScore": {
+      "overallScore": 46,
+      "topReasons": "[\"Ideal acreage (510 ac) in target range\",\"Low flood/wetlands risk\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0002v1navxxxz99g",
+        "price": 1846200,
+        "pricePerAcre": 3620,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yocs006dv1nanvspouku",
+    "apn": "67-1-495-55",
+    "address": "5711 Turkey Creek Rd",
+    "county": "Dallas",
+    "state": "AL",
+    "acreage": 881,
+    "lat": 32.3593,
+    "lon": -87.06559999999999,
+    "zoning": "conservation",
+    "createdAt": "2026-04-03T02:18:49.421Z",
+    "fitScore": {
+      "overallScore": 67,
+      "topReasons": "[\"Ideal acreage (881 ac) in target range\",\"Paved road access\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
+        "price": 4616440,
+        "pricePerAcre": 5240,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yoct006gv1naqswgq9f7",
     "apn": "54-9-944-40",
     "address": "1342 Bear Hollow Rd",
     "county": "Marengo",
@@ -9,14 +59,14 @@
     "lat": 32.09520000000001,
     "lon": -87.6324,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.708Z",
+    "createdAt": "2026-04-03T02:18:49.421Z",
     "fitScore": {
       "overallScore": 79,
       "topReasons": "[\"Ideal acreage (377 ac) in target range\",\"Paved road access\",\"Water features present on property\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
         "price": 3765476,
         "pricePerAcre": 9988,
         "status": "listed"
@@ -28,57 +78,7 @@
     }
   },
   {
-    "id": "cmni3ytqs006jv119z6w7klyz",
-    "apn": "89-5-303-28",
-    "address": "8667 Hwy 29",
-    "county": "Tuscaloosa",
-    "state": "AL",
-    "acreage": 510,
-    "lat": 33.3473,
-    "lon": -87.6243,
-    "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.708Z",
-    "fitScore": {
-      "overallScore": 46,
-      "topReasons": "[\"Ideal acreage (510 ac) in target range\",\"Low flood/wetlands risk\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof0005v119hyjuhysp",
-        "price": 1846200,
-        "pricePerAcre": 3620,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytqr006dv119aziwz94j",
-    "apn": "67-1-495-55",
-    "address": "5711 Turkey Creek Rd",
-    "county": "Dallas",
-    "state": "AL",
-    "acreage": 881,
-    "lat": 32.3593,
-    "lon": -87.06559999999999,
-    "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.707Z",
-    "fitScore": {
-      "overallScore": 67,
-      "topReasons": "[\"Ideal acreage (881 ac) in target range\",\"Paved road access\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
-        "price": 4616440,
-        "pricePerAcre": 5240,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytqp0067v1194dc0omeq",
+    "id": "cmni9yocr0067v1na3n9qsrac",
     "apn": "26-8-544-95",
     "address": "4684 Rocky Ford Rd",
     "county": "Monroe",
@@ -87,14 +87,14 @@
     "lat": 31.5374,
     "lon": -87.2949,
     "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.706Z",
+    "createdAt": "2026-04-03T02:18:49.420Z",
     "fitScore": {
       "overallScore": 63,
       "topReasons": "[\"Ideal acreage (234 ac) in target range\",\"Strong soils quality (8.4/10)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0006v1193fzr0ces",
+        "sourceId": "cmni9yo7z0003v1nauvn1oqm6",
         "price": 3258684,
         "pricePerAcre": 13926,
         "status": "listed"
@@ -103,7 +103,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqq006av119hp1h2yn6",
+    "id": "cmni9yocs006av1na2cjscx5m",
     "apn": null,
     "address": "4503 Cedar Creek Rd",
     "county": "Wilcox",
@@ -112,14 +112,14 @@
     "lat": 31.9297,
     "lon": -87.4173,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.706Z",
+    "createdAt": "2026-04-03T02:18:49.420Z",
     "fitScore": {
       "overallScore": 65,
       "topReasons": "[\"Ideal acreage (907 ac) in target range\",\"Paved road access\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
         "price": 11634089,
         "pricePerAcre": 12827,
         "status": "listed"
@@ -128,32 +128,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqo0061v119bvgech76",
-    "apn": "91-7-597-18",
-    "address": "3595 Long Branch Rd",
-    "county": "Clay",
-    "state": "AL",
-    "acreage": 397,
-    "lat": 33.2291,
-    "lon": -85.8474,
-    "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.705Z",
-    "fitScore": {
-      "overallScore": 67,
-      "topReasons": "[\"Ideal acreage (397 ac) in target range\",\"Good metro proximity (40 mi)\",\"Low flood/wetlands risk\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof000av119r909sr29",
-        "price": 1369650,
-        "pricePerAcre": 3450,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytqp0064v1194xxvfls1",
+    "id": "cmni9yocr0064v1nas3jwdsf5",
     "apn": "26-1-905-73",
     "address": "7688 Cedar Creek Rd",
     "county": "Randolph",
@@ -162,14 +137,14 @@
     "lat": 33.3693,
     "lon": -85.54639999999999,
     "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.705Z",
+    "createdAt": "2026-04-03T02:18:49.419Z",
     "fitScore": {
       "overallScore": 62,
       "topReasons": "[\"Ideal acreage (888 ac) in target range\",\"Good metro proximity (39 mi)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0006v1193fzr0ces",
+        "sourceId": "cmni9yo7z0003v1nauvn1oqm6",
         "price": 5108664,
         "pricePerAcre": 5753,
         "status": "listed"
@@ -178,44 +153,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqn005vv119o2wj4iuo",
-    "apn": "75-6-226-15",
-    "address": "6766 County Rd 112",
-    "county": "Blount",
-    "state": "AL",
-    "acreage": 264,
-    "lat": 33.99659999999999,
-    "lon": -86.7067,
-    "zoning": "rural-residential",
-    "createdAt": "2026-04-02T23:30:58.704Z",
-    "fitScore": {
-      "overallScore": 61,
-      "topReasons": "[\"Ideal acreage (264 ac) in target range\",\"Paved road access\",\"Water features present on property\",\"Utilities readily available\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
-        "price": 1635216,
-        "pricePerAcre": 6194,
-        "status": "off-market"
-      },
-      {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
-        "price": 1700625,
-        "pricePerAcre": 6442,
-        "status": "listed"
-      },
-      {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
-        "price": 1651568,
-        "pricePerAcre": 6256,
-        "status": "off-market"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytqo005yv119lgndxduh",
+    "id": "cmni9yocp005yv1na3jjoqjlp",
     "apn": null,
     "address": "4832 Mountain View Dr",
     "county": "Coosa",
@@ -224,14 +162,14 @@
     "lat": 32.9025,
     "lon": -86.1519,
     "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.704Z",
+    "createdAt": "2026-04-03T02:18:49.418Z",
     "fitScore": {
       "overallScore": 67,
       "topReasons": "[\"Ideal acreage (520 ac) in target range\",\"Water features present on property\",\"Utilities readily available\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
         "price": 589680,
         "pricePerAcre": 1134,
         "status": "listed"
@@ -240,32 +178,32 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqm005pv119hg3c65qc",
-    "apn": "16-6-577-91",
-    "address": "9475 Possum Trot Rd",
-    "county": "DeKalb",
+    "id": "cmni9yocq0061v1nau0b87dyj",
+    "apn": "91-7-597-18",
+    "address": "3595 Long Branch Rd",
+    "county": "Clay",
     "state": "AL",
-    "acreage": 240,
-    "lat": 34.4807,
-    "lon": -85.6822,
-    "zoning": "rural-residential",
-    "createdAt": "2026-04-02T23:30:58.703Z",
+    "acreage": 397,
+    "lat": 33.2291,
+    "lon": -85.8474,
+    "zoning": "agricultural",
+    "createdAt": "2026-04-03T02:18:49.418Z",
     "fitScore": {
-      "overallScore": 45,
-      "topReasons": "[\"Ideal acreage (240 ac) in target range\",\"Strong soils quality (7.8/10)\",\"Water features present on property\"]"
+      "overallScore": 67,
+      "topReasons": "[\"Ideal acreage (397 ac) in target range\",\"Good metro proximity (40 mi)\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
-        "price": 559920,
-        "pricePerAcre": 2333,
+        "sourceId": "cmni9yo800009v1nawzhqe8n6",
+        "price": 1369650,
+        "pricePerAcre": 3450,
         "status": "listed"
       }
     ],
     "deal": null
   },
   {
-    "id": "cmni3ytqn005sv11918442pyc",
+    "id": "cmni9yoco005sv1na0cf1k0vo",
     "apn": "86-7-613-33",
     "address": "3746 Turkey Creek Rd",
     "county": "Marshall",
@@ -274,14 +212,14 @@
     "lat": 34.30289999999999,
     "lon": -86.4292,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.703Z",
+    "createdAt": "2026-04-03T02:18:49.417Z",
     "fitScore": {
       "overallScore": 61,
       "topReasons": "[\"Ideal acreage (899 ac) in target range\",\"Strong soils quality (7.6/10)\",\"Good metro proximity (27 mi)\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0004v119b1ngv1y5",
+        "sourceId": "cmni9yo80000bv1naszntu3mn",
         "price": 6022401,
         "pricePerAcre": 6699,
         "status": "listed"
@@ -290,7 +228,119 @@
     "deal": null
   },
   {
-    "id": "cmni3ytql005jv119qxvk3p0d",
+    "id": "cmni9yocp005vv1nao88h8ygw",
+    "apn": "75-6-226-15",
+    "address": "6766 County Rd 112",
+    "county": "Blount",
+    "state": "AL",
+    "acreage": 264,
+    "lat": 33.99659999999999,
+    "lon": -86.7067,
+    "zoning": "rural-residential",
+    "createdAt": "2026-04-03T02:18:49.417Z",
+    "fitScore": {
+      "overallScore": 61,
+      "topReasons": "[\"Ideal acreage (264 ac) in target range\",\"Paved road access\",\"Water features present on property\",\"Utilities readily available\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
+        "price": 1635216,
+        "pricePerAcre": 6194,
+        "status": "off-market"
+      },
+      {
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
+        "price": 1700625,
+        "pricePerAcre": 6442,
+        "status": "listed"
+      },
+      {
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
+        "price": 1651568,
+        "pricePerAcre": 6256,
+        "status": "off-market"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yocn005mv1nacaessl99",
+    "apn": "10-2-166-48",
+    "address": "119 Rocky Ford Rd",
+    "county": "Jackson",
+    "state": "AL",
+    "acreage": 857,
+    "lat": 34.6675,
+    "lon": -86.0152,
+    "zoning": "mixed-use",
+    "createdAt": "2026-04-03T02:18:49.416Z",
+    "fitScore": {
+      "overallScore": 60,
+      "topReasons": "[\"Ideal acreage (857 ac) in target range\",\"Strong soils quality (7.5/10)\",\"Good metro proximity (38 mi)\",\"Paved road access\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo80000bv1naszntu3mn",
+        "price": 10958459,
+        "pricePerAcre": 12787,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yoco005pv1naxft3bflo",
+    "apn": "16-6-577-91",
+    "address": "9475 Possum Trot Rd",
+    "county": "DeKalb",
+    "state": "AL",
+    "acreage": 240,
+    "lat": 34.4807,
+    "lon": -85.6822,
+    "zoning": "rural-residential",
+    "createdAt": "2026-04-03T02:18:49.416Z",
+    "fitScore": {
+      "overallScore": 45,
+      "topReasons": "[\"Ideal acreage (240 ac) in target range\",\"Strong soils quality (7.8/10)\",\"Water features present on property\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
+        "price": 559920,
+        "pricePerAcre": 2333,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yocm005gv1naipd3wb29",
+    "apn": "14-6-988-49",
+    "address": "6870 Pine Ridge Rd",
+    "county": "Osceola",
+    "state": "FL",
+    "acreage": 827,
+    "lat": 28.0193,
+    "lon": -81.2154,
+    "zoning": "agricultural",
+    "createdAt": "2026-04-03T02:18:49.415Z",
+    "fitScore": {
+      "overallScore": 51,
+      "topReasons": "[\"Ideal acreage (827 ac) in target range\",\"Strong soils quality (7.5/10)\",\"Good metro proximity (37 mi)\",\"Water features present on property\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
+        "price": 8027689,
+        "pricePerAcre": 9707,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yocn005jv1nan9gjt98j",
     "apn": "63-5-182-36",
     "address": "4536 Fox Run Rd",
     "county": "Polk",
@@ -299,26 +349,26 @@
     "lat": 27.9308,
     "lon": -81.7737,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.702Z",
+    "createdAt": "2026-04-03T02:18:49.415Z",
     "fitScore": {
       "overallScore": 76,
       "topReasons": "[\"Ideal acreage (404 ac) in target range\",\"Good metro proximity (29 mi)\",\"Paved road access\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0002v119p5agsr8r",
+        "sourceId": "cmni9yo800007v1nacuc2ef46",
         "price": 3545908,
         "pricePerAcre": 8777,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
         "price": 3545908,
         "pricePerAcre": 8777,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
         "price": 3439531,
         "pricePerAcre": 8514,
         "status": "listed"
@@ -330,57 +380,7 @@
     }
   },
   {
-    "id": "cmni3ytqm005mv1190epm7dam",
-    "apn": "10-2-166-48",
-    "address": "119 Rocky Ford Rd",
-    "county": "Jackson",
-    "state": "AL",
-    "acreage": 857,
-    "lat": 34.6675,
-    "lon": -86.0152,
-    "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.702Z",
-    "fitScore": {
-      "overallScore": 60,
-      "topReasons": "[\"Ideal acreage (857 ac) in target range\",\"Strong soils quality (7.5/10)\",\"Good metro proximity (38 mi)\",\"Paved road access\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof0004v119b1ngv1y5",
-        "price": 10958459,
-        "pricePerAcre": 12787,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytqk005gv119bfw31vrs",
-    "apn": "14-6-988-49",
-    "address": "6870 Pine Ridge Rd",
-    "county": "Osceola",
-    "state": "FL",
-    "acreage": 827,
-    "lat": 28.0193,
-    "lon": -81.2154,
-    "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.701Z",
-    "fitScore": {
-      "overallScore": 51,
-      "topReasons": "[\"Ideal acreage (827 ac) in target range\",\"Strong soils quality (7.5/10)\",\"Good metro proximity (37 mi)\",\"Water features present on property\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
-        "price": 8027689,
-        "pricePerAcre": 9707,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytqj005av1197rsshs3k",
+    "id": "cmni9yocl005av1nabxtn1k8m",
     "apn": "25-9-918-15",
     "address": "3527 Old Mill Rd",
     "county": "Walton",
@@ -389,20 +389,20 @@
     "lat": 30.73,
     "lon": -86.3,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.700Z",
+    "createdAt": "2026-04-03T02:18:49.414Z",
     "fitScore": {
       "overallScore": 44,
       "topReasons": "[\"Ideal acreage (816 ac) in target range\",\"Strong soils quality (8/10)\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
         "price": 7186512,
         "pricePerAcre": 8807,
         "status": "off-market"
       },
       {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
         "price": 7545838,
         "pricePerAcre": 9247,
         "status": "off-market"
@@ -411,7 +411,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqk005dv119iukipix9",
+    "id": "cmni9yocm005dv1na3hauxyso",
     "apn": "88-5-927-50",
     "address": "4867 Hickory Flat Rd",
     "county": "Highlands",
@@ -420,14 +420,14 @@
     "lat": 27.4623,
     "lon": -81.1944,
     "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.700Z",
+    "createdAt": "2026-04-03T02:18:49.414Z",
     "fitScore": {
       "overallScore": 51,
       "topReasons": "[\"Ideal acreage (936 ac) in target range\",\"Good metro proximity (15 mi)\",\"Water features present on property\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0005v119hyjuhysp",
+        "sourceId": "cmni9yo7z0002v1navxxxz99g",
         "price": 8004672,
         "pricePerAcre": 8552,
         "status": "listed"
@@ -436,32 +436,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqi0054v119xuyncftw",
-    "apn": "94-8-748-79",
-    "address": "198 Cedar Creek Rd",
-    "county": "Gadsden",
-    "state": "FL",
-    "acreage": 344,
-    "lat": 30.5047,
-    "lon": -84.5969,
-    "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.699Z",
-    "fitScore": {
-      "overallScore": 71,
-      "topReasons": "[\"Ideal acreage (344 ac) in target range\",\"Good metro proximity (30 mi)\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof0006v1193fzr0ces",
-        "price": 2734112,
-        "pricePerAcre": 7948,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytqj0057v119i1j8tbi8",
+    "id": "cmni9yocl0057v1nap533k7ce",
     "apn": "87-6-232-78",
     "address": "8179 Bear Hollow Rd",
     "county": "Jackson",
@@ -470,14 +445,14 @@
     "lat": 30.8437,
     "lon": -85.2337,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.699Z",
+    "createdAt": "2026-04-03T02:18:49.413Z",
     "fitScore": {
       "overallScore": 80,
       "topReasons": "[\"Ideal acreage (564 ac) in target range\",\"Good metro proximity (21 mi)\",\"Water features present on property\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0001v119n6x5u41m",
+        "sourceId": "cmni9yo7z0004v1nazi1mupk9",
         "price": 4607316,
         "pricePerAcre": 8169,
         "status": "listed"
@@ -489,38 +464,7 @@
     }
   },
   {
-    "id": "cmni3ytqh004yv119dkz9rog9",
-    "apn": "33-4-144-19",
-    "address": "4873 Fox Run Rd",
-    "county": "Columbia",
-    "state": "FL",
-    "acreage": 987,
-    "lat": 30.2038,
-    "lon": -82.72030000000001,
-    "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.698Z",
-    "fitScore": {
-      "overallScore": 36,
-      "topReasons": "[\"Ideal acreage (987 ac) in target range\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof000cv119058d3iys",
-        "price": 3631173,
-        "pricePerAcre": 3679,
-        "status": "listed"
-      },
-      {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
-        "price": 3703796,
-        "pricePerAcre": 3753,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytqi0051v119zaswcf4a",
+    "id": "cmni9yocj0051v1na4zdgljwm",
     "apn": "16-5-518-41",
     "address": "3482 Hollow Creek Rd",
     "county": "Jefferson",
@@ -529,14 +473,14 @@
     "lat": 30.3076,
     "lon": -84.03750000000001,
     "zoning": "rural-residential",
-    "createdAt": "2026-04-02T23:30:58.698Z",
+    "createdAt": "2026-04-03T02:18:49.412Z",
     "fitScore": {
       "overallScore": 56,
       "topReasons": "[\"Ideal acreage (659 ac) in target range\",\"Good metro proximity (26 mi)\",\"Paved road access\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0006v1193fzr0ces",
+        "sourceId": "cmni9yo7z0003v1nauvn1oqm6",
         "price": 6385710,
         "pricePerAcre": 9690,
         "status": "listed"
@@ -545,7 +489,32 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqh004vv119kcgy0c2u",
+    "id": "cmni9yock0054v1naghijptr9",
+    "apn": "94-8-748-79",
+    "address": "198 Cedar Creek Rd",
+    "county": "Gadsden",
+    "state": "FL",
+    "acreage": 344,
+    "lat": 30.5047,
+    "lon": -84.5969,
+    "zoning": "mixed-use",
+    "createdAt": "2026-04-03T02:18:49.412Z",
+    "fitScore": {
+      "overallScore": 71,
+      "topReasons": "[\"Ideal acreage (344 ac) in target range\",\"Good metro proximity (30 mi)\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0003v1nauvn1oqm6",
+        "price": 2734112,
+        "pricePerAcre": 7948,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yoci004vv1naeikrb3ho",
     "apn": "71-3-206-90",
     "address": "1627 Cedar Creek Rd",
     "county": "Levy",
@@ -554,14 +523,14 @@
     "lat": 29.2835,
     "lon": -82.7445,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.697Z",
+    "createdAt": "2026-04-03T02:18:49.411Z",
     "fitScore": {
       "overallScore": 61,
       "topReasons": "[\"Ideal acreage (298 ac) in target range\",\"Strong soils quality (7.4/10)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
         "price": 2681106,
         "pricePerAcre": 8997,
         "status": "listed"
@@ -570,7 +539,38 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqf004pv1198puapzqe",
+    "id": "cmni9yocj004yv1narc1tiztf",
+    "apn": "33-4-144-19",
+    "address": "4873 Fox Run Rd",
+    "county": "Columbia",
+    "state": "FL",
+    "acreage": 987,
+    "lat": 30.2038,
+    "lon": -82.72030000000001,
+    "zoning": "agricultural",
+    "createdAt": "2026-04-03T02:18:49.411Z",
+    "fitScore": {
+      "overallScore": 36,
+      "topReasons": "[\"Ideal acreage (987 ac) in target range\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo80000av1nam2zbxwiy",
+        "price": 3631173,
+        "pricePerAcre": 3679,
+        "status": "listed"
+      },
+      {
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
+        "price": 3703796,
+        "pricePerAcre": 3753,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yoch004pv1na1yml4fuj",
     "apn": "24-1-742-82",
     "address": "8824 Blue Ridge Pkwy",
     "county": "Alachua",
@@ -579,14 +579,14 @@
     "lat": 29.7447,
     "lon": -82.2217,
     "zoning": "rural-residential",
-    "createdAt": "2026-04-02T23:30:58.696Z",
+    "createdAt": "2026-04-03T02:18:49.410Z",
     "fitScore": {
       "overallScore": 69,
       "topReasons": "[\"Ideal acreage (811 ac) in target range\",\"Paved road access\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000cv119058d3iys",
+        "sourceId": "cmni9yo80000av1nam2zbxwiy",
         "price": 5819736,
         "pricePerAcre": 7176,
         "status": "listed"
@@ -595,7 +595,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqg004sv119dixt666q",
+    "id": "cmni9yoci004sv1nag6hothpt",
     "apn": "52-9-498-51",
     "address": "4832 Old Mill Rd",
     "county": "Marion",
@@ -604,14 +604,14 @@
     "lat": 29.3144,
     "lon": -82.00729999999999,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.696Z",
+    "createdAt": "2026-04-03T02:18:49.410Z",
     "fitScore": {
       "overallScore": 44,
       "topReasons": "[\"Ideal acreage (755 ac) in target range\",\"Paved road access\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0009v1199kg4bvri",
+        "sourceId": "cmni9yo7z0006v1navrhuf640",
         "price": 8060380,
         "pricePerAcre": 10676,
         "status": "off-market"
@@ -620,7 +620,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqe004jv1190f0zrnzy",
+    "id": "cmni9yocg004jv1na4oixm0aw",
     "apn": "25-6-885-44",
     "address": "8716 Timber Ridge Ln",
     "county": "Appling",
@@ -629,14 +629,14 @@
     "lat": 31.777,
     "lon": -82.21730000000001,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.695Z",
+    "createdAt": "2026-04-03T02:18:49.409Z",
     "fitScore": {
       "overallScore": 43,
       "topReasons": "[\"Ideal acreage (734 ac) in target range\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0001v119n6x5u41m",
+        "sourceId": "cmni9yo7z0004v1nazi1mupk9",
         "price": 8511464,
         "pricePerAcre": 11596,
         "status": "listed"
@@ -645,7 +645,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqf004mv119frrw26ys",
+    "id": "cmni9yoch004mv1nata0vlk6i",
     "apn": null,
     "address": "5518 Turkey Creek Rd",
     "county": "Telfair",
@@ -654,14 +654,14 @@
     "lat": 31.8744,
     "lon": -82.7882,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.695Z",
+    "createdAt": "2026-04-03T02:18:49.409Z",
     "fitScore": {
       "overallScore": 94,
       "topReasons": "[\"Ideal acreage (197 ac) in target range\",\"Strong soils quality (8.7/10)\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0009v1199kg4bvri",
+        "sourceId": "cmni9yo7z0006v1navrhuf640",
         "price": 1304928,
         "pricePerAcre": 6624,
         "status": "listed"
@@ -673,7 +673,7 @@
     }
   },
   {
-    "id": "cmni3ytqd004dv119yxzd5a90",
+    "id": "cmni9yocf004dv1na08ztc888",
     "apn": "30-2-569-20",
     "address": "665 Meadow Creek Rd",
     "county": "Burke",
@@ -682,14 +682,14 @@
     "lat": 32.9248,
     "lon": -81.8984,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.694Z",
+    "createdAt": "2026-04-03T02:18:49.408Z",
     "fitScore": {
       "overallScore": 81,
       "topReasons": "[\"Ideal acreage (856 ac) in target range\",\"Water features present on property\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
         "price": 10959368,
         "pricePerAcre": 12803,
         "status": "listed"
@@ -701,7 +701,7 @@
     }
   },
   {
-    "id": "cmni3ytqe004gv119bo5j19ke",
+    "id": "cmni9yocg004gv1naq6mrdq5g",
     "apn": "32-1-100-62",
     "address": "5842 Spring Branch Rd",
     "county": "Emanuel",
@@ -710,20 +710,20 @@
     "lat": 32.5192,
     "lon": -82.3698,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.694Z",
+    "createdAt": "2026-04-03T02:18:49.408Z",
     "fitScore": {
       "overallScore": 55,
       "topReasons": "[\"Ideal acreage (458 ac) in target range\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0001v119n6x5u41m",
+        "sourceId": "cmni9yo7z0004v1nazi1mupk9",
         "price": 2870744,
         "pricePerAcre": 6268,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
         "price": 2784622,
         "pricePerAcre": 6080,
         "status": "listed"
@@ -732,47 +732,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqc0047v1195e76cd0h",
-    "apn": "29-5-770-41",
-    "address": "4768 Blue Ridge Pkwy",
-    "county": "Talbot",
-    "state": "GA",
-    "acreage": 536,
-    "lat": 32.7376,
-    "lon": -84.4387,
-    "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.693Z",
-    "fitScore": {
-      "overallScore": 79,
-      "topReasons": "[\"Ideal acreage (536 ac) in target range\",\"Good metro proximity (30 mi)\",\"Low flood/wetlands risk\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
-        "price": 726816,
-        "pricePerAcre": 1356,
-        "status": "listed"
-      },
-      {
-        "sourceId": "cmni3ytof0007v119sfdrqtbu",
-        "price": 734084,
-        "pricePerAcre": 1370,
-        "status": "listed"
-      },
-      {
-        "sourceId": "cmni3ytof0008v119xun5n3yi",
-        "price": 719548,
-        "pricePerAcre": 1342,
-        "status": "listed"
-      }
-    ],
-    "deal": {
-      "stage": "qualified",
-      "priority": "medium"
-    }
-  },
-  {
-    "id": "cmni3ytqd004av119z1sxgs1f",
+    "id": "cmni9yocf004av1na7neo8axi",
     "apn": null,
     "address": "4464 Hollow Creek Rd",
     "county": "Meriwether",
@@ -781,14 +741,14 @@
     "lat": 32.9341,
     "lon": -84.6089,
     "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.693Z",
+    "createdAt": "2026-04-03T02:18:49.407Z",
     "fitScore": {
       "overallScore": 75,
       "topReasons": "[\"Ideal acreage (904 ac) in target range\",\"Strong soils quality (8.6/10)\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0006v1193fzr0ces",
+        "sourceId": "cmni9yo7z0003v1nauvn1oqm6",
         "price": 4173768,
         "pricePerAcre": 4617,
         "status": "listed"
@@ -800,7 +760,7 @@
     }
   },
   {
-    "id": "cmni3ytqc0044v119jglh265l",
+    "id": "cmni9yocd0044v1nao34jsbzp",
     "apn": null,
     "address": "5812 Sandy Bottom Rd",
     "county": "Jasper",
@@ -809,14 +769,14 @@
     "lat": 33.3772,
     "lon": -83.5527,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.692Z",
+    "createdAt": "2026-04-03T02:18:49.406Z",
     "fitScore": {
       "overallScore": 60,
       "topReasons": "[\"Ideal acreage (720 ac) in target range\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0009v1199kg4bvri",
+        "sourceId": "cmni9yo7z0006v1navrhuf640",
         "price": 9056160,
         "pricePerAcre": 12578,
         "status": "listed"
@@ -825,7 +785,47 @@
     "deal": null
   },
   {
-    "id": "cmni3ytqa003yv119ftrlb67t",
+    "id": "cmni9yoce0047v1nahzi6lhwi",
+    "apn": "29-5-770-41",
+    "address": "4768 Blue Ridge Pkwy",
+    "county": "Talbot",
+    "state": "GA",
+    "acreage": 536,
+    "lat": 32.7376,
+    "lon": -84.4387,
+    "zoning": "agricultural",
+    "createdAt": "2026-04-03T02:18:49.406Z",
+    "fitScore": {
+      "overallScore": 79,
+      "topReasons": "[\"Ideal acreage (536 ac) in target range\",\"Good metro proximity (30 mi)\",\"Low flood/wetlands risk\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
+        "price": 726816,
+        "pricePerAcre": 1356,
+        "status": "listed"
+      },
+      {
+        "sourceId": "cmni9yo80000cv1nayrllpv8f",
+        "price": 734084,
+        "pricePerAcre": 1370,
+        "status": "listed"
+      },
+      {
+        "sourceId": "cmni9yo800008v1nahb879x8v",
+        "price": 719548,
+        "pricePerAcre": 1342,
+        "status": "listed"
+      }
+    ],
+    "deal": {
+      "stage": "qualified",
+      "priority": "medium"
+    }
+  },
+  {
+    "id": "cmni9yocc003yv1nanxc8vfeq",
     "apn": null,
     "address": "9924 Timber Ridge Ln",
     "county": "Morgan",
@@ -834,14 +834,14 @@
     "lat": 33.71510000000001,
     "lon": -83.46329999999999,
     "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.691Z",
+    "createdAt": "2026-04-03T02:18:49.405Z",
     "fitScore": {
       "overallScore": 91,
       "topReasons": "[\"Ideal acreage (285 ac) in target range\",\"Strong soils quality (8.4/10)\",\"Paved road access\",\"Utilities readily available\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0004v119b1ngv1y5",
+        "sourceId": "cmni9yo80000bv1naszntu3mn",
         "price": 2473515,
         "pricePerAcre": 8679,
         "status": "listed"
@@ -853,7 +853,7 @@
     }
   },
   {
-    "id": "cmni3ytqb0041v119dtg91rqk",
+    "id": "cmni9yocd0041v1nanj9bhw49",
     "apn": "69-9-952-24",
     "address": "3279 Hollow Creek Rd",
     "county": "Putnam",
@@ -862,14 +862,14 @@
     "lat": 33.3861,
     "lon": -83.25670000000001,
     "zoning": "rural-residential",
-    "createdAt": "2026-04-02T23:30:58.691Z",
+    "createdAt": "2026-04-03T02:18:49.405Z",
     "fitScore": {
       "overallScore": 90,
       "topReasons": "[\"Ideal acreage (165 ac) in target range\",\"Strong soils quality (8.1/10)\",\"Good metro proximity (34 mi)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0006v1193fzr0ces",
+        "sourceId": "cmni9yo7z0003v1nauvn1oqm6",
         "price": 715935,
         "pricePerAcre": 4339,
         "status": "listed"
@@ -881,32 +881,7 @@
     }
   },
   {
-    "id": "cmni3ytq9003sv119lk2nh2r9",
-    "apn": "86-2-363-18",
-    "address": "2162 Hollow Creek Rd",
-    "county": "Rabun",
-    "state": "GA",
-    "acreage": 443,
-    "lat": 34.9622,
-    "lon": -83.27560000000001,
-    "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.690Z",
-    "fitScore": {
-      "overallScore": 55,
-      "topReasons": "[\"Ideal acreage (443 ac) in target range\",\"Water features present on property\",\"Utilities readily available\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof000cv119058d3iys",
-        "price": 3065117,
-        "pricePerAcre": 6919,
-        "status": "off-market"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytqa003vv119i1ubhcq2",
+    "id": "cmni9yocc003vv1na6vmm4dwj",
     "apn": "63-1-685-35",
     "address": "601 Mountain View Dr",
     "county": "Greene",
@@ -915,26 +890,26 @@
     "lat": 33.6911,
     "lon": -83.1566,
     "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.690Z",
+    "createdAt": "2026-04-03T02:18:49.404Z",
     "fitScore": {
       "overallScore": 74,
       "topReasons": "[\"Ideal acreage (360 ac) in target range\",\"Good metro proximity (35 mi)\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0008v119xun5n3yi",
+        "sourceId": "cmni9yo800008v1nahb879x8v",
         "price": 4391280,
         "pricePerAcre": 12198,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytoe0002v119p5agsr8r",
+        "sourceId": "cmni9yo800007v1nacuc2ef46",
         "price": 4479106,
         "pricePerAcre": 12442,
         "status": "off-market"
       },
       {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
         "price": 4523018,
         "pricePerAcre": 12564,
         "status": "listed"
@@ -946,35 +921,7 @@
     }
   },
   {
-    "id": "cmni3ytq8003mv119l4ifct6b",
-    "apn": "83-3-871-64",
-    "address": "1179 Long Branch Rd",
-    "county": "Lumpkin",
-    "state": "GA",
-    "acreage": 533,
-    "lat": 34.5429,
-    "lon": -84.0212,
-    "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.689Z",
-    "fitScore": {
-      "overallScore": 78,
-      "topReasons": "[\"Ideal acreage (533 ac) in target range\",\"Paved road access\",\"Water features present on property\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof0006v1193fzr0ces",
-        "price": 2025400,
-        "pricePerAcre": 3800,
-        "status": "listed"
-      }
-    ],
-    "deal": {
-      "stage": "pursuit",
-      "priority": "medium"
-    }
-  },
-  {
-    "id": "cmni3ytq9003pv119dt5qa9ne",
+    "id": "cmni9yoca003pv1naq4q6aq3r",
     "apn": "12-8-666-52",
     "address": "4399 Sandy Bottom Rd",
     "county": "White",
@@ -983,26 +930,26 @@
     "lat": 34.6132,
     "lon": -83.8598,
     "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.689Z",
+    "createdAt": "2026-04-03T02:18:49.403Z",
     "fitScore": {
       "overallScore": 69,
       "topReasons": "[\"Ideal acreage (297 ac) in target range\",\"Good metro proximity (43 mi)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0008v119xun5n3yi",
+        "sourceId": "cmni9yo800008v1nahb879x8v",
         "price": 3537864,
         "pricePerAcre": 11912,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytof0008v119xun5n3yi",
+        "sourceId": "cmni9yo800008v1nahb879x8v",
         "price": 3431728,
         "pricePerAcre": 11555,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytof0005v119hyjuhysp",
+        "sourceId": "cmni9yo7z0002v1navxxxz99g",
         "price": 3537864,
         "pricePerAcre": 11912,
         "status": "listed"
@@ -1011,7 +958,32 @@
     "deal": null
   },
   {
-    "id": "cmni3ytq7003jv119ulsjbp4s",
+    "id": "cmni9yocb003sv1nau4tc6hav",
+    "apn": "86-2-363-18",
+    "address": "2162 Hollow Creek Rd",
+    "county": "Rabun",
+    "state": "GA",
+    "acreage": 443,
+    "lat": 34.9622,
+    "lon": -83.27560000000001,
+    "zoning": "timber",
+    "createdAt": "2026-04-03T02:18:49.403Z",
+    "fitScore": {
+      "overallScore": 55,
+      "topReasons": "[\"Ideal acreage (443 ac) in target range\",\"Water features present on property\",\"Utilities readily available\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo80000av1nam2zbxwiy",
+        "price": 3065117,
+        "pricePerAcre": 6919,
+        "status": "off-market"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yoc9003jv1namouzu057",
     "apn": "57-6-876-15",
     "address": "8384 White Oak Rd",
     "county": "Williamsburg",
@@ -1020,14 +992,14 @@
     "lat": 33.6871,
     "lon": -79.7295,
     "zoning": "rural-residential",
-    "createdAt": "2026-04-02T23:30:58.688Z",
+    "createdAt": "2026-04-03T02:18:49.402Z",
     "fitScore": {
       "overallScore": 73,
       "topReasons": "[\"Ideal acreage (390 ac) in target range\",\"Good metro proximity (43 mi)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0002v119p5agsr8r",
+        "sourceId": "cmni9yo800007v1nacuc2ef46",
         "price": 3397290,
         "pricePerAcre": 8711,
         "status": "listed"
@@ -1039,7 +1011,35 @@
     }
   },
   {
-    "id": "cmni3ytq6003dv1198tvzo9ut",
+    "id": "cmni9yoca003mv1namvlqa8ts",
+    "apn": "83-3-871-64",
+    "address": "1179 Long Branch Rd",
+    "county": "Lumpkin",
+    "state": "GA",
+    "acreage": 533,
+    "lat": 34.5429,
+    "lon": -84.0212,
+    "zoning": "agricultural",
+    "createdAt": "2026-04-03T02:18:49.402Z",
+    "fitScore": {
+      "overallScore": 78,
+      "topReasons": "[\"Ideal acreage (533 ac) in target range\",\"Paved road access\",\"Water features present on property\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0003v1nauvn1oqm6",
+        "price": 2025400,
+        "pricePerAcre": 3800,
+        "status": "listed"
+      }
+    ],
+    "deal": {
+      "stage": "pursuit",
+      "priority": "medium"
+    }
+  },
+  {
+    "id": "cmni9yoc8003dv1nab47rciiw",
     "apn": "64-5-974-19",
     "address": "9322 State Rd 68",
     "county": "Colleton",
@@ -1048,20 +1048,20 @@
     "lat": 32.7799,
     "lon": -80.5522,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.687Z",
+    "createdAt": "2026-04-03T02:18:49.401Z",
     "fitScore": {
       "overallScore": 71,
       "topReasons": "[\"Ideal acreage (902 ac) in target range\",\"Strong soils quality (7/10)\",\"Good metro proximity (45 mi)\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0004v119b1ngv1y5",
+        "sourceId": "cmni9yo80000bv1naszntu3mn",
         "price": 6350982,
         "pricePerAcre": 7041,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
         "price": 6096943,
         "pricePerAcre": 6759,
         "status": "listed"
@@ -1070,7 +1070,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytq7003gv119436t3o0c",
+    "id": "cmni9yoc9003gv1nadhwyn2w3",
     "apn": "19-6-694-75",
     "address": "9170 Sandy Bottom Rd",
     "county": "Hampton",
@@ -1079,14 +1079,14 @@
     "lat": 32.8004,
     "lon": -81.12509999999999,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.687Z",
+    "createdAt": "2026-04-03T02:18:49.401Z",
     "fitScore": {
       "overallScore": 0,
       "topReasons": "[]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
         "price": 3667903,
         "pricePerAcre": 6103,
         "status": "listed"
@@ -1095,32 +1095,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytq50037v1193l5nrhzw",
-    "apn": null,
-    "address": "2071 Rocky Ford Rd",
-    "county": "Aiken",
-    "state": "SC",
-    "acreage": 254,
-    "lat": 33.4908,
-    "lon": -81.8155,
-    "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.686Z",
-    "fitScore": {
-      "overallScore": 50,
-      "topReasons": "[\"Ideal acreage (254 ac) in target range\",\"Good metro proximity (16 mi)\",\"Low flood/wetlands risk\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
-        "price": 2054606,
-        "pricePerAcre": 8089,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytq6003av119f1sjcgrh",
+    "id": "cmni9yoc7003av1nazzpog3nz",
     "apn": null,
     "address": "4541 River Bend Rd",
     "county": "Edgefield",
@@ -1129,14 +1104,14 @@
     "lat": 33.6524,
     "lon": -82.0405,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.686Z",
+    "createdAt": "2026-04-03T02:18:49.400Z",
     "fitScore": {
       "overallScore": 58,
       "topReasons": "[\"Ideal acreage (725 ac) in target range\",\"Good metro proximity (41 mi)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0002v119p5agsr8r",
+        "sourceId": "cmni9yo800007v1nacuc2ef46",
         "price": 7574800,
         "pricePerAcre": 10448,
         "status": "listed"
@@ -1145,7 +1120,57 @@
     "deal": null
   },
   {
-    "id": "cmni3ytq40031v119f26k5uxt",
+    "id": "cmni9yoc60034v1nac30m9els",
+    "apn": null,
+    "address": "5380 Cedar Creek Rd",
+    "county": "Newberry",
+    "state": "SC",
+    "acreage": 475,
+    "lat": 34.295,
+    "lon": -81.5928,
+    "zoning": "mixed-use",
+    "createdAt": "2026-04-03T02:18:49.399Z",
+    "fitScore": {
+      "overallScore": 38,
+      "topReasons": "[\"Ideal acreage (475 ac) in target range\",\"Strong soils quality (8.4/10)\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
+        "price": 6548825,
+        "pricePerAcre": 13787,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yoc70037v1nawrtsblpd",
+    "apn": null,
+    "address": "2071 Rocky Ford Rd",
+    "county": "Aiken",
+    "state": "SC",
+    "acreage": 254,
+    "lat": 33.4908,
+    "lon": -81.8155,
+    "zoning": "timber",
+    "createdAt": "2026-04-03T02:18:49.399Z",
+    "fitScore": {
+      "overallScore": 50,
+      "topReasons": "[\"Ideal acreage (254 ac) in target range\",\"Good metro proximity (16 mi)\",\"Low flood/wetlands risk\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
+        "price": 2054606,
+        "pricePerAcre": 8089,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yoc60031v1na6sag6ztm",
     "apn": "57-7-637-60",
     "address": "309 Bear Hollow Rd",
     "county": "Laurens",
@@ -1154,20 +1179,20 @@
     "lat": 34.3578,
     "lon": -81.9846,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.685Z",
+    "createdAt": "2026-04-03T02:18:49.398Z",
     "fitScore": {
       "overallScore": 100,
       "topReasons": "[\"Ideal acreage (211 ac) in target range\",\"Strong soils quality (8.9/10)\",\"Good metro proximity (38 mi)\",\"Paved road access\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0005v119hyjuhysp",
+        "sourceId": "cmni9yo7z0002v1navxxxz99g",
         "price": 882402,
         "pricePerAcre": 4182,
         "status": "off-market"
       },
       {
-        "sourceId": "cmni3ytof0005v119hyjuhysp",
+        "sourceId": "cmni9yo7z0002v1navxxxz99g",
         "price": 855930,
         "pricePerAcre": 4057,
         "status": "listed"
@@ -1179,32 +1204,7 @@
     }
   },
   {
-    "id": "cmni3ytq50034v119295jxn0j",
-    "apn": null,
-    "address": "5380 Cedar Creek Rd",
-    "county": "Newberry",
-    "state": "SC",
-    "acreage": 475,
-    "lat": 34.295,
-    "lon": -81.5928,
-    "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.685Z",
-    "fitScore": {
-      "overallScore": 38,
-      "topReasons": "[\"Ideal acreage (475 ac) in target range\",\"Strong soils quality (8.4/10)\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
-        "price": 6548825,
-        "pricePerAcre": 13787,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytq3002vv119m5l2vyds",
+    "id": "cmni9yoc4002vv1namt6jlnf5",
     "apn": null,
     "address": "6543 Shady Grove Rd",
     "county": "Pickens",
@@ -1213,14 +1213,14 @@
     "lat": 34.7602,
     "lon": -82.6282,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.684Z",
+    "createdAt": "2026-04-03T02:18:49.397Z",
     "fitScore": {
       "overallScore": 66,
       "topReasons": "[\"Ideal acreage (156 ac) in target range\",\"Good metro proximity (44 mi)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0004v119b1ngv1y5",
+        "sourceId": "cmni9yo80000bv1naszntu3mn",
         "price": 1749540,
         "pricePerAcre": 11215,
         "status": "listed"
@@ -1229,7 +1229,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytq4002yv119xqd75j1a",
+    "id": "cmni9yoc5002yv1navjh2wfnv",
     "apn": "44-8-742-90",
     "address": "6314 Shady Grove Rd",
     "county": "Abbeville",
@@ -1238,14 +1238,14 @@
     "lat": 34.22479999999999,
     "lon": -82.5088,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.684Z",
+    "createdAt": "2026-04-03T02:18:49.397Z",
     "fitScore": {
       "overallScore": 0,
       "topReasons": "[]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
         "price": 3660800,
         "pricePerAcre": 5632,
         "status": "listed"
@@ -1254,38 +1254,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytq2002pv1192d9xohsz",
-    "apn": "89-8-817-11",
-    "address": "2100 Mountain View Dr",
-    "county": "Anderson",
-    "state": "SC",
-    "acreage": 732,
-    "lat": 34.4144,
-    "lon": -82.5638,
-    "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.683Z",
-    "fitScore": {
-      "overallScore": 44,
-      "topReasons": "[\"Ideal acreage (732 ac) in target range\",\"Strong soils quality (7.2/10)\",\"Paved road access\",\"Low flood/wetlands risk\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof0004v119b1ngv1y5",
-        "price": 8472168,
-        "pricePerAcre": 11574,
-        "status": "listed"
-      },
-      {
-        "sourceId": "cmni3ytof0004v119b1ngv1y5",
-        "price": 8218003,
-        "pricePerAcre": 11227,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytq3002sv119lcowcc1c",
+    "id": "cmni9yoc4002sv1nar2soq8h3",
     "apn": "78-9-688-72",
     "address": "8145 Dry Creek Rd",
     "county": "Oconee",
@@ -1294,26 +1263,26 @@
     "lat": 34.7043,
     "lon": -82.9271,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.683Z",
+    "createdAt": "2026-04-03T02:18:49.396Z",
     "fitScore": {
       "overallScore": 42,
       "topReasons": "[\"Ideal acreage (640 ac) in target range\",\"Good metro proximity (43 mi)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
         "price": 4697600,
         "pricePerAcre": 7340,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytof0008v119xun5n3yi",
+        "sourceId": "cmni9yo800008v1nahb879x8v",
         "price": 4791552,
         "pricePerAcre": 7487,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytof0009v1199kg4bvri",
+        "sourceId": "cmni9yo7z0006v1navrhuf640",
         "price": 4650624,
         "pricePerAcre": 7267,
         "status": "listed"
@@ -1322,7 +1291,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytq2002mv119ddduzho5",
+    "id": "cmni9yoc2002mv1nabfhoqg79",
     "apn": "12-1-411-85",
     "address": "147 Old Mill Rd",
     "county": "Greenville",
@@ -1331,14 +1300,14 @@
     "lat": 34.8617,
     "lon": -82.3587,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.682Z",
+    "createdAt": "2026-04-03T02:18:49.395Z",
     "fitScore": {
       "overallScore": 78,
       "topReasons": "[\"Ideal acreage (195 ac) in target range\",\"Good metro proximity (34 mi)\",\"Paved road access\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
         "price": 2908620,
         "pricePerAcre": 14916,
         "status": "listed"
@@ -1350,44 +1319,38 @@
     }
   },
   {
-    "id": "cmni3ytq0002gv119yp5murfo",
-    "apn": null,
-    "address": "401 Sandy Bottom Rd",
-    "county": "Macon",
-    "state": "NC",
-    "acreage": 269,
-    "lat": 35.0515,
-    "lon": -83.4317,
-    "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.681Z",
+    "id": "cmni9yoc3002pv1nat3u3u79g",
+    "apn": "89-8-817-11",
+    "address": "2100 Mountain View Dr",
+    "county": "Anderson",
+    "state": "SC",
+    "acreage": 732,
+    "lat": 34.4144,
+    "lon": -82.5638,
+    "zoning": "mixed-use",
+    "createdAt": "2026-04-03T02:18:49.395Z",
     "fitScore": {
-      "overallScore": 42,
-      "topReasons": "[\"Ideal acreage (269 ac) in target range\",\"Utilities readily available\"]"
+      "overallScore": 44,
+      "topReasons": "[\"Ideal acreage (732 ac) in target range\",\"Strong soils quality (7.2/10)\",\"Paved road access\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0009v1199kg4bvri",
-        "price": 899536,
-        "pricePerAcre": 3344,
+        "sourceId": "cmni9yo80000bv1naszntu3mn",
+        "price": 8472168,
+        "pricePerAcre": 11574,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
-        "price": 908531,
-        "pricePerAcre": 3377,
-        "status": "listed"
-      },
-      {
-        "sourceId": "cmni3ytof000cv119058d3iys",
-        "price": 926522,
-        "pricePerAcre": 3444,
+        "sourceId": "cmni9yo80000bv1naszntu3mn",
+        "price": 8218003,
+        "pricePerAcre": 11227,
         "status": "listed"
       }
     ],
     "deal": null
   },
   {
-    "id": "cmni3ytq1002jv1197jfqvt9j",
+    "id": "cmni9yoc2002jv1nauj3wjgl3",
     "apn": "41-4-816-11",
     "address": "8146 Fox Run Rd",
     "county": "Columbus",
@@ -1396,14 +1359,14 @@
     "lat": 34.1971,
     "lon": -78.6068,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.681Z",
+    "createdAt": "2026-04-03T02:18:49.394Z",
     "fitScore": {
       "overallScore": 77,
       "topReasons": "[\"Ideal acreage (275 ac) in target range\",\"Paved road access\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
         "price": 954250,
         "pricePerAcre": 3470,
         "status": "listed"
@@ -1415,32 +1378,7 @@
     }
   },
   {
-    "id": "cmni3ytpz002av119voba9c1s",
-    "apn": "71-7-886-75",
-    "address": "6310 Pine Ridge Rd",
-    "county": "Davidson",
-    "state": "NC",
-    "acreage": 797,
-    "lat": 35.9406,
-    "lon": -80.18369999999999,
-    "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.680Z",
-    "fitScore": {
-      "overallScore": 52,
-      "topReasons": "[\"Ideal acreage (797 ac) in target range\",\"Strong soils quality (7/10)\",\"Good metro proximity (30 mi)\",\"Paved road access\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof0007v119sfdrqtbu",
-        "price": 9989598,
-        "pricePerAcre": 12534,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytq0002dv119rh58hn9v",
+    "id": "cmni9yoc0002dv1na0iapuyxo",
     "apn": null,
     "address": "414 Mountain View Dr",
     "county": "Transylvania",
@@ -1449,14 +1387,14 @@
     "lat": 35.3338,
     "lon": -82.6483,
     "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.680Z",
+    "createdAt": "2026-04-03T02:18:49.393Z",
     "fitScore": {
       "overallScore": 57,
       "topReasons": "[\"Ideal acreage (848 ac) in target range\",\"Good metro proximity (35 mi)\",\"Paved road access\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0001v119n6x5u41m",
+        "sourceId": "cmni9yo7z0004v1nazi1mupk9",
         "price": 1797760,
         "pricePerAcre": 2120,
         "status": "off-market"
@@ -1465,7 +1403,69 @@
     "deal": null
   },
   {
-    "id": "cmni3ytpy0024v119ca1wtci5",
+    "id": "cmni9yoc1002gv1naq7a9266m",
+    "apn": null,
+    "address": "401 Sandy Bottom Rd",
+    "county": "Macon",
+    "state": "NC",
+    "acreage": 269,
+    "lat": 35.0515,
+    "lon": -83.4317,
+    "zoning": "conservation",
+    "createdAt": "2026-04-03T02:18:49.393Z",
+    "fitScore": {
+      "overallScore": 42,
+      "topReasons": "[\"Ideal acreage (269 ac) in target range\",\"Utilities readily available\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo7z0006v1navrhuf640",
+        "price": 899536,
+        "pricePerAcre": 3344,
+        "status": "listed"
+      },
+      {
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
+        "price": 908531,
+        "pricePerAcre": 3377,
+        "status": "listed"
+      },
+      {
+        "sourceId": "cmni9yo80000av1nam2zbxwiy",
+        "price": 926522,
+        "pricePerAcre": 3444,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yoc0002av1na5jdkap08",
+    "apn": "71-7-886-75",
+    "address": "6310 Pine Ridge Rd",
+    "county": "Davidson",
+    "state": "NC",
+    "acreage": 797,
+    "lat": 35.9406,
+    "lon": -80.18369999999999,
+    "zoning": "conservation",
+    "createdAt": "2026-04-03T02:18:49.392Z",
+    "fitScore": {
+      "overallScore": 52,
+      "topReasons": "[\"Ideal acreage (797 ac) in target range\",\"Strong soils quality (7/10)\",\"Good metro proximity (30 mi)\",\"Paved road access\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo80000cv1nayrllpv8f",
+        "price": 9989598,
+        "pricePerAcre": 12534,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yoby0024v1nayoke9kgp",
     "apn": null,
     "address": "477 Old Mill Rd",
     "county": "Surry",
@@ -1474,14 +1474,14 @@
     "lat": 36.388,
     "lon": -80.61680000000001,
     "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.679Z",
+    "createdAt": "2026-04-03T02:18:49.391Z",
     "fitScore": {
       "overallScore": 82,
       "topReasons": "[\"Ideal acreage (513 ac) in target range\",\"Strong soils quality (7.8/10)\",\"Good metro proximity (41 mi)\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0004v119b1ngv1y5",
+        "sourceId": "cmni9yo80000bv1naszntu3mn",
         "price": 910062,
         "pricePerAcre": 1774,
         "status": "listed"
@@ -1493,7 +1493,7 @@
     }
   },
   {
-    "id": "cmni3ytpz0027v119ppcjvx9o",
+    "id": "cmni9yobz0027v1naa4pulh3q",
     "apn": "38-8-104-49",
     "address": "5371 Hollow Creek Rd",
     "county": "Randolph",
@@ -1502,26 +1502,26 @@
     "lat": 35.8435,
     "lon": -79.93390000000001,
     "zoning": "rural-residential",
-    "createdAt": "2026-04-02T23:30:58.679Z",
+    "createdAt": "2026-04-03T02:18:49.391Z",
     "fitScore": {
       "overallScore": 44,
       "topReasons": "[\"Ideal acreage (910 ac) in target range\",\"Good metro proximity (27 mi)\",\"Paved road access\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
         "price": 8662290,
         "pricePerAcre": 9519,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytof0005v119hyjuhysp",
+        "sourceId": "cmni9yo7z0002v1navxxxz99g",
         "price": 8315798,
         "pricePerAcre": 9138,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytof000cv119058d3iys",
+        "sourceId": "cmni9yo80000av1nam2zbxwiy",
         "price": 8662290,
         "pricePerAcre": 9519,
         "status": "listed"
@@ -1530,7 +1530,38 @@
     "deal": null
   },
   {
-    "id": "cmni3ytpx001yv119s34sfn5i",
+    "id": "cmni9yobx0021v1nau0ym9jaa",
+    "apn": "23-2-507-90",
+    "address": "2864 Hollow Creek Rd",
+    "county": "Iredell",
+    "state": "NC",
+    "acreage": 829,
+    "lat": 35.8828,
+    "lon": -80.78330000000001,
+    "zoning": "timber",
+    "createdAt": "2026-04-03T02:18:49.390Z",
+    "fitScore": {
+      "overallScore": 69,
+      "topReasons": "[\"Ideal acreage (829 ac) in target range\",\"Strong soils quality (7.3/10)\",\"Paved road access\",\"Water features present on property\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo80000bv1naszntu3mn",
+        "price": 12155627,
+        "pricePerAcre": 14663,
+        "status": "listed"
+      },
+      {
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
+        "price": 11790958,
+        "pricePerAcre": 14223,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yobx001yv1natructyp2",
     "apn": "28-2-565-98",
     "address": "499 Long Branch Rd",
     "county": "Rowan",
@@ -1539,26 +1570,26 @@
     "lat": 35.6923,
     "lon": -80.58999999999999,
     "zoning": "rural-residential",
-    "createdAt": "2026-04-02T23:30:58.678Z",
+    "createdAt": "2026-04-03T02:18:49.389Z",
     "fitScore": {
       "overallScore": 99,
       "topReasons": "[\"Ideal acreage (172 ac) in target range\",\"Strong soils quality (7/10)\",\"Good metro proximity (43 mi)\",\"Paved road access\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0005v119hyjuhysp",
+        "sourceId": "cmni9yo7z0002v1navxxxz99g",
         "price": 185588,
         "pricePerAcre": 1079,
         "status": "off-market"
       },
       {
-        "sourceId": "cmni3ytoe0002v119p5agsr8r",
+        "sourceId": "cmni9yo800007v1nacuc2ef46",
         "price": 185588,
         "pricePerAcre": 1079,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
         "price": 180020,
         "pricePerAcre": 1047,
         "status": "off-market"
@@ -1570,38 +1601,32 @@
     }
   },
   {
-    "id": "cmni3ytpy0021v119io05luy3",
-    "apn": "23-2-507-90",
-    "address": "2864 Hollow Creek Rd",
-    "county": "Iredell",
+    "id": "cmni9yobv001sv1nad78qd9cn",
+    "apn": "15-3-506-98",
+    "address": "3489 Mountain View Dr",
+    "county": "Person",
     "state": "NC",
-    "acreage": 829,
-    "lat": 35.8828,
-    "lon": -80.78330000000001,
-    "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.678Z",
+    "acreage": 242,
+    "lat": 36.5393,
+    "lon": -78.9263,
+    "zoning": "mixed-use",
+    "createdAt": "2026-04-03T02:18:49.388Z",
     "fitScore": {
-      "overallScore": 69,
-      "topReasons": "[\"Ideal acreage (829 ac) in target range\",\"Strong soils quality (7.3/10)\",\"Paved road access\",\"Water features present on property\"]"
+      "overallScore": 70,
+      "topReasons": "[\"Ideal acreage (242 ac) in target range\",\"Good metro proximity (44 mi)\",\"Water features present on property\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0004v119b1ngv1y5",
-        "price": 12155627,
-        "pricePerAcre": 14663,
-        "status": "listed"
-      },
-      {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
-        "price": 11790958,
-        "pricePerAcre": 14223,
+        "sourceId": "cmni9yo7z0006v1navrhuf640",
+        "price": 370260,
+        "pricePerAcre": 1530,
         "status": "listed"
       }
     ],
     "deal": null
   },
   {
-    "id": "cmni3ytpw001vv119a9v6gap9",
+    "id": "cmni9yobw001vv1nanfqzy05y",
     "apn": "84-4-986-54",
     "address": "3470 Hollow Creek Rd",
     "county": "Alamance",
@@ -1610,14 +1635,14 @@
     "lat": 36.0454,
     "lon": -79.44420000000001,
     "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.677Z",
+    "createdAt": "2026-04-03T02:18:49.388Z",
     "fitScore": {
       "overallScore": 97,
       "topReasons": "[\"Ideal acreage (271 ac) in target range\",\"Paved road access\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0002v119p5agsr8r",
+        "sourceId": "cmni9yo800007v1nacuc2ef46",
         "price": 920045,
         "pricePerAcre": 3395,
         "status": "listed"
@@ -1629,7 +1654,7 @@
     }
   },
   {
-    "id": "cmni3ytpv001pv11986kci5t7",
+    "id": "cmni9yobv001pv1navxewrbja",
     "apn": "32-6-405-77",
     "address": "1954 Hickory Flat Rd",
     "county": "Chatham",
@@ -1638,14 +1663,14 @@
     "lat": 35.584,
     "lon": -79.38709999999999,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.676Z",
+    "createdAt": "2026-04-03T02:18:49.387Z",
     "fitScore": {
       "overallScore": 70,
       "topReasons": "[\"Ideal acreage (832 ac) in target range\",\"Good metro proximity (30 mi)\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0002v119p5agsr8r",
+        "sourceId": "cmni9yo800007v1nacuc2ef46",
         "price": 8952320,
         "pricePerAcre": 10760,
         "status": "listed"
@@ -1654,32 +1679,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytpw001sv119pxspcsj9",
-    "apn": "15-3-506-98",
-    "address": "3489 Mountain View Dr",
-    "county": "Person",
-    "state": "NC",
-    "acreage": 242,
-    "lat": 36.5393,
-    "lon": -78.9263,
-    "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.676Z",
-    "fitScore": {
-      "overallScore": 70,
-      "topReasons": "[\"Ideal acreage (242 ac) in target range\",\"Good metro proximity (44 mi)\",\"Water features present on property\",\"Low flood/wetlands risk\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof0009v1199kg4bvri",
-        "price": 370260,
-        "pricePerAcre": 1530,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytpu001mv119d64rlprb",
+    "id": "cmni9yobu001mv1naqjnnvqw0",
     "apn": "99-8-804-53",
     "address": "4784 Church Hill Rd",
     "county": "Ashe",
@@ -1688,14 +1688,14 @@
     "lat": 36.5007,
     "lon": -81.6486,
     "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.675Z",
+    "createdAt": "2026-04-03T02:18:49.386Z",
     "fitScore": {
       "overallScore": 77,
       "topReasons": "[\"Ideal acreage (557 ac) in target range\",\"Strong soils quality (8.8/10)\",\"Good metro proximity (36 mi)\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0008v119xun5n3yi",
+        "sourceId": "cmni9yo800008v1nahb879x8v",
         "price": 1696622,
         "pricePerAcre": 3046,
         "status": "listed"
@@ -1707,7 +1707,7 @@
     }
   },
   {
-    "id": "cmni3ytpt001gv119xekuvy9e",
+    "id": "cmni9yobs001gv1naoyyuw996",
     "apn": "86-1-601-37",
     "address": "4949 Sandy Bottom Rd",
     "county": "Buncombe",
@@ -1716,26 +1716,26 @@
     "lat": 35.4714,
     "lon": -82.4132,
     "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.674Z",
+    "createdAt": "2026-04-03T02:18:49.385Z",
     "fitScore": {
       "overallScore": 91,
       "topReasons": "[\"Ideal acreage (450 ac) in target range\",\"Good metro proximity (24 mi)\",\"Paved road access\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
         "price": 1453050,
         "pricePerAcre": 3229,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytof0007v119sfdrqtbu",
+        "sourceId": "cmni9yo80000cv1nayrllpv8f",
         "price": 1467581,
         "pricePerAcre": 3261,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytof000cv119058d3iys",
+        "sourceId": "cmni9yo80000av1nam2zbxwiy",
         "price": 1525703,
         "pricePerAcre": 3390,
         "status": "listed"
@@ -1747,7 +1747,7 @@
     }
   },
   {
-    "id": "cmni3ytpu001jv119susmzk46",
+    "id": "cmni9yobt001jv1nahtzy1p2h",
     "apn": null,
     "address": "1697 Piney Woods Rd",
     "county": "Watauga",
@@ -1756,14 +1756,14 @@
     "lat": 36.1823,
     "lon": -81.8042,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.674Z",
+    "createdAt": "2026-04-03T02:18:49.385Z",
     "fitScore": {
       "overallScore": 0,
       "topReasons": "[]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0004v119b1ngv1y5",
+        "sourceId": "cmni9yo80000bv1naszntu3mn",
         "price": 8296683,
         "pricePerAcre": 14379,
         "status": "off-market"
@@ -1772,7 +1772,32 @@
     "deal": null
   },
   {
-    "id": "cmni3ytps001av119tunnjpa5",
+    "id": "cmni9yobr001dv1na5zam5rgw",
+    "apn": "68-7-898-38",
+    "address": "6071 Timber Ridge Ln",
+    "county": "Floyd",
+    "state": "VA",
+    "acreage": 268,
+    "lat": 36.9888,
+    "lon": -80.2527,
+    "zoning": "rural-residential",
+    "createdAt": "2026-04-03T02:18:49.384Z",
+    "fitScore": {
+      "overallScore": 35,
+      "topReasons": "[\"Ideal acreage (268 ac) in target range\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo80000cv1nayrllpv8f",
+        "price": 505448,
+        "pricePerAcre": 1886,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yobr001av1nanhuqroko",
     "apn": null,
     "address": "6664 Hollow Creek Rd",
     "county": "Patrick",
@@ -1781,14 +1806,14 @@
     "lat": 36.7859,
     "lon": -80.427,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.673Z",
+    "createdAt": "2026-04-03T02:18:49.383Z",
     "fitScore": {
       "overallScore": 82,
       "topReasons": "[\"Ideal acreage (158 ac) in target range\",\"Paved road access\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000av119r909sr29",
+        "sourceId": "cmni9yo800009v1nawzhqe8n6",
         "price": 260226,
         "pricePerAcre": 1647,
         "status": "listed"
@@ -1800,32 +1825,7 @@
     }
   },
   {
-    "id": "cmni3ytpt001dv119sbgveo93",
-    "apn": "68-7-898-38",
-    "address": "6071 Timber Ridge Ln",
-    "county": "Floyd",
-    "state": "VA",
-    "acreage": 268,
-    "lat": 36.9888,
-    "lon": -80.2527,
-    "zoning": "rural-residential",
-    "createdAt": "2026-04-02T23:30:58.673Z",
-    "fitScore": {
-      "overallScore": 35,
-      "topReasons": "[\"Ideal acreage (268 ac) in target range\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof0007v119sfdrqtbu",
-        "price": 505448,
-        "pricePerAcre": 1886,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytps0017v119qzg5njkx",
+    "id": "cmni9yobq0017v1nacgg6cqig",
     "apn": null,
     "address": "2995 Sandy Bottom Rd",
     "county": "Buckingham",
@@ -1834,14 +1834,14 @@
     "lat": 37.5382,
     "lon": -78.4159,
     "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.672Z",
+    "createdAt": "2026-04-03T02:18:49.382Z",
     "fitScore": {
       "overallScore": 85,
       "topReasons": "[\"Ideal acreage (274 ac) in target range\",\"Strong soils quality (8/10)\",\"Good metro proximity (35 mi)\",\"Paved road access\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0003v119zffw1wb2",
+        "sourceId": "cmni9yo7z0001v1nae2xati4n",
         "price": 831590,
         "pricePerAcre": 3035,
         "status": "listed"
@@ -1853,32 +1853,7 @@
     }
   },
   {
-    "id": "cmni3ytpq0011v119beyztg00",
-    "apn": null,
-    "address": "5197 Mountain View Dr",
-    "county": "Greene",
-    "state": "VA",
-    "acreage": 1300,
-    "lat": 38.1626,
-    "lon": -78.4415,
-    "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.671Z",
-    "fitScore": {
-      "overallScore": 58,
-      "topReasons": "[\"Good metro proximity (24 mi)\"]"
-    },
-    "listings": [
-      {
-        "sourceId": "cmni3ytof000av119r909sr29",
-        "price": 1908400,
-        "pricePerAcre": 1468,
-        "status": "listed"
-      }
-    ],
-    "deal": null
-  },
-  {
-    "id": "cmni3ytpr0014v119jqh9lzkg",
+    "id": "cmni9yobp0014v1nagzzd4pr0",
     "apn": "11-7-156-82",
     "address": "9075 Cedar Creek Rd",
     "county": "Fluvanna",
@@ -1887,14 +1862,14 @@
     "lat": 37.9842,
     "lon": -78.2593,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.671Z",
+    "createdAt": "2026-04-03T02:18:49.381Z",
     "fitScore": {
       "overallScore": 72,
       "topReasons": "[\"Strong soils quality (8.4/10)\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
         "price": 10948739,
         "pricePerAcre": 8377,
         "status": "listed"
@@ -1906,7 +1881,7 @@
     }
   },
   {
-    "id": "cmni3ytpp000yv119h20bwiv2",
+    "id": "cmni9yobn000yv1naves27mkr",
     "apn": "83-3-790-78",
     "address": "2223 Hickory Flat Rd",
     "county": "Madison",
@@ -1915,14 +1890,14 @@
     "lat": 38.2876,
     "lon": -78.18820000000001,
     "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.670Z",
+    "createdAt": "2026-04-03T02:18:49.380Z",
     "fitScore": {
       "overallScore": 87,
       "topReasons": "[\"Strong soils quality (8.7/10)\",\"Good metro proximity (33 mi)\",\"Paved road access\",\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0008v119xun5n3yi",
+        "sourceId": "cmni9yo800008v1nahb879x8v",
         "price": 4653684,
         "pricePerAcre": 4382,
         "status": "listed"
@@ -1934,44 +1909,32 @@
     }
   },
   {
-    "id": "cmni3ytpo000sv119ewwm8253",
+    "id": "cmni9yobo0011v1na1r0w9nb8",
     "apn": null,
-    "address": "8678 Deer Run Trail",
-    "county": "Nelson",
+    "address": "5197 Mountain View Dr",
+    "county": "Greene",
     "state": "VA",
-    "acreage": 1234,
-    "lat": 37.6562,
-    "lon": -79.0124,
-    "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.669Z",
+    "acreage": 1300,
+    "lat": 38.1626,
+    "lon": -78.4415,
+    "zoning": "mixed-use",
+    "createdAt": "2026-04-03T02:18:49.380Z",
     "fitScore": {
-      "overallScore": 44,
-      "topReasons": "[\"Strong soils quality (7.9/10)\",\"Good metro proximity (39 mi)\"]"
+      "overallScore": 58,
+      "topReasons": "[\"Good metro proximity (24 mi)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof0008v119xun5n3yi",
-        "price": 5784992,
-        "pricePerAcre": 4688,
-        "status": "listed"
-      },
-      {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
-        "price": 5900692,
-        "pricePerAcre": 4782,
-        "status": "off-market"
-      },
-      {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
-        "price": 5669292,
-        "pricePerAcre": 4594,
+        "sourceId": "cmni9yo800009v1nawzhqe8n6",
+        "price": 1908400,
+        "pricePerAcre": 1468,
         "status": "listed"
       }
     ],
     "deal": null
   },
   {
-    "id": "cmni3ytpp000vv1199laic26t",
+    "id": "cmni9yobm000vv1nauxvcgu7r",
     "apn": null,
     "address": "7549 Long Branch Rd",
     "county": "Rappahannock",
@@ -1980,14 +1943,14 @@
     "lat": 38.7967,
     "lon": -78.0252,
     "zoning": "agricultural",
-    "createdAt": "2026-04-02T23:30:58.669Z",
+    "createdAt": "2026-04-03T02:18:49.379Z",
     "fitScore": {
       "overallScore": 58,
       "topReasons": "[\"Good metro proximity (33 mi)\",\"Paved road access\",\"Low flood/wetlands risk\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000av119r909sr29",
+        "sourceId": "cmni9yo800009v1nawzhqe8n6",
         "price": 16701958,
         "pricePerAcre": 14638,
         "status": "listed"
@@ -1996,32 +1959,44 @@
     "deal": null
   },
   {
-    "id": "cmni3ytpn000mv119tv2b3gvz",
+    "id": "cmni9yobl000sv1naagdf0ew6",
     "apn": null,
-    "address": "7740 Indian Trail Rd",
-    "county": "Highland",
+    "address": "8678 Deer Run Trail",
+    "county": "Nelson",
     "state": "VA",
-    "acreage": 88,
-    "lat": 38.3414,
-    "lon": -79.6275,
-    "zoning": "conservation",
-    "createdAt": "2026-04-02T23:30:58.668Z",
+    "acreage": 1234,
+    "lat": 37.6562,
+    "lon": -79.0124,
+    "zoning": "agricultural",
+    "createdAt": "2026-04-03T02:18:49.378Z",
     "fitScore": {
-      "overallScore": 47,
-      "topReasons": "[\"Strong soils quality (7.2/10)\",\"Low flood/wetlands risk\"]"
+      "overallScore": 44,
+      "topReasons": "[\"Strong soils quality (7.9/10)\",\"Good metro proximity (39 mi)\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000cv119058d3iys",
-        "price": 1079408,
-        "pricePerAcre": 12266,
+        "sourceId": "cmni9yo800008v1nahb879x8v",
+        "price": 5784992,
+        "pricePerAcre": 4688,
+        "status": "listed"
+      },
+      {
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
+        "price": 5900692,
+        "pricePerAcre": 4782,
+        "status": "off-market"
+      },
+      {
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
+        "price": 5669292,
+        "pricePerAcre": 4594,
         "status": "listed"
       }
     ],
     "deal": null
   },
   {
-    "id": "cmni3ytpo000pv119jaf2t8sn",
+    "id": "cmni9yobk000pv1nag6ayqkyv",
     "apn": "82-1-972-91",
     "address": "6822 Piney Woods Rd",
     "county": "Albemarle",
@@ -2030,26 +2005,26 @@
     "lat": 38.0658,
     "lon": -78.6828,
     "zoning": "rural-residential",
-    "createdAt": "2026-04-02T23:30:58.668Z",
+    "createdAt": "2026-04-03T02:18:49.377Z",
     "fitScore": {
       "overallScore": 52,
       "topReasons": "[\"Good metro proximity (29 mi)\",\"Paved road access\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0002v119p5agsr8r",
+        "sourceId": "cmni9yo800007v1nacuc2ef46",
         "price": 710336,
         "pricePerAcre": 8072,
         "status": "listed"
       },
       {
-        "sourceId": "cmni3ytoe0001v119n6x5u41m",
+        "sourceId": "cmni9yo7z0004v1nazi1mupk9",
         "price": 724543,
         "pricePerAcre": 8233,
         "status": "off-market"
       },
       {
-        "sourceId": "cmni3ytoe0000v119fdiqxmfw",
+        "sourceId": "cmni9yo7z0000v1naemtfmt98",
         "price": 689026,
         "pricePerAcre": 7830,
         "status": "listed"
@@ -2058,7 +2033,32 @@
     "deal": null
   },
   {
-    "id": "cmni3ytpm000jv119iodihfem",
+    "id": "cmni9yobk000mv1nap75pqo6p",
+    "apn": null,
+    "address": "7740 Indian Trail Rd",
+    "county": "Highland",
+    "state": "VA",
+    "acreage": 88,
+    "lat": 38.3414,
+    "lon": -79.6275,
+    "zoning": "conservation",
+    "createdAt": "2026-04-03T02:18:49.376Z",
+    "fitScore": {
+      "overallScore": 47,
+      "topReasons": "[\"Strong soils quality (7.2/10)\",\"Low flood/wetlands risk\"]"
+    },
+    "listings": [
+      {
+        "sourceId": "cmni9yo80000av1nam2zbxwiy",
+        "price": 1079408,
+        "pricePerAcre": 12266,
+        "status": "listed"
+      }
+    ],
+    "deal": null
+  },
+  {
+    "id": "cmni9yobi000jv1na9h4c7rh4",
     "apn": "53-7-253-32",
     "address": "6330 County Rd 112",
     "county": "Bath",
@@ -2067,14 +2067,14 @@
     "lat": 38.0513,
     "lon": -79.67060000000001,
     "zoning": "timber",
-    "createdAt": "2026-04-02T23:30:58.667Z",
+    "createdAt": "2026-04-03T02:18:49.375Z",
     "fitScore": {
       "overallScore": 31,
       "topReasons": "[\"Water features present on property\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000av119r909sr29",
+        "sourceId": "cmni9yo800009v1nawzhqe8n6",
         "price": 382298,
         "pricePerAcre": 4606,
         "status": "listed"
@@ -2083,7 +2083,7 @@
     "deal": null
   },
   {
-    "id": "cmni3ytpm000gv1193wuy2rp2",
+    "id": "cmni9yobi000gv1navcd4owrf",
     "apn": "80-6-636-10",
     "address": "5237 State Rd 68",
     "county": "Rockbridge",
@@ -2092,14 +2092,14 @@
     "lat": 37.8413,
     "lon": -79.3236,
     "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.666Z",
+    "createdAt": "2026-04-03T02:18:49.374Z",
     "fitScore": {
       "overallScore": 75,
       "topReasons": "[\"Good metro proximity (35 mi)\",\"Paved road access\"]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytof000bv119dxe27fdp",
+        "sourceId": "cmni9yo7z0005v1na97s98i4z",
         "price": 229732,
         "pricePerAcre": 2908,
         "status": "listed"
@@ -2111,7 +2111,7 @@
     }
   },
   {
-    "id": "cmni3ytpl000dv119zrju7bji",
+    "id": "cmni9yobg000dv1na0e3sdn5n",
     "apn": null,
     "address": "5302 Timber Ridge Ln",
     "county": "Augusta",
@@ -2120,14 +2120,14 @@
     "lat": 38.2268,
     "lon": -79.112,
     "zoning": "mixed-use",
-    "createdAt": "2026-04-02T23:30:58.665Z",
+    "createdAt": "2026-04-03T02:18:49.373Z",
     "fitScore": {
       "overallScore": 62,
       "topReasons": "[]"
     },
     "listings": [
       {
-        "sourceId": "cmni3ytoe0002v119p5agsr8r",
+        "sourceId": "cmni9yo800007v1nacuc2ef46",
         "price": 546952,
         "pricePerAcre": 9767,
         "status": "listed"

@@ -1,0 +1,104 @@
+{
+  "id": "cmni9uglo001mv17ietbui5ol",
+  "apn": "99-8-804-53",
+  "address": "4784 Church Hill Rd",
+  "county": "Ashe",
+  "state": "NC",
+  "acreage": 557,
+  "lat": 36.5007,
+  "lon": -81.6486,
+  "zoning": "mixed-use",
+  "description": "557-acre mixed-use tract in Ashe County, NC. 16% forest, 84% pasture. Water features include spring. 36 miles from Boone. Gravel road access. Elevation 2289 ft.",
+  "createdAt": "2026-04-03T02:15:32.749Z",
+  "updatedAt": "2026-04-03T02:15:32.749Z",
+  "listings": [
+    {
+      "id": "cmni9ugmx007tv17i9durr2m6",
+      "parcelId": "cmni9uglo001mv17ietbui5ol",
+      "sourceId": "cmni9ugjf0002v17i3v49xs5g",
+      "externalId": "lands-of-america-936705",
+      "url": "https://www.landsofamerica.com/listing/lands-of-america-936705",
+      "title": "Pristine 557-Acre Development Opportunity in Ashe County",
+      "price": 1696622,
+      "pricePerAcre": 3046,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/lands-of-america-936705/aerial-1.jpg\",\"https://images.landscout.dev/lands-of-america-936705/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-11-19\",\"daysOnMarket\":74,\"broker\":null}",
+      "firstSeen": "2026-04-03T02:15:32.794Z",
+      "lastSeen": "2026-04-03T02:15:32.794Z",
+      "createdAt": "2026-04-03T02:15:32.794Z",
+      "updatedAt": "2026-04-03T02:15:32.794Z",
+      "sourceName": "Lands of America"
+    }
+  ],
+  "features": {
+    "id": "cmni9uglo001nv17i18h60u91",
+    "parcelId": "cmni9uglo001mv17ietbui5ol",
+    "landCoverMix": "{\"developed\":100}",
+    "waterPresence": true,
+    "waterFeatures": "[\"water feature\"]",
+    "metroDistance": 98.9,
+    "nearestMetro": "Charlotte, NC",
+    "slopeStats": "{\"avgSlope\":15.6,\"maxSlope\":null,\"pctOver15\":75}",
+    "soilsQuality": 9,
+    "roadAccess": "gravel",
+    "easements": "[\"utility easement\",\"road easement\"]",
+    "powerDistance": 5.5,
+    "waterDistance": 0.08,
+    "sewerDistance": 14,
+    "fiberDistance": 11.4,
+    "gasDistance": 16.8,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 2.8,
+    "elevation": 3293,
+    "createdAt": "2026-04-03T02:15:32.749Z",
+    "updatedAt": "2026-04-03T02:16:24.735Z"
+  },
+  "fitScore": {
+    "id": "cmni9uglo001ov17icumzxslf",
+    "parcelId": "cmni9uglo001mv17ietbui5ol",
+    "overallScore": 56,
+    "scoreBreakdown": "{\"acreage\":100,\"landCoverMix\":20,\"waterPresence\":100,\"metroProximity\":2,\"slope\":10,\"soils\":90,\"roadAccess\":75,\"easementPenalty\":70,\"utilities\":20}",
+    "topReasons": "[\"+ Ideal acreage for target range (100)\",\"+ Water features present (100)\",\"+ High-quality soils (90)\",\"- Utilities distant or unavailable (20)\",\"- Far from metro areas (2)\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:16:24.737Z"
+  },
+  "deal": {
+    "id": "cmni9ugoi00fxv17ihfsg4hsa",
+    "parcelId": "cmni9uglo001mv17ietbui5ol",
+    "stage": "pursuit",
+    "priority": "medium",
+    "notes": "557-acre mixed-use property in Ashe County, NC. Score: 77/100.",
+    "nextAction": "Finalize offer terms",
+    "nextDate": "2026-04-09T02:15:32.850Z",
+    "assignee": null,
+    "createdAt": "2026-04-03T02:15:32.850Z",
+    "updatedAt": "2026-04-03T02:15:32.850Z",
+    "activities": [
+      {
+        "id": "cmni9ugoi00g1v17ioep1x6p6",
+        "dealId": "cmni9ugoi00fxv17ihfsg4hsa",
+        "type": "email",
+        "content": "Received Phase I environmental report — no issues identified.",
+        "createdAt": "2026-03-27T02:15:32.850Z"
+      },
+      {
+        "id": "cmni9ugoj00g3v17i72l2ofvb",
+        "dealId": "cmni9ugoi00fxv17ihfsg4hsa",
+        "type": "email",
+        "content": "Forwarded wetlands delineation report to attorney for review.",
+        "createdAt": "2026-03-15T02:15:32.851Z"
+      },
+      {
+        "id": "cmni9ugoi00fzv17isgm33wv3",
+        "dealId": "cmni9ugoi00fxv17ihfsg4hsa",
+        "type": "email",
+        "content": "Sent request for timber appraisal to Anderson Forestry Consultants.",
+        "createdAt": "2026-03-05T02:15:32.850Z"
+      }
+    ]
+  },
+  "ownership": null
+}

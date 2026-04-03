@@ -1,0 +1,104 @@
+{
+  "id": "cmni9it6a0017v1f0nhv0c41p",
+  "apn": null,
+  "address": "2995 Sandy Bottom Rd",
+  "county": "Buckingham",
+  "state": "VA",
+  "acreage": 274,
+  "lat": 37.5382,
+  "lon": -78.4159,
+  "zoning": "agricultural",
+  "description": "274-acre agricultural tract in Buckingham County, VA. 52% forest, 48% pasture. 35 miles from Lynchburg. Paved road access. Elevation 1494 ft.",
+  "createdAt": "2026-04-03T02:06:29.171Z",
+  "updatedAt": "2026-04-03T02:06:29.171Z",
+  "listings": [
+    {
+      "id": "cmni9it7j007fv1f0uycp8w8t",
+      "parcelId": "cmni9it6a0017v1f0nhv0c41p",
+      "sourceId": "cmni9it4q000cv1f0zhoabq6w",
+      "externalId": "hall-and-hall-909593",
+      "url": "https://www.hallhall.com/listing/hall-and-hall-909593",
+      "title": "Secluded 274-Acre Agricultural Tract in Buckingham County",
+      "price": 831590,
+      "pricePerAcre": 3035,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/hall-and-hall-909593/aerial-1.jpg\",\"https://images.landscout.dev/hall-and-hall-909593/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-03-02\",\"daysOnMarket\":198,\"broker\":\"Hall & Hall\"}",
+      "firstSeen": "2026-04-03T02:06:29.216Z",
+      "lastSeen": "2026-04-03T02:06:29.216Z",
+      "createdAt": "2026-04-03T02:06:29.216Z",
+      "updatedAt": "2026-04-03T02:06:29.216Z",
+      "sourceName": "Hall & Hall"
+    }
+  ],
+  "features": {
+    "id": "cmni9it6a0018v1f0ve4zx2fm",
+    "parcelId": "cmni9it6a0017v1f0nhv0c41p",
+    "landCoverMix": "{\"forest\":52,\"pasture\":48}",
+    "waterPresence": false,
+    "waterFeatures": null,
+    "metroDistance": 35,
+    "nearestMetro": "Lynchburg",
+    "slopeStats": "{\"mean\":20.6,\"percentOver20\":13.1,\"percentOver40\":0.6}",
+    "soilsQuality": 8,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 2.2,
+    "waterDistance": 0.1,
+    "sewerDistance": 17.9,
+    "fiberDistance": 9.5,
+    "gasDistance": 17.1,
+    "inFloodway": false,
+    "floodZone": "A",
+    "wetlandsPercent": 34.5,
+    "elevation": 1494,
+    "createdAt": "2026-04-03T02:06:29.171Z",
+    "updatedAt": "2026-04-03T02:06:29.171Z"
+  },
+  "fitScore": {
+    "id": "cmni9it6a0019v1f01wcyx1ny",
+    "parcelId": "cmni9it6a0017v1f0nhv0c41p",
+    "overallScore": 85,
+    "scoreBreakdown": "{\"acreage\":19,\"soils\":12,\"location\":15,\"access\":10,\"water\":5,\"terrain\":3,\"utilities\":4,\"risk\":5,\"elevation\":1}",
+    "topReasons": "[\"Ideal acreage (274 ac) in target range\",\"Strong soils quality (8/10)\",\"Good metro proximity (35 mi)\",\"Paved road access\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:06:29.171Z"
+  },
+  "deal": {
+    "id": "cmni9it8s00e1v1f06b1k8w5h",
+    "parcelId": "cmni9it6a0017v1f0nhv0c41p",
+    "stage": "qualified",
+    "priority": "medium",
+    "notes": null,
+    "nextAction": "Conduct environmental review",
+    "nextDate": "2026-04-16T02:06:29.260Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-03T02:06:29.261Z",
+    "updatedAt": "2026-04-03T02:06:29.261Z",
+    "activities": [
+      {
+        "id": "cmni9it8t00e7v1f0o5k42aot",
+        "dealId": "cmni9it8s00e1v1f06b1k8w5h",
+        "type": "call",
+        "content": "Discussed with surveyor — boundary survey would take 2-3 weeks.",
+        "createdAt": "2026-03-22T02:06:29.261Z"
+      },
+      {
+        "id": "cmni9it8t00e3v1f00ll1rfwi",
+        "dealId": "cmni9it8s00e1v1f06b1k8w5h",
+        "type": "visit",
+        "content": "Site visit confirmed mountain views to the west, gentle rolling terrain.",
+        "createdAt": "2026-02-18T02:06:29.261Z"
+      },
+      {
+        "id": "cmni9it8t00e5v1f03isbzg1v",
+        "dealId": "cmni9it8s00e1v1f06b1k8w5h",
+        "type": "document",
+        "content": "Uploaded survey plat to deal folder.",
+        "createdAt": "2026-02-06T02:06:29.261Z"
+      }
+    ]
+  },
+  "ownership": null
+}

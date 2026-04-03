@@ -116,16 +116,68 @@ export default function MapPage() {
     )
 
     map.on('load', () => {
-      // Add empty source — will be updated when parcels load
+      // Add source with clustering enabled
       map.addSource('parcels', {
         type: 'geojson',
         data: { type: 'FeatureCollection', features: [] },
+        cluster: true,
+        clusterMaxZoom: 12,
+        clusterRadius: 50,
+        clusterProperties: {
+          scoreSum: ['+', ['get', 'score']],
+          scoreCount: ['+', 1],
+        },
       })
 
+      // Layer 1: Cluster circles
+      map.addLayer({
+        id: 'clusters',
+        type: 'circle',
+        source: 'parcels',
+        filter: ['has', 'point_count'],
+        paint: {
+          'circle-color': [
+            'case',
+            ['>=', ['/', ['get', 'scoreSum'], ['get', 'scoreCount']], 80], '#22c55e',
+            ['>=', ['/', ['get', 'scoreSum'], ['get', 'scoreCount']], 60], '#f59e0b',
+            '#ef4444',
+          ],
+          'circle-opacity': 0.75,
+          'circle-radius': [
+            'step',
+            ['get', 'point_count'],
+            18,   // default radius
+            10, 22,
+            50, 28,
+            100, 34,
+          ],
+          'circle-stroke-width': 2,
+          'circle-stroke-color': 'rgba(255,255,255,0.2)',
+        },
+      })
+
+      // Layer 2: Cluster count labels
+      map.addLayer({
+        id: 'cluster-count',
+        type: 'symbol',
+        source: 'parcels',
+        filter: ['has', 'point_count'],
+        layout: {
+          'text-field': '{point_count_abbreviated}',
+          'text-size': 13,
+          'text-font': ['Open Sans Bold', 'Arial Unicode MS Bold'],
+        },
+        paint: {
+          'text-color': '#ffffff',
+        },
+      })
+
+      // Layer 3: Unclustered individual points
       map.addLayer({
         id: 'parcel-circles',
         type: 'circle',
         source: 'parcels',
+        filter: ['!', ['has', 'point_count']],
         paint: {
           'circle-radius': [
             'interpolate',
@@ -142,7 +194,23 @@ export default function MapPage() {
         },
       })
 
-      // Click handler
+      // Click handler for clusters — zoom to expand
+      map.on('click', 'clusters', (e) => {
+        const features = map.queryRenderedFeatures(e.point, { layers: ['clusters'] })
+        if (!features.length) return
+        const clusterId = features[0].properties.cluster_id
+        const source = map.getSource('parcels') as maplibregl.GeoJSONSource
+        source.getClusterExpansionZoom(clusterId).then((zoom) => {
+          const geometry = features[0].geometry
+          if (geometry.type !== 'Point') return
+          map.easeTo({
+            center: geometry.coordinates as [number, number],
+            zoom: zoom,
+          })
+        })
+      })
+
+      // Click handler for unclustered points
       map.on('click', 'parcel-circles', (e) => {
         const feature = e.features?.[0]
         if (!feature || feature.geometry.type !== 'Point') return
@@ -180,7 +248,13 @@ export default function MapPage() {
           .addTo(map)
       })
 
-      // Pointer cursor
+      // Pointer cursor for clusters and points
+      map.on('mouseenter', 'clusters', () => {
+        map.getCanvas().style.cursor = 'pointer'
+      })
+      map.on('mouseleave', 'clusters', () => {
+        map.getCanvas().style.cursor = ''
+      })
       map.on('mouseenter', 'parcel-circles', () => {
         map.getCanvas().style.cursor = 'pointer'
       })

@@ -1,6 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import maplibregl from 'maplibre-gl'
+import 'maplibre-gl/dist/maplibre-gl.css'
 import {
   X,
   MapPin,
@@ -36,10 +38,18 @@ interface ScoreBreakdownItem {
   weight: number
 }
 
+function miniMapMarkerColor(score: number): string {
+  if (score >= 80) return '#22c55e'
+  if (score >= 60) return '#f59e0b'
+  return '#ef4444'
+}
+
 export default function PropertyDetail({ parcelId, onClose }: PropertyDetailProps) {
   const [parcel, setParcel] = useState<FullParcel | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const miniMapRef = useRef<HTMLDivElement>(null)
+  const miniMapInstanceRef = useRef<maplibregl.Map | null>(null)
 
   useEffect(() => {
     let cancelled = false
@@ -72,13 +82,75 @@ export default function PropertyDetail({ parcelId, onClose }: PropertyDetailProp
     return () => { document.body.style.overflow = '' }
   }, [])
 
+  // Mini-map initialization
+  useEffect(() => {
+    if (!parcel || parcel.lat == null || parcel.lon == null) return
+    if (!miniMapRef.current) return
+
+    // Tear down previous instance if parcel changed
+    if (miniMapInstanceRef.current) {
+      miniMapInstanceRef.current.remove()
+      miniMapInstanceRef.current = null
+    }
+
+    const map = new maplibregl.Map({
+      container: miniMapRef.current,
+      style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+      center: [parcel.lon, parcel.lat],
+      zoom: 12,
+      interactive: false,
+      attributionControl: false,
+    })
+
+    const score = parcel.fitScore?.overallScore ?? 0
+    const color = miniMapMarkerColor(score)
+
+    const markerEl = document.createElement('div')
+    markerEl.style.width = '14px'
+    markerEl.style.height = '14px'
+    markerEl.style.borderRadius = '50%'
+    markerEl.style.backgroundColor = color
+    markerEl.style.border = '2px solid rgba(255,255,255,0.6)'
+    markerEl.style.boxShadow = `0 0 6px ${color}`
+
+    new maplibregl.Marker({ element: markerEl })
+      .setLngLat([parcel.lon, parcel.lat])
+      .addTo(map)
+
+    miniMapInstanceRef.current = map
+
+    return () => {
+      map.remove()
+      miniMapInstanceRef.current = null
+    }
+  }, [parcel])
+
   function parseBreakdown(raw: string | undefined): ScoreBreakdownItem[] {
     if (!raw) return []
     try {
       const parsed = JSON.parse(raw)
       if (Array.isArray(parsed)) return parsed
+
+      // Seed stores breakdown as flat Record<string, number> where values are
+      // weighted contributions (acreage: 0-20, soils: 0-15, etc.).
+      // Scale each to 0-100 for bar display.
+      const maxWeights: Record<string, number> = {
+        acreage: 20, soils: 15, location: 15, access: 15,
+        water: 10, terrain: 10, utilities: 10, risk: 12, elevation: 5,
+      }
+      const labelMap: Record<string, string> = {
+        acreage: 'Acreage', soils: 'Soils', location: 'Location',
+        access: 'Access', water: 'Water', terrain: 'Terrain',
+        utilities: 'Utilities', risk: 'Risk', elevation: 'Elevation',
+      }
+
       if (typeof parsed === 'object') {
         return Object.entries(parsed).map(([key, val]) => {
+          if (typeof val === 'number') {
+            const maxW = maxWeights[key] ?? 20
+            const scaled = Math.round((val / maxW) * 100)
+            return { label: labelMap[key] ?? key, score: scaled, weight: maxW }
+          }
           const v = val as Record<string, unknown>
           return { label: (v.label as string) ?? key, score: (v.score as number) ?? 0, weight: (v.weight as number) ?? 1 }
         })
@@ -96,8 +168,9 @@ export default function PropertyDetail({ parcelId, onClose }: PropertyDetailProp
     return raw.split('\n').filter(Boolean)
   }
 
-  function sourceLabel(sourceId: string): string {
-    return SOURCES.find((s) => s.id === sourceId)?.name ?? sourceId
+  function sourceLabel(listing: { sourceId: string; sourceName?: string }): string {
+    if (listing.sourceName) return listing.sourceName
+    return SOURCES.find((s) => s.id === listing.sourceId)?.name ?? listing.sourceId
   }
 
   function scoreRingColor(score: number): string {
@@ -282,17 +355,18 @@ export default function PropertyDetail({ parcelId, onClose }: PropertyDetailProp
                 {/* Location */}
                 <div className="rounded-xl border border-gray-800 bg-gray-900/60 p-4">
                   <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">Location</h3>
-                  <div className="flex h-24 items-center justify-center rounded-lg border border-dashed border-gray-700 bg-gray-800/40">
-                    <div className="text-center">
-                      <MapPin className="mx-auto h-5 w-5 text-gray-600" />
-                      <p className="mt-1 text-xs text-gray-500">Map coming soon</p>
-                      {parcel.lat != null && parcel.lon != null && (
-                        <p className="text-[10px] tabular-nums text-gray-600">
-                          {parcel.lat.toFixed(5)}, {parcel.lon.toFixed(5)}
-                        </p>
-                      )}
+                  {parcel.lat != null && parcel.lon != null ? (
+                    <div className="relative h-48 overflow-hidden rounded-lg">
+                      <div ref={miniMapRef} className="h-full w-full" />
+                      <div className="absolute bottom-2 left-2 rounded bg-black/60 px-2 py-0.5 text-[10px] tabular-nums text-gray-400">
+                        {parcel.lat.toFixed(5)}, {parcel.lon.toFixed(5)}
+                      </div>
                     </div>
-                  </div>
+                  ) : (
+                    <div className="flex h-48 items-center justify-center rounded-lg border border-dashed border-gray-700 bg-gray-800/40">
+                      <p className="text-sm text-gray-500">No coordinates available</p>
+                    </div>
+                  )}
                 </div>
 
                 {/* Sources */}
@@ -304,7 +378,7 @@ export default function PropertyDetail({ parcelId, onClose }: PropertyDetailProp
                     <div className="space-y-1.5">
                       {parcel.listings.map((listing) => (
                         <div key={listing.id} className="flex items-center justify-between text-xs">
-                          <span className="text-gray-300">{sourceLabel(listing.sourceId)}</span>
+                          <span className="text-gray-300">{sourceLabel(listing)}</span>
                           <div className="flex items-center gap-3">
                             <span className="tabular-nums text-gray-400">{listing.price ? formatCurrency(listing.price) : '--'}</span>
                             <span className="rounded-full bg-gray-800 px-1.5 py-0.5 text-[10px] text-gray-500">{listing.status}</span>
@@ -344,6 +418,30 @@ export default function PropertyDetail({ parcelId, onClose }: PropertyDetailProp
                       {parcel.features.wetlandsPercent != null && (
                         <FeatureRow label="Wetlands" value={`${parcel.features.wetlandsPercent.toFixed(1)}%`} warn={parcel.features.wetlandsPercent > 50} />
                       )}
+                      {(() => {
+                        // Bug 3 fix: parse waterFeatures JSON string
+                        if (!parcel.features?.waterFeatures) return null
+                        let text: string
+                        try {
+                          const arr = JSON.parse(parcel.features.waterFeatures)
+                          text = Array.isArray(arr) ? arr.join(', ') : parcel.features.waterFeatures
+                        } catch {
+                          text = parcel.features.waterFeatures
+                        }
+                        return <FeatureRow icon={Droplets} label="Water" value={text} />
+                      })()}
+                      {(() => {
+                        // Bug 5 fix: parse landCoverMix JSON string
+                        if (!parcel.features?.landCoverMix) return null
+                        let text: string
+                        try {
+                          const mix = JSON.parse(parcel.features.landCoverMix)
+                          text = Object.entries(mix).map(([k, v]) => `${k} ${v}%`).join(', ')
+                        } catch {
+                          text = parcel.features.landCoverMix
+                        }
+                        return <FeatureRow label="Land Cover" value={text} />
+                      })()}
                     </div>
                   </div>
                 )}

@@ -1,0 +1,97 @@
+{
+  "id": "cmni9it6l002mv1f0to6duk6q",
+  "apn": "12-1-411-85",
+  "address": "147 Old Mill Rd",
+  "county": "Greenville",
+  "state": "SC",
+  "acreage": 195,
+  "lat": 34.8617,
+  "lon": -82.3587,
+  "zoning": "conservation",
+  "description": "195-acre conservation tract in Greenville County, SC. 38% pasture, 20% cropland, 42% wetland. 34 miles from Greenville. Paved road access. Elevation 344 ft.",
+  "createdAt": "2026-04-03T02:06:29.181Z",
+  "updatedAt": "2026-04-03T02:06:29.181Z",
+  "listings": [
+    {
+      "id": "cmni9it7t008vv1f0gpaevolt",
+      "parcelId": "cmni9it6l002mv1f0to6duk6q",
+      "sourceId": "cmni9it4q000cv1f0zhoabq6w",
+      "externalId": "hall-and-hall-428920",
+      "url": "https://www.hallhall.com/listing/hall-and-hall-428920",
+      "title": "Rolling 195-Acre Conservation Tract in Greenville County",
+      "price": 2908620,
+      "pricePerAcre": 14916,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/hall-and-hall-428920/aerial-1.jpg\",\"https://images.landscout.dev/hall-and-hall-428920/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-07-13\",\"daysOnMarket\":142,\"broker\":\"Hall & Hall\"}",
+      "firstSeen": "2026-04-03T02:06:29.225Z",
+      "lastSeen": "2026-04-03T02:06:29.225Z",
+      "createdAt": "2026-04-03T02:06:29.225Z",
+      "updatedAt": "2026-04-03T02:06:29.225Z",
+      "sourceName": "Hall & Hall"
+    }
+  ],
+  "features": {
+    "id": "cmni9it6l002nv1f0ndicdto0",
+    "parcelId": "cmni9it6l002mv1f0to6duk6q",
+    "landCoverMix": "{\"pasture\":38,\"cropland\":20,\"wetland\":42}",
+    "waterPresence": false,
+    "waterFeatures": null,
+    "metroDistance": 34,
+    "nearestMetro": "Greenville",
+    "slopeStats": "{\"mean\":17.3,\"percentOver20\":27.5,\"percentOver40\":14.1}",
+    "soilsQuality": 4.1,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 1.2,
+    "waterDistance": 5.4,
+    "sewerDistance": 2.2,
+    "fiberDistance": 5.7,
+    "gasDistance": 5.6,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 0.9,
+    "elevation": 344,
+    "createdAt": "2026-04-03T02:06:29.181Z",
+    "updatedAt": "2026-04-03T02:06:29.181Z"
+  },
+  "fitScore": {
+    "id": "cmni9it6l002ov1f0y1gbilgm",
+    "parcelId": "cmni9it6l002mv1f0to6duk6q",
+    "overallScore": 78,
+    "scoreBreakdown": "{\"acreage\":14,\"soils\":6,\"location\":15,\"access\":14,\"water\":2,\"terrain\":6,\"utilities\":7,\"risk\":12,\"elevation\":1}",
+    "topReasons": "[\"Ideal acreage (195 ac) in target range\",\"Good metro proximity (34 mi)\",\"Paved road access\",\"Low flood/wetlands risk\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:06:29.181Z"
+  },
+  "deal": {
+    "id": "cmni9it9200fjv1f0giin5mnb",
+    "parcelId": "cmni9it6l002mv1f0to6duk6q",
+    "stage": "pursuit",
+    "priority": "medium",
+    "notes": "195-acre conservation property in Greenville County, SC. Score: 78/100.",
+    "nextAction": "Submit LOI",
+    "nextDate": "2026-04-18T02:06:29.270Z",
+    "assignee": "Analyst",
+    "createdAt": "2026-04-03T02:06:29.270Z",
+    "updatedAt": "2026-04-03T02:06:29.270Z",
+    "activities": [
+      {
+        "id": "cmni9it9300fnv1f01l2ky2ro",
+        "dealId": "cmni9it9200fjv1f0giin5mnb",
+        "type": "visit",
+        "content": "Site visit confirmed mountain views to the west, gentle rolling terrain.",
+        "createdAt": "2026-03-04T02:06:29.271Z"
+      },
+      {
+        "id": "cmni9it9200flv1f0p2r8fc4q",
+        "dealId": "cmni9it9200fjv1f0giin5mnb",
+        "type": "note",
+        "content": "Neighboring parcels recently sold at $5,200/ac — this is well-priced.",
+        "createdAt": "2026-02-02T02:06:29.270Z"
+      }
+    ]
+  },
+  "ownership": null
+}

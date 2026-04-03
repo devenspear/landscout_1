@@ -1,0 +1,104 @@
+{
+  "id": "cmni9ugm4003mv17iivmbnufv",
+  "apn": "83-3-871-64",
+  "address": "1179 Long Branch Rd",
+  "county": "Lumpkin",
+  "state": "GA",
+  "acreage": 533,
+  "lat": 34.5429,
+  "lon": -84.0212,
+  "zoning": "agricultural",
+  "description": "533-acre agricultural tract in Lumpkin County, GA. 33% wetland, 67% forest. Water features include pond. 11 miles from Dahlonega. Paved road access. Elevation 838 ft.",
+  "createdAt": "2026-04-03T02:15:32.764Z",
+  "updatedAt": "2026-04-03T02:15:32.764Z",
+  "listings": [
+    {
+      "id": "cmni9ugna009tv17ila0e1r7z",
+      "parcelId": "cmni9ugm4003mv17iivmbnufv",
+      "sourceId": "cmni9ugjf0003v17im17w6hav",
+      "externalId": "united-country-278603",
+      "url": "https://www.unitedcountry.com/listing/united-country-278603",
+      "title": "Prime 533-Acre Farm in Lumpkin County",
+      "price": 2025400,
+      "pricePerAcre": 3800,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/united-country-278603/aerial-1.jpg\",\"https://images.landscout.dev/united-country-278603/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-02-07\",\"daysOnMarket\":20,\"broker\":\"United Country\"}",
+      "firstSeen": "2026-04-03T02:15:32.807Z",
+      "lastSeen": "2026-04-03T02:15:32.807Z",
+      "createdAt": "2026-04-03T02:15:32.807Z",
+      "updatedAt": "2026-04-03T02:15:32.807Z",
+      "sourceName": "United Country"
+    }
+  ],
+  "features": {
+    "id": "cmni9ugm4003nv17inz74cq4u",
+    "parcelId": "cmni9ugm4003mv17iivmbnufv",
+    "landCoverMix": "{\"forest\":100}",
+    "waterPresence": true,
+    "waterFeatures": "[\"water feature\"]",
+    "metroDistance": 58.7,
+    "nearestMetro": "Atlanta, GA",
+    "slopeStats": "{\"avgSlope\":7.9,\"maxSlope\":null,\"pctOver15\":0}",
+    "soilsQuality": 9,
+    "roadAccess": "paved",
+    "easements": null,
+    "powerDistance": 5.9,
+    "waterDistance": 0.12,
+    "sewerDistance": 3,
+    "fiberDistance": 22.9,
+    "gasDistance": 15.1,
+    "inFloodway": false,
+    "floodZone": "X",
+    "wetlandsPercent": 35.8,
+    "elevation": 1449,
+    "createdAt": "2026-04-03T02:15:32.764Z",
+    "updatedAt": "2026-04-03T02:17:17.041Z"
+  },
+  "fitScore": {
+    "id": "cmni9ugm4003ov17irgdfbq49",
+    "parcelId": "cmni9ugm4003mv17iivmbnufv",
+    "overallScore": 70,
+    "scoreBreakdown": "{\"acreage\":100,\"landCoverMix\":20,\"waterPresence\":100,\"metroProximity\":14,\"slope\":86,\"soils\":90,\"roadAccess\":100,\"easementPenalty\":100,\"utilities\":38}",
+    "topReasons": "[\"+ Ideal acreage for target range (100)\",\"+ Water features present (100)\",\"+ Strong road access (100)\",\"- Utilities distant or unavailable (38)\",\"- Far from metro areas (14)\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:17:17.045Z"
+  },
+  "deal": {
+    "id": "cmni9ugog00fpv17i3dwk26on",
+    "parcelId": "cmni9ugm4003mv17iivmbnufv",
+    "stage": "pursuit",
+    "priority": "medium",
+    "notes": "533-acre agricultural property in Lumpkin County, GA. Score: 78/100.",
+    "nextAction": "Order Phase I ESA",
+    "nextDate": "2026-04-25T02:15:32.848Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-03T02:15:32.849Z",
+    "updatedAt": "2026-04-03T02:15:32.849Z",
+    "activities": [
+      {
+        "id": "cmni9ugoh00frv17i3619v967",
+        "dealId": "cmni9ugog00fpv17i3dwk26on",
+        "type": "note",
+        "content": "County records show no liens or encumbrances. Title appears clean.",
+        "createdAt": "2026-03-24T02:15:32.849Z"
+      },
+      {
+        "id": "cmni9ugoh00ftv17isarnucnl",
+        "dealId": "cmni9ugog00fpv17i3dwk26on",
+        "type": "document",
+        "content": "Received and reviewed title commitment — Schedule B items are standard.",
+        "createdAt": "2026-03-24T02:15:32.849Z"
+      },
+      {
+        "id": "cmni9ugoh00fvv17i0axrtauh",
+        "dealId": "cmni9ugog00fpv17i3dwk26on",
+        "type": "document",
+        "content": "Received and reviewed title commitment — Schedule B items are standard.",
+        "createdAt": "2026-03-01T02:15:32.849Z"
+      }
+    ]
+  },
+  "ownership": null
+}

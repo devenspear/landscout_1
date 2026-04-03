@@ -1,0 +1,104 @@
+{
+  "id": "cmni9mi09006gv15pj49l6z65",
+  "apn": "54-9-944-40",
+  "address": "1342 Bear Hollow Rd",
+  "county": "Marengo",
+  "state": "AL",
+  "acreage": 377,
+  "lat": 32.09520000000001,
+  "lon": -87.6324,
+  "zoning": "conservation",
+  "description": "377-acre conservation tract in Marengo County, AL. 60% cropland, 40% wetland. Water features include creek, pond. 52 miles from Tuscaloosa. Paved road access. Elevation 1344 ft.",
+  "createdAt": "2026-04-03T02:09:21.321Z",
+  "updatedAt": "2026-04-03T02:09:21.321Z",
+  "listings": [
+    {
+      "id": "cmni9mi1c00cfv15p00jbhpuq",
+      "parcelId": "cmni9mi09006gv15pj49l6z65",
+      "sourceId": "cmni9mhxn0006v15pfminwddj",
+      "externalId": "landleader-549607",
+      "url": "https://www.landleader.com/listing/landleader-549607",
+      "title": "Trophy 377-Acre Wilderness Tract in Marengo County",
+      "price": 3765476,
+      "pricePerAcre": 9988,
+      "status": "listed",
+      "photos": "[\"https://images.landscout.dev/landleader-549607/aerial-1.jpg\",\"https://images.landscout.dev/landleader-549607/ground-1.jpg\"]",
+      "metadata": "{\"originalListDate\":\"2025-01-01\",\"daysOnMarket\":339,\"broker\":null}",
+      "firstSeen": "2026-04-03T02:09:21.361Z",
+      "lastSeen": "2026-04-03T02:09:21.361Z",
+      "createdAt": "2026-04-03T02:09:21.361Z",
+      "updatedAt": "2026-04-03T02:09:21.361Z",
+      "sourceName": "LandLeader"
+    }
+  ],
+  "features": {
+    "id": "cmni9mi09006hv15p8oqmxu1j",
+    "parcelId": "cmni9mi09006gv15pj49l6z65",
+    "landCoverMix": "{\"cropland\":60,\"wetland\":40}",
+    "waterPresence": true,
+    "waterFeatures": "[\"creek\",\"pond\"]",
+    "metroDistance": 52,
+    "nearestMetro": "Tuscaloosa",
+    "slopeStats": "{\"mean\":24.3,\"percentOver20\":37,\"percentOver40\":6.4}",
+    "soilsQuality": 4.9,
+    "roadAccess": "paved",
+    "easements": "[\"utility easement\",\"road easement\"]",
+    "powerDistance": 7.7,
+    "waterDistance": 5.5,
+    "sewerDistance": 17.7,
+    "fiberDistance": 10.7,
+    "gasDistance": 9.7,
+    "inFloodway": false,
+    "floodZone": null,
+    "wetlandsPercent": 2.2,
+    "elevation": 1344,
+    "createdAt": "2026-04-03T02:09:21.321Z",
+    "updatedAt": "2026-04-03T02:09:21.321Z"
+  },
+  "fitScore": {
+    "id": "cmni9mi09006iv15ppbrlzk15",
+    "parcelId": "cmni9mi09006gv15pj49l6z65",
+    "overallScore": 79,
+    "scoreBreakdown": "{\"acreage\":20,\"soils\":7,\"location\":7,\"access\":12,\"water\":10,\"terrain\":2,\"utilities\":1,\"risk\":12,\"elevation\":3}",
+    "topReasons": "[\"Ideal acreage (377 ac) in target range\",\"Paved road access\",\"Water features present on property\",\"Low flood/wetlands risk\"]",
+    "autoFailed": false,
+    "autoFailReason": null,
+    "calculatedAt": "2026-04-03T02:09:21.321Z"
+  },
+  "deal": {
+    "id": "cmni9mi1v00fbv15pkw3z98d7",
+    "parcelId": "cmni9mi09006gv15pj49l6z65",
+    "stage": "pursuit",
+    "priority": "medium",
+    "notes": null,
+    "nextAction": "Submit LOI",
+    "nextDate": "2026-05-01T02:09:21.379Z",
+    "assignee": "Deven",
+    "createdAt": "2026-04-03T02:09:21.380Z",
+    "updatedAt": "2026-04-03T02:09:21.380Z",
+    "activities": [
+      {
+        "id": "cmni9mi1w00fdv15pqzro5ii0",
+        "dealId": "cmni9mi1v00fbv15pkw3z98d7",
+        "type": "call",
+        "content": "Called county planning office — zoning change is feasible with site plan.",
+        "createdAt": "2026-03-16T02:09:21.380Z"
+      },
+      {
+        "id": "cmni9mi1w00ffv15pgx2wha8o",
+        "dealId": "cmni9mi1v00fbv15pkw3z98d7",
+        "type": "offer",
+        "content": "Counter-offer received at $4,200/acre — recommending acceptance.",
+        "createdAt": "2026-02-25T02:09:21.380Z"
+      },
+      {
+        "id": "cmni9mi1w00fhv15pvwpo7zi9",
+        "dealId": "cmni9mi1v00fbv15pkw3z98d7",
+        "type": "email",
+        "content": "Sent request for timber appraisal to Anderson Forestry Consultants.",
+        "createdAt": "2026-02-06T02:09:21.380Z"
+      }
+    ]
+  },
+  "ownership": null
+}
